@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Leni Urdu Class</title>
+    <meta name="description" content="Learn to speak natural, everyday conversational Urdu — Roman Urdu first, with speaking practice, listening and role-play." />
+    <meta name="theme-color" content="#0b7a64" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#101518" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Leni Urdu Class" />
+    <style>
+      /* Paint the right background before CSS loads (avoids a white flash in dark mode). */
+      html { background: #faf7f2; }
+      @media (prefers-color-scheme: dark) { html { background: #101518; } }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Leni Urdu Class needs JavaScript to run.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

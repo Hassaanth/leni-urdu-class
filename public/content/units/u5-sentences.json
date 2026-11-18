@@ -1,0 +1,600 @@
+{
+  "id": "u5",
+  "level": 3,
+  "title": "Building Sentences",
+  "description": "Talk about now, the past and the future, say no, and make polite requests.",
+  "lessons": [
+    {
+      "id": "l5-present",
+      "title": "What You Do & Are Doing",
+      "objective": "Use \"-ta hoon\" for habits and \"raha hoon\" for things happening right now.",
+      "tips": [
+        "Habit: verb stem + ta/ti + hoon. \"Main chai peeta hoon\" = I drink tea (regularly).",
+        "Happening now: verb stem + raha/rahi + hoon. \"Main chai pee raha hoon\" = I am drinking tea (now).",
+        "Endings: -a / -i for one man / one woman, -e for plural or respectful aap: \"Aap kya kar rahe hain?\""
+      ],
+      "phrases": [
+        {
+          "id": "p-urdu-seekh",
+          "en": "I am learning Urdu.",
+          "roman": "Main Urdu seekh raha hoon.",
+          "urdu": "میں اردو سیکھ رہا ہوں۔",
+          "accept": [
+            "main urdu sikh raha hoon",
+            "mein urdu seekh raha hoon",
+            "main urdu seekh raha hun"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main Urdu seekh raha hoon.",
+              "urdu": "میں اردو سیکھ رہا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main Urdu seekh rahi hoon.",
+              "urdu": "میں اردو سیکھ رہی ہوں۔"
+            },
+            "explain": "A male speaker says \"raha\", a female speaker says \"rahi\". The ending agrees with the person doing the action.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-chai-pee-raha",
+          "en": "I'm drinking tea.",
+          "roman": "Main chai pee raha hoon.",
+          "urdu": "میں چائے پی رہا ہوں۔",
+          "accept": [
+            "main chai pi raha hoon",
+            "main chai pee raha hun"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main chai pee raha hoon.",
+              "urdu": "میں چائے پی رہا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main chai pee rahi hoon.",
+              "urdu": "میں چائے پی رہی ہوں۔"
+            },
+            "explain": "\"Raha\" for men, \"rahi\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-woh-kaam",
+          "en": "She is working.",
+          "roman": "Woh kaam kar rahi hai.",
+          "urdu": "وہ کام کر رہی ہے۔",
+          "accept": [
+            "wo kaam kar rahi hai",
+            "woh kam kar rahi hai"
+          ],
+          "note": "\"Rahi\" tells you it's a woman; \"Woh kaam kar raha hai\" would be a man.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-hum-kha-rahe",
+          "en": "We are eating.",
+          "roman": "Hum khaana kha rahe hain.",
+          "urdu": "ہم کھانا کھا رہے ہیں۔",
+          "accept": [
+            "hum khana kha rahe hain",
+            "ham khaana kha rahe hain"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-roz-chai",
+          "en": "I drink tea every day.",
+          "roman": "Main roz chai peeta hoon.",
+          "urdu": "میں روز چائے پیتا ہوں۔",
+          "accept": [
+            "main roz chai pita hoon",
+            "main rozana chai peeta hoon"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main roz chai peeta hoon.",
+              "urdu": "میں روز چائے پیتا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main roz chai peeti hoon.",
+              "urdu": "میں روز چائے پیتی ہوں۔"
+            },
+            "explain": "Habits: \"peeta\" for men, \"peeti\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kya-kar-rahe",
+          "en": "What are you doing?",
+          "roman": "Aap kya kar rahe hain?",
+          "urdu": "آپ کیا کر رہے ہیں؟",
+          "accept": [
+            "aap kia kar rahe hain",
+            "ap kya kar rahe hain"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Aap kya kar rahe hain?",
+              "urdu": "آپ کیا کر رہے ہیں؟"
+            },
+            "feminine": {
+              "roman": "Aap kya kar rahi hain?",
+              "urdu": "آپ کیا کر رہی ہیں؟"
+            },
+            "explain": "Asking a man (or group): \"rahe\". Asking a woman: \"rahi\".",
+            "by": "listener"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kuch-nahi",
+          "en": "Nothing.",
+          "roman": "Kuch nahi.",
+          "urdu": "کچھ نہیں۔",
+          "accept": [
+            "kuchh nahi",
+            "kuch nahin",
+            "kuch nai"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-rehta-hoon",
+          "en": "I live in Karachi.",
+          "roman": "Main Karachi mein rehta hoon.",
+          "urdu": "میں کراچی میں رہتا ہوں۔",
+          "accept": [
+            "main karachi main rehta hoon",
+            "main karachi mein rehta hun"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main Karachi mein rehta hoon.",
+              "urdu": "میں کراچی میں رہتا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main Karachi mein rehti hoon.",
+              "urdu": "میں کراچی میں رہتی ہوں۔"
+            },
+            "explain": "\"Rehta\" for men, \"rehti\" for women. Swap in your city.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kahan-rehte",
+          "en": "Where do you live?",
+          "roman": "Aap kahan rehte hain?",
+          "urdu": "آپ کہاں رہتے ہیں؟",
+          "accept": [
+            "aap kahaan rehte hain",
+            "ap kahan rehte hain"
+          ],
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-pres-mcq-1",
+          "prompt": "Which sentence means \"I am drinking tea (right now)\" for a female speaker?",
+          "options": [
+            "Main chai pee rahi hoon.",
+            "Main chai peeti hoon.",
+            "Main chai pee raha hoon."
+          ],
+          "answer": 0,
+          "explain": "\"Rahi\" = ongoing action, female speaker. \"Peeti hoon\" is a habit."
+        },
+        {
+          "type": "order",
+          "id": "x-pres-order-1",
+          "en": "We are eating.",
+          "roman": "Hum khaana kha rahe hain",
+          "urdu": "ہم کھانا کھا رہے ہیں۔",
+          "distractors": [
+            "raha"
+          ],
+          "explain": "With \"hum\" (we), use the plural ending: rahe hain."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-pres-qa",
+          "questionId": "q-kya-kar-rahe"
+        },
+        {
+          "type": "readAloud",
+          "id": "x-pres-read",
+          "passageId": "r-learning"
+        }
+      ]
+    },
+    {
+      "id": "l5-past-future",
+      "title": "Past & Future",
+      "objective": "Say what happened and what you will do.",
+      "tips": [
+        "Future: add -unga (men) / -ungi (women): \"Main kal aaunga / aaungi.\"",
+        "Past with \"gaya / gayi\" agrees with the speaker: \"Main bazaar gaya tha\" (man).",
+        "With \"maine\" (I, in the past for verbs like eat, drink, do), the verb agrees with the thing, not you: \"Maine chai pi\" for everyone, because chai is feminine."
+      ],
+      "phrases": [
+        {
+          "id": "p-bazaar-gaya",
+          "en": "I went to the bazaar yesterday.",
+          "roman": "Main kal bazaar gaya tha.",
+          "urdu": "میں کل بازار گیا تھا۔",
+          "accept": [
+            "main kal bazar gaya tha",
+            "mein kal bazaar gaya tha"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main kal bazaar gaya tha.",
+              "urdu": "میں کل بازار گیا تھا۔"
+            },
+            "feminine": {
+              "roman": "Main kal bazaar gayi thi.",
+              "urdu": "میں کل بازار گئی تھی۔"
+            },
+            "explain": "\"Gaya tha\" for men, \"gayi thi\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-maine-khaya",
+          "en": "I ate (the meal).",
+          "roman": "Maine khaana khaya.",
+          "urdu": "میں نے کھانا کھایا۔",
+          "accept": [
+            "maine khana khaya",
+            "main ne khaana khaya",
+            "maine khaana khaaya"
+          ],
+          "note": "Same for everyone: \"khaya\" agrees with \"khaana\" (masculine).",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-maine-chai",
+          "en": "I drank tea.",
+          "roman": "Maine chai pi.",
+          "urdu": "میں نے چائے پی۔",
+          "accept": [
+            "maine chai pee",
+            "main ne chai pi"
+          ],
+          "note": "\"Pi\" agrees with \"chai\" (feminine), not with the speaker.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kal-aaunga",
+          "en": "I will come tomorrow.",
+          "roman": "Main kal aaunga.",
+          "urdu": "میں کل آؤں گا۔",
+          "accept": [
+            "main kal aunga",
+            "main kal aaun ga",
+            "mein kal aaunga"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main kal aaunga.",
+              "urdu": "میں کل آؤں گا۔"
+            },
+            "feminine": {
+              "roman": "Main kal aaungi.",
+              "urdu": "میں کل آؤں گی۔"
+            },
+            "explain": "Future: \"-ga\" for men, \"-gi\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-shaam-milenge",
+          "en": "We'll meet in the evening.",
+          "roman": "Hum shaam ko milenge.",
+          "urdu": "ہم شام کو ملیں گے۔",
+          "accept": [
+            "hum sham ko milenge",
+            "hum shaam ko milen ge"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kab-aayenge",
+          "en": "When will you come?",
+          "roman": "Aap kab aayenge?",
+          "urdu": "آپ کب آئیں گے؟",
+          "accept": [
+            "aap kab aaenge",
+            "aap kab ayenge",
+            "ap kab aayenge"
+          ],
+          "note": "Asking a woman: \"Aap kab aayengi?\"",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-nahi-pata",
+          "en": "I don't know.",
+          "roman": "Mujhe nahi pata.",
+          "urdu": "مجھے نہیں پتا۔",
+          "accept": [
+            "mujhe nahin pata",
+            "mujhe nahi pta",
+            "pata nahi"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-bhool-gaya",
+          "en": "I forgot.",
+          "roman": "Main bhool gaya.",
+          "urdu": "میں بھول گیا۔",
+          "accept": [
+            "main bhul gaya",
+            "mein bhool gaya"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main bhool gaya.",
+              "urdu": "میں بھول گیا۔"
+            },
+            "feminine": {
+              "roman": "Main bhool gayi.",
+              "urdu": "میں بھول گئی۔"
+            },
+            "explain": "\"Gaya\" for men, \"gayi\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kya-hua",
+          "en": "What happened?",
+          "roman": "Kya hua?",
+          "urdu": "کیا ہوا؟",
+          "accept": [
+            "kia hua",
+            "kya hoa"
+          ],
+          "kind": "phrase"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-pf-mcq-1",
+          "prompt": "Ayesha wants to say \"I drank tea\". Which is correct?",
+          "options": [
+            "Maine chai pi.",
+            "Maine chai piya.",
+            "Main chai pi rahi."
+          ],
+          "answer": 0,
+          "explain": "With \"maine\", the verb agrees with chai (feminine): pi. That's the same for men and women."
+        },
+        {
+          "type": "fill",
+          "id": "x-pf-fill-1",
+          "roman": "Main kal ___. (male speaker)",
+          "urdu": "میں کل ___۔",
+          "en": "I will come tomorrow.",
+          "options": [
+            "aaunga",
+            "aaungi",
+            "aaya"
+          ],
+          "answer": 0,
+          "explain": "Male speaker, future: aaunga."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-pf-qa",
+          "questionId": "q-kal-kya-kiya"
+        }
+      ]
+    },
+    {
+      "id": "l5-requests",
+      "title": "Saying No & Asking Politely",
+      "objective": "Say what you can't do, make polite requests and ask permission.",
+      "tips": [
+        "\"Sakta / sakti\" = can: \"Main jaa sakta hoon\" (I can go). Put \"nahi\" before it for can't.",
+        "Polite requests end in -ein or -iye: karein, dikhayein, boliye. \"Zara\" softens a request, like \"just\"."
+      ],
+      "phrases": [
+        {
+          "id": "p-nahi-ja-sakta",
+          "en": "I can't go.",
+          "roman": "Main nahi jaa sakta.",
+          "urdu": "میں نہیں جا سکتا۔",
+          "accept": [
+            "main nahi ja sakta",
+            "main nahin jaa sakta"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main nahi jaa sakta.",
+              "urdu": "میں نہیں جا سکتا۔"
+            },
+            "feminine": {
+              "roman": "Main nahi jaa sakti.",
+              "urdu": "میں نہیں جا سکتی۔"
+            },
+            "explain": "\"Sakta\" for men, \"sakti\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-madad",
+          "en": "Can you help me?",
+          "roman": "Kya aap meri madad kar sakte hain?",
+          "urdu": "کیا آپ میری مدد کر سکتے ہیں؟",
+          "accept": [
+            "kya ap meri madad kar sakte hain",
+            "kya aap meri madad kar sakti hain"
+          ],
+          "note": "Asking a woman: \"kar sakti hain\". \"Meri\" agrees with \"madad\" (feminine).",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-zara-dikhayein",
+          "en": "Could you show me this?",
+          "roman": "Zara yeh dikhayein.",
+          "urdu": "ذرا یہ دکھائیں۔",
+          "accept": [
+            "zara ye dikhaen",
+            "zara yeh dikhaiye",
+            "zara yeh dikhayen"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-darwaza",
+          "en": "Please close the door.",
+          "roman": "Darwaza band kar dein.",
+          "urdu": "دروازہ بند کر دیں۔",
+          "accept": [
+            "darwaaza band kar dein",
+            "darwaza band kar den",
+            "darwaza band kar dijiye"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-nahi-chahiye",
+          "en": "I don't want it. / No, thanks.",
+          "roman": "Mujhe nahi chahiye.",
+          "urdu": "مجھے نہیں چاہیے۔",
+          "accept": [
+            "mujhe nahin chahiye",
+            "nahi chahiye"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-andar-aa",
+          "en": "May I come in?",
+          "roman": "Kya main andar aa sakta hoon?",
+          "urdu": "کیا میں اندر آ سکتا ہوں؟",
+          "accept": [
+            "kya mein andar aa sakta hoon",
+            "kya main andar aa sakta hun"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Kya main andar aa sakta hoon?",
+              "urdu": "کیا میں اندر آ سکتا ہوں؟"
+            },
+            "feminine": {
+              "roman": "Kya main andar aa sakti hoon?",
+              "urdu": "کیا میں اندر آ سکتی ہوں؟"
+            },
+            "explain": "\"Sakta\" for men, \"sakti\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-zaroor",
+          "en": "Of course / Definitely",
+          "roman": "Zaroor",
+          "urdu": "ضرور",
+          "accept": [
+            "zarur",
+            "zaroor"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-ek-minute",
+          "en": "One minute / Just a moment",
+          "roman": "Ek minute",
+          "urdu": "ایک منٹ",
+          "accept": [
+            "aik minute",
+            "ek mint"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-fikr-na",
+          "en": "Don't worry.",
+          "roman": "Fikr na karein.",
+          "urdu": "فکر نہ کریں۔",
+          "accept": [
+            "fikar na karein",
+            "fikr na karen",
+            "fikar na karo"
+          ],
+          "note": "\"Na\" (not \"nahi\") is used in polite commands: \"na karein\" = please don't.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-mat-karo",
+          "en": "Don't do it! (informal)",
+          "roman": "Mat karo!",
+          "urdu": "مت کرو!",
+          "accept": [
+            "mat kro"
+          ],
+          "note": "Direct and informal — fine with friends or children, too blunt with elders. Prefer \"na karein\" with elders.",
+          "kind": "phrase"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-req-mcq-1",
+          "prompt": "Which is the most polite way to ask an older stranger not to worry?",
+          "options": [
+            "Fikr na karein.",
+            "Fikr mat karo.",
+            "Fikr nahi."
+          ],
+          "answer": 0,
+          "explain": "\"Na karein\" is the polite negative command for aap."
+        },
+        {
+          "type": "complete",
+          "id": "x-req-complete-1",
+          "context": [
+            {
+              "speaker": "Receptionist",
+              "roman": "Ji, farmaiye?",
+              "urdu": "جی، فرمائیے؟",
+              "en": "Yes, how can I help?"
+            }
+          ],
+          "prompt": "Ask for help politely.",
+          "options": [
+            {
+              "roman": "Kya aap meri madad kar sakte hain?",
+              "urdu": "کیا آپ میری مدد کر سکتے ہیں؟",
+              "en": "Can you help me?"
+            },
+            {
+              "roman": "Mat karo!",
+              "urdu": "مت کرو!",
+              "en": "Don't do it!"
+            },
+            {
+              "roman": "Kuch nahi.",
+              "urdu": "کچھ نہیں۔",
+              "en": "Nothing."
+            }
+          ],
+          "answer": 0,
+          "explain": "\"Kya aap ... kar sakte hain?\" is a polite request pattern."
+        }
+      ]
+    }
+  ]
+}

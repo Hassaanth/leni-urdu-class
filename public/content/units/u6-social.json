@@ -1,0 +1,584 @@
+{
+  "id": "u6",
+  "level": 4,
+  "title": "Natural Social Urdu",
+  "description": "Make plans, share feelings and opinions, and sound relaxed with friends.",
+  "lessons": [
+    {
+      "id": "l6-plans",
+      "title": "Invitations & Plans",
+      "objective": "Invite someone, accept or decline, and agree on a time.",
+      "tips": [
+        "Pakistani hospitality is warm: an invitation (\"Hamare ghar aaiye\") is often sincere. Saying \"Zaroor, Insha'Allah\" is a friendly reply.",
+        "Everyday Urdu borrows many English words: plan, weekend, free, late. That's natural, not \"wrong\" Urdu."
+      ],
+      "phrases": [
+        {
+          "id": "p-kal-plan",
+          "en": "What's the plan tomorrow?",
+          "roman": "Kal kya plan hai?",
+          "urdu": "کل کیا پلان ہے؟",
+          "accept": [
+            "kal ka kya plan hai",
+            "kal kia plan hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-chalo-chai",
+          "en": "Come on, let's have tea.",
+          "roman": "Chalo, chai peete hain.",
+          "urdu": "چلو، چائے پیتے ہیں۔",
+          "accept": [
+            "chalo chai pite hain",
+            "chalo chai peetay hain"
+          ],
+          "note": "\"Chalo + verb-te hain\" is how you say \"let's...\".",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-ghar-aaiye",
+          "en": "Come to our home (please visit us).",
+          "roman": "Hamare ghar aaiye.",
+          "urdu": "ہمارے گھر آئیے۔",
+          "accept": [
+            "hamare ghar aaiye",
+            "humare ghar aaiye",
+            "hamare ghar aayen",
+            "hamare ghar aaen"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-zaroor-aaunga",
+          "en": "I'll definitely come.",
+          "roman": "Zaroor aaunga.",
+          "urdu": "ضرور آؤں گا۔",
+          "accept": [
+            "zarur aaunga",
+            "zaroor aunga"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Zaroor aaunga.",
+              "urdu": "ضرور آؤں گا۔"
+            },
+            "feminine": {
+              "roman": "Zaroor aaungi.",
+              "urdu": "ضرور آؤں گی۔"
+            },
+            "explain": "\"Aaunga\" for men, \"aaungi\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-weekend-free",
+          "en": "Are you free this weekend? (informal)",
+          "roman": "Is weekend free ho?",
+          "urdu": "اس ویک اینڈ فری ہو؟",
+          "accept": [
+            "is weekend free ho kya",
+            "kya is weekend free ho"
+          ],
+          "note": "\"Ho\" goes with tum, so this is for friends. To be polite: \"Kya aap is weekend free hain?\"",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-der-ho",
+          "en": "I'll be late.",
+          "roman": "Mujhe der ho jayegi.",
+          "urdu": "مجھے دیر ہو جائے گی۔",
+          "accept": [
+            "mujhe der ho jaegi",
+            "mujhe der ho jaye gi"
+          ],
+          "literal": "to me lateness will happen",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-koi-masla-nahi",
+          "en": "No problem.",
+          "roman": "Koi masla nahi.",
+          "urdu": "کوئی مسئلہ نہیں۔",
+          "accept": [
+            "koi masla nahin",
+            "koi masla nai"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-phir-kabhi",
+          "en": "Some other time.",
+          "roman": "Phir kabhi.",
+          "urdu": "پھر کبھی۔",
+          "accept": [
+            "fir kabhi"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-kitne-baje-milein",
+          "en": "What time shall we meet?",
+          "roman": "Kitne baje milein?",
+          "urdu": "کتنے بجے ملیں؟",
+          "accept": [
+            "kitne baje milen",
+            "kitne bajay milein"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-intezaar",
+          "en": "I'll wait.",
+          "roman": "Main intezaar karunga.",
+          "urdu": "میں انتظار کروں گا۔",
+          "accept": [
+            "main intazar karunga",
+            "main intezar karunga"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main intezaar karunga.",
+              "urdu": "میں انتظار کروں گا۔"
+            },
+            "feminine": {
+              "roman": "Main intezaar karungi.",
+              "urdu": "میں انتظار کروں گی۔"
+            },
+            "explain": "\"Karunga\" for men, \"karungi\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-plan-complete-1",
+          "context": [
+            {
+              "speaker": "Hamza",
+              "roman": "Yaar, is weekend free ho? Chalo, chai peete hain.",
+              "urdu": "یار، اس ویک اینڈ فری ہو؟ چلو، چائے پیتے ہیں۔",
+              "en": "Mate, are you free this weekend? Let's have tea."
+            }
+          ],
+          "prompt": "Accept and ask what time.",
+          "options": [
+            {
+              "roman": "Haan, zaroor! Kitne baje milein?",
+              "urdu": "ہاں، ضرور! کتنے بجے ملیں؟",
+              "en": "Yes, definitely! What time shall we meet?"
+            },
+            {
+              "roman": "Mujhe neend aa rahi hai.",
+              "urdu": "مجھے نیند آ رہی ہے۔",
+              "en": "I'm sleepy."
+            },
+            {
+              "roman": "Iski qeemat kya hai?",
+              "urdu": "اس کی قیمت کیا ہے؟",
+              "en": "What's the price?"
+            }
+          ],
+          "answer": 0,
+          "explain": "Accept with \"zaroor\" and keep the conversation going with a follow-up question."
+        },
+        {
+          "type": "fill",
+          "id": "x-plan-fill-1",
+          "roman": "Chalo, chai ___ hain.",
+          "urdu": "چلو، چائے ___ ہیں۔",
+          "en": "Let's have tea.",
+          "options": [
+            "peete",
+            "peeta",
+            "pi"
+          ],
+          "answer": 0,
+          "explain": "\"Chalo ... peete hain\" = let's drink. The plural -te matches \"we\"."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-plan-qa",
+          "questionId": "q-weekend"
+        }
+      ],
+      "roleplayId": "c-weekend"
+    },
+    {
+      "id": "l6-feelings",
+      "title": "Feelings & Opinions",
+      "objective": "Say how you feel and share or disagree with an opinion politely.",
+      "tips": [
+        "\"Mujhe lagta hai ke...\" (I think that...) is the easiest way to give an opinion.",
+        "Disagreeing politely: start with something positive — \"Aap ki baat theek hai, lekin...\" (you have a point, but...)."
+      ],
+      "phrases": [
+        {
+          "id": "p-khush",
+          "en": "I'm very happy.",
+          "roman": "Main bohat khush hoon.",
+          "urdu": "میں بہت خوش ہوں۔",
+          "accept": [
+            "main bahut khush hoon",
+            "main bohot khush hoon",
+            "main bohat khush hun"
+          ],
+          "note": "\"Khush\" doesn't change for gender. The kh is the throaty خ.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-pareshan",
+          "en": "I'm worried / upset.",
+          "roman": "Main pareshan hoon.",
+          "urdu": "میں پریشان ہوں۔",
+          "accept": [
+            "main pareshaan hoon",
+            "main preshan hoon"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-dukh-hua",
+          "en": "I'm sorry to hear that. (lit. it made me sad)",
+          "roman": "Mujhe sun kar dukh hua.",
+          "urdu": "مجھے سن کر دکھ ہوا۔",
+          "accept": [
+            "mujhe sunkar dukh hua",
+            "mujhe sun ke dukh hua"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-khayal-mein",
+          "en": "In my opinion...",
+          "roman": "Mere khayal mein...",
+          "urdu": "میرے خیال میں...",
+          "accept": [
+            "mere khayal main",
+            "mere khyal mein"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-lagta-hai",
+          "en": "I think that...",
+          "roman": "Mujhe lagta hai ke...",
+          "urdu": "مجھے لگتا ہے کہ...",
+          "accept": [
+            "mujhe lagta hai ki",
+            "mujhe lagta he ke"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-theek-keh",
+          "en": "You're right.",
+          "roman": "Aap theek keh rahe hain.",
+          "urdu": "آپ ٹھیک کہہ رہے ہیں۔",
+          "accept": [
+            "aap theek kah rahe hain",
+            "aap thik keh rahe hain"
+          ],
+          "note": "To a woman: \"Aap theek keh rahi hain.\"",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-mutafiq",
+          "en": "I don't agree.",
+          "roman": "Main mutafiq nahi hoon.",
+          "urdu": "میں متفق نہیں ہوں۔",
+          "accept": [
+            "main muttafiq nahi hoon",
+            "main mutafiq nahin hoon"
+          ],
+          "note": "Fairly formal. In casual talk people often say \"Mujhe aisa nahi lagta\" (I don't think so).",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kamaal",
+          "en": "Wow, amazing! (informal)",
+          "roman": "Yaar, kamaal hai!",
+          "urdu": "یار، کمال ہے!",
+          "accept": [
+            "yaar kamal hai",
+            "yar kamaal hai"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-bohat-acha",
+          "en": "Very good / Great",
+          "roman": "Bohat acha",
+          "urdu": "بہت اچھا",
+          "accept": [
+            "bahut acha",
+            "bohat achha",
+            "bohot acha",
+            "bohat achcha"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-gussa",
+          "en": "I'm getting angry.",
+          "roman": "Mujhe gussa aa raha hai.",
+          "urdu": "مجھے غصہ آ رہا ہے۔",
+          "accept": [
+            "mujhe ghussa aa raha hai",
+            "mujhe gussa aa rha hai"
+          ],
+          "note": "\"Gussa\" starts with غ, a gargled g sound, though many people say a plain g.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-mubarak",
+          "en": "Congratulations!",
+          "roman": "Mubarak ho!",
+          "urdu": "مبارک ہو!",
+          "accept": [
+            "mubaarak ho",
+            "mubarak ho"
+          ],
+          "kind": "phrase"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-feel-complete-1",
+          "context": [
+            {
+              "speaker": "Sana",
+              "roman": "Meri naukri lag gayi!",
+              "urdu": "میری نوکری لگ گئی!",
+              "en": "I got the job!"
+            }
+          ],
+          "prompt": "Respond to Sana's good news.",
+          "options": [
+            {
+              "roman": "Mubarak ho! Main bohat khush hoon.",
+              "urdu": "مبارک ہو! میں بہت خوش ہوں۔",
+              "en": "Congratulations! I'm so happy."
+            },
+            {
+              "roman": "Mujhe sun kar dukh hua.",
+              "urdu": "مجھے سن کر دکھ ہوا۔",
+              "en": "I'm sorry to hear that."
+            },
+            {
+              "roman": "Main mutafiq nahi hoon.",
+              "urdu": "میں متفق نہیں ہوں۔",
+              "en": "I don't agree."
+            }
+          ],
+          "answer": 0,
+          "explain": "\"Mubarak ho\" is the go-to response to any good news."
+        },
+        {
+          "type": "fill",
+          "id": "x-feel-fill-1",
+          "roman": "Mujhe ___ hai ke yeh acha hai.",
+          "urdu": "مجھے ___ ہے کہ یہ اچھا ہے۔",
+          "en": "I think that this is good.",
+          "options": [
+            "lagta",
+            "gussa",
+            "khayal"
+          ],
+          "answer": 0,
+          "explain": "\"Mujhe lagta hai ke...\" = I think that..."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-feel-qa",
+          "questionId": "q-opinion"
+        }
+      ]
+    },
+    {
+      "id": "l6-casual",
+      "title": "Casual Expressions",
+      "objective": "Understand and use the small words that make conversation sound natural.",
+      "tips": [
+        "\"Yaar\" is everywhere among friends — like \"mate\" or \"dude\". Don't use it with elders or in formal settings.",
+        "\"Acha\" has many jobs: \"good\", \"okay\", \"I see\", and with a rising tone, \"Really?\""
+      ],
+      "phrases": [
+        {
+          "id": "p-yaar",
+          "en": "mate / buddy (informal)",
+          "roman": "yaar",
+          "urdu": "یار",
+          "accept": [
+            "yar"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-acha",
+          "en": "Okay / I see / Really?",
+          "roman": "Acha",
+          "urdu": "اچھا",
+          "accept": [
+            "achha",
+            "accha",
+            "achcha"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-sach-mein",
+          "en": "Really? / Seriously?",
+          "roman": "Sach mein?",
+          "urdu": "سچ میں؟",
+          "accept": [
+            "sach main",
+            "sach me",
+            "sachi"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-chalo",
+          "en": "Okay then / Let's go",
+          "roman": "Chalo",
+          "urdu": "چلو",
+          "accept": [
+            "chalo"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-bas",
+          "en": "Enough / That's it",
+          "roman": "Bas",
+          "urdu": "بس",
+          "kind": "word"
+        },
+        {
+          "id": "p-kya-haal",
+          "en": "How's it going?",
+          "roman": "Kya haal hai?",
+          "urdu": "کیا حال ہے؟",
+          "accept": [
+            "kya hal hai",
+            "kia haal hai",
+            "kya haal he"
+          ],
+          "note": "Casual and friendly. A typical reply: \"Theek, aap sunayein?\"",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-sab-theek",
+          "en": "All good?",
+          "roman": "Sab theek?",
+          "urdu": "سب ٹھیک؟",
+          "accept": [
+            "sab thik"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-mazaa-aa-gaya",
+          "en": "That was so much fun!",
+          "roman": "Mazaa aa gaya!",
+          "urdu": "مزہ آ گیا!",
+          "accept": [
+            "maza aa gaya",
+            "maza agaya"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-inshallah",
+          "en": "God willing (about future plans)",
+          "roman": "Insha'Allah",
+          "urdu": "ان شاء اللہ",
+          "accept": [
+            "inshallah",
+            "insha allah",
+            "inshaallah"
+          ],
+          "note": "Very commonly added to future plans: \"Kal milenge, Insha'Allah.\"",
+          "kind": "word"
+        },
+        {
+          "id": "p-mashallah",
+          "en": "Wonderful! (praising something, lit. what God has willed)",
+          "roman": "Masha'Allah",
+          "urdu": "ماشاءاللہ",
+          "accept": [
+            "mashallah",
+            "masha allah",
+            "maashallah"
+          ],
+          "note": "Used when praising someone's child, home, success, etc.",
+          "kind": "word"
+        },
+        {
+          "id": "p-kya-scene",
+          "en": "What's up? / What's the plan? (slang)",
+          "roman": "Kya scene hai?",
+          "urdu": "کیا سین ہے؟",
+          "accept": [
+            "kia scene hai",
+            "kya seen hai"
+          ],
+          "note": "Very informal, mostly younger people among friends.",
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-cas-mcq-1",
+          "prompt": "Your friend's aunt shows you her new home. What fits best?",
+          "options": [
+            "Masha'Allah, bohat acha hai!",
+            "Yaar, kya scene hai?",
+            "Bas."
+          ],
+          "answer": 0,
+          "explain": "\"Masha'Allah\" is a warm compliment, and suits speaking to an elder. \"Yaar\" is too casual for an aunt."
+        },
+        {
+          "type": "complete",
+          "id": "x-cas-complete-1",
+          "context": [
+            {
+              "speaker": "Ali",
+              "roman": "Yaar, kya haal hai?",
+              "urdu": "یار، کیا حال ہے؟",
+              "en": "Mate, how's it going?"
+            }
+          ],
+          "prompt": "Reply casually and ask back.",
+          "options": [
+            {
+              "roman": "Sab theek! Tum sunao?",
+              "urdu": "سب ٹھیک! تم سناؤ؟",
+              "en": "All good! What about you?"
+            },
+            {
+              "roman": "Mubarak ho!",
+              "urdu": "مبارک ہو!",
+              "en": "Congratulations!"
+            },
+            {
+              "roman": "Maaf kijiye.",
+              "urdu": "معاف کیجیے۔",
+              "en": "Excuse me."
+            }
+          ],
+          "answer": 0,
+          "explain": "With a friend, \"Tum sunao?\" is the casual version of \"Aap sunayein?\"."
+        }
+      ],
+      "roleplayId": "c-friends"
+    }
+  ]
+}

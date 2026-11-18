@@ -1,0 +1,312 @@
+{
+  "questions": [
+    {
+      "id": "q-naam",
+      "level": 1,
+      "question": { "roman": "Aap ka naam kya hai?", "urdu": "آپ کا نام کیا ہے؟", "en": "What is your name?" },
+      "answers": [
+        { "roman": "Mera naam {name} hai.", "urdu": "میرا نام {name} ہے۔", "en": "My name is {name}." },
+        { "roman": "Ji, mera naam {name} hai.", "urdu": "جی، میرا نام {name} ہے۔", "en": "My name is {name}." }
+      ],
+      "hints": ["mera = my", "naam = name", "hai = is (at the end)"]
+    },
+    {
+      "id": "q-kaise-hain",
+      "level": 1,
+      "question": { "roman": "Aap kaise hain?", "urdu": "آپ کیسے ہیں؟", "en": "How are you?" },
+      "answers": [
+        { "roman": "Main theek hoon.", "urdu": "میں ٹھیک ہوں۔", "en": "I'm fine." },
+        { "roman": "Main theek hoon, shukriya. Aap sunayein?", "urdu": "میں ٹھیک ہوں، شکریہ۔ آپ سنائیں؟", "en": "I'm fine, thanks. And you?" },
+        { "roman": "Alhamdulillah, theek hoon.", "urdu": "الحمدللہ، ٹھیک ہوں۔", "en": "Fine, thank God." }
+      ],
+      "hints": ["theek = fine", "hoon = am"]
+    },
+    {
+      "id": "q-khairiyat",
+      "level": 1,
+      "question": { "roman": "Sab khairiyat hai?", "urdu": "سب خیریت ہے؟", "en": "Is everything well?" },
+      "answers": [
+        { "roman": "Ji, sab khairiyat hai.", "urdu": "جی، سب خیریت ہے۔", "en": "Yes, all is well." },
+        { "roman": "Alhamdulillah, sab theek hai.", "urdu": "الحمدللہ، سب ٹھیک ہے۔", "en": "Thank God, all's fine." },
+        { "roman": "Ji haan, shukriya.", "urdu": "جی ہاں، شکریہ۔", "en": "Yes, thank you." }
+      ],
+      "hints": ["ji = polite yes", "sab = all"]
+    },
+    {
+      "id": "q-english",
+      "level": 1,
+      "question": { "roman": "Kya aap Urdu bolte hain?", "urdu": "کیا آپ اردو بولتے ہیں؟", "en": "Do you speak Urdu?" },
+      "answers": [
+        { "roman": "Mujhe thori Urdu aati hai.", "urdu": "مجھے تھوڑی اردو آتی ہے۔", "en": "I know a little Urdu." },
+        { "roman": "Ji, thori thori.", "urdu": "جی، تھوڑی تھوڑی۔", "en": "Yes, a little." },
+        { "roman": "Main Urdu seekh raha hoon.", "urdu": "میں اردو سیکھ رہا ہوں۔", "en": "I'm learning Urdu." },
+        { "roman": "Main Urdu seekh rahi hoon.", "urdu": "میں اردو سیکھ رہی ہوں۔", "en": "I'm learning Urdu." }
+      ],
+      "hints": ["thori = a little", "aati hai = comes (to me)"]
+    },
+    {
+      "id": "q-kahan-se",
+      "level": 1,
+      "question": { "roman": "Aap kahan se hain?", "urdu": "آپ کہاں سے ہیں؟", "en": "Where are you from?" },
+      "answers": [
+        { "roman": "Main {city} se hoon.", "urdu": "میں {city} سے ہوں۔", "en": "I'm from {city}." }
+      ],
+      "hints": ["se = from", "Say your city or country in the gap."]
+    },
+    {
+      "id": "q-siblings",
+      "level": 2,
+      "question": { "roman": "Aap ke kitne behen bhai hain?", "urdu": "آپ کے کتنے بہن بھائی ہیں؟", "en": "How many brothers and sisters do you have?" },
+      "answers": [
+        { "roman": "Mere do bhai hain.", "urdu": "میرے دو بھائی ہیں۔", "en": "I have two brothers." },
+        { "roman": "Mere {number} bhai aur {number} behen hain.", "urdu": "میرے {number} بھائی اور {number} بہن ہیں۔", "en": "I have {number} brothers and {number} sisters." },
+        { "roman": "Meri ek behen hai.", "urdu": "میری ایک بہن ہے۔", "en": "I have one sister." },
+        { "roman": "Mere koi behen bhai nahi hain.", "urdu": "میرے کوئی بہن بھائی نہیں ہیں۔", "en": "I have no siblings." }
+      ],
+      "hints": ["bhai = brother", "behen = sister", "ek, do, teen = 1, 2, 3"]
+    },
+    {
+      "id": "q-pasand",
+      "level": 2,
+      "question": { "roman": "Aap ko kya pasand hai?", "urdu": "آپ کو کیا پسند ہے؟", "en": "What do you like?" },
+      "answers": [
+        { "roman": "Mujhe {thing} pasand hai.", "urdu": "مجھے {thing} پسند ہے۔", "en": "I like {thing}." },
+        { "roman": "Mujhe chai pasand hai.", "urdu": "مجھے چائے پسند ہے۔", "en": "I like tea." },
+        { "roman": "Mujhe cricket pasand hai.", "urdu": "مجھے کرکٹ پسند ہے۔", "en": "I like cricket." }
+      ],
+      "hints": ["mujhe = to me", "pasand = liked"]
+    },
+    {
+      "id": "q-time",
+      "level": 2,
+      "question": { "roman": "Kitne baje hain?", "urdu": "کتنے بجے ہیں؟", "en": "What time is it?" },
+      "answers": [
+        { "roman": "{number} baje hain.", "urdu": "{number} بجے ہیں۔", "en": "It's {number} o'clock." },
+        { "roman": "Mujhe nahi pata.", "urdu": "مجھے نہیں پتا۔", "en": "I don't know." }
+      ],
+      "hints": ["baje = o'clock", "Say a number: ek, do, teen..."]
+    },
+    {
+      "id": "q-kya-kar-rahe",
+      "level": 3,
+      "question": { "roman": "Aap kya kar rahe hain?", "urdu": "آپ کیا کر رہے ہیں؟", "en": "What are you doing?" },
+      "answers": [
+        { "roman": "Main Urdu seekh raha hoon.", "urdu": "میں اردو سیکھ رہا ہوں۔", "en": "I'm learning Urdu." },
+        { "roman": "Main Urdu seekh rahi hoon.", "urdu": "میں اردو سیکھ رہی ہوں۔", "en": "I'm learning Urdu." },
+        { "roman": "Kuch nahi.", "urdu": "کچھ نہیں۔", "en": "Nothing." },
+        { "roman": "Main chai pee raha hoon.", "urdu": "میں چائے پی رہا ہوں۔", "en": "I'm drinking tea." },
+        { "roman": "Main chai pee rahi hoon.", "urdu": "میں چائے پی رہی ہوں۔", "en": "I'm drinking tea." }
+      ],
+      "hints": ["raha / rahi hoon = am ...-ing", "seekh = learn"]
+    },
+    {
+      "id": "q-kal-kya-kiya",
+      "level": 3,
+      "question": { "roman": "Aap ne kal kya kiya?", "urdu": "آپ نے کل کیا کیا؟", "en": "What did you do yesterday?" },
+      "answers": [
+        { "roman": "Main kal bazaar gaya tha.", "urdu": "میں کل بازار گیا تھا۔", "en": "I went to the bazaar yesterday." },
+        { "roman": "Main kal bazaar gayi thi.", "urdu": "میں کل بازار گئی تھی۔", "en": "I went to the bazaar yesterday." },
+        { "roman": "Maine kaam kiya.", "urdu": "میں نے کام کیا۔", "en": "I worked." },
+        { "roman": "Kuch khaas nahi.", "urdu": "کچھ خاص نہیں۔", "en": "Nothing special." }
+      ],
+      "hints": ["gaya / gayi = went", "maine ... kiya = I did ..."]
+    },
+    {
+      "id": "q-weekend",
+      "level": 4,
+      "question": { "roman": "Is weekend kya plan hai?", "urdu": "اس ویک اینڈ کیا پلان ہے؟", "en": "What's the plan this weekend?" },
+      "answers": [
+        { "roman": "Abhi koi plan nahi.", "urdu": "ابھی کوئی پلان نہیں۔", "en": "No plans yet." },
+        { "roman": "Main doston se milunga.", "urdu": "میں دوستوں سے ملوں گا۔", "en": "I'll meet friends." },
+        { "roman": "Main doston se milungi.", "urdu": "میں دوستوں سے ملوں گی۔", "en": "I'll meet friends." },
+        { "roman": "Chalo, chai peete hain.", "urdu": "چلو، چائے پیتے ہیں۔", "en": "Let's have tea." }
+      ],
+      "hints": ["koi plan nahi = no plan", "milunga / milungi = will meet"]
+    },
+    {
+      "id": "q-opinion",
+      "level": 4,
+      "question": { "roman": "Aap ko Urdu seekhna kaisa lag raha hai?", "urdu": "آپ کو اردو سیکھنا کیسا لگ رہا ہے؟", "en": "How are you finding learning Urdu?" },
+      "answers": [
+        { "roman": "Mujhe bohat acha lag raha hai.", "urdu": "مجھے بہت اچھا لگ رہا ہے۔", "en": "I'm really enjoying it." },
+        { "roman": "Mushkil hai, lekin mazaa aa raha hai.", "urdu": "مشکل ہے، لیکن مزہ آ رہا ہے۔", "en": "It's hard, but fun." },
+        { "roman": "Mere khayal mein Urdu bohat khoobsurat hai.", "urdu": "میرے خیال میں اردو بہت خوبصورت ہے۔", "en": "In my opinion Urdu is very beautiful." }
+      ],
+      "hints": ["acha lagna = to like / feel good", "mushkil = difficult", "lekin = but"]
+    },
+    {
+      "id": "q-kahan-jaana",
+      "level": 5,
+      "question": { "roman": "Ji, kahan jaana hai?", "urdu": "جی، کہاں جانا ہے؟", "en": "Where do you need to go?" },
+      "answers": [
+        { "roman": "Mujhe {place} jaana hai.", "urdu": "مجھے {place} جانا ہے۔", "en": "I need to go to {place}." },
+        { "roman": "Mujhe airport jaana hai.", "urdu": "مجھے ایئرپورٹ جانا ہے۔", "en": "I need to go to the airport." }
+      ],
+      "hints": ["mujhe ... jaana hai = I need to go to ..."]
+    },
+    {
+      "id": "q-kya-masla",
+      "level": 5,
+      "question": { "roman": "Kya masla hai?", "urdu": "کیا مسئلہ ہے؟", "en": "What's the problem?" },
+      "answers": [
+        { "roman": "Yeh kaam nahi kar raha.", "urdu": "یہ کام نہیں کر رہا۔", "en": "This isn't working." },
+        { "roman": "Mera samaan kho gaya hai.", "urdu": "میرا سامان کھو گیا ہے۔", "en": "My luggage is lost." },
+        { "roman": "Meri tabiyat theek nahi.", "urdu": "میری طبیعت ٹھیک نہیں۔", "en": "I'm not feeling well." }
+      ],
+      "hints": ["kaam nahi kar raha = isn't working", "kho gaya = got lost"]
+    }
+  ],
+  "passages": [
+    {
+      "id": "r-first-meeting",
+      "title": "Meeting Ali",
+      "level": 1,
+      "lines": [
+        { "speaker": "Ali", "roman": "Assalamu alaikum! Mera naam Ali hai.", "urdu": "السلام علیکم! میرا نام علی ہے۔", "en": "Hello! My name is Ali." },
+        { "speaker": "Sara", "roman": "Wa alaikum assalam! Mera naam Sara hai.", "urdu": "وعلیکم السلام! میرا نام سارہ ہے۔", "en": "Hello! My name is Sara." },
+        { "speaker": "Ali", "roman": "Aap kaisi hain?", "urdu": "آپ کیسی ہیں؟", "en": "How are you?" },
+        { "speaker": "Sara", "roman": "Main theek hoon, shukriya. Aap sunayein?", "urdu": "میں ٹھیک ہوں، شکریہ۔ آپ سنائیں؟", "en": "I'm fine, thanks. And you?" },
+        { "speaker": "Ali", "roman": "Main bhi theek hoon. Aapse mil kar khushi hui.", "urdu": "میں بھی ٹھیک ہوں۔ آپ سے مل کر خوشی ہوئی۔", "en": "I'm fine too. Nice to meet you." }
+      ],
+      "question": {
+        "prompt": "Why does Ali say \"kaisi\" instead of \"kaise\"?",
+        "options": ["Because he is talking to a woman (Sara)", "Because he is a man", "Because it is a question"],
+        "answer": 0,
+        "explain": "\"Kaisi\" is used when asking a woman how she is."
+      }
+    },
+    {
+      "id": "r-goodbye",
+      "title": "Saying goodbye",
+      "level": 1,
+      "lines": [
+        { "speaker": "Hina", "roman": "Bohat shukriya! Chai bohat achi thi.", "urdu": "بہت شکریہ! چائے بہت اچھی تھی۔", "en": "Thank you so much! The tea was very good." },
+        { "speaker": "Omar", "roman": "Koi baat nahi. Phir aaiye ga!", "urdu": "کوئی بات نہیں۔ پھر آئیے گا!", "en": "No problem. Come again!" },
+        { "speaker": "Hina", "roman": "Zaroor. Phir milenge. Khuda hafiz!", "urdu": "ضرور۔ پھر ملیں گے۔ خدا حافظ!", "en": "Definitely. See you again. Goodbye!" },
+        { "speaker": "Omar", "roman": "Allah hafiz!", "urdu": "اللہ حافظ!", "en": "Goodbye!" }
+      ],
+      "question": {
+        "prompt": "What did Hina enjoy?",
+        "options": ["The tea", "The food", "The music"],
+        "answer": 0,
+        "explain": "\"Chai bohat achi thi\" = the tea was very good."
+      }
+    },
+    {
+      "id": "r-my-day",
+      "title": "My day",
+      "level": 2,
+      "lines": [
+        { "roman": "Main subah jaldi uthta hoon.", "urdu": "میں صبح جلدی اٹھتا ہوں۔", "en": "I get up early in the morning." },
+        { "roman": "Pehle main chai peeta hoon.", "urdu": "پہلے میں چائے پیتا ہوں۔", "en": "First I drink tea." },
+        { "roman": "Phir main kaam par jaata hoon.", "urdu": "پھر میں کام پر جاتا ہوں۔", "en": "Then I go to work." },
+        { "roman": "Shaam ko main thak jaata hoon.", "urdu": "شام کو میں تھک جاتا ہوں۔", "en": "In the evening I get tired." },
+        { "roman": "Raat ko mujhe jaldi neend aa jaati hai.", "urdu": "رات کو مجھے جلدی نیند آ جاتی ہے۔", "en": "At night I fall asleep quickly." }
+      ],
+      "question": {
+        "prompt": "What does the speaker do first in the morning?",
+        "options": ["Drinks tea", "Goes to work", "Goes to sleep"],
+        "answer": 0,
+        "explain": "\"Pehle main chai peeta hoon\" = first I drink tea."
+      }
+    },
+    {
+      "id": "r-family",
+      "title": "My family",
+      "level": 2,
+      "lines": [
+        { "roman": "Mere ghar mein paanch log hain.", "urdu": "میرے گھر میں پانچ لوگ ہیں۔", "en": "There are five people in my home." },
+        { "roman": "Ammi, abbu, do bhai aur main.", "urdu": "امی، ابو، دو بھائی اور میں۔", "en": "Mum, dad, two brothers and me." },
+        { "roman": "Meri nani bhi qareeb rehti hain.", "urdu": "میری نانی بھی قریب رہتی ہیں۔", "en": "My grandmother also lives nearby." },
+        { "roman": "Har itwaar hum sab saath khaana khaate hain.", "urdu": "ہر اتوار ہم سب ساتھ کھانا کھاتے ہیں۔", "en": "Every Sunday we all eat together." }
+      ],
+      "question": {
+        "prompt": "How many people live in the speaker's home?",
+        "options": ["Five", "Two", "Ten"],
+        "answer": 0,
+        "explain": "\"Paanch log\" = five people."
+      }
+    },
+    {
+      "id": "r-learning",
+      "title": "Learning Urdu",
+      "level": 3,
+      "lines": [
+        { "roman": "Main Urdu seekh raha hoon.", "urdu": "میں اردو سیکھ رہا ہوں۔", "en": "I'm learning Urdu." },
+        { "roman": "Meri nani sirf Urdu bolti hain.", "urdu": "میری نانی صرف اردو بولتی ہیں۔", "en": "My grandmother only speaks Urdu." },
+        { "roman": "Pehle mujhe kuch samajh nahi aata tha.", "urdu": "پہلے مجھے کچھ سمجھ نہیں آتا تھا۔", "en": "At first I didn't understand anything." },
+        { "roman": "Ab main unse thori thori baat kar sakta hoon.", "urdu": "اب میں ان سے تھوڑی تھوڑی بات کر سکتا ہوں۔", "en": "Now I can talk with her a little." },
+        { "roman": "Woh bohat khush hoti hain.", "urdu": "وہ بہت خوش ہوتی ہیں۔", "en": "She gets very happy." }
+      ],
+      "question": {
+        "prompt": "Why is the speaker learning Urdu?",
+        "options": ["To talk with his grandmother", "For work", "To travel"],
+        "answer": 0,
+        "explain": "His nani only speaks Urdu, and now he can talk with her a little."
+      }
+    },
+    {
+      "id": "r-bazaar",
+      "title": "At the bazaar",
+      "level": 3,
+      "lines": [
+        { "roman": "Kal main bazaar gayi thi.", "urdu": "کل میں بازار گئی تھی۔", "en": "Yesterday I went to the bazaar." },
+        { "roman": "Mujhe ek kurta pasand aaya.", "urdu": "مجھے ایک کرتا پسند آیا۔", "en": "I liked a kurta." },
+        { "roman": "Dukaandar ne kaha, teen hazaar rupay.", "urdu": "دکاندار نے کہا، تین ہزار روپے۔", "en": "The shopkeeper said, three thousand rupees." },
+        { "roman": "Maine kaha, yeh bohat mehenga hai!", "urdu": "میں نے کہا، یہ بہت مہنگا ہے!", "en": "I said, that's very expensive!" },
+        { "roman": "Aakhir mein maine do hazaar mein khareed liya.", "urdu": "آخر میں میں نے دو ہزار میں خرید لیا۔", "en": "In the end I bought it for two thousand." }
+      ],
+      "question": {
+        "prompt": "How much did the speaker finally pay?",
+        "options": ["Two thousand rupees", "Three thousand rupees", "Five hundred rupees"],
+        "answer": 0,
+        "explain": "\"Do hazaar mein khareed liya\" = bought it for two thousand."
+      }
+    },
+    {
+      "id": "r-phone",
+      "title": "A phone message",
+      "level": 5,
+      "lines": [
+        { "roman": "Assalamu alaikum, Ahmed sahab. Main Bilal bol raha hoon.", "urdu": "السلام علیکم احمد صاحب۔ میں بلال بول رہا ہوں۔", "en": "Hello Mr Ahmed. This is Bilal speaking." },
+        { "roman": "Aaj ki meeting ke baare mein call kar raha tha.", "urdu": "آج کی میٹنگ کے بارے میں کال کر رہا تھا۔", "en": "I was calling about today's meeting." },
+        { "roman": "Mujhe thori der ho jayegi, traffic bohat hai.", "urdu": "مجھے تھوڑی دیر ہو جائے گی، ٹریفک بہت ہے۔", "en": "I'll be a little late, there's a lot of traffic." },
+        { "roman": "Main taqreeban teen baje pohanch jaunga.", "urdu": "میں تقریباً تین بجے پہنچ جاؤں گا۔", "en": "I'll get there at about three o'clock." },
+        { "roman": "Maazrat chahta hoon. Khuda hafiz.", "urdu": "معذرت چاہتا ہوں۔ خدا حافظ۔", "en": "I apologise. Goodbye." }
+      ],
+      "question": {
+        "prompt": "Why will Bilal be late?",
+        "options": ["Because of traffic", "Because he is ill", "Because he forgot"],
+        "answer": 0,
+        "explain": "\"Traffic bohat hai\" = there's a lot of traffic."
+      }
+    },
+    {
+      "id": "r-story",
+      "title": "The rainy trip",
+      "level": 6,
+      "lines": [
+        { "roman": "Pichle hafte hum Murree gaye.", "urdu": "پچھلے ہفتے ہم مری گئے۔", "en": "Last week we went to Murree." },
+        { "roman": "Pehle sab kuch theek tha, lekin achanak gaari kharab ho gayi.", "urdu": "پہلے سب کچھ ٹھیک تھا، لیکن اچانک گاڑی خراب ہو گئی۔", "en": "At first everything was fine, but suddenly the car broke down." },
+        { "roman": "Uske baad tez barish shuru ho gayi, is liye hum ek dhaabe par ruk gaye.", "urdu": "اس کے بعد تیز بارش شروع ہو گئی، اس لیے ہم ایک ڈھابے پر رک گئے۔", "en": "After that heavy rain started, so we stopped at a roadside café." },
+        { "roman": "Mazay ki baat yeh hai ke wahan ki chai zindagi ki sab se achi chai thi!", "urdu": "مزے کی بات یہ ہے کہ وہاں کی چائے زندگی کی سب سے اچھی چائے تھی!", "en": "The funny thing is, the tea there was the best tea of my life!" },
+        { "roman": "Aakhir mein hum raat ko pohanche. Der aayad durust aayad!", "urdu": "آخر میں ہم رات کو پہنچے۔ دیر آید درست آید!", "en": "In the end we arrived at night. Better late than never!" }
+      ],
+      "question": {
+        "prompt": "Why did they stop at the roadside café?",
+        "options": ["Because heavy rain started", "Because they were lost", "Because they wanted to eat"],
+        "answer": 0,
+        "explain": "\"Tez barish shuru ho gayi, is liye...\" = heavy rain started, so..."
+      }
+    }
+  ],
+  "dailyThemes": [
+    { "id": "d-greetings", "title": "Greetings", "phraseIds": ["p-salaam", "p-walaikum", "p-kaise-hain", "p-theek-hoon", "p-khuda-hafiz"] },
+    { "id": "d-survival", "title": "Survival phrases", "phraseIds": ["p-samajh-nahi", "p-aahista", "p-dobara", "p-thori-urdu", "p-matlab"] },
+    { "id": "d-food", "title": "Food & drink", "phraseIds": ["p-chai-pasand", "p-bhook", "p-pyaas", "p-mazay-ka", "p-bas-shukriya"] },
+    { "id": "d-shopping", "title": "Shopping", "phraseIds": ["p-kitne-ka", "p-mehenga", "p-kam-karein", "p-yeh-chahiye", "p-bas-itna"] },
+    { "id": "d-getting-around", "title": "Getting around", "phraseIds": ["p-masjid-kahan", "p-seedha-jaayen", "p-daayen-murein", "p-door-hai", "p-raasta-bata"] },
+    { "id": "d-feelings", "title": "Feelings", "phraseIds": ["p-khush", "p-pareshan", "p-thak-gaya", "p-neend", "p-mubarak"] },
+    { "id": "d-social", "title": "Making plans", "phraseIds": ["p-chalo-chai", "p-zaroor-aaunga", "p-kitne-baje-milein", "p-koi-masla-nahi", "p-phir-kabhi"] }
+  ]
+}

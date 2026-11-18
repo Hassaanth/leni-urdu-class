@@ -1,0 +1,543 @@
+{
+  "id": "u4",
+  "level": 2,
+  "title": "Getting Around & Daily Life",
+  "description": "Ask for directions, talk about time, and describe your routine.",
+  "lessons": [
+    {
+      "id": "l4-directions",
+      "title": "Directions",
+      "objective": "Ask where something is and understand simple directions.",
+      "tips": [
+        "Many Pakistanis use the English words \"right\" and \"left\" in directions. Learn daayen and baayen anyway so you can understand them.",
+        "\"Jaayen\" and \"murein\" are polite commands: go, turn."
+      ],
+      "phrases": [
+        {
+          "id": "p-masjid-kahan",
+          "en": "Where is the mosque?",
+          "roman": "Masjid kahan hai?",
+          "urdu": "مسجد کہاں ہے؟",
+          "accept": [
+            "masjid kahaan hai",
+            "masjid kahan he"
+          ],
+          "note": "Swap in any place: \"Bazaar kahan hai?\", \"Hotel kahan hai?\"",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-washroom",
+          "en": "Where is the washroom?",
+          "roman": "Washroom kahan hai?",
+          "urdu": "واش روم کہاں ہے؟",
+          "accept": [
+            "bathroom kahan hai",
+            "washroom kahaan hai"
+          ],
+          "note": "\"Washroom\" is the usual word in Pakistan.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-seedha",
+          "en": "straight",
+          "roman": "seedha",
+          "urdu": "سیدھا",
+          "accept": [
+            "sidha",
+            "seedhaa"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-daayen",
+          "en": "right (direction)",
+          "roman": "daayen",
+          "urdu": "دائیں",
+          "accept": [
+            "dayen",
+            "daein",
+            "dain"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-baayen",
+          "en": "left (direction)",
+          "roman": "baayen",
+          "urdu": "بائیں",
+          "accept": [
+            "bayen",
+            "baein",
+            "bain"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-seedha-jaayen",
+          "en": "Go straight.",
+          "roman": "Seedha jaayen.",
+          "urdu": "سیدھا جائیں۔",
+          "accept": [
+            "seedha jayen",
+            "sidha jaayen",
+            "seedha jaen",
+            "seedha jaiye"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-daayen-murein",
+          "en": "Turn right.",
+          "roman": "Daayen murein.",
+          "urdu": "دائیں مڑیں۔",
+          "accept": [
+            "dayen muren",
+            "daayen mudein",
+            "daayen muriye"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-baayen-murein",
+          "en": "Turn left.",
+          "roman": "Baayen murein.",
+          "urdu": "بائیں مڑیں۔",
+          "accept": [
+            "bayen muren",
+            "baayen mudein",
+            "baayen muriye"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-qareeb",
+          "en": "near",
+          "roman": "qareeb",
+          "urdu": "قریب",
+          "accept": [
+            "kareeb",
+            "qarib",
+            "kareb"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-door",
+          "en": "far",
+          "roman": "door",
+          "urdu": "دور",
+          "accept": [
+            "dur"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-door-hai",
+          "en": "Is it far?",
+          "roman": "Kya yeh door hai?",
+          "urdu": "کیا یہ دور ہے؟",
+          "accept": [
+            "kya ye door hai",
+            "kya yeh dur hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-yahan",
+          "en": "here",
+          "roman": "yahan",
+          "urdu": "یہاں",
+          "accept": [
+            "yahaan",
+            "yaha"
+          ],
+          "kind": "word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-dir-mcq-1",
+          "prompt": "Someone tells you \"Baayen murein\". What do you do?",
+          "options": [
+            "Turn left",
+            "Turn right",
+            "Go straight"
+          ],
+          "answer": 0,
+          "explain": "baayen = left, daayen = right, seedha = straight."
+        },
+        {
+          "type": "order",
+          "id": "x-dir-order-1",
+          "en": "Is it far?",
+          "roman": "Kya yeh door hai",
+          "urdu": "کیا یہ دور ہے؟",
+          "distractors": [
+            "qareeb"
+          ]
+        }
+      ],
+      "roleplayId": "c-directions"
+    },
+    {
+      "id": "l4-time",
+      "title": "Time & Days",
+      "objective": "Ask the time and talk about today, tomorrow and parts of the day.",
+      "tips": [
+        "\"Kal\" means both yesterday and tomorrow! The verb tense tells you which.",
+        "\"Baje\" means o'clock: \"Paanch baje\" = five o'clock."
+      ],
+      "phrases": [
+        {
+          "id": "p-kitne-baje",
+          "en": "What time is it?",
+          "roman": "Kitne baje hain?",
+          "urdu": "کتنے بجے ہیں؟",
+          "accept": [
+            "kitne bajay hain",
+            "kitne baje hai",
+            "time kya hua hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-do-baje",
+          "en": "It's two o'clock.",
+          "roman": "Do baje hain.",
+          "urdu": "دو بجے ہیں۔",
+          "accept": [
+            "do bajay hain"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-aaj",
+          "en": "today",
+          "roman": "aaj",
+          "urdu": "آج",
+          "accept": [
+            "aj"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-kal",
+          "en": "tomorrow / yesterday",
+          "roman": "kal",
+          "urdu": "کل",
+          "kind": "word"
+        },
+        {
+          "id": "p-subah",
+          "en": "morning",
+          "roman": "subah",
+          "urdu": "صبح",
+          "accept": [
+            "subha",
+            "subeh"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-dopahar",
+          "en": "afternoon",
+          "roman": "dopahar",
+          "urdu": "دوپہر",
+          "accept": [
+            "dopehar",
+            "dupahar"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-shaam",
+          "en": "evening",
+          "roman": "shaam",
+          "urdu": "شام",
+          "accept": [
+            "sham"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-raat",
+          "en": "night",
+          "roman": "raat",
+          "urdu": "رات",
+          "accept": [
+            "rat"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-hafta",
+          "en": "week (also: Saturday)",
+          "roman": "hafta",
+          "urdu": "ہفتہ",
+          "accept": [
+            "hafte"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-abhi",
+          "en": "right now",
+          "roman": "abhi",
+          "urdu": "ابھی",
+          "kind": "word"
+        },
+        {
+          "id": "p-baad-mein",
+          "en": "later",
+          "roman": "baad mein",
+          "urdu": "بعد میں",
+          "accept": [
+            "bad mein",
+            "baad main",
+            "baad me"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-kab-milenge",
+          "en": "When shall we meet?",
+          "roman": "Hum kab milenge?",
+          "urdu": "ہم کب ملیں گے؟",
+          "accept": [
+            "hum kab milen ge",
+            "ham kab milenge"
+          ],
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-time-mcq-1",
+          "prompt": "\"Kal\" can mean…",
+          "options": [
+            "both yesterday and tomorrow",
+            "only tomorrow",
+            "today"
+          ],
+          "answer": 0,
+          "explain": "kal = yesterday or tomorrow; the verb tense makes it clear."
+        },
+        {
+          "type": "fill",
+          "id": "x-time-fill-1",
+          "roman": "Kitne ___ hain?",
+          "urdu": "کتنے ___ ہیں؟",
+          "en": "What time is it?",
+          "options": [
+            "baje",
+            "din",
+            "kal"
+          ],
+          "answer": 0,
+          "explain": "baje = o'clock."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-time-qa",
+          "questionId": "q-time"
+        }
+      ]
+    },
+    {
+      "id": "l4-routine",
+      "title": "Daily Routine & Likes",
+      "objective": "Describe what you do every day and what you like or don't like.",
+      "tips": [
+        "Habit verbs end in -ta (men) or -ti (women): \"Main kaam par jaata hoon\" / \"Main kaam par jaati hoon\". This is your first speaker-gender pattern — pick the form that matches you.",
+        "Likes use \"mujhe\": \"Mujhe cricket pasand hai\" (to me cricket is liked). This form doesn't change for gender."
+      ],
+      "phrases": [
+        {
+          "id": "p-jaldi-uthta",
+          "en": "I get up early in the morning.",
+          "roman": "Main subah jaldi uthta hoon.",
+          "urdu": "میں صبح جلدی اٹھتا ہوں۔",
+          "accept": [
+            "main subha jaldi uthta hoon",
+            "mein subah jaldi uthta hoon"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main subah jaldi uthta hoon.",
+              "urdu": "میں صبح جلدی اٹھتا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main subah jaldi uthti hoon.",
+              "urdu": "میں صبح جلدی اٹھتی ہوں۔"
+            },
+            "explain": "Men say \"uthta\", women say \"uthti\". The verb matches the speaker.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kaam-par",
+          "en": "I go to work.",
+          "roman": "Main kaam par jaata hoon.",
+          "urdu": "میں کام پر جاتا ہوں۔",
+          "accept": [
+            "main kaam pe jaata hoon",
+            "main kam par jata hoon",
+            "main kaam par jata hun"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main kaam par jaata hoon.",
+              "urdu": "میں کام پر جاتا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main kaam par jaati hoon.",
+              "urdu": "میں کام پر جاتی ہوں۔"
+            },
+            "explain": "\"Jaata\" for a male speaker, \"jaati\" for a female speaker.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-cricket",
+          "en": "I like cricket.",
+          "roman": "Mujhe cricket pasand hai.",
+          "urdu": "مجھے کرکٹ پسند ہے۔",
+          "accept": [
+            "mujhe cricket pasand he"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-pasand-nahi",
+          "en": "I don't like this.",
+          "roman": "Mujhe yeh pasand nahi.",
+          "urdu": "مجھے یہ پسند نہیں۔",
+          "accept": [
+            "mujhe ye pasand nahi",
+            "mujhe yeh pasand nahin",
+            "mujhe yeh pasand nahi hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kya-pasand",
+          "en": "What do you like?",
+          "roman": "Aap ko kya pasand hai?",
+          "urdu": "آپ کو کیا پسند ہے؟",
+          "accept": [
+            "aapko kya pasand hai",
+            "ap ko kya pasand hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-thak-gaya",
+          "en": "I'm tired.",
+          "roman": "Main thak gaya hoon.",
+          "urdu": "میں تھک گیا ہوں۔",
+          "accept": [
+            "main thak gaya hun",
+            "mein thak gaya hoon"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main thak gaya hoon.",
+              "urdu": "میں تھک گیا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main thak gayi hoon.",
+              "urdu": "میں تھک گئی ہوں۔"
+            },
+            "explain": "\"Gaya\" for men, \"gayi\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-neend",
+          "en": "I'm sleepy.",
+          "roman": "Mujhe neend aa rahi hai.",
+          "urdu": "مجھے نیند آ رہی ہے۔",
+          "accept": [
+            "mujhe neend aa rahi he",
+            "mujhe nind aa rahi hai"
+          ],
+          "literal": "to me sleep is coming",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-roz",
+          "en": "every day",
+          "roman": "roz",
+          "urdu": "روز",
+          "accept": [
+            "rozana"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-kabhi-kabhi",
+          "en": "sometimes",
+          "roman": "kabhi kabhi",
+          "urdu": "کبھی کبھی",
+          "accept": [
+            "kabhi kabhar"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-hamesha",
+          "en": "always",
+          "roman": "hamesha",
+          "urdu": "ہمیشہ",
+          "accept": [
+            "humesha"
+          ],
+          "kind": "word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-rout-mcq-1",
+          "prompt": "Sara (a woman) wants to say \"I go to work\". Which is right?",
+          "options": [
+            "Main kaam par jaati hoon.",
+            "Main kaam par jaata hoon.",
+            "Mujhe kaam par jaata hai."
+          ],
+          "answer": 0,
+          "explain": "Women use the -ti ending: jaati."
+        },
+        {
+          "type": "fill",
+          "id": "x-rout-fill-1",
+          "roman": "Mujhe cricket ___ hai.",
+          "urdu": "مجھے کرکٹ ___ ہے۔",
+          "en": "I like cricket.",
+          "options": [
+            "pasand",
+            "neend",
+            "roz"
+          ],
+          "answer": 0,
+          "explain": "pasand = liked."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-rout-qa",
+          "questionId": "q-pasand"
+        },
+        {
+          "type": "readAloud",
+          "id": "x-rout-read",
+          "passageId": "r-my-day"
+        }
+      ]
+    }
+  ]
+}

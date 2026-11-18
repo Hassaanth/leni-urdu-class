@@ -1,0 +1,13 @@
+{
+  "name": "bolo-urdu-tutor-proxy",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Optional server for the Leni Urdu Class AI tutor. Holds the API key; the web app never sees it.",
+  "scripts": {
+    "start": "node tutor-proxy.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest"
+  }
+}

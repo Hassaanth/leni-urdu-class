@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "levels": [
+    {
+      "id": 1,
+      "title": "Absolute Beginner",
+      "description": "Greetings, introductions, essential phrases, numbers and simple questions.",
+      "speakingGoal": "Say a greeting, introduce yourself, ask someone's name and answer a basic question."
+    },
+    {
+      "id": 2,
+      "title": "Everyday Conversations",
+      "description": "Family, food, shopping, prices, directions, time and daily routines.",
+      "speakingGoal": "Handle short, predictable daily interactions using simple sentences."
+    },
+    {
+      "id": 3,
+      "title": "Building Sentences",
+      "description": "Present, past and future patterns, negation, questions and polite requests.",
+      "speakingGoal": "Form your own sentences instead of relying only on memorised phrases."
+    },
+    {
+      "id": 4,
+      "title": "Natural Social Urdu",
+      "description": "Invitations, plans, feelings, opinions and casual expressions.",
+      "speakingGoal": "Hold several connected exchanges and respond more naturally."
+    },
+    {
+      "id": 5,
+      "title": "Real-World Communication",
+      "description": "Travel, phone calls, work, explaining problems and fixing misunderstandings.",
+      "speakingGoal": "Explain what you need, ask follow-up questions and recover when a conversation gets difficult."
+    },
+    {
+      "id": 6,
+      "title": "Advanced Conversational Practice",
+      "description": "Idioms, storytelling, connected speech and nuanced opinions.",
+      "speakingGoal": "Keep longer conversations going with fewer hints and less English."
+    }
+  ],
+  "units": [
+    { "id": "u1", "level": 1, "file": "units/u1-greetings.json" },
+    { "id": "u2", "level": 1, "file": "units/u2-basics.json" },
+    { "id": "u3", "level": 2, "file": "units/u3-everyday.json" },
+    { "id": "u4", "level": 2, "file": "units/u4-getting-around.json" },
+    { "id": "u5", "level": 3, "file": "units/u5-sentences.json" },
+    { "id": "u6", "level": 4, "file": "units/u6-social.json" },
+    { "id": "u7", "level": 5, "file": "units/u7-real-world.json" },
+    { "id": "u8", "level": 6, "file": "units/u8-advanced.json" }
+  ],
+  "extras": {
+    "conversations": "conversations.json",
+    "pronunciation": "pronunciation.json",
+    "speaking": "speaking.json"
+  }
+}

@@ -1,0 +1,736 @@
+{
+  "id": "u1",
+  "level": 1,
+  "title": "Greetings & Introductions",
+  "description": "Say hello, introduce yourself, and get through your first conversation.",
+  "lessons": [
+    {
+      "id": "l1-intro",
+      "title": "Introducing Yourself",
+      "objective": "Greet someone, ask their name, introduce yourself, and respond to a basic question.",
+      "tips": [
+        "Aap is the respectful word for \"you\". Use it with strangers, elders, and anyone you are not close to. It is never rude.",
+        "Urdu usually puts the verb at the end: \"Mera naam Ali hai\" is literally \"My name Ali is\".",
+        "Some words change with gender. \"Mera naam\" stays the same for everyone because it matches naam (name), not the speaker. \"Kaise\" becomes \"kaisi\" when you ask a woman."
+      ],
+      "phrases": [
+        {
+          "id": "p-salaam",
+          "en": "Peace be upon you (hello)",
+          "roman": "Assalamu alaikum",
+          "urdu": "السلام علیکم",
+          "accept": [
+            "assalam o alaikum",
+            "assalamualaikum",
+            "asalam alaikum",
+            "assalam alaikum",
+            "salam alaikum",
+            "asalamualaikum",
+            "assalamu alaykum",
+            "assalam-o-alaikum"
+          ],
+          "note": "The most common greeting in Pakistan, used at any time of day, with anyone. It is a religious greeting in origin, and it is used everywhere in daily life.",
+          "kind": "phrase"
+        },
+        {
+          "id": "p-walaikum",
+          "en": "And peace be upon you too (reply to a greeting)",
+          "roman": "Wa alaikum assalam",
+          "urdu": "وعلیکم السلام",
+          "accept": [
+            "walaikum assalam",
+            "wa alaikum salam",
+            "walaikum salam",
+            "waalaikum assalam",
+            "wa alaykum assalam",
+            "walaikumassalam",
+            "wa alaikum as salam"
+          ],
+          "note": "The standard reply to \"Assalamu alaikum\". When someone greets you, reply with this rather than repeating their greeting.",
+          "kind": "phrase"
+        },
+        {
+          "id": "p-naam-kya",
+          "en": "What is your name?",
+          "roman": "Aap ka naam kya hai?",
+          "urdu": "آپ کا نام کیا ہے؟",
+          "accept": [
+            "aapka naam kya hai",
+            "aap ka naam kia hai",
+            "aap ka nam kya hai"
+          ],
+          "literal": "your name what is",
+          "note": "\"Aap ka\" means \"your\" (respectful). \"Kya\" means \"what\". With a close friend you might hear \"Tumhara naam kya hai?\", but \"aap ka\" is the safe choice.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-mera-naam",
+          "en": "My name is {name}.",
+          "roman": "Mera naam {name} hai.",
+          "urdu": "میرا نام {name} ہے۔",
+          "slot": "name",
+          "literal": "my name [name] is",
+          "note": "Everyone says \"mera naam\", whether the speaker is a man or a woman, because \"mera\" agrees with \"naam\" (a masculine word), not with you.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kaise-hain",
+          "en": "How are you?",
+          "roman": "Aap kaise hain?",
+          "urdu": "آپ کیسے ہیں؟",
+          "accept": [
+            "aap kese hain",
+            "aap kaisay hain",
+            "ap kaise hain"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Aap kaise hain?",
+              "urdu": "آپ کیسے ہیں؟"
+            },
+            "feminine": {
+              "roman": "Aap kaisi hain?",
+              "urdu": "آپ کیسی ہیں؟"
+            },
+            "explain": "This depends on who you are asking: \"kaise\" when asking a man (or a group), \"kaisi\" when asking a woman.",
+            "by": "listener"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-theek-hoon",
+          "en": "I am fine.",
+          "roman": "Main theek hoon.",
+          "urdu": "میں ٹھیک ہوں۔",
+          "accept": [
+            "mein theek hoon",
+            "main thik hoon",
+            "main theek hun",
+            "mai theek hoon",
+            "main theek hu"
+          ],
+          "note": "\"Theek\" (fine, okay) does not change for gender, so men and women both say \"Main theek hoon\". The \"th\" here is a retroflex t with a puff of air, not the English \"th\" in \"think\".",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-aap-sunayein",
+          "en": "And how about you? (lit. you tell me?)",
+          "roman": "Aap sunayein?",
+          "urdu": "آپ سنائیں؟",
+          "accept": [
+            "aap sunaen",
+            "aap sunaiye",
+            "aap sunain",
+            "aap sunayen",
+            "aap sunaein",
+            "ap sunayein"
+          ],
+          "note": "A very common, friendly way to bounce the question back. Literally \"you tell (me)\". With close friends people say the informal \"Tum sunao?\".",
+          "kind": "phrase"
+        },
+        {
+          "id": "p-mil-kar-khushi",
+          "en": "Nice to meet you.",
+          "roman": "Aapse mil kar khushi hui.",
+          "urdu": "آپ سے مل کر خوشی ہوئی۔",
+          "accept": [
+            "aap se mil kar khushi hui",
+            "aapse milkar khushi hui",
+            "aap se mil ke khushi hui",
+            "aapse mil ke khushi hui"
+          ],
+          "literal": "having met you, happiness happened",
+          "note": "\"Hui\" agrees with \"khushi\" (happiness, a feminine word), so this phrase is the same for every speaker.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-main-bhi-theek",
+          "en": "I'm fine too.",
+          "roman": "Main bhi theek hoon.",
+          "urdu": "میں بھی ٹھیک ہوں۔",
+          "accept": [
+            "mein bhi theek hoon",
+            "main bhi thik hoon",
+            "main bhi theek hun"
+          ],
+          "note": "\"Bhi\" means \"also, too\". It comes right after the word it refers to.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-ji-haan",
+          "en": "Yes (polite)",
+          "roman": "Ji haan",
+          "urdu": "جی ہاں",
+          "accept": [
+            "jee haan",
+            "ji han",
+            "ji ha"
+          ],
+          "note": "\"Ji\" makes things polite. \"Ji\" alone is also a polite \"yes\" or \"I'm listening\".",
+          "kind": "phrase"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-intro-complete-1",
+          "context": [
+            {
+              "speaker": "Bilal",
+              "roman": "Assalamu alaikum!",
+              "urdu": "السلام علیکم!",
+              "en": "Peace be upon you!"
+            }
+          ],
+          "prompt": "Bilal greets you. What do you reply?",
+          "options": [
+            {
+              "roman": "Wa alaikum assalam!",
+              "urdu": "وعلیکم السلام!",
+              "en": "And peace be upon you too!"
+            },
+            {
+              "roman": "Main theek hoon.",
+              "urdu": "میں ٹھیک ہوں۔",
+              "en": "I am fine."
+            },
+            {
+              "roman": "Aap ka naam kya hai?",
+              "urdu": "آپ کا نام کیا ہے؟",
+              "en": "What is your name?"
+            }
+          ],
+          "answer": 0,
+          "explain": "\"Wa alaikum assalam\" is the standard reply to \"Assalamu alaikum\"."
+        },
+        {
+          "type": "complete",
+          "id": "x-intro-complete-2",
+          "context": [
+            {
+              "speaker": "Bilal",
+              "roman": "Aap kaise hain?",
+              "urdu": "آپ کیسے ہیں؟",
+              "en": "How are you?"
+            },
+            {
+              "speaker": "You",
+              "roman": "Main theek hoon. ___",
+              "urdu": "میں ٹھیک ہوں۔ ___",
+              "en": "I'm fine. ___"
+            }
+          ],
+          "prompt": "Answer, then ask Bilal how he is.",
+          "options": [
+            {
+              "roman": "Aap sunayein?",
+              "urdu": "آپ سنائیں؟",
+              "en": "And how about you?"
+            },
+            {
+              "roman": "Ji haan.",
+              "urdu": "جی ہاں۔",
+              "en": "Yes."
+            },
+            {
+              "roman": "Wa alaikum assalam.",
+              "urdu": "وعلیکم السلام۔",
+              "en": "And peace be upon you too."
+            }
+          ],
+          "answer": 0,
+          "explain": "\"Aap sunayein?\" politely turns the question back to the other person."
+        },
+        {
+          "type": "fill",
+          "id": "x-intro-fill-1",
+          "roman": "Mera ___ Ali hai.",
+          "urdu": "میرا ___ علی ہے۔",
+          "en": "My name is Ali.",
+          "options": [
+            "naam",
+            "kya",
+            "theek"
+          ],
+          "answer": 0,
+          "explain": "\"Naam\" means name: Mera naam Ali hai."
+        },
+        {
+          "type": "order",
+          "id": "x-intro-order-1",
+          "en": "What is your name?",
+          "roman": "Aap ka naam kya hai",
+          "urdu": "آپ کا نام کیا ہے؟",
+          "distractors": [
+            "mera"
+          ],
+          "explain": "Question words like \"kya\" usually sit just before the verb \"hai\"."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-intro-qa",
+          "questionId": "q-naam"
+        },
+        {
+          "type": "readAloud",
+          "id": "x-intro-read",
+          "passageId": "r-first-meeting"
+        }
+      ],
+      "roleplayId": "c-first-meeting"
+    },
+    {
+      "id": "l1-greetings",
+      "title": "Hellos, Thanks & Goodbyes",
+      "objective": "Greet people, thank them, apologise politely and say goodbye.",
+      "tips": [
+        "\"Shukriya\" is the everyday \"thank you\". Many Pakistanis also simply say \"thank you\" in English.",
+        "For goodbye you will hear both \"Khuda hafiz\" and \"Allah hafiz\". Both are normal; follow what the people around you use."
+      ],
+      "phrases": [
+        {
+          "id": "p-khuda-hafiz",
+          "en": "Goodbye (lit. may God protect you)",
+          "roman": "Khuda hafiz",
+          "urdu": "خدا حافظ",
+          "accept": [
+            "khudahafiz",
+            "khuda hafis"
+          ],
+          "note": "The \"kh\" is a throaty sound (خ), like the end of Scottish \"loch\", not an English k.",
+          "kind": "phrase"
+        },
+        {
+          "id": "p-allah-hafiz",
+          "en": "Goodbye (also very common)",
+          "roman": "Allah hafiz",
+          "urdu": "اللہ حافظ",
+          "accept": [
+            "allahafiz",
+            "allah hafis"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-phir-milenge",
+          "en": "See you again",
+          "roman": "Phir milenge",
+          "urdu": "پھر ملیں گے",
+          "accept": [
+            "phir milen ge",
+            "phir milain ge",
+            "fir milenge",
+            "phir milein ge"
+          ],
+          "note": "\"Ph\" is a p with a strong puff of air, not an \"f\" (though many people do say \"fir\").",
+          "kind": "phrase"
+        },
+        {
+          "id": "p-shukriya",
+          "en": "Thank you",
+          "roman": "Shukriya",
+          "urdu": "شکریہ",
+          "accept": [
+            "shukria",
+            "shukriyah",
+            "shukreya"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-bohat-shukriya",
+          "en": "Thank you very much",
+          "roman": "Bohat shukriya",
+          "urdu": "بہت شکریہ",
+          "accept": [
+            "bahut shukriya",
+            "bohot shukriya",
+            "bohat shukria",
+            "bht shukriya"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-koi-baat-nahi",
+          "en": "No problem / You're welcome / It's okay",
+          "roman": "Koi baat nahi",
+          "urdu": "کوئی بات نہیں",
+          "accept": [
+            "koi baat nahin",
+            "koi bat nahi",
+            "koi baat nai"
+          ],
+          "literal": "any matter not",
+          "note": "Used to reply to thanks, to an apology, or to reassure someone.",
+          "kind": "phrase"
+        },
+        {
+          "id": "p-maaf-kijiye",
+          "en": "Excuse me / Sorry (polite)",
+          "roman": "Maaf kijiye",
+          "urdu": "معاف کیجیے",
+          "accept": [
+            "maaf kijie",
+            "maaf kijiyega",
+            "maf kijiye",
+            "maaf keejiye"
+          ],
+          "note": "Use it to get someone's attention or to apologise. \"Maaf kijiyega\" is even more polite.",
+          "kind": "phrase"
+        },
+        {
+          "id": "p-theek-hai",
+          "en": "Okay / Alright",
+          "roman": "Theek hai",
+          "urdu": "ٹھیک ہے",
+          "accept": [
+            "thik hai",
+            "theek he",
+            "theek hay",
+            "theek ha"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-sab-khairiyat",
+          "en": "Is everything well?",
+          "roman": "Sab khairiyat hai?",
+          "urdu": "سب خیریت ہے؟",
+          "accept": [
+            "sab khairiat hai",
+            "sab khairiyat",
+            "sab khairiyat he"
+          ],
+          "note": "A warm way to ask how someone and their family are doing.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-alhamdulillah",
+          "en": "Praise be to God (often: all good, thank God)",
+          "roman": "Alhamdulillah",
+          "urdu": "الحمدللہ",
+          "accept": [
+            "alhamdolillah",
+            "alhamdu lillah",
+            "alhumdulillah"
+          ],
+          "note": "A very common reply to \"How are you?\" meaning things are good. People of all backgrounds in Pakistan hear and understand it.",
+          "kind": "word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-greet-complete-1",
+          "context": [
+            {
+              "speaker": "Shopkeeper",
+              "roman": "Yeh lijiye.",
+              "urdu": "یہ لیجیے۔",
+              "en": "Here you go."
+            }
+          ],
+          "prompt": "The shopkeeper hands you your change. What do you say?",
+          "options": [
+            {
+              "roman": "Bohat shukriya!",
+              "urdu": "بہت شکریہ!",
+              "en": "Thank you very much!"
+            },
+            {
+              "roman": "Maaf kijiye.",
+              "urdu": "معاف کیجیے۔",
+              "en": "Sorry."
+            },
+            {
+              "roman": "Sab khairiyat hai?",
+              "urdu": "سب خیریت ہے؟",
+              "en": "Is everything well?"
+            }
+          ],
+          "answer": 0,
+          "explain": "When someone gives you something, \"shukriya\" or \"bohat shukriya\" fits."
+        },
+        {
+          "type": "complete",
+          "id": "x-greet-complete-2",
+          "context": [
+            {
+              "speaker": "Friend",
+              "roman": "Bohat shukriya!",
+              "urdu": "بہت شکریہ!",
+              "en": "Thanks a lot!"
+            }
+          ],
+          "prompt": "Your friend thanks you. Reply naturally.",
+          "options": [
+            {
+              "roman": "Koi baat nahi.",
+              "urdu": "کوئی بات نہیں۔",
+              "en": "No problem."
+            },
+            {
+              "roman": "Khuda hafiz.",
+              "urdu": "خدا حافظ۔",
+              "en": "Goodbye."
+            },
+            {
+              "roman": "Shukriya.",
+              "urdu": "شکریہ۔",
+              "en": "Thank you."
+            }
+          ],
+          "answer": 0,
+          "explain": "\"Koi baat nahi\" works like \"no problem\" or \"you're welcome\"."
+        },
+        {
+          "type": "fill",
+          "id": "x-greet-fill-1",
+          "roman": "Koi baat ___.",
+          "urdu": "کوئی بات ___۔",
+          "en": "No problem.",
+          "options": [
+            "nahi",
+            "hai",
+            "kya"
+          ],
+          "answer": 0,
+          "explain": "\"Nahi\" means not/no: koi baat nahi."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-greet-qa",
+          "questionId": "q-khairiyat"
+        },
+        {
+          "type": "readAloud",
+          "id": "x-greet-read",
+          "passageId": "r-goodbye"
+        }
+      ],
+      "roleplayId": "c-relatives"
+    },
+    {
+      "id": "l1-survival",
+      "title": "Survival Phrases",
+      "objective": "Say when you don't understand, ask people to slow down, and ask for what you need.",
+      "tips": [
+        "\"Mujhe\" means \"to me\". Many Urdu feelings and needs are said this way: \"Mujhe paani chahiye\" is literally \"to me, water is needed\".",
+        "These phrases are your safety net. If you remember only a few, remember \"Aahista boliye\" and \"Mujhe samajh nahi aaya\"."
+      ],
+      "phrases": [
+        {
+          "id": "p-samajh-nahi",
+          "en": "I didn't understand.",
+          "roman": "Mujhe samajh nahi aaya.",
+          "urdu": "مجھے سمجھ نہیں آیا۔",
+          "accept": [
+            "mujhe samajh nahin aaya",
+            "mujhe samajh nahi aya",
+            "mujhe samajh nahi aai",
+            "mujhe samajh nahi ayi",
+            "mjhe samajh nahi aaya"
+          ],
+          "literal": "to me understanding didn't come",
+          "note": "Used the moment you don't follow what someone said. You will also hear \"samajh nahi aayi\"; both are common.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-aahista",
+          "en": "Please speak slowly.",
+          "roman": "Aahista boliye.",
+          "urdu": "آہستہ بولیے۔",
+          "accept": [
+            "ahista boliye",
+            "aahista bolen",
+            "aahista bolein",
+            "aahista boliyega",
+            "ahista bolain"
+          ],
+          "note": "\"Boliye\" is the polite \"please speak\". \"Aahista\" means slowly or softly.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-dobara",
+          "en": "Please say that again.",
+          "roman": "Dobara boliye.",
+          "urdu": "دوبارہ بولیے۔",
+          "accept": [
+            "dobaara boliye",
+            "dubara boliye",
+            "dobara bolen",
+            "dobara bolein"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-thori-urdu",
+          "en": "I know a little Urdu.",
+          "roman": "Mujhe thori Urdu aati hai.",
+          "urdu": "مجھے تھوڑی اردو آتی ہے۔",
+          "accept": [
+            "mujhe thodi urdu aati hai",
+            "mujhe thori si urdu aati hai",
+            "mujhe thori urdu ati hai"
+          ],
+          "literal": "to me a little Urdu comes",
+          "note": "\"Thori\" and \"aati\" are feminine because Urdu (the language) is feminine. It is the same for every speaker.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-english-bolte",
+          "en": "Do you speak English?",
+          "roman": "Kya aap English bolte hain?",
+          "urdu": "کیا آپ انگلش بولتے ہیں؟",
+          "accept": [
+            "kya aap angrezi bolte hain",
+            "kia aap english bolte hain",
+            "kya ap english bolte hain"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Kya aap English bolte hain?",
+              "urdu": "کیا آپ انگلش بولتے ہیں؟"
+            },
+            "feminine": {
+              "roman": "Kya aap English bolti hain?",
+              "urdu": "کیا آپ انگلش بولتی ہیں؟"
+            },
+            "explain": "\"Bolte\" when asking a man, \"bolti\" when asking a woman. \"Kya\" at the start turns a sentence into a yes/no question.",
+            "by": "listener"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-matlab",
+          "en": "What does this mean?",
+          "roman": "Iska matlab kya hai?",
+          "urdu": "اس کا مطلب کیا ہے؟",
+          "accept": [
+            "is ka matlab kya hai",
+            "iska matlab kia hai",
+            "iska matlb kya hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-urdu-mein",
+          "en": "What do you call this in Urdu?",
+          "roman": "Isay Urdu mein kya kehte hain?",
+          "urdu": "اسے اردو میں کیا کہتے ہیں؟",
+          "accept": [
+            "ise urdu mein kya kehte hain",
+            "isko urdu mein kya kehte hain",
+            "isay urdu main kya kehte hain",
+            "ise urdu me kya kehte hain"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-paani-chahiye",
+          "en": "I need water.",
+          "roman": "Mujhe paani chahiye.",
+          "urdu": "مجھے پانی چاہیے۔",
+          "accept": [
+            "mujhe pani chahiye",
+            "mujhe paani chaahiye",
+            "mujhe pani chahie"
+          ],
+          "literal": "to me water is needed",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kitne-ka",
+          "en": "How much is this?",
+          "roman": "Yeh kitne ka hai?",
+          "urdu": "یہ کتنے کا ہے؟",
+          "accept": [
+            "ye kitne ka hai",
+            "yeh kitnay ka hai",
+            "ye kitne ka he"
+          ],
+          "note": "Used for prices. For a feminine item you may hear \"Yeh kitne ki hai?\".",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-haan",
+          "en": "Yes",
+          "roman": "Haan",
+          "urdu": "ہاں",
+          "accept": [
+            "han",
+            "haa"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-nahi",
+          "en": "No / not",
+          "roman": "Nahi",
+          "urdu": "نہیں",
+          "accept": [
+            "nahin",
+            "nai",
+            "nahi"
+          ],
+          "note": "The final \"n\" is nasal: the air goes through your nose, and the n is not fully pronounced.",
+          "kind": "word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-surv-complete-1",
+          "context": [
+            {
+              "speaker": "Uncle",
+              "roman": "Aap kab se yahan reh rahe hain aur aap ko yeh shehar kaisa laga?",
+              "urdu": "آپ کب سے یہاں رہ رہے ہیں اور آپ کو یہ شہر کیسا لگا؟",
+              "en": "How long have you been living here and how do you like this city?"
+            }
+          ],
+          "prompt": "That was too fast for you. What do you say?",
+          "options": [
+            {
+              "roman": "Maaf kijiye, aahista boliye.",
+              "urdu": "معاف کیجیے، آہستہ بولیے۔",
+              "en": "Excuse me, please speak slowly."
+            },
+            {
+              "roman": "Mujhe paani chahiye.",
+              "urdu": "مجھے پانی چاہیے۔",
+              "en": "I need water."
+            },
+            {
+              "roman": "Khuda hafiz.",
+              "urdu": "خدا حافظ۔",
+              "en": "Goodbye."
+            }
+          ],
+          "answer": 0,
+          "explain": "Asking someone to slow down is normal and polite. People are usually happy to help a learner."
+        },
+        {
+          "type": "fill",
+          "id": "x-surv-fill-1",
+          "roman": "Mujhe paani ___.",
+          "urdu": "مجھے پانی ___۔",
+          "en": "I need water.",
+          "options": [
+            "chahiye",
+            "hai",
+            "boliye"
+          ],
+          "answer": 0,
+          "explain": "\"Chahiye\" means \"is needed / want\": Mujhe paani chahiye."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-surv-qa",
+          "questionId": "q-english"
+        }
+      ],
+      "roleplayId": "c-speak-slowly"
+    }
+  ]
+}

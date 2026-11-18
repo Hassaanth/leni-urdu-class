@@ -1,0 +1,572 @@
+{
+  "id": "u7",
+  "level": 5,
+  "title": "Real-World Communication",
+  "description": "Travel, make phone calls, handle work situations and sort out problems.",
+  "lessons": [
+    {
+      "id": "l7-travel",
+      "title": "Travel & Transport",
+      "objective": "Get a ride, agree a fare, ask about tickets, and report lost luggage.",
+      "tips": [
+        "\"Mujhe ... jaana hai\" (I need to go to ...) is the most useful travel sentence. It's the same for men and women.",
+        "Agree the fare (\"kiraya\") before a rickshaw or taxi ride if there is no meter or app."
+      ],
+      "phrases": [
+        {
+          "id": "p-airport-jaana",
+          "en": "I need to go to the airport.",
+          "roman": "Mujhe airport jaana hai.",
+          "urdu": "مجھے ایئرپورٹ جانا ہے۔",
+          "accept": [
+            "mujhe airport jana hai",
+            "mujhe airport jaana he"
+          ],
+          "literal": "to me airport going is",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kiraya",
+          "en": "How much will the fare be?",
+          "roman": "Kiraya kitna hoga?",
+          "urdu": "کرایہ کتنا ہوگا؟",
+          "accept": [
+            "kiraaya kitna hoga",
+            "kiraya kitna ho ga",
+            "kirayah kitna hoga"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-rok-dein",
+          "en": "Please stop here.",
+          "roman": "Yahan rok dein.",
+          "urdu": "یہاں روک دیں۔",
+          "accept": [
+            "yahan rok den",
+            "yahaan rok dein",
+            "yahan rok dijiye"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-ticket-kahan",
+          "en": "Where can I get a ticket?",
+          "roman": "Ticket kahan milega?",
+          "urdu": "ٹکٹ کہاں ملے گا؟",
+          "accept": [
+            "ticket kahan mile ga",
+            "ticket kahan milegi"
+          ],
+          "note": "You'll hear both \"milega\" and \"milegi\" — speakers differ on ticket's gender.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-train-kab",
+          "en": "When will the train leave?",
+          "roman": "Train kab chalegi?",
+          "urdu": "ٹرین کب چلے گی؟",
+          "accept": [
+            "train kab chale gi",
+            "gaari kab chalegi"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-samaan-kho",
+          "en": "My luggage is lost.",
+          "roman": "Mera samaan kho gaya hai.",
+          "urdu": "میرا سامان کھو گیا ہے۔",
+          "accept": [
+            "mera saman kho gaya hai",
+            "mera samaan gum ho gaya hai"
+          ],
+          "note": "\"Gaya\" agrees with \"samaan\", so it's the same for every speaker.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-hotel-door",
+          "en": "How far is the hotel from here?",
+          "roman": "Hotel yahan se kitna door hai?",
+          "urdu": "ہوٹل یہاں سے کتنا دور ہے؟",
+          "accept": [
+            "hotel yahan se kitna dur hai",
+            "hotel yahaan se kitna door hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-raasta-bata",
+          "en": "Please tell me the way.",
+          "roman": "Raasta bata dein.",
+          "urdu": "راستہ بتا دیں۔",
+          "accept": [
+            "rasta bata dein",
+            "raasta bata den",
+            "rasta bata dijiye"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-raasta-nahi-pata",
+          "en": "I don't know the way.",
+          "roman": "Mujhe raasta nahi pata.",
+          "urdu": "مجھے راستہ نہیں پتا۔",
+          "accept": [
+            "mujhe rasta nahi pata",
+            "mujhe raasta nahin pata"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-jaldi",
+          "en": "Please hurry.",
+          "roman": "Jaldi karein, please.",
+          "urdu": "جلدی کریں، پلیز۔",
+          "accept": [
+            "jaldi karen please",
+            "jaldi karein",
+            "please jaldi karein"
+          ],
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-trav-complete-1",
+          "context": [
+            {
+              "speaker": "Driver",
+              "roman": "Ji, kahan jaana hai?",
+              "urdu": "جی، کہاں جانا ہے؟",
+              "en": "Yes, where do you need to go?"
+            }
+          ],
+          "prompt": "Tell the driver your destination.",
+          "options": [
+            {
+              "roman": "Mujhe airport jaana hai. Kiraya kitna hoga?",
+              "urdu": "مجھے ایئرپورٹ جانا ہے۔ کرایہ کتنا ہوگا؟",
+              "en": "I need to go to the airport. How much will the fare be?"
+            },
+            {
+              "roman": "Mera samaan kho gaya hai.",
+              "urdu": "میرا سامان کھو گیا ہے۔",
+              "en": "My luggage is lost."
+            },
+            {
+              "roman": "Yahan rok dein.",
+              "urdu": "یہاں روک دیں۔",
+              "en": "Stop here."
+            }
+          ],
+          "answer": 0,
+          "explain": "Give the destination, then agree the fare before setting off."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-trav-qa",
+          "questionId": "q-kahan-jaana"
+        }
+      ],
+      "roleplayId": "c-misunderstanding"
+    },
+    {
+      "id": "l7-phone-work",
+      "title": "Phone Calls & Work",
+      "objective": "Start and end a phone call, ask for someone, and talk about meetings.",
+      "tips": [
+        "On the phone people often start with \"Hello\" and then \"Assalamu alaikum\".",
+        "\"Sahab\" (Mr / sir) after a name shows respect: \"Ahmed sahab\". For women: \"sahiba\" (formal) or \"ji\": \"Ayesha ji\"."
+      ],
+      "phrases": [
+        {
+          "id": "p-kaun-bol",
+          "en": "Who's speaking?",
+          "roman": "Kaun bol raha hai?",
+          "urdu": "کون بول رہا ہے؟",
+          "accept": [
+            "kon bol raha hai",
+            "kaun bol rha hai",
+            "aap kaun bol rahe hain"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-main-bol-raha",
+          "en": "This is {name} speaking.",
+          "roman": "Main {name} bol raha hoon.",
+          "urdu": "میں {name} بول رہا ہوں۔",
+          "slot": "name",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main {name} bol raha hoon.",
+              "urdu": "میں {name} بول رہا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main {name} bol rahi hoon.",
+              "urdu": "میں {name} بول رہی ہوں۔"
+            },
+            "explain": "\"Raha\" for men, \"rahi\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-awaaz-nahi",
+          "en": "I can't hear you.",
+          "roman": "Awaaz nahi aa rahi.",
+          "urdu": "آواز نہیں آ رہی۔",
+          "accept": [
+            "awaz nahi aa rahi",
+            "aawaz nahi aa rahi",
+            "awaaz nahin aa rahi"
+          ],
+          "literal": "the voice isn't coming",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-baad-call",
+          "en": "I'll call you later.",
+          "roman": "Main baad mein call karta hoon.",
+          "urdu": "میں بعد میں کال کرتا ہوں۔",
+          "accept": [
+            "main baad main call karta hoon",
+            "main bad mein call karta hoon"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main baad mein call karta hoon.",
+              "urdu": "میں بعد میں کال کرتا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main baad mein call karti hoon.",
+              "urdu": "میں بعد میں کال کرتی ہوں۔"
+            },
+            "explain": "\"Karta\" for men, \"karti\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-ahmed-se-baat",
+          "en": "May I speak to Mr Ahmed?",
+          "roman": "Kya main Ahmed sahab se baat kar sakta hoon?",
+          "urdu": "کیا میں احمد صاحب سے بات کر سکتا ہوں؟",
+          "accept": [
+            "kya main ahmed sahib se baat kar sakta hoon",
+            "kya main ahmed sahab se baat kar sakti hoon"
+          ],
+          "note": "Women say \"kar sakti hoon\".",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-meeting-mein",
+          "en": "He's in a meeting right now.",
+          "roman": "Woh abhi meeting mein hain.",
+          "urdu": "وہ ابھی میٹنگ میں ہیں۔",
+          "accept": [
+            "wo abhi meeting mein hain",
+            "woh abhi meeting main hain"
+          ],
+          "note": "\"Hain\" (plural) is used for one person to show respect.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kaam-khatam",
+          "en": "My work is finished.",
+          "roman": "Mera kaam khatam ho gaya.",
+          "urdu": "میرا کام ختم ہو گیا۔",
+          "accept": [
+            "mera kaam khatm ho gaya",
+            "mera kam khatam ho gaya"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-chutti",
+          "en": "Today is a day off.",
+          "roman": "Aaj chutti hai.",
+          "urdu": "آج چھٹی ہے۔",
+          "accept": [
+            "aaj chhutti hai",
+            "aj chutti hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-meeting-kab",
+          "en": "What time is the meeting?",
+          "roman": "Meeting kitne baje hai?",
+          "urdu": "میٹنگ کتنے بجے ہے؟",
+          "accept": [
+            "meeting kitne bajay hai",
+            "meeting kab hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-pohanch-jaunga",
+          "en": "I'll get there shortly.",
+          "roman": "Main thori der mein pohanch jaunga.",
+          "urdu": "میں تھوڑی دیر میں پہنچ جاؤں گا۔",
+          "accept": [
+            "main thodi der mein pahunch jaunga",
+            "main thori der mein pohnch jaunga"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main thori der mein pohanch jaunga.",
+              "urdu": "میں تھوڑی دیر میں پہنچ جاؤں گا۔"
+            },
+            "feminine": {
+              "roman": "Main thori der mein pohanch jaungi.",
+              "urdu": "میں تھوڑی دیر میں پہنچ جاؤں گی۔"
+            },
+            "explain": "\"Jaunga\" for men, \"jaungi\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-phone-complete-1",
+          "context": [
+            {
+              "speaker": "Caller",
+              "roman": "Hello? Hello? Aap sun rahe hain?",
+              "urdu": "ہیلو؟ ہیلو؟ آپ سن رہے ہیں؟",
+              "en": "Hello? Hello? Can you hear me?"
+            }
+          ],
+          "prompt": "The line is bad. Tell them you can't hear and you'll call later.",
+          "options": [
+            {
+              "roman": "Awaaz nahi aa rahi. Main baad mein call karta hoon.",
+              "urdu": "آواز نہیں آ رہی۔ میں بعد میں کال کرتا ہوں۔",
+              "en": "I can't hear you. I'll call later."
+            },
+            {
+              "roman": "Aaj chutti hai.",
+              "urdu": "آج چھٹی ہے۔",
+              "en": "Today is a day off."
+            },
+            {
+              "roman": "Kaun bol raha hai?",
+              "urdu": "کون بول رہا ہے؟",
+              "en": "Who's speaking?"
+            }
+          ],
+          "answer": 0,
+          "explain": "\"Awaaz nahi aa rahi\" is exactly what people say on a bad line."
+        },
+        {
+          "type": "readAloud",
+          "id": "x-phone-read",
+          "passageId": "r-phone"
+        }
+      ],
+      "roleplayId": "c-phone"
+    },
+    {
+      "id": "l7-problems",
+      "title": "Problems & Misunderstandings",
+      "objective": "Explain a problem, clarify what you meant and ask for help in an emergency.",
+      "tips": [
+        "To check meaning, repeat back with \"Aap ka matlab hai...?\" (You mean...?).",
+        "\"Maazrat\" is a formal apology; \"Sorry\" and \"Maaf kijiye\" are everyday ones."
+      ],
+      "phrases": [
+        {
+          "id": "p-masla-hai",
+          "en": "There's a problem.",
+          "roman": "Ek masla hai.",
+          "urdu": "ایک مسئلہ ہے۔",
+          "accept": [
+            "aik masla hai",
+            "ek masla he",
+            "koi masla hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-kaam-nahi-kar-raha",
+          "en": "This isn't working.",
+          "roman": "Yeh kaam nahi kar raha.",
+          "urdu": "یہ کام نہیں کر رہا۔",
+          "accept": [
+            "ye kaam nahi kar raha",
+            "yeh kaam nahin kar raha",
+            "yeh kam nahi kar raha"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-matlab-nahi-tha",
+          "en": "That's not what I meant.",
+          "roman": "Mera matlab yeh nahi tha.",
+          "urdu": "میرا مطلب یہ نہیں تھا۔",
+          "accept": [
+            "mera matlab ye nahi tha",
+            "mera matlab yeh nahin tha"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-aap-ka-matlab",
+          "en": "You mean...?",
+          "roman": "Aap ka matlab hai...?",
+          "urdu": "آپ کا مطلب ہے...؟",
+          "accept": [
+            "aapka matlab hai",
+            "aap ka matlab he"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-samjha-nahi",
+          "en": "I didn't get it — please explain again.",
+          "roman": "Main samjha nahi, phir se batayein.",
+          "urdu": "میں سمجھا نہیں، پھر سے بتائیں۔",
+          "accept": [
+            "main samjha nahin phir se batayein",
+            "main samjha nahi phir se bataen"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main samjha nahi, phir se batayein.",
+              "urdu": "میں سمجھا نہیں، پھر سے بتائیں۔"
+            },
+            "feminine": {
+              "roman": "Main samjhi nahi, phir se batayein.",
+              "urdu": "میں سمجھی نہیں، پھر سے بتائیں۔"
+            },
+            "explain": "\"Samjha\" for men, \"samjhi\" for women. \"Mujhe samajh nahi aaya\" avoids gender entirely.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-galti",
+          "en": "My mistake. / A mistake was made.",
+          "roman": "Galti ho gayi.",
+          "urdu": "غلطی ہو گئی۔",
+          "accept": [
+            "ghalti ho gayi",
+            "galti ho gai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-maazrat",
+          "en": "I apologise. (formal)",
+          "roman": "Maazrat chahta hoon.",
+          "urdu": "معذرت چاہتا ہوں۔",
+          "accept": [
+            "mazrat chahta hoon",
+            "maazrat chahta hun"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Maazrat chahta hoon.",
+              "urdu": "معذرت چاہتا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Maazrat chahti hoon.",
+              "urdu": "معذرت چاہتی ہوں۔"
+            },
+            "explain": "\"Chahta\" for men, \"chahti\" for women.",
+            "by": "speaker"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-doctor",
+          "en": "I need a doctor.",
+          "roman": "Mujhe doctor ki zaroorat hai.",
+          "urdu": "مجھے ڈاکٹر کی ضرورت ہے۔",
+          "accept": [
+            "mujhe doctor ki zarurat hai",
+            "mujhe daktar ki zaroorat hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-tabiyat",
+          "en": "I'm not feeling well.",
+          "roman": "Meri tabiyat theek nahi.",
+          "urdu": "میری طبیعت ٹھیک نہیں۔",
+          "accept": [
+            "meri tabiat theek nahi",
+            "meri tabiyat thik nahi",
+            "meri tabiyat theek nahi hai"
+          ],
+          "note": "\"Tabiyat\" (health, state) is feminine, so it's \"meri\" for everyone.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-madad-help",
+          "en": "Help!",
+          "roman": "Madad!",
+          "urdu": "مدد!",
+          "kind": "word"
+        },
+        {
+          "id": "p-likh-sakte",
+          "en": "Could you write it down?",
+          "roman": "Kya aap likh sakte hain?",
+          "urdu": "کیا آپ لکھ سکتے ہیں؟",
+          "accept": [
+            "kya ap likh sakte hain",
+            "kya aap likh sakti hain",
+            "kya aap likh denge"
+          ],
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-prob-complete-1",
+          "context": [
+            {
+              "speaker": "Clerk",
+              "roman": "Aap ka form kal tak jama hoga, phir pandrah din lagenge.",
+              "urdu": "آپ کا فارم کل تک جمع ہوگا، پھر پندرہ دن لگیں گے۔",
+              "en": "Your form will be submitted by tomorrow, then it'll take fifteen days."
+            }
+          ],
+          "prompt": "You only caught part of that. Check what they meant.",
+          "options": [
+            {
+              "roman": "Aap ka matlab hai pandrah din?",
+              "urdu": "آپ کا مطلب ہے پندرہ دن؟",
+              "en": "You mean fifteen days?"
+            },
+            {
+              "roman": "Mazaa aa gaya!",
+              "urdu": "مزہ آ گیا!",
+              "en": "That was fun!"
+            },
+            {
+              "roman": "Madad!",
+              "urdu": "مدد!",
+              "en": "Help!"
+            }
+          ],
+          "answer": 0,
+          "explain": "Repeating the key part back with \"Aap ka matlab hai...?\" is a great way to confirm."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-prob-qa",
+          "questionId": "q-kya-masla"
+        }
+      ],
+      "roleplayId": "c-misunderstanding"
+    }
+  ]
+}
