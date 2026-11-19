@@ -30,7 +30,7 @@ npm run preview      # serve the build on :4173
 
 ## Limitations (honest)
 
-- **Audio is the Google Translate Urdu voice**, downloaded into `public/content/audio/` by `npm run audio` (re-run after editing content). It is synthesized, not a native speaker, and uses Google Translate's unofficial endpoint: fine for personal/class use, not allowed by Google's terms for a public product. Audio needs a connection; lessons work offline.
+- **Audio uses Microsoft's neural Pakistani Urdu voices** (Uzma, female; Asad, male, for male characters), generated into `public/content/audio/` by `npm run audio` (needs `pip install edge-tts`; re-run after editing content). There's a clip for every sentence and every individual word (tap a word to hear it). The voices are synthesized, not recordings of a person, and come from the free Edge read-aloud service, which is meant for personal use; for a larger public product, regenerate them through Azure Speech. Audio needs a connection; lessons work offline.
 - **Speech recognition depends on the browser.** It works in Chrome and Edge (online) and in Safari on iOS 14.5+, but often not in iPhone Home Screen apps, so there the mic defaults to Record & compare (open the link in Safari for speech checking). Firefox doesn't support it. Speech-to-text can mishear correct speech.
 - **No phoneme-level pronunciation assessment** is configured.
 - **Content was written carefully for learners but has not been reviewed by native-speaker teachers.**
@@ -43,4 +43,4 @@ Speech and the microphone need HTTPS. Deploy the build (below), open it in Safar
 
 ## Deploy
 
-`npm run build`, then upload `dist/` to any static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages). The app uses hash routing and relative paths, so it needs no rewrites. Serve it over HTTPS.
+Live at **https://hassaanth.github.io/leni-urdu-class/** (GitHub Pages, served from the `gh-pages` branch). To publish an update: `npm run build`, then push the contents of `dist/` (plus an empty `.nojekyll` file) to the `gh-pages` branch. Any static host works too; the app uses hash routing and relative paths, so it needs no rewrites. Serve it over HTTPS.
