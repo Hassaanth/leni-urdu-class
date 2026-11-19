@@ -1,0 +1,689 @@
+{
+  "id": "u3",
+  "level": 2,
+  "title": "Family, Food & Shopping",
+  "description": "Talk about your family, eat and drink, and shop in the bazaar.",
+  "lessons": [
+    {
+      "id": "l3-family",
+      "title": "Family",
+      "objective": "Name family members and talk about brothers and sisters.",
+      "tips": [
+        "Urdu has separate words for relatives on your mother's and father's side: dada/dadi (father's parents), nana/nani (mother's parents).",
+        "\"Mere do bhai hain\" literally means \"my two brothers are\" — that's how Urdu says \"I have two brothers\"."
+      ],
+      "phrases": [
+        {
+          "id": "p-ammi",
+          "en": "mum",
+          "roman": "ammi",
+          "urdu": "امی",
+          "accept": [
+            "ammee",
+            "ami"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-abbu",
+          "en": "dad",
+          "roman": "abbu",
+          "urdu": "ابو",
+          "accept": [
+            "abu",
+            "abboo"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-bhai",
+          "en": "brother",
+          "roman": "bhai",
+          "urdu": "بھائی",
+          "accept": [
+            "bhaai"
+          ],
+          "note": "Also used to address any man politely, like \"brother\" or \"mate\".",
+          "kind": "word"
+        },
+        {
+          "id": "p-behen",
+          "en": "sister",
+          "roman": "behen",
+          "urdu": "بہن",
+          "accept": [
+            "bahan",
+            "behn",
+            "bahen"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-beta",
+          "en": "son (also: dear, to a young person)",
+          "roman": "beta",
+          "urdu": "بیٹا",
+          "kind": "word"
+        },
+        {
+          "id": "p-beti",
+          "en": "daughter",
+          "roman": "beti",
+          "urdu": "بیٹی",
+          "kind": "word"
+        },
+        {
+          "id": "p-dada",
+          "en": "grandfather (father's father)",
+          "roman": "dada",
+          "urdu": "دادا",
+          "accept": [
+            "daada"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-nani",
+          "en": "grandmother (mother's mother)",
+          "roman": "nani",
+          "urdu": "نانی",
+          "accept": [
+            "naani"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-khala",
+          "en": "aunt (mother's sister)",
+          "roman": "khala",
+          "urdu": "خالہ",
+          "accept": [
+            "khaala"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-chacha",
+          "en": "uncle (father's younger brother)",
+          "roman": "chacha",
+          "urdu": "چچا",
+          "accept": [
+            "chachaa"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-do-bhai",
+          "en": "I have two brothers.",
+          "roman": "Mere do bhai hain.",
+          "urdu": "میرے دو بھائی ہیں۔",
+          "accept": [
+            "mere do bhai hein",
+            "meray do bhai hain"
+          ],
+          "note": "\"Mere\" (plural) matches \"bhai\" in the plural. For sisters: \"Meri do behnein hain\".",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-behen-bhai",
+          "en": "How many brothers and sisters do you have?",
+          "roman": "Aap ke kitne behen bhai hain?",
+          "urdu": "آپ کے کتنے بہن بھائی ہیں؟",
+          "accept": [
+            "aapke kitne behen bhai hain",
+            "aap ke kitne bhai behen hain",
+            "aap ke kitne behan bhai hain"
+          ],
+          "note": "\"Behen bhai\" together means siblings.",
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-fam-mcq-1",
+          "prompt": "Your mother's sister is your…",
+          "options": [
+            "khala",
+            "chacha",
+            "dada"
+          ],
+          "answer": 0,
+          "explain": "khala = mother's sister. chacha = father's brother. dada = father's father."
+        },
+        {
+          "type": "fill",
+          "id": "x-fam-fill-1",
+          "roman": "Mere do ___ hain.",
+          "urdu": "میرے دو ___ ہیں۔",
+          "en": "I have two brothers.",
+          "options": [
+            "bhai",
+            "behen",
+            "ammi"
+          ],
+          "answer": 0,
+          "explain": "bhai = brother(s)."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-fam-qa",
+          "questionId": "q-siblings"
+        }
+      ],
+      "roleplayId": "c-relatives",
+      "dialogue": {
+        "title": "Khala asks about the family",
+        "partner": {
+          "name": "Khala",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap ke kitne behen bhai hain?",
+            "urdu": "آپ کے کتنے بہن بھائی ہیں؟",
+            "en": "How many brothers and sisters do you have?"
+          },
+          {
+            "who": "you",
+            "roman": "Mere do bhai hain aur ek behen.",
+            "urdu": "میرے دو بھائی ہیں اور ایک بہن۔",
+            "en": "I have two brothers and one sister."
+          },
+          {
+            "who": "them",
+            "roman": "Masha'Allah! Aur ammi abbu kaise hain?",
+            "urdu": "ماشاءاللہ! اور امی ابو کیسے ہیں؟",
+            "en": "Wonderful! And how are your mum and dad?"
+          },
+          {
+            "who": "you",
+            "roman": "Woh theek hain, shukriya.",
+            "urdu": "وہ ٹھیک ہیں، شکریہ۔",
+            "en": "They're fine, thank you."
+          },
+          {
+            "who": "them",
+            "roman": "Nani ko mera salaam kehna.",
+            "urdu": "نانی کو میرا سلام کہنا۔",
+            "en": "Give my regards to Nani."
+          }
+        ]
+      }
+    },
+    {
+      "id": "l3-food",
+      "title": "Food & Drink",
+      "objective": "Say what you like, when you're hungry or thirsty, and accept or decline more food.",
+      "tips": [
+        "Hosts often insist you eat more. \"Bas, shukriya\" (that's enough, thanks) is the polite way to stop — you may need to say it twice!",
+        "\"Mujhe bhook lagi hai\" literally means \"hunger has attached to me\"."
+      ],
+      "phrases": [
+        {
+          "id": "p-khaana",
+          "en": "food / meal",
+          "roman": "khaana",
+          "urdu": "کھانا",
+          "accept": [
+            "khana"
+          ],
+          "note": "The \"kh\" here is کھ — a k with a puff of air. It's different from the throaty خ in \"khush\".",
+          "kind": "word"
+        },
+        {
+          "id": "p-paani",
+          "en": "water",
+          "roman": "paani",
+          "urdu": "پانی",
+          "accept": [
+            "pani"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-chai",
+          "en": "tea",
+          "roman": "chai",
+          "urdu": "چائے",
+          "accept": [
+            "chaye",
+            "chaai",
+            "chae"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-roti",
+          "en": "flatbread",
+          "roman": "roti",
+          "urdu": "روٹی",
+          "kind": "word"
+        },
+        {
+          "id": "p-chawal",
+          "en": "rice",
+          "roman": "chawal",
+          "urdu": "چاول",
+          "accept": [
+            "chaawal",
+            "chawel"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-daal",
+          "en": "lentils",
+          "roman": "daal",
+          "urdu": "دال",
+          "accept": [
+            "dal"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-chai-pasand",
+          "en": "I like tea.",
+          "roman": "Mujhe chai pasand hai.",
+          "urdu": "مجھے چائے پسند ہے۔",
+          "accept": [
+            "mujhe chaye pasand hai",
+            "mujhe chai pasand he"
+          ],
+          "literal": "to me tea is liked",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-bhook",
+          "en": "I'm hungry.",
+          "roman": "Mujhe bhook lagi hai.",
+          "urdu": "مجھے بھوک لگی ہے۔",
+          "accept": [
+            "mujhe bhuk lagi hai",
+            "mujhe bhook lagi he"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-pyaas",
+          "en": "I'm thirsty.",
+          "roman": "Mujhe pyaas lagi hai.",
+          "urdu": "مجھے پیاس لگی ہے۔",
+          "accept": [
+            "mujhe pyas lagi hai",
+            "mujhe piyas lagi hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-mazay-ka",
+          "en": "It's delicious!",
+          "roman": "Bohat mazay ka hai!",
+          "urdu": "بہت مزے کا ہے!",
+          "accept": [
+            "bohat maze ka hai",
+            "bahut maze ka hai",
+            "bohat mazedaar hai",
+            "bohot mazay ka hai"
+          ],
+          "note": "\"Bohat mazedaar hai\" means the same thing.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-bas-shukriya",
+          "en": "That's enough, thank you.",
+          "roman": "Bas, shukriya.",
+          "urdu": "بس، شکریہ۔",
+          "accept": [
+            "bas shukria"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-thora-aur",
+          "en": "A little more, please.",
+          "roman": "Thora aur.",
+          "urdu": "تھوڑا اور۔",
+          "accept": [
+            "thoda aur",
+            "thora or",
+            "thora aur dein"
+          ],
+          "kind": "phrase"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-food-complete-1",
+          "context": [
+            {
+              "speaker": "Aunty",
+              "roman": "Beta, aur khaana lo!",
+              "urdu": "بیٹا، اور کھانا لو!",
+              "en": "Dear, have more food!"
+            }
+          ],
+          "prompt": "You're full. Decline politely.",
+          "options": [
+            {
+              "roman": "Bas, shukriya. Bohat mazay ka tha!",
+              "urdu": "بس، شکریہ۔ بہت مزے کا تھا!",
+              "en": "That's enough, thanks. It was delicious!"
+            },
+            {
+              "roman": "Mujhe bhook lagi hai.",
+              "urdu": "مجھے بھوک لگی ہے۔",
+              "en": "I'm hungry."
+            },
+            {
+              "roman": "Yeh kitne ka hai?",
+              "urdu": "یہ کتنے کا ہے؟",
+              "en": "How much is this?"
+            }
+          ],
+          "answer": 0,
+          "explain": "\"Bas, shukriya\" stops the food politely, and praising the meal is always appreciated."
+        },
+        {
+          "type": "fill",
+          "id": "x-food-fill-1",
+          "roman": "Mujhe chai ___ hai.",
+          "urdu": "مجھے چائے ___ ہے۔",
+          "en": "I like tea.",
+          "options": [
+            "pasand",
+            "bhook",
+            "paani"
+          ],
+          "answer": 0,
+          "explain": "\"Pasand\" = liked. Mujhe X pasand hai = I like X."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-food-qa",
+          "questionId": "q-pasand"
+        }
+      ],
+      "roleplayId": "c-restaurant",
+      "dialogue": {
+        "title": "Dinner at Aunty’s",
+        "partner": {
+          "name": "Aunty",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Beta, khaana khayenge?",
+            "urdu": "بیٹا، کھانا کھائیں گے؟",
+            "en": "Dear, will you eat?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji, mujhe bhook lagi hai!",
+            "urdu": "جی، مجھے بھوک لگی ہے!",
+            "en": "Yes, I'm hungry!"
+          },
+          {
+            "who": "them",
+            "roman": "Roti aur daal lijiye. Chai bhi?",
+            "urdu": "روٹی اور دال لیجیے۔ چائے بھی؟",
+            "en": "Have roti and daal. Tea too?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji, mujhe chai pasand hai. Bohat mazay ka hai!",
+            "urdu": "جی، مجھے چائے پسند ہے۔ بہت مزے کا ہے!",
+            "en": "Yes, I like tea. It's delicious!"
+          },
+          {
+            "who": "them",
+            "roman": "Thora aur?",
+            "urdu": "تھوڑا اور؟",
+            "en": "A little more?"
+          },
+          {
+            "who": "you",
+            "roman": "Bas, shukriya.",
+            "urdu": "بس، شکریہ۔",
+            "en": "That's enough, thank you."
+          }
+        ]
+      }
+    },
+    {
+      "id": "l3-shopping",
+      "title": "Shopping & Prices",
+      "objective": "Ask prices, say something is too expensive, and bargain politely.",
+      "tips": [
+        "Bargaining is normal in many bazaars but not in supermarkets or fixed-price shops.",
+        "\"Karein\" is the polite \"please do\": \"Thora kam karein\" = please reduce it a little."
+      ],
+      "phrases": [
+        {
+          "id": "p-qeemat",
+          "en": "What's the price?",
+          "roman": "Iski qeemat kya hai?",
+          "urdu": "اس کی قیمت کیا ہے؟",
+          "accept": [
+            "is ki qeemat kya hai",
+            "iski keemat kya hai",
+            "iski qimat kya hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-mehenga",
+          "en": "It's very expensive.",
+          "roman": "Yeh bohat mehenga hai.",
+          "urdu": "یہ بہت مہنگا ہے۔",
+          "accept": [
+            "ye bohat mehnga hai",
+            "yeh bahut mehenga hai",
+            "yeh bohot mehnga hai"
+          ],
+          "note": "For a feminine item: \"bohat mehengi hai\".",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-sasta",
+          "en": "cheap",
+          "roman": "sasta",
+          "urdu": "سستا",
+          "accept": [
+            "susta"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-kam-karein",
+          "en": "Please lower the price a little.",
+          "roman": "Thora kam karein.",
+          "urdu": "تھوڑا کم کریں۔",
+          "accept": [
+            "thoda kam karein",
+            "thora kam karen",
+            "thora kam kar dein"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-yeh-chahiye",
+          "en": "I want this one.",
+          "roman": "Mujhe yeh chahiye.",
+          "urdu": "مجھے یہ چاہیے۔",
+          "accept": [
+            "mujhe ye chahiye"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-aur-kuch",
+          "en": "Anything else?",
+          "roman": "Aur kuch?",
+          "urdu": "اور کچھ؟",
+          "accept": [
+            "or kuch",
+            "aur kuchh"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-bas-itna",
+          "en": "That's all.",
+          "roman": "Bas, itna hi.",
+          "urdu": "بس، اتنا ہی۔",
+          "accept": [
+            "bas itna hi"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-rupay",
+          "en": "rupees",
+          "roman": "rupay",
+          "urdu": "روپے",
+          "accept": [
+            "rupaye",
+            "rupe",
+            "rupees"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-sau",
+          "en": "hundred",
+          "roman": "sau",
+          "urdu": "سو",
+          "accept": [
+            "so"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-hazaar",
+          "en": "thousand",
+          "roman": "hazaar",
+          "urdu": "ہزار",
+          "accept": [
+            "hazar"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-dukaan",
+          "en": "shop",
+          "roman": "dukaan",
+          "urdu": "دکان",
+          "accept": [
+            "dukan"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-card",
+          "en": "Do you take card?",
+          "roman": "Kya aap card lete hain?",
+          "urdu": "کیا آپ کارڈ لیتے ہیں؟",
+          "accept": [
+            "kya ap card lete hain",
+            "kia aap card lete hain"
+          ],
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-shop-complete-1",
+          "context": [
+            {
+              "speaker": "Shopkeeper",
+              "roman": "Yeh do hazaar rupay ka hai.",
+              "urdu": "یہ دو ہزار روپے کا ہے۔",
+              "en": "This is two thousand rupees."
+            }
+          ],
+          "prompt": "That seems too much. Bargain politely.",
+          "options": [
+            {
+              "roman": "Yeh bohat mehenga hai. Thora kam karein.",
+              "urdu": "یہ بہت مہنگا ہے۔ تھوڑا کم کریں۔",
+              "en": "It's very expensive. Please lower it a little."
+            },
+            {
+              "roman": "Bas, itna hi.",
+              "urdu": "بس، اتنا ہی۔",
+              "en": "That's all."
+            },
+            {
+              "roman": "Mujhe pyaas lagi hai.",
+              "urdu": "مجھے پیاس لگی ہے۔",
+              "en": "I'm thirsty."
+            }
+          ],
+          "answer": 0,
+          "explain": "Saying it's expensive and asking to lower it is the classic polite bargaining move."
+        },
+        {
+          "type": "order",
+          "id": "x-shop-order-1",
+          "en": "It's very expensive.",
+          "roman": "Yeh bohat mehenga hai",
+          "urdu": "یہ بہت مہنگا ہے۔",
+          "distractors": [
+            "sasta"
+          ]
+        }
+      ],
+      "roleplayId": "c-shopping",
+      "dialogue": {
+        "title": "Bargaining for a scarf",
+        "partner": {
+          "name": "Shopkeeper",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "you",
+            "roman": "Iski qeemat kya hai?",
+            "urdu": "اس کی قیمت کیا ہے؟",
+            "en": "What's the price?"
+          },
+          {
+            "who": "them",
+            "roman": "Do hazaar rupay.",
+            "urdu": "دو ہزار روپے۔",
+            "en": "Two thousand rupees."
+          },
+          {
+            "who": "you",
+            "roman": "Yeh bohat mehenga hai. Thora kam karein.",
+            "urdu": "یہ بہت مہنگا ہے۔ تھوڑا کم کریں۔",
+            "en": "It's very expensive. Please lower it a little."
+          },
+          {
+            "who": "them",
+            "roman": "Acha, ek hazaar. Aur kuch?",
+            "urdu": "اچھا، ایک ہزار۔ اور کچھ؟",
+            "en": "Okay, one thousand. Anything else?"
+          },
+          {
+            "who": "you",
+            "roman": "Bas, itna hi. Kya aap card lete hain?",
+            "urdu": "بس، اتنا ہی۔ کیا آپ کارڈ لیتے ہیں؟",
+            "en": "That's all. Do you take card?"
+          },
+          {
+            "who": "them",
+            "roman": "Ji haan.",
+            "urdu": "جی ہاں۔",
+            "en": "Yes."
+          }
+        ]
+      }
+    }
+  ]
+}

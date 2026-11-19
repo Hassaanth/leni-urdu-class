@@ -1,0 +1,616 @@
+{
+  "id": "u8",
+  "level": 6,
+  "title": "Advanced Conversation",
+  "description": "Idioms, storytelling and nuanced opinions for longer conversations.",
+  "lessons": [
+    {
+      "id": "l8-idioms",
+      "title": "Idioms & Sayings",
+      "objective": "Recognise common Urdu idioms and use a few in conversation.",
+      "tips": [
+        "Idioms rarely translate word for word. Learn the situation each one fits, not just the literal meaning.",
+        "Many sayings come from Persian (\"Der aayad durust aayad\"). Educated speakers use them often; younger people may use them jokingly."
+      ],
+      "phrases": [
+        {
+          "id": "p-dil-khush",
+          "en": "That made my day! (lit. the heart became happy)",
+          "roman": "Dil khush ho gaya!",
+          "urdu": "دل خوش ہو گیا!",
+          "accept": [
+            "dil khush hogaya",
+            "dil khush ho gya"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-naak-mein-dam",
+          "en": "(They) drove me up the wall. (lit. put breath in my nose)",
+          "roman": "Naak mein dam kar diya.",
+          "urdu": "ناک میں دم کر دیا۔",
+          "accept": [
+            "naak main dam kar diya",
+            "nak mein dam kar diya"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-aankhon-ka-tara",
+          "en": "the apple of (someone's) eye (lit. star of the eyes)",
+          "roman": "aankhon ka tara",
+          "urdu": "آنکھوں کا تارا",
+          "accept": [
+            "ankhon ka tara",
+            "aankhon ka taara"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-hawai-qilay",
+          "en": "to build castles in the air",
+          "roman": "hawai qilay banana",
+          "urdu": "ہوائی قلعے بنانا",
+          "accept": [
+            "hawai qile banana",
+            "hawai kilay banana"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-ek-anaar",
+          "en": "Too many people want the same one thing. (lit. one pomegranate, a hundred sick)",
+          "roman": "Ek anaar sau beemar",
+          "urdu": "ایک انار سو بیمار",
+          "accept": [
+            "ek anar sau bimar",
+            "aik anaar sau beemar"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-der-aayad",
+          "en": "Better late than never.",
+          "roman": "Der aayad durust aayad",
+          "urdu": "دیر آید درست آید",
+          "accept": [
+            "der ayad durust ayad",
+            "dair aayad durust aayad"
+          ],
+          "note": "A Persian saying used in Urdu, often teasingly when someone arrives late.",
+          "kind": "phrase"
+        },
+        {
+          "id": "p-oont-zeera",
+          "en": "A drop in the ocean / far too little. (lit. cumin in a camel's mouth)",
+          "roman": "Oont ke munh mein zeera",
+          "urdu": "اونٹ کے منہ میں زیرہ",
+          "accept": [
+            "unt ke munh mein zeera",
+            "oont ke mooh mein zeera"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-jitne-munh",
+          "en": "Everyone says something different. (lit. as many mouths, that many stories)",
+          "roman": "Jitne munh utni baatein",
+          "urdu": "جتنے منہ اتنی باتیں",
+          "accept": [
+            "jitne munh utni batein",
+            "jitne mooh utni baatein"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-sir-mat-khao",
+          "en": "Stop pestering me! (lit. don't eat my head)",
+          "roman": "Mera sir mat khao!",
+          "urdu": "میرا سر مت کھاؤ!",
+          "accept": [
+            "mera sar mat khao",
+            "mera sir na khao"
+          ],
+          "note": "Informal and joking among friends and family. Too rude for strangers.",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-ghar-ki-murghi",
+          "en": "What's familiar is undervalued. (lit. the chicken at home is like lentils)",
+          "roman": "Ghar ki murghi daal barabar",
+          "urdu": "گھر کی مرغی دال برابر",
+          "accept": [
+            "ghar ki murgi daal barabar",
+            "ghar ki murghi dal barabar"
+          ],
+          "kind": "phrase"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-idiom-mcq-1",
+          "prompt": "Fifty people applied for one job opening. Which saying fits?",
+          "options": [
+            "Ek anaar sau beemar",
+            "Der aayad durust aayad",
+            "Ghar ki murghi daal barabar"
+          ],
+          "answer": 0,
+          "explain": "One pomegranate, a hundred sick: lots of demand for one thing."
+        },
+        {
+          "type": "complete",
+          "id": "x-idiom-complete-1",
+          "context": [
+            {
+              "speaker": "Cousin",
+              "roman": "Sorry yaar, traffic bohat tha, aadha ghanta late ho gaya.",
+              "urdu": "سوری یار، ٹریفک بہت تھا، آدھا گھنٹہ لیٹ ہو گیا۔",
+              "en": "Sorry mate, there was a lot of traffic, I'm half an hour late."
+            }
+          ],
+          "prompt": "Tease your cousin kindly.",
+          "options": [
+            {
+              "roman": "Koi baat nahi — der aayad durust aayad!",
+              "urdu": "کوئی بات نہیں — دیر آید درست آید!",
+              "en": "No worries — better late than never!"
+            },
+            {
+              "roman": "Oont ke munh mein zeera.",
+              "urdu": "اونٹ کے منہ میں زیرہ۔",
+              "en": "Cumin in a camel's mouth."
+            },
+            {
+              "roman": "Aankhon ka tara.",
+              "urdu": "آنکھوں کا تارا۔",
+              "en": "Apple of the eye."
+            }
+          ],
+          "answer": 0,
+          "explain": "\"Der aayad durust aayad\" is the classic friendly reply to someone arriving late."
+        }
+      ],
+      "dialogue": {
+        "title": "Zara’s little brother",
+        "partner": {
+          "name": "Zara",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Mere bhai ne aaj naak mein dam kar diya!",
+            "urdu": "میرے بھائی نے آج ناک میں دم کر دیا!",
+            "en": "My brother drove me up the wall today!"
+          },
+          {
+            "who": "you",
+            "roman": "Haha, kyun?",
+            "urdu": "ہاہا، کیوں؟",
+            "en": "Haha, why?"
+          },
+          {
+            "who": "them",
+            "roman": "Woh har waqt mera sir khaata hai!",
+            "urdu": "وہ ہر وقت میرا سر کھاتا ہے!",
+            "en": "He pesters me all the time!"
+          },
+          {
+            "who": "you",
+            "roman": "Lekin woh aap ki aankhon ka tara hai!",
+            "urdu": "لیکن وہ آپ کی آنکھوں کا تارا ہے!",
+            "en": "But he's the apple of your eye!"
+          },
+          {
+            "who": "them",
+            "roman": "Haan, yeh bhi sach hai. Ghar ki murghi daal barabar!",
+            "urdu": "ہاں، یہ بھی سچ ہے۔ گھر کی مرغی دال برابر!",
+            "en": "Yes, that's true too. We never value what's at home!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l8-story",
+      "title": "Telling a Story",
+      "objective": "Connect events in order and keep a listener engaged.",
+      "tips": [
+        "Linking words carry a story: pehle (first), phir (then), uske baad (after that), achanak (suddenly), aakhir mein (in the end).",
+        "\"Pata hai kya hua?\" (Know what happened?) is a natural way to start an anecdote."
+      ],
+      "phrases": [
+        {
+          "id": "p-pehle",
+          "en": "first / before",
+          "roman": "pehle",
+          "urdu": "پہلے",
+          "accept": [
+            "pahle",
+            "pehlay"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-phir",
+          "en": "then / again",
+          "roman": "phir",
+          "urdu": "پھر",
+          "accept": [
+            "fir"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-uske-baad",
+          "en": "after that",
+          "roman": "uske baad",
+          "urdu": "اس کے بعد",
+          "accept": [
+            "us ke baad",
+            "uske bad"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-achanak",
+          "en": "suddenly",
+          "roman": "achanak",
+          "urdu": "اچانک",
+          "accept": [
+            "achaanak"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-is-liye",
+          "en": "so / that's why",
+          "roman": "is liye",
+          "urdu": "اس لیے",
+          "accept": [
+            "isliye",
+            "is lye"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-lekin",
+          "en": "but",
+          "roman": "lekin",
+          "urdu": "لیکن",
+          "accept": [
+            "lekan",
+            "laikin"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-kyunke",
+          "en": "because",
+          "roman": "kyunke",
+          "urdu": "کیونکہ",
+          "accept": [
+            "kyunki",
+            "kyun ke",
+            "kiunke"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-aakhir-mein",
+          "en": "in the end",
+          "roman": "aakhir mein",
+          "urdu": "آخر میں",
+          "accept": [
+            "akhir mein",
+            "aakhir main"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-pata-hai-kya-hua",
+          "en": "You know what happened?",
+          "roman": "Pata hai kya hua?",
+          "urdu": "پتا ہے کیا ہوا؟",
+          "accept": [
+            "pta hai kya hua",
+            "pata hai kia hua"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-ek-dafa",
+          "en": "Once upon a time...",
+          "roman": "Ek dafa ka zikr hai...",
+          "urdu": "ایک دفعہ کا ذکر ہے...",
+          "accept": [
+            "aik dafa ka zikr hai",
+            "ek dafa ka zikar hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-mazay-ki-baat",
+          "en": "The funny thing is...",
+          "roman": "Mazay ki baat yeh hai ke...",
+          "urdu": "مزے کی بات یہ ہے کہ...",
+          "accept": [
+            "maze ki baat yeh hai ke",
+            "mazay ki baat ye hai ki"
+          ],
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill",
+          "id": "x-story-fill-1",
+          "roman": "Main ghar ja raha tha. ___ barish shuru ho gayi!",
+          "urdu": "میں گھر جا رہا تھا۔ ___ بارش شروع ہو گئی!",
+          "en": "I was going home. Suddenly it started raining!",
+          "options": [
+            "Achanak",
+            "Lekin",
+            "Pehle"
+          ],
+          "answer": 0,
+          "explain": "\"Achanak\" = suddenly."
+        },
+        {
+          "type": "order",
+          "id": "x-story-order-1",
+          "en": "You know what happened?",
+          "roman": "Pata hai kya hua",
+          "urdu": "پتا ہے کیا ہوا؟",
+          "distractors": [
+            "phir"
+          ]
+        },
+        {
+          "type": "readAloud",
+          "id": "x-story-read",
+          "passageId": "r-story"
+        }
+      ],
+      "roleplayId": "c-story",
+      "dialogue": {
+        "title": "Caught in the rain",
+        "partner": {
+          "name": "Zara",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Pata hai kya hua?",
+            "urdu": "پتا ہے کیا ہوا؟",
+            "en": "You know what happened?"
+          },
+          {
+            "who": "you",
+            "roman": "Nahi, kya hua?",
+            "urdu": "نہیں، کیا ہوا؟",
+            "en": "No, what happened?"
+          },
+          {
+            "who": "them",
+            "roman": "Pehle main bazaar gayi. Phir achanak barish shuru ho gayi!",
+            "urdu": "پہلے میں بازار گئی۔ پھر اچانک بارش شروع ہو گئی!",
+            "en": "First I went to the bazaar. Then suddenly it started raining!"
+          },
+          {
+            "who": "you",
+            "roman": "Uske baad?",
+            "urdu": "اس کے بعد؟",
+            "en": "After that?"
+          },
+          {
+            "who": "them",
+            "roman": "Mere paas chhatri nahi thi, is liye main bheeg gayi. Lekin aakhir mein mazaa aaya!",
+            "urdu": "میرے پاس چھتری نہیں تھی، اس لیے میں بھیگ گئی۔ لیکن آخر میں مزہ آیا!",
+            "en": "I didn't have an umbrella, so I got soaked. But in the end it was fun!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l8-nuance",
+      "title": "Nuanced Opinions",
+      "objective": "Weigh both sides, hedge, and disagree respectfully in longer discussions.",
+      "tips": [
+        "Softeners like \"shayad\" (maybe) and \"kisi had tak\" (to some extent) make opinions sound thoughtful rather than blunt.",
+        "\"Baat yeh hai ke...\" (The thing is...) buys you time while you think — very natural."
+      ],
+      "phrases": [
+        {
+          "id": "p-baat-yeh-hai",
+          "en": "The thing is...",
+          "roman": "Baat yeh hai ke...",
+          "urdu": "بات یہ ہے کہ...",
+          "accept": [
+            "baat ye hai ke",
+            "baat yeh hai ki"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-ek-taraf",
+          "en": "On one hand..., on the other hand...",
+          "roman": "Ek taraf..., doosri taraf...",
+          "urdu": "ایک طرف...، دوسری طرف...",
+          "accept": [
+            "ek taraf dusri taraf",
+            "aik taraf doosri taraf"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-shayad",
+          "en": "maybe / perhaps",
+          "roman": "shayad",
+          "urdu": "شاید",
+          "accept": [
+            "shaayad",
+            "shaid"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-yaqeen-nahi",
+          "en": "I'm not sure. / I can't believe it.",
+          "roman": "Mujhe yaqeen nahi.",
+          "urdu": "مجھے یقین نہیں۔",
+          "accept": [
+            "mujhe yakeen nahi",
+            "mujhe yaqeen nahin"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-bilkul",
+          "en": "absolutely / exactly",
+          "roman": "bilkul",
+          "urdu": "بالکل",
+          "accept": [
+            "bilkull"
+          ],
+          "note": "\"Bilkul nahi\" = absolutely not.",
+          "kind": "word"
+        },
+        {
+          "id": "p-kisi-had-tak",
+          "en": "to some extent",
+          "roman": "kisi had tak",
+          "urdu": "کسی حد تک",
+          "accept": [
+            "kisi hadd tak"
+          ],
+          "kind": "phrase"
+        },
+        {
+          "id": "p-baat-theek-lekin",
+          "en": "You have a point, but...",
+          "roman": "Aap ki baat theek hai, lekin...",
+          "urdu": "آپ کی بات ٹھیک ہے، لیکن...",
+          "accept": [
+            "aapki baat theek hai lekin",
+            "aap ki baat thik hai lekin"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-tajurba",
+          "en": "My experience is different.",
+          "roman": "Mera tajurba alag hai.",
+          "urdu": "میرا تجربہ الگ ہے۔",
+          "accept": [
+            "mera tajurba mukhtalif hai",
+            "mera tajarba alag hai"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-sochna-parega",
+          "en": "I'll have to think about it.",
+          "roman": "Is par sochna parega.",
+          "urdu": "اس پر سوچنا پڑے گا۔",
+          "accept": [
+            "is pe sochna parega",
+            "is par sochna padega"
+          ],
+          "kind": "sentence"
+        },
+        {
+          "id": "p-seedhi-baat",
+          "en": "Simply put... / It's simple:",
+          "roman": "Seedhi si baat hai.",
+          "urdu": "سیدھی سی بات ہے۔",
+          "accept": [
+            "sidhi si baat hai",
+            "seedhi si baat he"
+          ],
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-nuance-complete-1",
+          "context": [
+            {
+              "speaker": "Uncle",
+              "roman": "Aaj kal ke bachche phone ke bina reh hi nahi sakte. Phone bilkul bure hain!",
+              "urdu": "آج کل کے بچے فون کے بغیر رہ ہی نہیں سکتے۔ فون بالکل برے ہیں!",
+              "en": "Kids these days can't live without phones. Phones are completely bad!"
+            }
+          ],
+          "prompt": "Disagree respectfully with an elder.",
+          "options": [
+            {
+              "roman": "Aap ki baat kisi had tak theek hai, lekin phone se bachche seekhte bhi hain.",
+              "urdu": "آپ کی بات کسی حد تک ٹھیک ہے، لیکن فون سے بچے سیکھتے بھی ہیں۔",
+              "en": "You're right to some extent, but children also learn from phones."
+            },
+            {
+              "roman": "Mera sir mat khao!",
+              "urdu": "میرا سر مت کھاؤ!",
+              "en": "Stop pestering me!"
+            },
+            {
+              "roman": "Bilkul nahi, aap ghalat hain.",
+              "urdu": "بالکل نہیں، آپ غلط ہیں۔",
+              "en": "Absolutely not, you're wrong."
+            }
+          ],
+          "answer": 0,
+          "explain": "Acknowledging the elder's point before adding yours is respectful. Flat contradiction sounds rude to an elder."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-nuance-qa",
+          "questionId": "q-opinion"
+        }
+      ],
+      "dialogue": {
+        "title": "City life: a debate",
+        "partner": {
+          "name": "Uncle",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Mere khayal mein shehar ki zindagi bohat mushkil hai.",
+            "urdu": "میرے خیال میں شہر کی زندگی بہت مشکل ہے۔",
+            "en": "In my opinion, city life is very hard."
+          },
+          {
+            "who": "you",
+            "roman": "Kisi had tak, lekin mera tajurba alag hai.",
+            "urdu": "کسی حد تک، لیکن میرا تجربہ الگ ہے۔",
+            "en": "To some extent, but my experience is different."
+          },
+          {
+            "who": "them",
+            "roman": "Acha? Kaise?",
+            "urdu": "اچھا؟ کیسے؟",
+            "en": "Oh? How?"
+          },
+          {
+            "who": "you",
+            "roman": "Baat yeh hai ke ek taraf mushkil hai, doosri taraf bohat mauqe hain.",
+            "urdu": "بات یہ ہے کہ ایک طرف مشکل ہے، دوسری طرف بہت موقعے ہیں۔",
+            "en": "The thing is, on one hand it's hard, on the other there are lots of opportunities."
+          },
+          {
+            "who": "them",
+            "roman": "Hmm, is par sochna parega. Shayad aap theek hain.",
+            "urdu": "ہمم، اس پر سوچنا پڑے گا۔ شاید آپ ٹھیک ہیں۔",
+            "en": "Hmm, I'll have to think about that. Maybe you're right."
+          }
+        ]
+      }
+    }
+  ]
+}

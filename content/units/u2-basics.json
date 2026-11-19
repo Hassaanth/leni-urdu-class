@@ -1,0 +1,618 @@
+{
+  "id": "u2",
+  "level": 1,
+  "title": "Numbers, People & Questions",
+  "description": "Count to ten, talk about people, and ask the key question words.",
+  "lessons": [
+    {
+      "id": "l2-numbers",
+      "title": "Numbers 1–10",
+      "objective": "Count from one to ten and ask \"how many?\".",
+      "tips": [
+        "Long vowels matter: \"chaar\" (four) has a long \"aa\". Hold it a little longer than an English \"a\".",
+        "\"Aath\" (eight) ends in a retroflex t with a puff of air: curl your tongue tip back slightly."
+      ],
+      "phrases": [
+        {
+          "id": "p-ek",
+          "en": "one",
+          "roman": "ek",
+          "urdu": "ایک",
+          "accept": [
+            "aik",
+            "ik"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-do",
+          "en": "two",
+          "roman": "do",
+          "urdu": "دو",
+          "kind": "word"
+        },
+        {
+          "id": "p-teen",
+          "en": "three",
+          "roman": "teen",
+          "urdu": "تین",
+          "accept": [
+            "tin"
+          ],
+          "note": "A soft dental t: the tongue touches the back of your top teeth.",
+          "kind": "word"
+        },
+        {
+          "id": "p-chaar",
+          "en": "four",
+          "roman": "chaar",
+          "urdu": "چار",
+          "accept": [
+            "char"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-paanch",
+          "en": "five",
+          "roman": "paanch",
+          "urdu": "پانچ",
+          "accept": [
+            "panch"
+          ],
+          "note": "The \"aa\" is slightly nasal.",
+          "kind": "word"
+        },
+        {
+          "id": "p-chhe",
+          "en": "six",
+          "roman": "chhe",
+          "urdu": "چھ",
+          "accept": [
+            "che",
+            "chay",
+            "chhay",
+            "chey"
+          ],
+          "note": "\"Chh\" is a ch with a puff of air.",
+          "kind": "word"
+        },
+        {
+          "id": "p-saat",
+          "en": "seven",
+          "roman": "saat",
+          "urdu": "سات",
+          "accept": [
+            "sat"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-aath",
+          "en": "eight",
+          "roman": "aath",
+          "urdu": "آٹھ",
+          "accept": [
+            "ath",
+            "aat"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-nau",
+          "en": "nine",
+          "roman": "nau",
+          "urdu": "نو",
+          "accept": [
+            "nao",
+            "no"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-das",
+          "en": "ten",
+          "roman": "das",
+          "urdu": "دس",
+          "accept": [
+            "dus"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-kitne",
+          "en": "How many? / How much?",
+          "roman": "Kitne?",
+          "urdu": "کتنے؟",
+          "accept": [
+            "kitnay"
+          ],
+          "kind": "word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-num-mcq-1",
+          "prompt": "Which number is \"paanch\"?",
+          "options": [
+            "5",
+            "4",
+            "8"
+          ],
+          "answer": 0,
+          "explain": "paanch = 5, chaar = 4, aath = 8."
+        },
+        {
+          "type": "fill",
+          "id": "x-num-fill-1",
+          "roman": "ek, do, ___, chaar",
+          "urdu": "ایک، دو، ___، چار",
+          "en": "one, two, three, four",
+          "options": [
+            "teen",
+            "saat",
+            "das"
+          ],
+          "answer": 0,
+          "explain": "teen = three."
+        }
+      ],
+      "dialogue": {
+        "title": "At the samosa stall",
+        "partner": {
+          "name": "Hamza",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Kitne?",
+            "urdu": "کتنے؟",
+            "en": "How many?"
+          },
+          {
+            "who": "you",
+            "roman": "Paanch, please.",
+            "urdu": "پانچ، پلیز۔",
+            "en": "Five, please."
+          },
+          {
+            "who": "them",
+            "roman": "Paanch? Ya chhe?",
+            "urdu": "پانچ؟ یا چھ؟",
+            "en": "Five? Or six?"
+          },
+          {
+            "who": "you",
+            "roman": "Nahi, paanch. Shukriya!",
+            "urdu": "نہیں، پانچ۔ شکریہ!",
+            "en": "No, five. Thanks!"
+          },
+          {
+            "who": "them",
+            "roman": "Theek hai. Ek, do, teen, chaar, paanch!",
+            "urdu": "ٹھیک ہے۔ ایک، دو، تین، چار، پانچ!",
+            "en": "Okay. One, two, three, four, five!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l2-questions",
+      "title": "Question Words",
+      "objective": "Ask who, what, where, when, why and how — and say where you are from.",
+      "tips": [
+        "Most question words start with k: kya, kaun, kahan, kab, kyun, kaise, kitna.",
+        "The question word usually goes where the answer would go: \"Aap kahan se hain?\" → \"Main London se hoon.\""
+      ],
+      "phrases": [
+        {
+          "id": "p-kya",
+          "en": "what?",
+          "roman": "kya?",
+          "urdu": "کیا؟",
+          "accept": [
+            "kia",
+            "kiya"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-kaun",
+          "en": "who?",
+          "roman": "kaun?",
+          "urdu": "کون؟",
+          "accept": [
+            "kon",
+            "kaon"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-kahan",
+          "en": "where?",
+          "roman": "kahan?",
+          "urdu": "کہاں؟",
+          "accept": [
+            "kahaan",
+            "kahan"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-kab",
+          "en": "when?",
+          "roman": "kab?",
+          "urdu": "کب؟",
+          "kind": "word"
+        },
+        {
+          "id": "p-kyun",
+          "en": "why?",
+          "roman": "kyun?",
+          "urdu": "کیوں؟",
+          "accept": [
+            "kyon",
+            "kiyun",
+            "kyu"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-kaise",
+          "en": "how?",
+          "roman": "kaise?",
+          "urdu": "کیسے؟",
+          "accept": [
+            "kese",
+            "kaisay"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-kaun-sa",
+          "en": "which one?",
+          "roman": "kaun sa?",
+          "urdu": "کون سا؟",
+          "accept": [
+            "kon sa",
+            "konsa",
+            "kaunsa"
+          ],
+          "note": "Becomes \"kaun si\" for feminine things: \"kaun si kitaab?\" (which book?)",
+          "kind": "phrase"
+        },
+        {
+          "id": "p-kahan-se",
+          "en": "Where are you from?",
+          "roman": "Aap kahan se hain?",
+          "urdu": "آپ کہاں سے ہیں؟",
+          "accept": [
+            "aap kahaan se hain",
+            "ap kahan se hain",
+            "aap kahan se hein"
+          ],
+          "literal": "you where from are",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-london-se",
+          "en": "I'm from London.",
+          "roman": "Main London se hoon.",
+          "urdu": "میں لندن سے ہوں۔",
+          "accept": [
+            "mein london se hoon",
+            "main london se hun"
+          ],
+          "note": "Swap in your own city: \"Main Toronto se hoon\", \"Main Lahore se hoon\".",
+          "kind": "sentence"
+        },
+        {
+          "id": "p-yeh-kya",
+          "en": "What is this?",
+          "roman": "Yeh kya hai?",
+          "urdu": "یہ کیا ہے؟",
+          "accept": [
+            "ye kya hai",
+            "yeh kia hai",
+            "ye kya he"
+          ],
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "complete",
+          "id": "x-q-complete-1",
+          "context": [
+            {
+              "speaker": "Ayesha",
+              "roman": "Aap kahan se hain?",
+              "urdu": "آپ کہاں سے ہیں؟",
+              "en": "Where are you from?"
+            }
+          ],
+          "prompt": "Answer Ayesha's question.",
+          "options": [
+            {
+              "roman": "Main London se hoon.",
+              "urdu": "میں لندن سے ہوں۔",
+              "en": "I'm from London."
+            },
+            {
+              "roman": "Mera naam Sara hai.",
+              "urdu": "میرا نام سارہ ہے۔",
+              "en": "My name is Sara."
+            },
+            {
+              "roman": "Kahan?",
+              "urdu": "کہاں؟",
+              "en": "Where?"
+            }
+          ],
+          "answer": 0,
+          "explain": "\"Kahan se\" = from where. Answer with \"[place] se hoon\"."
+        },
+        {
+          "type": "fill",
+          "id": "x-q-fill-1",
+          "roman": "Aap ___ se hain?",
+          "urdu": "آپ ___ سے ہیں؟",
+          "en": "Where are you from?",
+          "options": [
+            "kahan",
+            "kab",
+            "kaun"
+          ],
+          "answer": 0,
+          "explain": "kahan = where, kab = when, kaun = who."
+        },
+        {
+          "type": "spokenQA",
+          "id": "x-q-qa",
+          "questionId": "q-kahan-se"
+        }
+      ],
+      "dialogue": {
+        "title": "Where are you from?",
+        "partner": {
+          "name": "Ayesha",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap kahan se hain?",
+            "urdu": "آپ کہاں سے ہیں؟",
+            "en": "Where are you from?"
+          },
+          {
+            "who": "you",
+            "roman": "Main London se hoon. Aur aap?",
+            "urdu": "میں لندن سے ہوں۔ اور آپ؟",
+            "en": "I'm from London. And you?"
+          },
+          {
+            "who": "them",
+            "roman": "Main Lahore se hoon.",
+            "urdu": "میں لاہور سے ہوں۔",
+            "en": "I'm from Lahore."
+          },
+          {
+            "who": "you",
+            "roman": "Yeh kya hai?",
+            "urdu": "یہ کیا ہے؟",
+            "en": "What is this?"
+          },
+          {
+            "who": "them",
+            "roman": "Yeh chai hai!",
+            "urdu": "یہ چائے ہے!",
+            "en": "This is tea!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l2-people",
+      "title": "People & Pronouns",
+      "objective": "Use I, you, we, he/she, and introduce a friend.",
+      "tips": [
+        "Urdu has three \"you\"s: aap (respectful), tum (friends, younger people) and tu (very intimate or rude — avoid it as a beginner).",
+        "\"Yeh\" (this, he/she nearby) and \"woh\" (that, he/she further away) don't show gender. The verb or adjective often does."
+      ],
+      "phrases": [
+        {
+          "id": "p-main",
+          "en": "I",
+          "roman": "main",
+          "urdu": "میں",
+          "accept": [
+            "mein",
+            "mai"
+          ],
+          "note": "Nasal ending: \"main\" sounds close to \"meh\" with air through the nose.",
+          "kind": "word"
+        },
+        {
+          "id": "p-aap",
+          "en": "you (respectful)",
+          "roman": "aap",
+          "urdu": "آپ",
+          "accept": [
+            "ap"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-tum",
+          "en": "you (informal, friends)",
+          "roman": "tum",
+          "urdu": "تم",
+          "kind": "word"
+        },
+        {
+          "id": "p-hum",
+          "en": "we",
+          "roman": "hum",
+          "urdu": "ہم",
+          "kind": "word"
+        },
+        {
+          "id": "p-yeh",
+          "en": "this / he / she (near)",
+          "roman": "yeh",
+          "urdu": "یہ",
+          "accept": [
+            "ye",
+            "yah"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-woh",
+          "en": "that / he / she (far)",
+          "roman": "woh",
+          "urdu": "وہ",
+          "accept": [
+            "wo",
+            "vo",
+            "voh"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-dost",
+          "en": "friend",
+          "roman": "dost",
+          "urdu": "دوست",
+          "kind": "word"
+        },
+        {
+          "id": "p-larka",
+          "en": "boy",
+          "roman": "larka",
+          "urdu": "لڑکا",
+          "accept": [
+            "ladka",
+            "larrka"
+          ],
+          "note": "The \"r\" here is ڑ, a flap with the tongue curled back. Some people write it as \"d\": ladka.",
+          "kind": "word"
+        },
+        {
+          "id": "p-larki",
+          "en": "girl",
+          "roman": "larki",
+          "urdu": "لڑکی",
+          "accept": [
+            "ladki"
+          ],
+          "kind": "word"
+        },
+        {
+          "id": "p-mera-dost",
+          "en": "This is my friend.",
+          "roman": "Yeh mera dost hai.",
+          "urdu": "یہ میرا دوست ہے۔",
+          "accept": [
+            "ye mera dost hai",
+            "yeh mera dost he"
+          ],
+          "genderVariants": {
+            "masculine": {
+              "roman": "Yeh mera dost hai.",
+              "urdu": "یہ میرا دوست ہے۔"
+            },
+            "feminine": {
+              "roman": "Yeh meri dost hai.",
+              "urdu": "یہ میری دوست ہے۔"
+            },
+            "explain": "This depends on the friend, not on you: \"mera dost\" for a male friend, \"meri dost\" for a female friend.",
+            "by": "listener"
+          },
+          "kind": "sentence"
+        },
+        {
+          "id": "p-hum-dost",
+          "en": "We are friends.",
+          "roman": "Hum dost hain.",
+          "urdu": "ہم دوست ہیں۔",
+          "accept": [
+            "hum dost hein",
+            "ham dost hain"
+          ],
+          "kind": "sentence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "x-ppl-mcq-1",
+          "prompt": "You are meeting your friend's grandmother. Which \"you\" should you use?",
+          "options": [
+            "aap",
+            "tum",
+            "tu"
+          ],
+          "answer": 0,
+          "explain": "Use \"aap\" with elders and anyone you want to show respect to."
+        },
+        {
+          "type": "fill",
+          "id": "x-ppl-fill-1",
+          "roman": "Yeh ___ dost hai. (introducing your female friend)",
+          "urdu": "یہ ___ دوست ہے۔",
+          "en": "This is my (female) friend.",
+          "options": [
+            "meri",
+            "mera",
+            "mere"
+          ],
+          "answer": 0,
+          "explain": "\"Meri\" matches a female friend; \"mera\" a male friend."
+        }
+      ],
+      "dialogue": {
+        "title": "Who is this?",
+        "partner": {
+          "name": "Bilal",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Yeh kaun hai?",
+            "urdu": "یہ کون ہے؟",
+            "en": "Who is this?"
+          },
+          {
+            "who": "you",
+            "roman": "Yeh mera dost hai.",
+            "urdu": "یہ میرا دوست ہے۔",
+            "en": "This is my friend."
+          },
+          {
+            "who": "them",
+            "roman": "Aur woh larki kaun hai?",
+            "urdu": "اور وہ لڑکی کون ہے؟",
+            "en": "And who is that girl?"
+          },
+          {
+            "who": "you",
+            "roman": "Woh bhi meri dost hai.",
+            "urdu": "وہ بھی میری دوست ہے۔",
+            "en": "She's my friend too."
+          },
+          {
+            "who": "them",
+            "roman": "Acha! Hum sab dost hain.",
+            "urdu": "اچھا! ہم سب دوست ہیں۔",
+            "en": "Nice! We're all friends."
+          }
+        ]
+      }
+    }
+  ]
+}
