@@ -6,10 +6,12 @@ import type {
   DialogueLine,
   FormPair,
   Lesson,
+  LessonDialogue,
   Phrase,
   ReadAloudPassage,
   SpokenQuestion,
 } from '../types';
+import type { LearnStyle, Pace, Skill } from './progress';
 import { fillSlots, romanWords } from './text';
 
 // ---------- Random helpers (seeded, so a session is stable while it runs) ----------
@@ -86,7 +88,8 @@ export type Exercise =
   | { kind: 'flashcard'; id: string; phrase: Phrase; direction: 'en-roman' | 'roman-en'; phraseIds: string[] }
   | { kind: 'repeat'; id: string; phrase: Phrase }
   | { kind: 'spokenQA'; id: string; question: SpokenQuestion }
-  | { kind: 'readAloud'; id: string; passage: ReadAloudPassage };
+  | { kind: 'readAloud'; id: string; passage: ReadAloudPassage }
+  | { kind: 'dialogue'; id: string; mode: 'listen' | 'speak'; dialogue: LessonDialogue };
 
 export type ExerciseKind = Exercise['kind'];
 
@@ -94,6 +97,25 @@ export type ExerciseKind = Exercise['kind'];
 export const GRADED: ExerciseKind[] = ['mcq', 'listen', 'match', 'order', 'translate', 'fill', 'complete'];
 /** Speaking exercises: always skippable, never block progress. */
 export const SPEAKING: ExerciseKind[] = ['repeat', 'spokenQA', 'readAloud'];
+
+/** Which skill an exercise practises (for adapting future lessons). */
+export function skillOf(e: Exercise): Skill | undefined {
+  switch (e.kind) {
+    case 'listen':
+      return 'listening';
+    case 'mcq':
+    case 'match':
+    case 'complete':
+    case 'flashcard':
+      return 'reading';
+    case 'order':
+    case 'translate':
+    case 'fill':
+      return 'writing';
+    default:
+      return undefined;
+  }
+}
 
 export const isGraded = (e: Exercise) => GRADED.includes(e.kind);
 
@@ -153,30 +175,78 @@ export interface BuildOptions {
   gender: Gender;
   name: string;
   seed?: number;
+  /** How the learner likes to learn: hear it first, see it written, or say it right away. */
+  style?: LearnStyle;
+  /** relaxed = 2 new phrases at a time + extra practice; fast = 4 at a time, more typing. */
+  pace?: Pace;
+  /** The skill the learner has been finding hardest; gets extra practice. */
+  weakSkill?: Skill | null;
+  /** Phrases from earlier lessons that are due or were missed — reviewed first as a warm-up. */
+  warmup?: Phrase[];
 }
 
-/** Full lesson: phrase presentations interleaved with practice, then authored exercises and speaking. */
+/**
+ * A lesson taught like a class:
+ *  1. warm-up from earlier lessons (spaced recall),
+ *  2. listen to a short real conversation that uses today's phrases,
+ *  3. small steps: meet 2–4 phrases → recognise them → build/say them,
+ *  4. mixed practice across the whole lesson,
+ *  5. have the conversation yourself, speaking your part.
+ * Recognition always comes before production, and the mix follows the learner's style and weak skill.
+ */
 export function buildLessonExercises(lesson: Lesson, course: Course, idx: CourseIndexes, opts: BuildOptions): Exercise[] {
   const rand = rng(opts.seed ?? Date.now());
   const { gender, name } = opts;
+  const style = opts.style ?? 'listen';
+  const pace = opts.pace ?? 'steady';
   // Distractors come from this lesson first, so learners choose between phrases they've just met.
   const pool = lesson.phrases.length >= 4 ? lesson.phrases : distractorPool(lesson, idx);
   const out: Exercise[] = [];
   const phrases = lesson.phrases;
-  const chunkSize = phrases.length > 9 ? 4 : 3;
+  const chunkSize = pace === 'relaxed' ? 2 : pace === 'fast' ? 4 : 3;
   let n = 0;
   const nid = (k: string) => `${lesson.id}:${k}:${n++}`;
+  const recognise = (p: Phrase, k: string): Exercise =>
+    style === 'see' ? mcqFor(p, pool, rand, gender, name, nid(k)) : listenFor(p, pool, rand, name, nid(k));
+  const build = (p: Phrase): Exercise => {
+    const f = displayForm(p, gender, name);
+    if (pace === 'fast' || !multiWord(p)) return { kind: 'translate', id: nid('translate'), phrase: p, accepted: acceptedRoman(p), phraseIds: [p.id] };
+    const extra = sample(pool.flatMap((x) => romanWords(x.roman)).filter((w) => !romanWords(f.roman).includes(w) && !w.includes('{')), 1, rand);
+    return orderFor(nid('build'), fillSlots(p.en, name), f.roman, f.urdu, extra, rand, [p.id]);
+  };
 
+  // 1. Warm-up from earlier lessons
+  for (const p of (opts.warmup ?? []).slice(0, 3)) out.push({ ...recognise(p, 'warm'), id: nid('warm') });
+
+  // 2. Hear the whole conversation first
+  if (lesson.dialogue) out.push({ kind: 'dialogue', id: nid('dialogue-listen'), mode: 'listen', dialogue: lesson.dialogue });
+
+  // 3. Small steps
   for (let i = 0; i < phrases.length; i += chunkSize) {
     const chunk = phrases.slice(i, i + chunkSize);
-    for (const p of chunk) out.push({ kind: 'intro', id: nid('intro'), phrase: p });
-    const [a, b, c] = shuffle(chunk, rand);
-    out.push(mcqFor(a, pool, rand, gender, name, nid('mcq')));
-    if (b) out.push(listenFor(b, pool, rand, name, nid('listen')));
-    out.push({ kind: 'repeat', id: nid('repeat'), phrase: c ?? b ?? a });
+    for (const p of chunk) {
+      out.push({ kind: 'intro', id: nid('intro'), phrase: p });
+      if (style === 'speak') out.push({ kind: 'repeat', id: nid('repeat'), phrase: p });
+    }
+    const shuffled = shuffle(chunk, rand);
+    // recognise: every phrase on relaxed, two otherwise
+    for (const p of shuffled.slice(0, pace === 'relaxed' ? chunk.length : 2)) out.push(recognise(p, 'recognise'));
+    // the other way round once per step, so both directions get practised
+    if (shuffled[0]) out.push(style === 'see' ? listenFor(shuffled[0], pool, rand, name, nid('listen')) : mcqFor(shuffled[0], pool, rand, gender, name, nid('mcq')));
+    // produce one phrase
+    const buildable = shuffled.find(multiWord) ?? shuffled[0];
+    out.push(build(buildable));
+    // speak (already done per phrase for speakers)
+    if (style !== 'speak') out.push({ kind: 'repeat', id: nid('repeat'), phrase: shuffled[shuffled.length - 1] });
+    // extra practice on the learner's weakest skill
+    const w = shuffled[1] ?? shuffled[0];
+    if (opts.weakSkill === 'listening') out.push(listenFor(w, pool, rand, name, nid('extra-listen')));
+    else if (opts.weakSkill === 'reading') out.push(comprehensionMcq(w, pool, rand, gender, name, nid('extra-read')));
+    else if (opts.weakSkill === 'writing') out.push(build(w));
+    else if (opts.weakSkill === 'speaking') out.push({ kind: 'repeat', id: nid('extra-say'), phrase: w });
   }
 
-  // Mixed practice over the whole lesson.
+  // 4. Mixed practice over the whole lesson
   const matchPhrases = sample(phrases, Math.min(4, phrases.length), rand);
   if (matchPhrases.length >= 3) {
     out.push({
@@ -186,14 +256,9 @@ export function buildLessonExercises(lesson: Lesson, course: Course, idx: Course
       phraseIds: matchPhrases.map((p) => p.id),
     });
   }
-  const orderable = phrases.filter(multiWord);
-  for (const p of sample(orderable, 1, rand)) {
-    const f = displayForm(p, gender, name);
-    const extra = sample(pool.flatMap((x) => romanWords(x.roman)).filter((w) => !romanWords(f.roman).includes(w) && !w.includes('{')), 1, rand);
-    out.push(orderFor(nid('order'), p.en, f.roman, f.urdu, extra, rand, [p.id]));
-  }
   out.push(comprehensionMcq(sample(phrases, 1, rand)[0], pool, rand, gender, name, nid('mcq-en')));
-  for (const p of sample(phrases.filter((x) => romanWords(x.roman).length <= 6), 2, rand)) {
+  const typeCount = pace === 'fast' ? 2 : pace === 'steady' ? 1 : 0;
+  for (const p of sample(phrases.filter((x) => romanWords(x.roman).length <= 6), typeCount, rand)) {
     out.push({ kind: 'translate', id: nid('translate'), phrase: p, accepted: acceptedRoman(p), phraseIds: [p.id] });
   }
 
@@ -224,6 +289,9 @@ export function buildLessonExercises(lesson: Lesson, course: Course, idx: Course
       }
     }
   }
+
+  // 5. Now have the conversation yourself
+  if (lesson.dialogue) out.push({ kind: 'dialogue', id: nid('dialogue-speak'), mode: 'speak', dialogue: lesson.dialogue });
   return out;
 }
 

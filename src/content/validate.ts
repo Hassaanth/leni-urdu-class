@@ -144,7 +144,18 @@ export function validateLesson(raw: unknown, path: string, issues: Issues): Less
         .filter((x): x is AuthoredExercise => x !== null)
     : [];
   if (phrases.length === 0) return null;
-  return { ...(raw as unknown as Lesson), phrases, exercises };
+  let dialogue = raw.dialogue as Lesson['dialogue'];
+  if (dialogue !== undefined) {
+    const d = dialogue as unknown;
+    const ok =
+      isObj(d) && isStr(d.title) && isObj(d.partner) && Array.isArray(d.lines) && d.lines.length > 1 &&
+      d.lines.every((l, i) => isObj(l) && (l.who === 'them' || l.who === 'you') && checkForms(l, `${p}.dialogue[${i}]`, issues));
+    if (!ok) {
+      issues.add(p, 'dialogue is invalid and was skipped');
+      dialogue = undefined;
+    }
+  }
+  return { ...(raw as unknown as Lesson), phrases, exercises, dialogue };
 }
 
 export function validateUnit(raw: unknown, path: string, issues: Issues): Unit | null {

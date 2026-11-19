@@ -178,7 +178,46 @@
           ]
         }
       ],
-      "roleplayId": "c-directions"
+      "roleplayId": "c-directions",
+      "dialogue": {
+        "title": "Finding the mosque",
+        "partner": {
+          "name": "Passer-by",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "you",
+            "roman": "Maaf kijiye, masjid kahan hai?",
+            "urdu": "معاف کیجیے، مسجد کہاں ہے؟",
+            "en": "Excuse me, where is the mosque?"
+          },
+          {
+            "who": "them",
+            "roman": "Seedha jaayen, phir baayen murein.",
+            "urdu": "سیدھا جائیں، پھر بائیں مڑیں۔",
+            "en": "Go straight, then turn left."
+          },
+          {
+            "who": "you",
+            "roman": "Kya yeh door hai?",
+            "urdu": "کیا یہ دور ہے؟",
+            "en": "Is it far?"
+          },
+          {
+            "who": "them",
+            "roman": "Nahi, qareeb hai. Yahan se paanch minute.",
+            "urdu": "نہیں، قریب ہے۔ یہاں سے پانچ منٹ۔",
+            "en": "No, it's near. Five minutes from here."
+          },
+          {
+            "who": "you",
+            "roman": "Bohat shukriya!",
+            "urdu": "بہت شکریہ!",
+            "en": "Thank you very much!"
+          }
+        ]
+      }
     },
     {
       "id": "l4-time",
@@ -343,7 +382,46 @@
           "id": "x-time-qa",
           "questionId": "q-time"
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "When shall we meet?",
+        "partner": {
+          "name": "Hamza",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Kitne baje hain?",
+            "urdu": "کتنے بجے ہیں؟",
+            "en": "What time is it?"
+          },
+          {
+            "who": "you",
+            "roman": "Do baje hain.",
+            "urdu": "دو بجے ہیں۔",
+            "en": "It's two o'clock."
+          },
+          {
+            "who": "them",
+            "roman": "Hum kab milenge? Aaj ya kal?",
+            "urdu": "ہم کب ملیں گے؟ آج یا کل؟",
+            "en": "When shall we meet? Today or tomorrow?"
+          },
+          {
+            "who": "you",
+            "roman": "Aaj nahi. Kal subah.",
+            "urdu": "آج نہیں۔ کل صبح۔",
+            "en": "Not today. Tomorrow morning."
+          },
+          {
+            "who": "them",
+            "roman": "Theek hai. Kal subah milenge!",
+            "urdu": "ٹھیک ہے۔ کل صبح ملیں گے!",
+            "en": "Okay. See you tomorrow morning!"
+          }
+        ]
+      }
     },
     {
       "id": "l4-routine",
@@ -537,7 +615,46 @@
           "id": "x-rout-read",
           "passageId": "r-my-day"
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "What do you like?",
+        "partner": {
+          "name": "Ayesha",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap ko kya pasand hai?",
+            "urdu": "آپ کو کیا پسند ہے؟",
+            "en": "What do you like?"
+          },
+          {
+            "who": "you",
+            "roman": "Mujhe cricket pasand hai. Aur aap ko?",
+            "urdu": "مجھے کرکٹ پسند ہے۔ اور آپ کو؟",
+            "en": "I like cricket. And you?"
+          },
+          {
+            "who": "them",
+            "roman": "Mujhe cricket pasand nahi! Main roz subah jaldi uthti hoon aur kaam par jaati hoon.",
+            "urdu": "مجھے کرکٹ پسند نہیں! میں روز صبح جلدی اٹھتی ہوں اور کام پر جاتی ہوں۔",
+            "en": "I don't like cricket! I get up early every morning and go to work."
+          },
+          {
+            "who": "you",
+            "roman": "Hamesha?",
+            "urdu": "ہمیشہ؟",
+            "en": "Always?"
+          },
+          {
+            "who": "them",
+            "roman": "Haan, hamesha. Abhi mujhe neend aa rahi hai!",
+            "urdu": "ہاں، ہمیشہ۔ ابھی مجھے نیند آ رہی ہے!",
+            "en": "Yes, always. I'm sleepy right now!"
+          }
+        ]
+      }
     }
   ]
 }

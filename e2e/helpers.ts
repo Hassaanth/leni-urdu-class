@@ -78,7 +78,7 @@ export async function answerCurrentExercise(page: Page): Promise<string | null> 
       return !!b;
     };
     const byText = (t: string) => click((b) => b.textContent!.trim() === t);
-    const el = document.querySelector('.session-body > *');
+    const el = document.querySelector('.session-body > :not(.teacher)');
     if (!el) return null;
     const key = Object.keys(el).find((k) => k.startsWith('__reactFiber$'))!;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -140,6 +140,16 @@ export async function answerCurrentExercise(page: Page): Promise<string | null> 
         await sleep(400);
         break;
       }
+      case 'dialogue':
+        if (ex.mode === 'speak') {
+          for (let i = 0; i < 20 && document.querySelector('.session-body .btn.primary.block'); i++) {
+            byText('Next line');
+            await sleep(900);
+          }
+          await sleep(1500);
+          for (let i = 0; i < 10 && byText('Next line'); i++) await sleep(1500);
+        }
+        break;
       case 'readAloud':
         if (ex.passage.question) (document.querySelectorAll('.session-body .card.soft .options button')[ex.passage.question.answer] as HTMLElement).click();
         break;

@@ -10,6 +10,7 @@ import { PhraseText, PlayButtons } from './common';
 import { IconEye, IconPlay } from './Icons';
 import { SpeakPanel, type AttemptResult } from './SpeakPanel';
 import { WordBreakdown } from './WordBreakdown';
+import { DialogueEx } from './DialogueEx';
 
 export interface Feedback {
   correctAnswer?: ReactNode;
@@ -797,6 +798,8 @@ export function ExerciseView({ ex, api }: { ex: Exercise; api: ExApi }) {
       return <SpokenQAEx ex={ex} api={api} />;
     case 'readAloud':
       return <ReadAloudEx ex={ex} api={api} />;
+    case 'dialogue':
+      return <DialogueEx ex={ex} api={api} />;
   }
 }
 

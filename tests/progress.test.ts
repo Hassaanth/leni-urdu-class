@@ -206,3 +206,56 @@ describe('lesson engine and conversations over the real course', async () => {
     expect(choiceForTarget(node, 'Wa alaikum assalam!')?.quality).toBe('best');
   });
 });
+
+describe('adaptive teaching flow', async () => {
+  const base = join(__dirname, '..', 'public', 'content');
+  const { course } = await loadCourse(async (p) => JSON.parse(readFileSync(join(base, p), 'utf8')));
+  const idx = buildIndexes(course);
+  const lesson = idx.lessonById.get('l1-intro')!;
+  const kinds = (o: Parameters<typeof buildLessonExercises>[3]) => buildLessonExercises(lesson, course, idx, o).map((e) => e.kind);
+
+  it('every lesson opens with its conversation and ends by speaking it', () => {
+    for (const l of idx.lessons) {
+      const ex = buildLessonExercises(l, course, idx, { gender: 'masculine', name: 'Ali', seed: 2 });
+      const dialogues = ex.filter((e) => e.kind === 'dialogue') as Extract<(typeof ex)[number], { kind: 'dialogue' }>[];
+      expect(dialogues.map((d) => d.mode), l.id).toEqual(['listen', 'speak']);
+    }
+  });
+
+  it('gentle pace introduces two phrases at a time; fast pace four', () => {
+    const firstStep = (k: string[]) => k.slice(k.indexOf('intro')).findIndex((x) => x !== 'intro');
+    expect(firstStep(kinds({ gender: 'masculine', name: 'Ali', seed: 1, pace: 'relaxed', style: 'see' }))).toBe(2);
+    expect(firstStep(kinds({ gender: 'masculine', name: 'Ali', seed: 1, pace: 'fast', style: 'see' }))).toBe(4);
+  });
+
+  it('speakers repeat each phrase straight after meeting it', () => {
+    const k = kinds({ gender: 'masculine', name: 'Ali', seed: 1, style: 'speak' });
+    k.forEach((x, i) => x === 'intro' && expect(k[i + 1]).toBe('repeat'));
+  });
+
+  it('listeners recognise by ear first; visual learners by reading', () => {
+    const afterIntros = (k: string[]) => k[k.lastIndexOf('intro', 6) + 1];
+    expect(afterIntros(kinds({ gender: 'masculine', name: 'Ali', seed: 1, style: 'listen' }))).toBe('listen');
+    expect(afterIntros(kinds({ gender: 'masculine', name: 'Ali', seed: 1, style: 'see' }))).toBe('mcq');
+  });
+
+  it('gentle pace uses word banks instead of typing', () => {
+    expect(kinds({ gender: 'masculine', name: 'Ali', seed: 1, pace: 'relaxed' })).not.toContain('translate');
+  });
+
+  it('starts with a warm-up of earlier phrases and adds practice for the weakest skill', () => {
+    const warm = idx.lessonById.get('l2-numbers')!.phrases.slice(0, 3);
+    const ex = buildLessonExercises(lesson, course, idx, { gender: 'masculine', name: 'Ali', seed: 1, warmup: warm, weakSkill: 'listening' });
+    expect(ex.slice(0, 3).every((e) => e.id.includes(':warm:'))).toBe(true);
+    expect(ex.filter((e) => e.id.includes('extra-listen')).length).toBeGreaterThan(0);
+  });
+
+  it('tracks skills and finds the weakest one', async () => {
+    const { weakestSkill } = await import('../src/lib/progress');
+    let s = initialState();
+    for (let i = 0; i < 5; i++) s = recordAnswer(s, { phraseIds: [], correct: i === 0, firstTry: true, skill: 'listening' }, today);
+    for (let i = 0; i < 5; i++) s = recordAnswer(s, { phraseIds: [], correct: true, firstTry: true, skill: 'reading' }, today);
+    expect(s.skills.listening).toEqual({ right: 1, total: 5 });
+    expect(weakestSkill(s)).toBe('listening');
+  });
+});

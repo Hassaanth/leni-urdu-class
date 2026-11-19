@@ -54,18 +54,18 @@ test.describe('core flows', () => {
   });
 
   test('wrong answers are explained and come back at the end', async ({ page }) => {
-    await seedSettings(page);
+    await seedSettings(page, { learnStyle: 'see' });
     await page.goto('/#/lesson/l2-numbers');
     await page.getByRole('button', { name: 'Start lesson' }).click();
     // advance through intro cards to the first multiple-choice question
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 10; i++) {
       if (await page.locator('.ex-kicker', { hasText: 'Choose the answer' }).count()) break;
       await page.getByRole('button', { name: 'Continue' }).click();
     }
     const total = await page.locator('.session-top > span').innerText();
     // pick an option that is wrong (read the answer index from the page props)
     const wrongIndex = await page.evaluate(() => {
-      const el = document.querySelector('.session-body > *')!;
+      const el = document.querySelector('.session-body > :not(.teacher)')!;
       const key = Object.keys(el).find((k) => k.startsWith('__reactFiber$'))!;
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let f: any = (el as any)[key];
@@ -87,7 +87,7 @@ test.describe('core flows', () => {
     await expect(prompt).toBeVisible();
     // Answer whatever is asked using a spelling variant of the accepted answer when possible.
     const accepted: string[] = await page.evaluate(() => {
-      const el = document.querySelector('.session-body > *')!;
+      const el = document.querySelector('.session-body > :not(.teacher)')!;
       const key = Object.keys(el).find((k) => k.startsWith('__reactFiber$'))!;
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let f: any = (el as any)[key];

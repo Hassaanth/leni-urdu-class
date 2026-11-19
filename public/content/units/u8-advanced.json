@@ -171,7 +171,46 @@
           "answer": 0,
           "explain": "\"Der aayad durust aayad\" is the classic friendly reply to someone arriving late."
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "Zara’s little brother",
+        "partner": {
+          "name": "Zara",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Mere bhai ne aaj naak mein dam kar diya!",
+            "urdu": "میرے بھائی نے آج ناک میں دم کر دیا!",
+            "en": "My brother drove me up the wall today!"
+          },
+          {
+            "who": "you",
+            "roman": "Haha, kyun?",
+            "urdu": "ہاہا، کیوں؟",
+            "en": "Haha, why?"
+          },
+          {
+            "who": "them",
+            "roman": "Woh har waqt mera sir khaata hai!",
+            "urdu": "وہ ہر وقت میرا سر کھاتا ہے!",
+            "en": "He pesters me all the time!"
+          },
+          {
+            "who": "you",
+            "roman": "Lekin woh aap ki aankhon ka tara hai!",
+            "urdu": "لیکن وہ آپ کی آنکھوں کا تارا ہے!",
+            "en": "But he's the apple of your eye!"
+          },
+          {
+            "who": "them",
+            "roman": "Haan, yeh bhi sach hai. Ghar ki murghi daal barabar!",
+            "urdu": "ہاں، یہ بھی سچ ہے۔ گھر کی مرغی دال برابر!",
+            "en": "Yes, that's true too. We never value what's at home!"
+          }
+        ]
+      }
     },
     {
       "id": "l8-story",
@@ -334,7 +373,46 @@
           "passageId": "r-story"
         }
       ],
-      "roleplayId": "c-story"
+      "roleplayId": "c-story",
+      "dialogue": {
+        "title": "Caught in the rain",
+        "partner": {
+          "name": "Zara",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Pata hai kya hua?",
+            "urdu": "پتا ہے کیا ہوا؟",
+            "en": "You know what happened?"
+          },
+          {
+            "who": "you",
+            "roman": "Nahi, kya hua?",
+            "urdu": "نہیں، کیا ہوا؟",
+            "en": "No, what happened?"
+          },
+          {
+            "who": "them",
+            "roman": "Pehle main bazaar gayi. Phir achanak barish shuru ho gayi!",
+            "urdu": "پہلے میں بازار گئی۔ پھر اچانک بارش شروع ہو گئی!",
+            "en": "First I went to the bazaar. Then suddenly it started raining!"
+          },
+          {
+            "who": "you",
+            "roman": "Uske baad?",
+            "urdu": "اس کے بعد؟",
+            "en": "After that?"
+          },
+          {
+            "who": "them",
+            "roman": "Mere paas chhatri nahi thi, is liye main bheeg gayi. Lekin aakhir mein mazaa aaya!",
+            "urdu": "میرے پاس چھتری نہیں تھی، اس لیے میں بھیگ گئی۔ لیکن آخر میں مزہ آیا!",
+            "en": "I didn't have an umbrella, so I got soaked. But in the end it was fun!"
+          }
+        ]
+      }
     },
     {
       "id": "l8-nuance",
@@ -493,7 +571,46 @@
           "id": "x-nuance-qa",
           "questionId": "q-opinion"
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "City life: a debate",
+        "partner": {
+          "name": "Uncle",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Mere khayal mein shehar ki zindagi bohat mushkil hai.",
+            "urdu": "میرے خیال میں شہر کی زندگی بہت مشکل ہے۔",
+            "en": "In my opinion, city life is very hard."
+          },
+          {
+            "who": "you",
+            "roman": "Kisi had tak, lekin mera tajurba alag hai.",
+            "urdu": "کسی حد تک، لیکن میرا تجربہ الگ ہے۔",
+            "en": "To some extent, but my experience is different."
+          },
+          {
+            "who": "them",
+            "roman": "Acha? Kaise?",
+            "urdu": "اچھا؟ کیسے؟",
+            "en": "Oh? How?"
+          },
+          {
+            "who": "you",
+            "roman": "Baat yeh hai ke ek taraf mushkil hai, doosri taraf bohat mauqe hain.",
+            "urdu": "بات یہ ہے کہ ایک طرف مشکل ہے، دوسری طرف بہت موقعے ہیں۔",
+            "en": "The thing is, on one hand it's hard, on the other there are lots of opportunities."
+          },
+          {
+            "who": "them",
+            "roman": "Hmm, is par sochna parega. Shayad aap theek hain.",
+            "urdu": "ہمم، اس پر سوچنا پڑے گا۔ شاید آپ ٹھیک ہیں۔",
+            "en": "Hmm, I'll have to think about that. Maybe you're right."
+          }
+        ]
+      }
     }
   ]
 }

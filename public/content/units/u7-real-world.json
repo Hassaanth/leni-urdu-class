@@ -170,7 +170,52 @@
           "questionId": "q-kahan-jaana"
         }
       ],
-      "roleplayId": "c-misunderstanding"
+      "roleplayId": "c-misunderstanding",
+      "dialogue": {
+        "title": "A taxi to the airport",
+        "partner": {
+          "name": "Driver",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Ji, kahan jaana hai?",
+            "urdu": "جی، کہاں جانا ہے؟",
+            "en": "Yes, where do you need to go?"
+          },
+          {
+            "who": "you",
+            "roman": "Mujhe airport jaana hai. Kiraya kitna hoga?",
+            "urdu": "مجھے ایئرپورٹ جانا ہے۔ کرایہ کتنا ہوگا؟",
+            "en": "I need to go to the airport. What will the fare be?"
+          },
+          {
+            "who": "them",
+            "roman": "Paanch sau rupay.",
+            "urdu": "پانچ سو روپے۔",
+            "en": "Five hundred rupees."
+          },
+          {
+            "who": "you",
+            "roman": "Theek hai. Jaldi karein, please.",
+            "urdu": "ٹھیک ہے۔ جلدی کریں، پلیز۔",
+            "en": "Okay. Please hurry."
+          },
+          {
+            "who": "them",
+            "roman": "Lijiye, airport aa gaya.",
+            "urdu": "لیجیے، ایئرپورٹ آ گیا۔",
+            "en": "Here we are, the airport."
+          },
+          {
+            "who": "you",
+            "roman": "Yahan rok dein. Shukriya!",
+            "urdu": "یہاں روک دیں۔ شکریہ!",
+            "en": "Stop here please. Thanks!"
+          }
+        ]
+      }
     },
     {
       "id": "l7-phone-work",
@@ -369,7 +414,60 @@
           "passageId": "r-phone"
         }
       ],
-      "roleplayId": "c-phone"
+      "roleplayId": "c-phone",
+      "dialogue": {
+        "title": "Calling an office",
+        "partner": {
+          "name": "Receptionist",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Hello, kaun bol raha hai?",
+            "urdu": "ہیلو، کون بول رہا ہے؟",
+            "en": "Hello, who's speaking?"
+          },
+          {
+            "who": "you",
+            "roman": "Main {name} bol raha hoon. Kya main Ahmed sahab se baat kar sakta hoon?",
+            "urdu": "میں {name} بول رہا ہوں۔ کیا میں احمد صاحب سے بات کر سکتا ہوں؟",
+            "en": "This is {name}. May I speak to Mr Ahmed?",
+            "f": {
+              "roman": "Main {name} bol rahi hoon. Kya main Ahmed sahab se baat kar sakti hoon?",
+              "urdu": "میں {name} بول رہی ہوں۔ کیا میں احمد صاحب سے بات کر سکتی ہوں؟"
+            }
+          },
+          {
+            "who": "them",
+            "roman": "Woh abhi meeting mein hain.",
+            "urdu": "وہ ابھی میٹنگ میں ہیں۔",
+            "en": "He's in a meeting right now."
+          },
+          {
+            "who": "you",
+            "roman": "Acha. Meeting kitne baje khatam hogi?",
+            "urdu": "اچھا۔ میٹنگ کتنے بجے ختم ہوگی؟",
+            "en": "I see. What time will the meeting end?"
+          },
+          {
+            "who": "them",
+            "roman": "Teen baje.",
+            "urdu": "تین بجے۔",
+            "en": "At three o'clock."
+          },
+          {
+            "who": "you",
+            "roman": "Theek hai, main baad mein call karta hoon.",
+            "urdu": "ٹھیک ہے، میں بعد میں کال کرتا ہوں۔",
+            "en": "Okay, I'll call later.",
+            "f": {
+              "roman": "Theek hai, main baad mein call karti hoon.",
+              "urdu": "ٹھیک ہے، میں بعد میں کال کرتی ہوں۔"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "l7-problems",
@@ -566,7 +664,46 @@
           "questionId": "q-kya-masla"
         }
       ],
-      "roleplayId": "c-misunderstanding"
+      "roleplayId": "c-misunderstanding",
+      "dialogue": {
+        "title": "A problem at the hotel",
+        "partner": {
+          "name": "Clerk",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "you",
+            "roman": "Maaf kijiye, ek masla hai. Yeh kaam nahi kar raha.",
+            "urdu": "معاف کیجیے، ایک مسئلہ ہے۔ یہ کام نہیں کر رہا۔",
+            "en": "Excuse me, there's a problem. This isn't working."
+          },
+          {
+            "who": "them",
+            "roman": "Aap ka matlab hai AC?",
+            "urdu": "آپ کا مطلب ہے اے سی؟",
+            "en": "You mean the AC?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji haan. Aur meri tabiyat bhi theek nahi.",
+            "urdu": "جی ہاں۔ اور میری طبیعت بھی ٹھیک نہیں۔",
+            "en": "Yes. And I'm not feeling well either."
+          },
+          {
+            "who": "them",
+            "roman": "Galti ho gayi, maazrat chahta hoon. Kya aap ko doctor ki zaroorat hai?",
+            "urdu": "غلطی ہو گئی، معذرت چاہتا ہوں۔ کیا آپ کو ڈاکٹر کی ضرورت ہے؟",
+            "en": "Our mistake, I apologise. Do you need a doctor?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji haan, please.",
+            "urdu": "جی ہاں، پلیز۔",
+            "en": "Yes, please."
+          }
+        ]
+      }
     }
   ]
 }

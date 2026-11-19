@@ -277,7 +277,58 @@
           "passageId": "r-first-meeting"
         }
       ],
-      "roleplayId": "c-first-meeting"
+      "roleplayId": "c-first-meeting",
+      "dialogue": {
+        "title": "Meeting Bilal",
+        "partner": {
+          "name": "Bilal",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Assalamu alaikum!",
+            "urdu": "السلام علیکم!",
+            "en": "Hello!"
+          },
+          {
+            "who": "you",
+            "roman": "Wa alaikum assalam!",
+            "urdu": "وعلیکم السلام!",
+            "en": "Hello to you too!"
+          },
+          {
+            "who": "them",
+            "roman": "Mera naam Bilal hai. Aap ka naam kya hai?",
+            "urdu": "میرا نام بلال ہے۔ آپ کا نام کیا ہے؟",
+            "en": "My name is Bilal. What is your name?"
+          },
+          {
+            "who": "you",
+            "roman": "Mera naam {name} hai.",
+            "urdu": "میرا نام {name} ہے۔",
+            "en": "My name is {name}."
+          },
+          {
+            "who": "them",
+            "roman": "Aapse mil kar khushi hui. Aap kaise hain?",
+            "urdu": "آپ سے مل کر خوشی ہوئی۔ آپ کیسے ہیں؟",
+            "en": "Nice to meet you. How are you?"
+          },
+          {
+            "who": "you",
+            "roman": "Main theek hoon, shukriya. Aap sunayein?",
+            "urdu": "میں ٹھیک ہوں، شکریہ۔ آپ سنائیں؟",
+            "en": "I'm fine, thanks. And you?"
+          },
+          {
+            "who": "them",
+            "roman": "Main bhi theek hoon.",
+            "urdu": "میں بھی ٹھیک ہوں۔",
+            "en": "I'm fine too."
+          }
+        ]
+      }
     },
     {
       "id": "l1-greetings",
@@ -508,7 +559,46 @@
           "passageId": "r-goodbye"
         }
       ],
-      "roleplayId": "c-relatives"
+      "roleplayId": "c-relatives",
+      "dialogue": {
+        "title": "Saying goodbye to Khala",
+        "partner": {
+          "name": "Khala",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Assalamu alaikum, beta! Sab khairiyat hai?",
+            "urdu": "السلام علیکم بیٹا! سب خیریت ہے؟",
+            "en": "Hello, dear! Is everything well?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji, Alhamdulillah. Bohat shukriya.",
+            "urdu": "جی، الحمدللہ۔ بہت شکریہ۔",
+            "en": "Yes, thank God. Thank you very much."
+          },
+          {
+            "who": "them",
+            "roman": "Theek hai. Phir milenge!",
+            "urdu": "ٹھیک ہے۔ پھر ملیں گے!",
+            "en": "Alright. See you again!"
+          },
+          {
+            "who": "you",
+            "roman": "Ji, phir milenge. Khuda hafiz!",
+            "urdu": "جی، پھر ملیں گے۔ خدا حافظ!",
+            "en": "Yes, see you again. Goodbye!"
+          },
+          {
+            "who": "them",
+            "roman": "Allah hafiz!",
+            "urdu": "اللہ حافظ!",
+            "en": "Goodbye!"
+          }
+        ]
+      }
     },
     {
       "id": "l1-survival",
@@ -730,7 +820,52 @@
           "questionId": "q-english"
         }
       ],
-      "roleplayId": "c-speak-slowly"
+      "roleplayId": "c-speak-slowly",
+      "dialogue": {
+        "title": "At a small shop",
+        "partner": {
+          "name": "Shopkeeper",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap ko kya chahiye? Yeh bohat acha hai!",
+            "urdu": "آپ کو کیا چاہیے؟ یہ بہت اچھا ہے!",
+            "en": "What do you need? This is very good!"
+          },
+          {
+            "who": "you",
+            "roman": "Maaf kijiye, mujhe samajh nahi aaya. Aahista boliye.",
+            "urdu": "معاف کیجیے، مجھے سمجھ نہیں آیا۔ آہستہ بولیے۔",
+            "en": "Sorry, I didn't understand. Please speak slowly."
+          },
+          {
+            "who": "them",
+            "roman": "Ji. Aap... ko... kya... chahiye?",
+            "urdu": "جی۔ آپ... کو... کیا... چاہیے؟",
+            "en": "Sure. What... do... you... need?"
+          },
+          {
+            "who": "you",
+            "roman": "Mujhe paani chahiye. Yeh kitne ka hai?",
+            "urdu": "مجھے پانی چاہیے۔ یہ کتنے کا ہے؟",
+            "en": "I need water. How much is this?"
+          },
+          {
+            "who": "them",
+            "roman": "Das rupay.",
+            "urdu": "دس روپے۔",
+            "en": "Ten rupees."
+          },
+          {
+            "who": "you",
+            "roman": "Shukriya!",
+            "urdu": "شکریہ!",
+            "en": "Thank you!"
+          }
+        ]
+      }
     }
   ]
 }

@@ -1,9 +1,10 @@
 // Runs any list of exercises: shows one at a time, validates answers, re-queues mistakes,
 // records progress, and reports a summary at the end. Used by lessons and practice modes.
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import { usePracticeTimer, useStopAudioOnUnmount } from '../hooks';
+import { useName, usePracticeTimer, useStopAudioOnUnmount } from '../hooks';
+import { praise, TEACHER, teacherLine } from '../lib/teacher';
 import { dateKey } from '../lib/dates';
-import { isGraded, SPEAKING, type Exercise } from '../lib/exercises';
+import { isGraded, skillOf, SPEAKING, type Exercise } from '../lib/exercises';
 import { introducePhrases, recordAnswer } from '../lib/progress';
 import { audio } from '../services/audio';
 import { store, useSettings } from '../state/store';
@@ -58,6 +59,7 @@ export function SessionRunner({ title, exercises, review, onFinish, onExit }: Pr
   usePracticeTimer(true);
   useStopAudioOnUnmount();
   const settings = useSettings();
+  const name = useName();
   const [queue, setQueue] = useState<QueueItem[]>(() => exercises.map((ex, i) => ({ ex, key: `${ex.id}#${i}`, retry: false })));
   const [pos, setPos] = useState(0);
   const [result, setResult] = useState<null | { correct: boolean; fb: Feedback }>(null);
@@ -90,7 +92,7 @@ export function SessionRunner({ title, exercises, review, onFinish, onExit }: Pr
       }
       if (!correct) phraseIds.forEach((id) => stats.current.missed.add(id));
       phraseIds.forEach((id) => stats.current.practiced.add(id));
-      store.update((s) => recordAnswer(s, { phraseIds, correct, firstTry, review }, dateKey()));
+      store.update((s) => recordAnswer(s, { phraseIds, correct, firstTry, review, skill: skillOf(item.ex) }, dateKey()));
       const requeue = opts.requeue ?? true;
       if (!correct && requeue && isGraded(item.ex) && !item.retry) {
         setQueue((q) => [...q, { ex: item.ex, key: `${item.key}-retry`, retry: true }]);
@@ -146,7 +148,7 @@ export function SessionRunner({ title, exercises, review, onFinish, onExit }: Pr
       <>
         <div className="feedback-title" role="status">
           {result.correct ? <IconCheck width={24} height={24} /> : <IconX width={24} height={24} />}
-          {result.correct ? (item.retry ? 'Got it this time!' : 'Correct!') : 'Not quite'}
+          {result.correct ? (item.retry ? 'Got it this time!' : `Correct! ${praise(pos).roman}`) : 'Not quite — that\x27s how we learn'}
         </div>
         {!result.correct && result.fb.correctAnswer && (
           <div>
@@ -196,6 +198,17 @@ export function SessionRunner({ title, exercises, review, onFinish, onExit }: Pr
         </span>
       </div>
       <div className="session-body" ref={bodyRef} tabIndex={-1} key={item.key}>
+        {!result && (
+          <div className="teacher">
+            <span className="t-avatar" aria-hidden>
+              {TEACHER.avatar}
+            </span>
+            <div className="t-bubble">
+              <span className="sr-only">{TEACHER.name} says: </span>
+              {teacherLine(ex, settings.learnStyle, name, ex.kind === 'intro' && !queue.slice(0, pos).some((q) => q.ex.kind === 'intro'))}
+            </div>
+          </div>
+        )}
         <ExerciseView ex={ex} api={api} />
       </div>
       <div

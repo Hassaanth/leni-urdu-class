@@ -103,6 +103,22 @@ export type AuthoredExercise =
   | { type: 'spokenQA'; id: string; questionId: string }
   | { type: 'readAloud'; id: string; passageId: string };
 
+export interface DialogueTurn {
+  who: 'them' | 'you';
+  roman: string;
+  urdu: string;
+  en: string;
+  /** Feminine-speaker version of a "you" line, when it differs. */
+  f?: FormPair;
+}
+
+/** A short real conversation: heard at the start of a lesson, spoken by the learner at the end. */
+export interface LessonDialogue {
+  title: string;
+  partner: { name: string; voice?: 'm' | 'f' };
+  lines: DialogueTurn[];
+}
+
 export interface Lesson {
   id: string;
   title: string;
@@ -113,6 +129,7 @@ export interface Lesson {
   exercises?: AuthoredExercise[];
   /** Conversation scenario that practises this lesson. */
   roleplayId?: string;
+  dialogue?: LessonDialogue;
 }
 
 export interface Unit {

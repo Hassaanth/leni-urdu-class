@@ -19,9 +19,12 @@ function Onboarding() {
   const [name, setName] = useState(settings.learnerName);
   const [gender, setGender] = useState<Settings['learnerGender']>(settings.learnerGender);
   const [goal, setGoal] = useState<Settings['dailyGoalMinutes']>(settings.dailyGoalMinutes);
+  const [style, setStyle] = useState<Settings['learnStyle']>(settings.learnStyle);
+  const [pace, setPace] = useState<Settings['pace']>(settings.pace);
+  const [why, setWhy] = useState<Settings['goal']>(settings.goal);
   const save = () =>
     {
-    store.update((s) => ({ ...s, settings: { ...s.settings, learnerName: name.trim(), learnerGender: gender, dailyGoalMinutes: goal, onboarded: true } }));
+    store.update((s) => ({ ...s, settings: { ...s.settings, learnerName: name.trim(), learnerGender: gender, dailyGoalMinutes: goal, learnStyle: style, pace, goal: why, onboarded: true } }));
     navigate('/start');
   };
   return (
@@ -30,7 +33,7 @@ function Onboarding() {
         Khush aamdeed! Welcome 👋
       </h2>
       <p className="muted">
-        Leni Urdu Class teaches everyday spoken Urdu with Roman Urdu first, so you can start speaking before you read the Urdu script. Three quick choices:
+        Leni Urdu Class teaches everyday spoken Urdu with Roman Urdu first, so you can start speaking before you read the Urdu script. A few quick questions so I can teach you the way you learn best:
       </p>
       <div className="stack">
         <label className="stack" style={{ display: 'block' }}>
@@ -53,6 +56,7 @@ function Onboarding() {
             ]}
           />
         </div>
+        <ProfileQuestions style={style} setStyle={setStyle} pace={pace} setPace={setPace} why={why} setWhy={setWhy} />
         <div>
           <strong>Daily practice goal</strong>
           <div style={{ marginTop: 6 }}>
@@ -167,6 +171,14 @@ export function LearnPage() {
         sub={challengeDone >= 5 ? 'Done for today — nice work!' : `${challengeDone}/5 phrases said aloud`}
       />
       <CardLink to="/speak/repeat" icon="🎙️" title="Repeat after me" sub="Listen to a phrase, then say it" />
+      {s.settings.onboarded && (
+        <CardLink
+          to={`/talk/${GOAL_PICKS[s.settings.goal].talk}`}
+          icon="🎯"
+          title={`For your goal: ${GOAL_PICKS[s.settings.goal].label}`}
+          sub="A real conversation you'll actually use"
+        />
+      )}
       {due > 0 && <CardLink to="/practice/review" icon="🔁" title={`${due} phrase${due === 1 ? '' : 's'} due for review`} sub="Spaced review keeps words fresh" />}
 
       <h2 id="course">Course</h2>
@@ -220,3 +232,75 @@ export function LearnPage() {
     </>
   );
 }
+
+export function ProfileQuestions(p: {
+  style: Settings['learnStyle'];
+  setStyle: (v: Settings['learnStyle']) => void;
+  pace: Settings['pace'];
+  setPace: (v: Settings['pace']) => void;
+  why: Settings['goal'];
+  setWhy: (v: Settings['goal']) => void;
+}) {
+  return (
+    <>
+      <div>
+        <strong>How do you pick up new things best?</strong>
+        <p className="small muted" style={{ margin: '2px 0 6px' }}>
+          I'll change the order of each lesson to suit you.
+        </p>
+        <Segmented
+          label="Learning style"
+          value={p.style}
+          onChange={p.setStyle}
+          options={[
+            { value: 'listen', label: '👂 Hearing it' },
+            { value: 'see', label: '👀 Seeing it' },
+            { value: 'speak', label: '🗣️ Saying it' },
+          ]}
+        />
+      </div>
+      <div>
+        <strong>What pace suits you?</strong>
+        <p className="small muted" style={{ margin: '2px 0 6px' }}>
+          Gentle: 2 new phrases at a time with extra practice. Fast: 4 at a time with more typing.
+        </p>
+        <Segmented
+          label="Pace"
+          value={p.pace}
+          onChange={p.setPace}
+          options={[
+            { value: 'relaxed', label: 'Gentle' },
+            { value: 'steady', label: 'Steady' },
+            { value: 'fast', label: 'Fast' },
+          ]}
+        />
+      </div>
+      <div>
+        <strong>Why are you learning Urdu?</strong>
+        <div style={{ marginTop: 6 }}>
+          <Segmented
+            label="Goal"
+            value={p.why}
+            onChange={p.setWhy}
+            options={[
+              { value: 'family', label: 'Family' },
+              { value: 'friends', label: 'Friends' },
+              { value: 'travel', label: 'Travel' },
+              { value: 'work', label: 'Work' },
+              { value: 'curious', label: 'Curious' },
+            ]}
+          />
+        </div>
+      </div>
+    </>
+  );
+}
+
+/** Lessons and role-plays that matter most for each goal. */
+export const GOAL_PICKS: Record<Settings['goal'], { lesson: string; talk: string; label: string }> = {
+  family: { lesson: 'l3-family', talk: 'c-relatives', label: 'talking with family' },
+  friends: { lesson: 'l6-casual', talk: 'c-friends', label: 'chatting with friends' },
+  travel: { lesson: 'l4-directions', talk: 'c-directions', label: 'getting around' },
+  work: { lesson: 'l7-phone-work', talk: 'c-phone', label: 'work and phone calls' },
+  curious: { lesson: 'l1-greetings', talk: 'c-first-meeting', label: 'first conversations' },
+};

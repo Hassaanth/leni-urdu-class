@@ -211,7 +211,54 @@
           "id": "x-pres-read",
           "passageId": "r-learning"
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "What are you doing?",
+        "partner": {
+          "name": "Bilal",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap kya kar rahe hain?",
+            "urdu": "آپ کیا کر رہے ہیں؟",
+            "en": "What are you doing?"
+          },
+          {
+            "who": "you",
+            "roman": "Main Urdu seekh raha hoon.",
+            "urdu": "میں اردو سیکھ رہا ہوں۔",
+            "en": "I'm learning Urdu.",
+            "f": {
+              "roman": "Main Urdu seekh rahi hoon.",
+              "urdu": "میں اردو سیکھ رہی ہوں۔"
+            }
+          },
+          {
+            "who": "them",
+            "roman": "Wah! Main chai pee raha hoon. Aap kahan rehte hain?",
+            "urdu": "واہ! میں چائے پی رہا ہوں۔ آپ کہاں رہتے ہیں؟",
+            "en": "Wow! I'm drinking tea. Where do you live?"
+          },
+          {
+            "who": "you",
+            "roman": "Main London mein rehta hoon.",
+            "urdu": "میں لندن میں رہتا ہوں۔",
+            "en": "I live in London.",
+            "f": {
+              "roman": "Main London mein rehti hoon.",
+              "urdu": "میں لندن میں رہتی ہوں۔"
+            }
+          },
+          {
+            "who": "them",
+            "roman": "Bohat acha!",
+            "urdu": "بہت اچھا!",
+            "en": "Very good!"
+          }
+        ]
+      }
     },
     {
       "id": "l5-past-future",
@@ -398,7 +445,54 @@
           "id": "x-pf-qa",
           "questionId": "q-kal-kya-kiya"
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "Yesterday and today",
+        "partner": {
+          "name": "Hamza",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Kal kya hua?",
+            "urdu": "کل کیا ہوا؟",
+            "en": "What happened yesterday?"
+          },
+          {
+            "who": "you",
+            "roman": "Main kal bazaar gaya tha. Maine khaana khaya.",
+            "urdu": "میں کل بازار گیا تھا۔ میں نے کھانا کھایا۔",
+            "en": "I went to the bazaar yesterday. I ate.",
+            "f": {
+              "roman": "Main kal bazaar gayi thi. Maine khaana khaya.",
+              "urdu": "میں کل بازار گئی تھی۔ میں نے کھانا کھایا۔"
+            }
+          },
+          {
+            "who": "them",
+            "roman": "Aur aaj? Aap kab aayenge?",
+            "urdu": "اور آج؟ آپ کب آئیں گے؟",
+            "en": "And today? When will you come?"
+          },
+          {
+            "who": "you",
+            "roman": "Main shaam ko aaunga.",
+            "urdu": "میں شام کو آؤں گا۔",
+            "en": "I'll come in the evening.",
+            "f": {
+              "roman": "Main shaam ko aaungi.",
+              "urdu": "میں شام کو آؤں گی۔"
+            }
+          },
+          {
+            "who": "them",
+            "roman": "Theek hai, hum shaam ko milenge!",
+            "urdu": "ٹھیک ہے، ہم شام کو ملیں گے!",
+            "en": "Okay, we'll meet in the evening!"
+          }
+        ]
+      }
     },
     {
       "id": "l5-requests",
@@ -594,7 +688,50 @@
           "answer": 0,
           "explain": "\"Kya aap ... kar sakte hain?\" is a polite request pattern."
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "At the front desk",
+        "partner": {
+          "name": "Receptionist",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "you",
+            "roman": "Maaf kijiye, kya main andar aa sakta hoon?",
+            "urdu": "معاف کیجیے، کیا میں اندر آ سکتا ہوں؟",
+            "en": "Excuse me, may I come in?",
+            "f": {
+              "roman": "Maaf kijiye, kya main andar aa sakti hoon?",
+              "urdu": "معاف کیجیے، کیا میں اندر آ سکتی ہوں؟"
+            }
+          },
+          {
+            "who": "them",
+            "roman": "Zaroor, aaiye. Ek minute.",
+            "urdu": "ضرور، آئیے۔ ایک منٹ۔",
+            "en": "Of course, come in. One minute."
+          },
+          {
+            "who": "you",
+            "roman": "Kya aap meri madad kar sakti hain?",
+            "urdu": "کیا آپ میری مدد کر سکتی ہیں؟",
+            "en": "Can you help me?"
+          },
+          {
+            "who": "them",
+            "roman": "Ji, zaroor. Fikr na karein.",
+            "urdu": "جی، ضرور۔ فکر نہ کریں۔",
+            "en": "Yes, of course. Don't worry."
+          },
+          {
+            "who": "you",
+            "roman": "Shukriya. Darwaza band kar dein, please.",
+            "urdu": "شکریہ۔ دروازہ بند کر دیں، پلیز۔",
+            "en": "Thanks. Please close the door."
+          }
+        ]
+      }
     }
   ]
 }

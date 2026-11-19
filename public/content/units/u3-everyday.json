@@ -171,7 +171,46 @@
           "questionId": "q-siblings"
         }
       ],
-      "roleplayId": "c-relatives"
+      "roleplayId": "c-relatives",
+      "dialogue": {
+        "title": "Khala asks about the family",
+        "partner": {
+          "name": "Khala",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap ke kitne behen bhai hain?",
+            "urdu": "آپ کے کتنے بہن بھائی ہیں؟",
+            "en": "How many brothers and sisters do you have?"
+          },
+          {
+            "who": "you",
+            "roman": "Mere do bhai hain aur ek behen.",
+            "urdu": "میرے دو بھائی ہیں اور ایک بہن۔",
+            "en": "I have two brothers and one sister."
+          },
+          {
+            "who": "them",
+            "roman": "Masha'Allah! Aur ammi abbu kaise hain?",
+            "urdu": "ماشاءاللہ! اور امی ابو کیسے ہیں؟",
+            "en": "Wonderful! And how are your mum and dad?"
+          },
+          {
+            "who": "you",
+            "roman": "Woh theek hain, shukriya.",
+            "urdu": "وہ ٹھیک ہیں، شکریہ۔",
+            "en": "They're fine, thank you."
+          },
+          {
+            "who": "them",
+            "roman": "Nani ko mera salaam kehna.",
+            "urdu": "نانی کو میرا سلام کہنا۔",
+            "en": "Give my regards to Nani."
+          }
+        ]
+      }
     },
     {
       "id": "l3-food",
@@ -367,7 +406,52 @@
           "questionId": "q-pasand"
         }
       ],
-      "roleplayId": "c-restaurant"
+      "roleplayId": "c-restaurant",
+      "dialogue": {
+        "title": "Dinner at Aunty’s",
+        "partner": {
+          "name": "Aunty",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Beta, khaana khayenge?",
+            "urdu": "بیٹا، کھانا کھائیں گے؟",
+            "en": "Dear, will you eat?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji, mujhe bhook lagi hai!",
+            "urdu": "جی، مجھے بھوک لگی ہے!",
+            "en": "Yes, I'm hungry!"
+          },
+          {
+            "who": "them",
+            "roman": "Roti aur daal lijiye. Chai bhi?",
+            "urdu": "روٹی اور دال لیجیے۔ چائے بھی؟",
+            "en": "Have roti and daal. Tea too?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji, mujhe chai pasand hai. Bohat mazay ka hai!",
+            "urdu": "جی، مجھے چائے پسند ہے۔ بہت مزے کا ہے!",
+            "en": "Yes, I like tea. It's delicious!"
+          },
+          {
+            "who": "them",
+            "roman": "Thora aur?",
+            "urdu": "تھوڑا اور؟",
+            "en": "A little more?"
+          },
+          {
+            "who": "you",
+            "roman": "Bas, shukriya.",
+            "urdu": "بس، شکریہ۔",
+            "en": "That's enough, thank you."
+          }
+        ]
+      }
     },
     {
       "id": "l3-shopping",
@@ -554,7 +638,52 @@
           ]
         }
       ],
-      "roleplayId": "c-shopping"
+      "roleplayId": "c-shopping",
+      "dialogue": {
+        "title": "Bargaining for a scarf",
+        "partner": {
+          "name": "Shopkeeper",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "you",
+            "roman": "Iski qeemat kya hai?",
+            "urdu": "اس کی قیمت کیا ہے؟",
+            "en": "What's the price?"
+          },
+          {
+            "who": "them",
+            "roman": "Do hazaar rupay.",
+            "urdu": "دو ہزار روپے۔",
+            "en": "Two thousand rupees."
+          },
+          {
+            "who": "you",
+            "roman": "Yeh bohat mehenga hai. Thora kam karein.",
+            "urdu": "یہ بہت مہنگا ہے۔ تھوڑا کم کریں۔",
+            "en": "It's very expensive. Please lower it a little."
+          },
+          {
+            "who": "them",
+            "roman": "Acha, ek hazaar. Aur kuch?",
+            "urdu": "اچھا، ایک ہزار۔ اور کچھ؟",
+            "en": "Okay, one thousand. Anything else?"
+          },
+          {
+            "who": "you",
+            "roman": "Bas, itna hi. Kya aap card lete hain?",
+            "urdu": "بس، اتنا ہی۔ کیا آپ کارڈ لیتے ہیں؟",
+            "en": "That's all. Do you take card?"
+          },
+          {
+            "who": "them",
+            "roman": "Ji haan.",
+            "urdu": "جی ہاں۔",
+            "en": "Yes."
+          }
+        ]
+      }
     }
   ]
 }

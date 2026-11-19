@@ -157,7 +157,46 @@
           "answer": 0,
           "explain": "teen = three."
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "At the samosa stall",
+        "partner": {
+          "name": "Hamza",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Kitne?",
+            "urdu": "کتنے؟",
+            "en": "How many?"
+          },
+          {
+            "who": "you",
+            "roman": "Paanch, please.",
+            "urdu": "پانچ، پلیز۔",
+            "en": "Five, please."
+          },
+          {
+            "who": "them",
+            "roman": "Paanch? Ya chhe?",
+            "urdu": "پانچ؟ یا چھ؟",
+            "en": "Five? Or six?"
+          },
+          {
+            "who": "you",
+            "roman": "Nahi, paanch. Shukriya!",
+            "urdu": "نہیں، پانچ۔ شکریہ!",
+            "en": "No, five. Thanks!"
+          },
+          {
+            "who": "them",
+            "roman": "Theek hai. Ek, do, teen, chaar, paanch!",
+            "urdu": "ٹھیک ہے۔ ایک، دو، تین، چار، پانچ!",
+            "en": "Okay. One, two, three, four, five!"
+          }
+        ]
+      }
     },
     {
       "id": "l2-questions",
@@ -334,7 +373,46 @@
           "id": "x-q-qa",
           "questionId": "q-kahan-se"
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "Where are you from?",
+        "partner": {
+          "name": "Ayesha",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap kahan se hain?",
+            "urdu": "آپ کہاں سے ہیں؟",
+            "en": "Where are you from?"
+          },
+          {
+            "who": "you",
+            "roman": "Main London se hoon. Aur aap?",
+            "urdu": "میں لندن سے ہوں۔ اور آپ؟",
+            "en": "I'm from London. And you?"
+          },
+          {
+            "who": "them",
+            "roman": "Main Lahore se hoon.",
+            "urdu": "میں لاہور سے ہوں۔",
+            "en": "I'm from Lahore."
+          },
+          {
+            "who": "you",
+            "roman": "Yeh kya hai?",
+            "urdu": "یہ کیا ہے؟",
+            "en": "What is this?"
+          },
+          {
+            "who": "them",
+            "roman": "Yeh chai hai!",
+            "urdu": "یہ چائے ہے!",
+            "en": "This is tea!"
+          }
+        ]
+      }
     },
     {
       "id": "l2-people",
@@ -495,7 +573,46 @@
           "answer": 0,
           "explain": "\"Meri\" matches a female friend; \"mera\" a male friend."
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "Who is this?",
+        "partner": {
+          "name": "Bilal",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Yeh kaun hai?",
+            "urdu": "یہ کون ہے؟",
+            "en": "Who is this?"
+          },
+          {
+            "who": "you",
+            "roman": "Yeh mera dost hai.",
+            "urdu": "یہ میرا دوست ہے۔",
+            "en": "This is my friend."
+          },
+          {
+            "who": "them",
+            "roman": "Aur woh larki kaun hai?",
+            "urdu": "اور وہ لڑکی کون ہے؟",
+            "en": "And who is that girl?"
+          },
+          {
+            "who": "you",
+            "roman": "Woh bhi meri dost hai.",
+            "urdu": "وہ بھی میری دوست ہے۔",
+            "en": "She's my friend too."
+          },
+          {
+            "who": "them",
+            "roman": "Acha! Hum sab dost hain.",
+            "urdu": "اچھا! ہم سب دوست ہیں۔",
+            "en": "Nice! We're all friends."
+          }
+        ]
+      }
     }
   ]
 }

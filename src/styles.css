@@ -1420,3 +1420,32 @@ strong,
 .option {
   border-radius: 18px;
 }
+
+/* Teacher */
+.teacher {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 4px 0 12px;
+}
+.t-avatar {
+  width: 42px;
+  height: 42px;
+  flex: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  background: var(--accent-soft);
+}
+.t-bubble {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px 18px 18px 18px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow);
+}
+.bubble.speaking {
+  outline: 3px solid var(--primary);
+}

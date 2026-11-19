@@ -7,6 +7,7 @@ import { audio } from '../services/audio';
 import { isIOS, isStandalone } from '../services/speech';
 import { tutorConfigured } from '../services/tutor';
 import { store, useSettings } from '../state/store';
+import { ProfileQuestions } from './LearnPage';
 import { SpeakingCapabilities } from './SpeakPage';
 
 function set<K extends keyof Settings>(key: K, value: Settings[K]) {
@@ -123,6 +124,22 @@ export function SettingsPage() {
           </div>
           <p className="small muted" style={{ marginTop: 6 }}>
             Counts time while you're actively doing lessons and practice (idle time isn't counted).
+          </p>
+        </div>
+      </Section>
+
+      <Section id="style" title="How you learn">
+        <div className="stack">
+          <ProfileQuestions
+            style={s.learnStyle}
+            setStyle={(v) => set('learnStyle', v)}
+            pace={s.pace}
+            setPace={(v) => set('pace', v)}
+            why={s.goal}
+            setWhy={(v) => set('goal', v)}
+          />
+          <p className="small muted" style={{ margin: 0 }}>
+            Changes apply from your next lesson. The app also gives you extra practice in whichever skill — listening, reading, writing or speaking — you find hardest.
           </p>
         </div>
       </Section>

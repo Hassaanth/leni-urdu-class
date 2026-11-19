@@ -22,7 +22,17 @@ export interface Settings {
   qaMode: 'beginner' | 'intermediate' | 'challenge';
   soundEffects: boolean;
   onboarded: boolean;
+  /** How the learner prefers to pick up new language. Shapes the order and kind of exercises. */
+  learnStyle: LearnStyle;
+  /** How many new phrases per step and how much repetition. */
+  pace: Pace;
+  goal: Goal;
 }
+
+export type LearnStyle = 'listen' | 'see' | 'speak';
+export type Pace = 'relaxed' | 'steady' | 'fast';
+export type Goal = 'family' | 'friends' | 'travel' | 'work' | 'curious';
+export type Skill = 'listening' | 'reading' | 'writing' | 'speaking';
 
 export const DEFAULT_SETTINGS: Settings = {
   showEnglish: true,
@@ -41,6 +51,9 @@ export const DEFAULT_SETTINGS: Settings = {
   qaMode: 'beginner',
   soundEffects: true,
   onboarded: false,
+  learnStyle: 'listen',
+  pace: 'steady',
+  goal: 'family',
 };
 
 export interface DayStats {
@@ -103,6 +116,8 @@ export interface ProgressState {
   achievements: Record<string, DateKey>;
   conversations: Record<string, { completedOn: DateKey; times: number; bestChoices: number }>;
   dailyChallenge: Record<DateKey, string[]>;
+  /** Right / total answers per skill, used to give more practice where the learner struggles. */
+  skills: Record<Skill, { right: number; total: number }>;
 }
 
 export function initialState(): ProgressState {
@@ -126,6 +141,7 @@ export function initialState(): ProgressState {
     achievements: {},
     conversations: {},
     dailyChallenge: {},
+    skills: { listening: { right: 0, total: 0 }, reading: { right: 0, total: 0 }, writing: { right: 0, total: 0 }, speaking: { right: 0, total: 0 } },
   };
 }
 
@@ -156,12 +172,16 @@ export function addXp(s: ProgressState, amount: number, today: DateKey): Progres
 /** Record a graded (confirmed) answer for one or more phrases. */
 export function recordAnswer(
   s: ProgressState,
-  opts: { phraseIds: string[]; correct: boolean; firstTry: boolean; review?: boolean },
+  opts: { phraseIds: string[]; correct: boolean; firstTry: boolean; review?: boolean; skill?: Skill },
   today: DateKey,
 ): ProgressState {
   const cards = { ...s.cards };
   for (const id of opts.phraseIds) cards[id] = grade(cards[id] ?? newCard(id, today), opts.correct, today);
   let next: ProgressState = { ...s, cards };
+  if (opts.skill && opts.firstTry) {
+    const k = next.skills[opts.skill];
+    next = { ...next, skills: { ...next.skills, [opts.skill]: { right: k.right + (opts.correct ? 1 : 0), total: k.total + 1 } } };
+  }
   next = withDay(next, today, (d) => ({
     ...d,
     exercises: d.exercises + 1,
@@ -334,5 +354,21 @@ export function migrate(raw: unknown): ProgressState {
     ...r,
     settings: { ...base.settings, ...(r.settings ?? {}) },
     speaking: { ...base.speaking, ...(r.speaking ?? {}) },
+    skills: { ...base.skills, ...(r.skills ?? {}) },
   } as ProgressState;
+}
+
+/** The skill with the lowest first-try accuracy (needs a few answers before it counts). */
+export function weakestSkill(s: ProgressState): Skill | null {
+  let worst: Skill | null = null;
+  let worstRate = 0.85; // only flag a skill that is clearly weaker
+  for (const [k, v] of Object.entries(s.skills) as [Skill, { right: number; total: number }][]) {
+    if (v.total < 4) continue;
+    const rate = v.right / v.total;
+    if (rate < worstRate) {
+      worst = k;
+      worstRate = rate;
+    }
+  }
+  return worst;
 }

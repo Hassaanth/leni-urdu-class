@@ -56,6 +56,13 @@ for u in course["units"]:
             gv = p.get("genderVariants")
             if gv:
                 add(gv["masculine"]["urdu"]); add(gv["feminine"]["urdu"])
+        dlg = l.get("dialogue")
+        if dlg:
+            pv = "m" if dlg["partner"].get("voice") == "m" else "f"
+            for line in dlg["lines"]:
+                add(line["urdu"], pv if line["who"] == "them" else "f")
+                if line.get("f"):
+                    add(line["f"]["urdu"])
         for ex in l.get("exercises", []):
             for c in ex.get("context", []):
                 add(c["urdu"])

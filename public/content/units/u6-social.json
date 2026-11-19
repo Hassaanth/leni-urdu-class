@@ -205,7 +205,58 @@
           "questionId": "q-weekend"
         }
       ],
-      "roleplayId": "c-weekend"
+      "roleplayId": "c-weekend",
+      "dialogue": {
+        "title": "Tea at Hamza’s",
+        "partner": {
+          "name": "Hamza",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Yaar, kal kya plan hai?",
+            "urdu": "یار، کل کیا پلان ہے؟",
+            "en": "Mate, what's the plan tomorrow?"
+          },
+          {
+            "who": "you",
+            "roman": "Kuch nahi. Kyun?",
+            "urdu": "کچھ نہیں۔ کیوں؟",
+            "en": "Nothing. Why?"
+          },
+          {
+            "who": "them",
+            "roman": "Hamare ghar aaiye! Chalo, chai peete hain.",
+            "urdu": "ہمارے گھر آئیے! چلو، چائے پیتے ہیں۔",
+            "en": "Come to our place! Let's have tea."
+          },
+          {
+            "who": "you",
+            "roman": "Zaroor! Kitne baje milein?",
+            "urdu": "ضرور! کتنے بجے ملیں؟",
+            "en": "Definitely! What time shall we meet?"
+          },
+          {
+            "who": "them",
+            "roman": "Shaam paanch baje.",
+            "urdu": "شام پانچ بجے۔",
+            "en": "Five in the evening."
+          },
+          {
+            "who": "you",
+            "roman": "Theek hai. Mujhe thori der ho jayegi.",
+            "urdu": "ٹھیک ہے۔ مجھے تھوڑی دیر ہو جائے گی۔",
+            "en": "Okay. I'll be a bit late."
+          },
+          {
+            "who": "them",
+            "roman": "Koi masla nahi. Main intezaar karunga.",
+            "urdu": "کوئی مسئلہ نہیں۔ میں انتظار کروں گا۔",
+            "en": "No problem. I'll wait."
+          }
+        ]
+      }
     },
     {
       "id": "l6-feelings",
@@ -397,7 +448,46 @@
           "id": "x-feel-qa",
           "questionId": "q-opinion"
         }
-      ]
+      ],
+      "dialogue": {
+        "title": "Good news from Sana",
+        "partner": {
+          "name": "Sana",
+          "voice": "f"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Meri naukri lag gayi!",
+            "urdu": "میری نوکری لگ گئی!",
+            "en": "I got the job!"
+          },
+          {
+            "who": "you",
+            "roman": "Mubarak ho! Main bohat khush hoon.",
+            "urdu": "مبارک ہو! میں بہت خوش ہوں۔",
+            "en": "Congratulations! I'm so happy."
+          },
+          {
+            "who": "them",
+            "roman": "Shukriya! Lekin main thori pareshan bhi hoon.",
+            "urdu": "شکریہ! لیکن میں تھوڑی پریشان بھی ہوں۔",
+            "en": "Thanks! But I'm a little worried too."
+          },
+          {
+            "who": "you",
+            "roman": "Mujhe lagta hai ke sab theek hoga.",
+            "urdu": "مجھے لگتا ہے کہ سب ٹھیک ہوگا۔",
+            "en": "I think everything will be fine."
+          },
+          {
+            "who": "them",
+            "roman": "Aap ki baat theek hai. Shukriya!",
+            "urdu": "آپ کی بات ٹھیک ہے۔ شکریہ!",
+            "en": "You've got a point. Thanks!"
+          }
+        ]
+      }
     },
     {
       "id": "l6-casual",
@@ -578,7 +668,52 @@
           "explain": "With a friend, \"Tum sunao?\" is the casual version of \"Aap sunayein?\"."
         }
       ],
-      "roleplayId": "c-friends"
+      "roleplayId": "c-friends",
+      "dialogue": {
+        "title": "Chatting with Ali",
+        "partner": {
+          "name": "Ali",
+          "voice": "m"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Yaar, kya haal hai?",
+            "urdu": "یار، کیا حال ہے؟",
+            "en": "Mate, how's it going?"
+          },
+          {
+            "who": "you",
+            "roman": "Sab theek! Tum sunao?",
+            "urdu": "سب ٹھیک! تم سناؤ؟",
+            "en": "All good! What about you?"
+          },
+          {
+            "who": "them",
+            "roman": "Bas yaar, kal cricket match tha. Mazaa aa gaya!",
+            "urdu": "بس یار، کل کرکٹ میچ تھا۔ مزہ آ گیا!",
+            "en": "Well, there was a cricket match yesterday. It was so much fun!"
+          },
+          {
+            "who": "you",
+            "roman": "Acha? Sach mein?",
+            "urdu": "اچھا؟ سچ میں؟",
+            "en": "Oh yeah? Really?"
+          },
+          {
+            "who": "them",
+            "roman": "Haan! Chalo, kal phir khelenge, Insha'Allah.",
+            "urdu": "ہاں! چلو، کل پھر کھیلیں گے، ان شاء اللہ۔",
+            "en": "Yes! Let's play again tomorrow, God willing."
+          },
+          {
+            "who": "you",
+            "roman": "Insha'Allah!",
+            "urdu": "ان شاء اللہ!",
+            "en": "God willing!"
+          }
+        ]
+      }
     }
   ]
 }

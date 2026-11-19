@@ -4,7 +4,10 @@ import { SessionRunner, type SessionSummary } from '../components/SessionRunner'
 import { useName } from '../hooks';
 import { dateKey } from '../lib/dates';
 import { buildLessonExercises, displayForm } from '../lib/exercises';
-import { completeLesson } from '../lib/progress';
+import { completeLesson, weakestSkill } from '../lib/progress';
+import { TEACHER } from '../lib/teacher';
+import { dueQueue } from '../lib/srs';
+import type { Phrase } from '../types';
 import { fillSlots } from '../lib/text';
 import { href, navigate } from '../router';
 import { useCourse } from '../state/course';
@@ -23,7 +26,17 @@ export function LessonPage({ id }: { id?: string }) {
   const [xpAtStart, setXpAtStart] = useState(0);
 
   const exercises = useMemo(
-    () => (lesson ? buildLessonExercises(lesson, course, idx, { gender: settings.learnerGender, name, seed }) : []),
+    () => (lesson ? buildLessonExercises(lesson, course, idx, {
+            gender: settings.learnerGender,
+            name,
+            seed,
+            style: settings.learnStyle,
+            pace: settings.pace,
+            weakSkill: weakestSkill(store.getState()),
+            warmup: dueQueue(Object.values(store.getState().cards), dateKey())
+              .map((c) => idx.phraseById.get(c.id))
+              .filter((p): p is Phrase => !!p && !lesson.phrases.includes(p)),
+          }) : []),
     // Rebuild only when a new attempt starts, not when settings change mid-lesson.
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [lesson, seed],
@@ -104,6 +117,46 @@ export function LessonPage({ id }: { id?: string }) {
               </div>
             );
           })}
+        </div>
+
+        <div className="teacher" style={{ marginTop: 18 }}>
+          <span className="t-avatar" aria-hidden>
+            {TEACHER.avatar}
+          </span>
+          <div className="t-bubble">
+            {pct < 60 ? (
+              <>
+                That was a tricky one — completely normal at this stage. Let's go over it again at a gentler pace, with smaller steps.
+                <div style={{ marginTop: 8 }}>
+                  <button
+                    className="btn small primary"
+                    onClick={() => {
+                      store.update((st) => ({ ...st, settings: { ...st.settings, pace: 'relaxed' } }));
+                      setSeed(Date.now());
+                      setXpAtStart(store.getState().xp);
+                      setPhase('session');
+                    }}
+                  >
+                    Redo it gently
+                  </button>
+                </div>
+              </>
+            ) : pct >= 95 && settings.pace !== 'fast' ? (
+              <>
+                Shabash! You made that look easy. Want bigger steps next time?
+                <div style={{ marginTop: 8 }}>
+                  <button
+                    className="btn small"
+                    onClick={() => store.update((st) => ({ ...st, settings: { ...st.settings, pace: st.settings.pace === 'relaxed' ? 'steady' : 'fast' } }))}
+                  >
+                    Yes, speed up
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>Well done! Say today's phrases out loud a few more times later — that's what makes them stick.</>
+            )}
+          </div>
         </div>
 
         <h2>What next?</h2>
