@@ -215,7 +215,7 @@ describe('adaptive teaching flow', async () => {
   const kinds = (o: Parameters<typeof buildLessonExercises>[3]) => buildLessonExercises(lesson, course, idx, o).map((e) => e.kind);
 
   it('every lesson opens with its conversation and ends by speaking it', () => {
-    for (const l of idx.lessons) {
+    for (const l of idx.lessons.filter((x) => x.dialogue)) {
       const ex = buildLessonExercises(l, course, idx, { gender: 'masculine', name: 'Ali', seed: 2 });
       const dialogues = ex.filter((e) => e.kind === 'dialogue') as Extract<(typeof ex)[number], { kind: 'dialogue' }>[];
       expect(dialogues.map((d) => d.mode), l.id).toEqual(['listen', 'speak']);
@@ -290,5 +290,41 @@ describe('Building Blocks engine', async () => {
     expect(ex.slice(0, 3).map((e) => e.kind)).toEqual(['say', 'say', 'say']);
     const afterPattern = ex.slice(ex.findIndex((e) => e.kind === 'pattern') + 1).filter((e) => e.kind === 'order' || e.kind === 'say');
     expect(afterPattern[0].kind).toBe('order');
+  });
+});
+
+describe('word lessons (Duolingo pace)', async () => {
+  const base = join(__dirname, '..', 'public', 'content');
+  const { course } = await loadCourse(async (f) => JSON.parse(readFileSync(join(base, f), 'utf8')));
+  const idx = buildIndexes(course);
+  const { buildWordLesson, buildPatternLesson } = await import('../src/lib/exercises');
+  const { normalizeUrdu } = await import('../src/lib/text');
+  const wordLessons = idx.lessons.filter((l) => l.kind === 'words');
+
+  it('teaches each word with a picture check right away, and practises every word several times', () => {
+    wordLessons.forEach((l, i) => {
+      const earlier = wordLessons.slice(0, i).flatMap((x) => x.phrases);
+      const ex = buildWordLesson(l, { gender: 'masculine', name: 'Ali', seed: 3, earlier, review: earlier.slice(-3), allowTyping: i >= 3 });
+      for (const w of l.phrases) {
+        const at = ex.findIndex((e) => e.kind === 'intro' && e.phrase.id === w.id);
+        expect(at, `${l.id}:${w.id} intro`).toBeGreaterThanOrEqual(0);
+        const next = ex.slice(at + 1).find((e) => e.kind !== 'repeat')!;
+        expect(next.kind === 'mcq' && next.id.includes(':picture:') && next.phraseIds[0] === w.id, `${l.id}:${w.id} picture check`).toBe(true);
+        const times = ex.filter((e) => 'phraseIds' in e && e.phraseIds.includes(w.id)).length + ex.filter((e) => e.kind === 'listen' && e.phrase.id === w.id).length;
+        expect(times, `${l.id}:${w.id} practice count`).toBeGreaterThanOrEqual(3);
+      }
+      // no full sentences in word lessons
+      for (const e of ex) if (e.kind === 'intro') expect(e.phrase.kind === 'sentence', l.id).toBe(false);
+    });
+  });
+
+  it('sentence lessons only check (not re-teach) words learned earlier', () => {
+    const b1 = idx.lessonById.get('b1')!;
+    const known = new Set(wordLessons.flatMap((l) => l.phrases).map((p) => normalizeUrdu(p.urdu)));
+    const ex = buildPatternLesson(b1, idx, { gender: 'masculine', name: 'Ali', seed: 1, known });
+    const taught = ex.filter((e) => e.kind === 'intro').map((e) => (e as { phrase: { roman: string } }).phrase.roman);
+    expect(taught).not.toContain('shukriya');
+    expect(taught).not.toContain('main');
+    expect(ex.some((e) => e.id.includes(':known:'))).toBe(true);
   });
 });

@@ -1,0 +1,228 @@
+{
+  "id": "wp1",
+  "level": 2,
+  "host": "ayesha",
+  "title": "Word pairs",
+  "chapter": "Chapter 5 · Putting words together",
+  "story": "Ayesha shows you that two words you know already make a phrase.",
+  "description": "Join words you know: hot tea, my home, two teas, very good.",
+  "lessons": [
+    {
+      "id": "p1",
+      "kind": "words",
+      "title": "Hot tea, cold water",
+      "objective": "Put a describing word before a food word.",
+      "phrases": [
+        {
+          "id": "v-garamchai",
+          "emoji": "🍵",
+          "roman": "garam chai",
+          "urdu": "گرم چائے",
+          "en": "hot tea",
+          "kind": "phrase",
+          "note": "Describing word first, then the thing — just like English."
+        },
+        {
+          "id": "v-thandapaani",
+          "emoji": "🧊",
+          "roman": "thanda paani",
+          "urdu": "ٹھنڈا پانی",
+          "en": "cold water",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-meethaaam",
+          "emoji": "🥭",
+          "roman": "meetha aam",
+          "urdu": "میٹھا آم",
+          "en": "sweet mango",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-mazedaarkhaana",
+          "emoji": "😋",
+          "roman": "mazedaar khaana",
+          "urdu": "مزیدار کھانا",
+          "en": "tasty food",
+          "kind": "phrase"
+        }
+      ],
+      "tips": [
+        "You already know every word in this lesson. Now we put two together: describing word first, thing second — exactly like English."
+      ]
+    },
+    {
+      "id": "p2",
+      "kind": "words",
+      "title": "My home, your name",
+      "objective": "Say whose something is.",
+      "phrases": [
+        {
+          "id": "v-meraghar",
+          "emoji": "🏠",
+          "roman": "mera ghar",
+          "urdu": "میرا گھر",
+          "en": "my home",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-meradost",
+          "emoji": "🤝",
+          "roman": "mera dost",
+          "urdu": "میرا دوست",
+          "en": "my friend",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-aapkanaam",
+          "emoji": "🏷️",
+          "roman": "aap ka naam",
+          "urdu": "آپ کا نام",
+          "en": "your name",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-meribehen",
+          "emoji": "👧",
+          "roman": "meri behen",
+          "urdu": "میری بہن",
+          "en": "my sister",
+          "kind": "phrase",
+          "note": "Meri (not mera), because behen (sister) is a feminine word. Many Urdu words are masculine or feminine — you'll pick it up by hearing them."
+        }
+      ],
+      "tips": [
+        "\"My\" goes first, just like English. For feminine words like behen (sister), mera becomes meri."
+      ]
+    },
+    {
+      "id": "p3",
+      "kind": "words",
+      "title": "Two teas, ten rupees",
+      "objective": "Put a number before a thing.",
+      "phrases": [
+        {
+          "id": "v-dochai",
+          "emoji": "🍵",
+          "roman": "do chai",
+          "urdu": "دو چائے",
+          "en": "two teas",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-ekroti",
+          "emoji": "🫓",
+          "roman": "ek roti",
+          "urdu": "ایک روٹی",
+          "en": "one roti",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-teenaam",
+          "emoji": "🥭",
+          "roman": "teen aam",
+          "urdu": "تین آم",
+          "en": "three mangoes",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-dasrupay",
+          "emoji": "💵",
+          "roman": "das rupay",
+          "urdu": "دس روپے",
+          "en": "ten rupees",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-paanchsau",
+          "emoji": "💯",
+          "roman": "paanch sau",
+          "urdu": "پانچ سو",
+          "en": "five hundred",
+          "kind": "phrase"
+        }
+      ],
+      "tips": [
+        "Numbers go before the thing, like English. And Urdu doesn't always add an \"s\" for plurals: do chai = two teas."
+      ]
+    },
+    {
+      "id": "p4",
+      "kind": "words",
+      "title": "Very good, thank you very much",
+      "objective": "Little phrases you'll say all day.",
+      "phrases": [
+        {
+          "id": "v-bohat",
+          "emoji": "💪",
+          "roman": "bohat",
+          "urdu": "بہت",
+          "en": "very / a lot",
+          "kind": "word",
+          "note": "A new word! Put it in front to make something stronger."
+        },
+        {
+          "id": "v-bohatacha",
+          "emoji": "👍",
+          "roman": "bohat acha",
+          "urdu": "بہت اچھا",
+          "en": "very good",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-bohatshukriya",
+          "emoji": "🙏",
+          "roman": "bohat shukriya",
+          "urdu": "بہت شکریہ",
+          "en": "thank you very much",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-jihaan",
+          "emoji": "✅",
+          "roman": "ji haan",
+          "urdu": "جی ہاں",
+          "en": "yes (politely)",
+          "kind": "phrase"
+        },
+        {
+          "id": "v-jinahi",
+          "emoji": "❌",
+          "roman": "ji nahi",
+          "urdu": "جی نہیں",
+          "en": "no (politely)",
+          "kind": "phrase"
+        }
+      ],
+      "tips": [
+        "One new word — bohat (very) — and four little phrases built from words you know."
+      ]
+    }
+  ],
+  "guide": [
+    {
+      "title": "Describing word + thing",
+      "body": "Like English, the describing word comes first: garam chai (hot tea), thanda paani (cold water).",
+      "examples": [
+        "v-garamchai",
+        "v-thandapaani"
+      ]
+    },
+    {
+      "title": "mera / meri",
+      "body": "My is mera for masculine words and meri for feminine words. Don't try to memorise lists — you'll get a feel for it.",
+      "examples": [
+        "v-meraghar",
+        "v-meribehen"
+      ]
+    },
+    {
+      "title": "Being extra polite",
+      "body": "Put ji in front of haan or nahi to be polite. Put bohat in front of shukriya to say \"thank you very much\".",
+      "examples": [
+        "v-jihaan",
+        "v-bohatshukriya"
+      ]
+    }
+  ]
+}

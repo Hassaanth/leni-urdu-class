@@ -1,0 +1,160 @@
+{
+  "id": "wu3",
+  "level": 1,
+  "host": "zara",
+  "title": "People",
+  "chapter": "Chapter 3 · Meet the family",
+  "story": "Little Zara introduces everyone in the house — learn who's who.",
+  "description": "Mum, dad, brother, sister, friend, child — and my, your, name and home.",
+  "lessons": [
+    {
+      "id": "w7",
+      "kind": "words",
+      "title": "Family",
+      "objective": "Name the people in a family.",
+      "phrases": [
+        {
+          "id": "v-ammi",
+          "emoji": "👩",
+          "roman": "ammi",
+          "urdu": "امی",
+          "en": "mum",
+          "kind": "word"
+        },
+        {
+          "id": "v-abbu",
+          "emoji": "👨",
+          "roman": "abbu",
+          "urdu": "ابو",
+          "en": "dad",
+          "kind": "word"
+        },
+        {
+          "id": "v-bhai",
+          "emoji": "👦",
+          "roman": "bhai",
+          "urdu": "بھائی",
+          "en": "brother",
+          "kind": "word",
+          "note": "People also call any man \"bhai\" to be friendly — like \"mate\"."
+        },
+        {
+          "id": "v-behen",
+          "emoji": "👧",
+          "roman": "behen",
+          "urdu": "بہن",
+          "en": "sister",
+          "kind": "word"
+        }
+      ]
+    },
+    {
+      "id": "w8",
+      "kind": "words",
+      "title": "People",
+      "objective": "Name people around you.",
+      "phrases": [
+        {
+          "id": "v-dost",
+          "emoji": "🤝",
+          "roman": "dost",
+          "urdu": "دوست",
+          "en": "friend",
+          "kind": "word"
+        },
+        {
+          "id": "v-bachcha",
+          "emoji": "👶",
+          "roman": "bachcha",
+          "urdu": "بچہ",
+          "en": "child",
+          "kind": "word"
+        },
+        {
+          "id": "v-aadmi",
+          "emoji": "🧔",
+          "roman": "aadmi",
+          "urdu": "آدمی",
+          "en": "man",
+          "kind": "word"
+        },
+        {
+          "id": "v-aurat",
+          "emoji": "👩‍🦱",
+          "roman": "aurat",
+          "urdu": "عورت",
+          "en": "woman",
+          "kind": "word"
+        }
+      ]
+    },
+    {
+      "id": "w9",
+      "kind": "words",
+      "title": "Mine & yours",
+      "objective": "Say whose something is.",
+      "phrases": [
+        {
+          "id": "v-mera",
+          "emoji": "☝️",
+          "roman": "mera",
+          "urdu": "میرا",
+          "en": "my",
+          "kind": "word"
+        },
+        {
+          "id": "v-aapka",
+          "emoji": "👉",
+          "roman": "aap ka",
+          "urdu": "آپ کا",
+          "en": "your",
+          "kind": "word",
+          "note": "Two words in Urdu (\"you's\"), one in English."
+        },
+        {
+          "id": "v-naam",
+          "emoji": "🏷️",
+          "roman": "naam",
+          "urdu": "نام",
+          "en": "name",
+          "kind": "word"
+        },
+        {
+          "id": "v-ghar",
+          "emoji": "🏠",
+          "roman": "ghar",
+          "urdu": "گھر",
+          "en": "home / house",
+          "kind": "word",
+          "note": "The gh is g + breath."
+        }
+      ]
+    }
+  ],
+  "guide": [
+    {
+      "title": "Family words",
+      "body": "Ammi and abbu are what most Pakistanis call their mum and dad. Bhai (brother) is also a friendly way to address any man.",
+      "examples": [
+        "v-ammi",
+        "v-abbu",
+        "v-bhai"
+      ]
+    },
+    {
+      "title": "\"My\" and \"your\"",
+      "body": "Mera = my, aap ka = your. They go BEFORE the word, just like English: mera ghar = my home.",
+      "examples": [
+        "v-mera",
+        "v-aapka"
+      ]
+    },
+    {
+      "title": "Don't worry about the script",
+      "body": "Notice that Urdu script is written right-to-left. You don't need to read it yet — the Roman Urdu is enough to start speaking.",
+      "examples": [
+        "v-naam"
+      ]
+    }
+  ]
+}

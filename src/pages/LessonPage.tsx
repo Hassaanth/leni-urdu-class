@@ -3,14 +3,14 @@ import { CardLink, PageHead, PhraseText, PlayButtons } from '../components/commo
 import { SessionRunner, type SessionSummary } from '../components/SessionRunner';
 import { useName } from '../hooks';
 import { dateKey } from '../lib/dates';
-import { buildLessonExercises, buildPatternLesson, displayForm } from '../lib/exercises';
+import { buildLessonExercises, buildPatternLesson, buildWordLesson, displayForm } from '../lib/exercises';
 import { completeLesson, weakestSkill } from '../lib/progress';
 import { FINALE, TEACHER } from '../lib/teacher';
 import { audio } from '../services/audio';
 import { useCharacter } from '../state/course';
 import { dueQueue } from '../lib/srs';
 import type { Phrase } from '../types';
-import { fillSlots } from '../lib/text';
+import { fillSlots, normalizeUrdu } from '../lib/text';
 import { href, navigate } from '../router';
 import { useCourse } from '../state/course';
 import { store, useProgress, useSettings } from '../state/store';
@@ -35,13 +35,35 @@ export function LessonPage({ id }: { id?: string }) {
       .map((c) => idx.phraseById.get(c.id))
       .filter((p): p is Phrase => !!p && !lesson.phrases.includes(p) && !(lesson.builds ?? []).includes(p));
     const opts = { gender: settings.learnerGender, name, seed, style: settings.learnStyle, pace: settings.pace, weakSkill: weakestSkill(st) };
+    const before = idx.lessons.slice(0, idx.lessons.indexOf(lesson));
+    if (lesson.kind === 'words') {
+      // Earlier words are distractors and review; due or missed ones come first.
+      const earlierLessons = before.filter((l) => l.kind === 'words');
+      const earlier = earlierLessons.flatMap((l) => l.phrases);
+      const dueWords = due.filter((p) => earlier.includes(p));
+      const recent = earlierLessons.length ? earlierLessons[earlierLessons.length - 1].phrases : [];
+      return buildWordLesson(lesson, {
+        ...opts,
+        earlier,
+        review: [...dueWords, ...recent.filter((p) => !dueWords.includes(p))],
+        allowTyping: earlierLessons.length >= 3,
+      });
+    }
     if (lesson.kind === 'build') {
       // Warm-up: earlier sentences that are due or were missed; otherwise the previous lesson's sentences.
-      const earlier = idx.lessons.slice(0, idx.lessons.indexOf(lesson)).filter((l) => l.kind === 'build');
+      const earlier = before.filter((l) => l.kind === 'build');
       const dueBuilds = due.filter((p) => idx.buildIds.has(p.id));
       const prev = earlier.length ? (earlier[earlier.length - 1].builds ?? []) : [];
       const previousBuilds = [...dueBuilds, ...prev.filter((b) => !b.slot && !dueBuilds.includes(b))];
-      return buildPatternLesson(lesson, idx, { ...opts, previousBuilds });
+      // Words the learner already got right in word lessons aren't taught again, just checked.
+      const known = new Set(
+        Object.values(st.cards)
+          .filter((c) => c.correct > 0)
+          .map((c) => idx.phraseById.get(c.id))
+          .filter((p): p is Phrase => !!p)
+          .map((p) => normalizeUrdu(p.urdu)),
+      );
+      return buildPatternLesson(lesson, idx, { ...opts, previousBuilds, known });
     }
     return buildLessonExercises(lesson, course, idx, { ...opts, warmup: due });
   },

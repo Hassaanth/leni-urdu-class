@@ -1,6 +1,6 @@
 {
   "id": "u1",
-  "level": 1,
+  "level": 4,
   "title": "Greetings & Introductions",
   "description": "Say hello, introduce yourself, and get through your first conversation.",
   "lessons": [
@@ -869,8 +869,8 @@
     }
   ],
   "host": "bilal",
-  "chapter": "Chapter 1 · Arrival",
-  "story": "Bilal picks you up from the airport. Time for your very first Urdu words!",
+  "chapter": "Chapter 11 · Real conversations: greetings",
+  "story": "With the basics in place, it's time for real conversations: greetings, goodbyes and getting out of trouble.",
   "guide": [
     {
       "title": "\"Aap\" — the polite \"you\"",

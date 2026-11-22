@@ -13,7 +13,7 @@ import type {
   SpokenQuestion,
 } from '../types';
 import type { LearnStyle, Pace, Skill } from './progress';
-import { fillSlots, romanWords } from './text';
+import { fillSlots, normalizeUrdu, romanWords } from './text';
 
 // ---------- Random helpers (seeded, so a session is stable while it runs) ----------
 
@@ -75,6 +75,8 @@ export interface Option {
   label: string;
   sub?: string;
   urdu?: string;
+  /** Picture card (word lessons). */
+  emoji?: string;
 }
 
 export type Exercise =
@@ -317,7 +319,11 @@ export function buildLessonExercises(lesson: Lesson, course: Course, idx: Course
  * sentences from words they know — with tiles at first, then from memory (anticipation), with
  * earlier words and sentences recalled at growing intervals.
  */
-export function buildPatternLesson(lesson: Lesson, _idx: CourseIndexes, opts: BuildOptions & { previousBuilds?: Phrase[] }): Exercise[] {
+export function buildPatternLesson(
+  lesson: Lesson,
+  _idx: CourseIndexes,
+  opts: BuildOptions & { previousBuilds?: Phrase[]; /** normalised Urdu of words already learned */ known?: Set<string> },
+): Exercise[] {
   const rand = rng(opts.seed ?? Date.now());
   const { gender, name } = opts;
   const pace = opts.pace ?? 'steady';
@@ -351,6 +357,12 @@ export function buildPatternLesson(lesson: Lesson, _idx: CourseIndexes, opts: Bu
   if (lesson.dialogue) out.push({ kind: 'dialogue', id: nid('dialogue-listen'), mode: 'listen', dialogue: lesson.dialogue });
   // 3. Meet each word, and check it straight away once there are enough to choose from
   words.forEach((w, i) => {
+    if (opts.known?.has(normalizeUrdu(w.urdu))) {
+      // Already learned in the word lessons: a quick check instead of teaching it again.
+      const check = wordCheck(w, words);
+      out.push({ ...check, id: nid('known') });
+      return;
+    }
     out.push({ kind: 'intro', id: nid('intro'), phrase: w });
     if (i >= 2) out.push(wordCheck(w, words.slice(0, i + 1)));
     if (style === 'speak') out.push({ kind: 'repeat', id: nid('repeat'), phrase: w });
@@ -372,6 +384,94 @@ export function buildPatternLesson(lesson: Lesson, _idx: CourseIndexes, opts: Bu
   if (lesson.dialogue) out.push({ kind: 'dialogue', id: nid('dialogue-speak'), mode: 'speak', dialogue: lesson.dialogue });
   // 7. Final recall of a couple of sentences from the start of the lesson
   for (const b of [builds[2], builds[3]].filter(Boolean)) out.push(say(b, 'final'));
+  return out;
+}
+
+/** "Which one is 'water'?" — picture cards, used the first time a word is practised. */
+function pictureFor(w: Phrase, pool: Phrase[], rand: () => number, gender: Gender, name: string, id: string): Exercise {
+  const others = sample(pool.filter((x) => x.id !== w.id && x.en !== w.en), 2, rand);
+  const opts = shuffle([w, ...others], rand);
+  return {
+    kind: 'mcq',
+    id,
+    prompt: `Which one is "${fillSlots(w.en, name)}"?`,
+    options: opts.map((o) => ({ label: displayForm(o, gender, name).roman, urdu: displayForm(o, gender, name).urdu, emoji: o.emoji })),
+    answer: opts.indexOf(w),
+    explain: w.note,
+    phraseIds: [w.id],
+    optionsAreRoman: true,
+  };
+}
+
+/**
+ * Word lesson, Duolingo pace: 3–5 new words, each taught with a picture and voice, checked straight
+ * away, then practised in several ways (pictures → meaning → listening → matching → saying → typing),
+ * with words from earlier lessons mixed in for review.
+ */
+export function buildWordLesson(
+  lesson: Lesson,
+  opts: BuildOptions & { earlier?: Phrase[]; review?: Phrase[]; allowTyping?: boolean },
+): Exercise[] {
+  const rand = rng(opts.seed ?? Date.now());
+  const { gender, name } = opts;
+  const style = opts.style ?? 'listen';
+  const pace = opts.pace ?? 'steady';
+  const items = lesson.phrases;
+  const earlier = opts.earlier ?? [];
+  const out: Exercise[] = [];
+  let n = 0;
+  const nid = (k: string) => `${lesson.id}:${k}:${n++}`;
+  // Distractors: words met so far in this lesson, then earlier lessons, then the rest of this lesson.
+  const poolFor = (i: number) => {
+    const seen = items.slice(0, i + 1);
+    const extra = sample(earlier, Math.max(0, 3 - seen.length), rand);
+    const p = [...seen, ...extra];
+    return p.length >= 3 ? p : [...p, ...items.slice(i + 1)];
+  };
+
+  // 1. Teach each word, check it at once, and re-check the previous one by ear.
+  items.forEach((w, i) => {
+    out.push({ kind: 'intro', id: nid('intro'), phrase: w });
+    if (style === 'speak') out.push({ kind: 'repeat', id: nid('repeat'), phrase: w });
+    out.push(pictureFor(w, poolFor(i), rand, gender, name, nid('picture')));
+    if (i >= 1) out.push(listenFor(items[i - 1], poolFor(i), rand, name, nid('hear')));
+  });
+  const all = [...items, ...earlier];
+  const pool = all.length >= 3 ? all : items;
+  // 2. Match all the new words
+  const pairs = items.length >= 3 ? items.slice(0, 5) : [...items, ...sample(earlier, 3 - items.length, rand)];
+  if (pairs.length >= 3) {
+    out.push({
+      kind: 'match',
+      id: nid('match'),
+      pairs: pairs.map((p) => ({ phraseId: p.id, en: fillSlots(p.en, name), roman: displayForm(p, gender, name).roman })),
+      phraseIds: pairs.map((p) => p.id),
+    });
+  }
+  // 3. Practise each word another way (no pictures now)
+  shuffle(items, rand).forEach((w, k) => {
+    const kind = (style === 'see' ? ['meaning', 'urdu', 'hear'] : ['hear', 'meaning', 'urdu'])[k % 3];
+    if (kind === 'hear') out.push(listenFor(w, pool, rand, name, nid('hear')));
+    else if (kind === 'meaning') out.push(comprehensionMcq(w, pool, rand, gender, name, nid('meaning')));
+    else out.push(mcqFor(w, pool, rand, gender, name, nid('urdu')));
+  });
+  // 4. Phrases (word pairs): build them from tiles
+  for (const w of items.filter((x) => romanWords(x.roman).length >= 2).slice(0, 2)) {
+    const f = displayForm(w, gender, name);
+    const extra = sample(pool.flatMap((x) => romanWords(x.roman)).filter((t) => !romanWords(f.roman).includes(t)), 1, rand);
+    out.push(orderFor(nid('build'), fillSlots(w.en, name), f.roman, f.urdu, extra, rand, [w.id]));
+  }
+  // 5. Review earlier words
+  (opts.review ?? []).slice(0, pace === 'relaxed' ? 2 : 3).forEach((w, k) => {
+    out.push(k % 2 ? comprehensionMcq(w, pool, rand, gender, name, nid('review')) : listenFor(w, [w, ...pool], rand, name, nid('review')));
+  });
+  // 6. Say words out loud
+  if (style !== 'speak') for (const w of sample(items, pace === 'relaxed' ? 1 : 2, rand)) out.push({ kind: 'repeat', id: nid('repeat'), phrase: w });
+  // 7. Type one from memory (once the learner has a few lessons behind them)
+  if (opts.allowTyping && pace !== 'relaxed') {
+    const w = sample(items, 1, rand)[0];
+    out.push({ kind: 'translate', id: nid('translate'), phrase: w, accepted: acceptedRoman(w), phraseIds: [w.id] });
+  }
   return out;
 }
 

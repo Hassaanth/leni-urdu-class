@@ -3,8 +3,8 @@
   "title": "Building Blocks 1: First words",
   "description": "Your first words and sentences — say how you are, ask questions, introduce people, ask for things.",
   "host": "bilal",
-  "chapter": "Start here · Building Blocks",
-  "story": "You've just landed in Lahore. Bilal is waiting at the airport — let's learn enough Urdu to say hello properly.",
+  "chapter": "Chapter 8 · First sentences",
+  "story": "Now you know the words — time to put them into real sentences, one pattern at a time.",
   "lessons": [
     {
       "id": "b1",
@@ -784,7 +784,7 @@
       "kind": "build"
     }
   ],
-  "level": 1,
+  "level": 3,
   "guide": [
     {
       "title": "Main ___ hoon = I am ___",

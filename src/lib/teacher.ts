@@ -8,6 +8,13 @@ export const TEACHER = { name: 'Leni', avatar: '👩🏽‍🏫' };
 export function teacherLine(ex: Exercise, style: LearnStyle, name: string, first: boolean): string {
   const warm = ex.id.includes(':warm:');
   if (warm) return 'Quick warm-up from last time — do you still remember this one?';
+  if (ex.id.includes(':known:')) return 'You already know this word — quick check!';
+  if (ex.id.includes(':review:')) return 'Review from an earlier lesson — do you remember this one?';
+  if (ex.id.includes(':picture:')) return 'Which picture matches? Say the word out loud as you tap it.';
+  if (ex.kind === 'intro' && ex.phrase.kind === 'word')
+    return first
+      ? 'Your first new word! Look at the picture, listen to it, then say it out loud.'
+      : `New word: "${fillSlots(ex.phrase.en, name)}". Listen, then say it out loud.`;
   switch (ex.kind) {
     case 'dialogue':
       return ex.mode === 'listen'

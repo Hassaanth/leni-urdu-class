@@ -155,8 +155,8 @@ export function StartPage() {
         <li>When a lesson has a role-play, do it: that's where you practise real conversation.</li>
       </ol>
 
-      <a className="btn primary block" style={{ marginTop: 16 }} href={href('/lesson/b1')}>
-        Start lesson 1: I am…
+      <a className="btn primary block" style={{ marginTop: 16 }} href={href('/lesson/w1')}>
+        Start lesson 1: Hello &amp; thank you
       </a>
     </>
   );

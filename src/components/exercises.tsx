@@ -52,9 +52,14 @@ export function IntroCard({ ex, api }: { ex: Of<'intro'>; api?: ExApi }) {
   const [nameDraft, setNameDraft] = useState(settings.learnerName);
   return (
     <div>
-      <Kicker>New phrase</Kicker>
+      <Kicker>{p.kind === 'word' ? 'New word' : 'New phrase'}</Kicker>
       <Speaker id={api?.host} line="teaches you:" />
       <div className="phrase-card">
+        {p.emoji && (
+          <div className="word-pic" aria-hidden>
+            {p.emoji}
+          </div>
+        )}
         <PhraseText roman={f.roman} urdu={f.urdu} en={fillSlots(p.en, name)} show={{ en: true, roman: true }} size="lg" />
         <div style={{ marginTop: 12 }}>
           <PlayButtons item={{ urdu: f.urdu, audio: p.audio, voice: api?.host }} autoPlay />
@@ -150,15 +155,20 @@ export function McqEx({ ex, api }: { ex: Of<'mcq'>; api: ExApi }) {
           </div>
         </div>
       )}
-      <div className="options" role="group" aria-label="Answer options">
+      <div className={`options ${ex.options.some((o) => o.emoji) ? 'picture-grid' : ''}`} role="group" aria-label="Answer options">
         {ex.options.map((o, i) => (
           <button
             key={i}
-            className={`option ${api.locked && i === ex.answer ? 'is-correct' : ''} ${api.locked && sel === i && i !== ex.answer ? 'is-wrong' : ''}`}
+            className={`option ${o.emoji ? 'picture' : ''} ${api.locked && i === ex.answer ? 'is-correct' : ''} ${api.locked && sel === i && i !== ex.answer ? 'is-wrong' : ''}`}
             aria-pressed={sel === i}
             disabled={api.locked}
             onClick={() => setSel(i)}
           >
+            {o.emoji && (
+              <span className="pic" aria-hidden>
+                {o.emoji}
+              </span>
+            )}
             <span className={ex.optionsAreRoman ? 'roman' : ''} lang={ex.optionsAreRoman ? 'ur-Latn' : 'en'}>
               {o.label}
             </span>

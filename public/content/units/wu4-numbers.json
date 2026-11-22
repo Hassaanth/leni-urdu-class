@@ -1,0 +1,179 @@
+{
+  "id": "wu4",
+  "level": 1,
+  "host": "rashid",
+  "title": "Numbers & money",
+  "chapter": "Chapter 4 · Chacha Rashid's shop",
+  "story": "Chacha Rashid's corner shop is the best place to learn numbers.",
+  "description": "Count from 1 to 10, then hundred, rupees, cheap and expensive.",
+  "lessons": [
+    {
+      "id": "w10",
+      "kind": "words",
+      "title": "Numbers 1–5",
+      "objective": "Count from one to five.",
+      "phrases": [
+        {
+          "id": "v-ek",
+          "emoji": "1️⃣",
+          "roman": "ek",
+          "urdu": "ایک",
+          "en": "one",
+          "kind": "word"
+        },
+        {
+          "id": "v-do",
+          "emoji": "2️⃣",
+          "roman": "do",
+          "urdu": "دو",
+          "en": "two",
+          "kind": "word"
+        },
+        {
+          "id": "v-teen",
+          "emoji": "3️⃣",
+          "roman": "teen",
+          "urdu": "تین",
+          "en": "three",
+          "kind": "word",
+          "note": "Soft t — your tongue touches the back of your top teeth."
+        },
+        {
+          "id": "v-chaar",
+          "emoji": "4️⃣",
+          "roman": "chaar",
+          "urdu": "چار",
+          "en": "four",
+          "kind": "word",
+          "note": "Long \"aa\", like \"father\"."
+        },
+        {
+          "id": "v-paanch",
+          "emoji": "5️⃣",
+          "roman": "paanch",
+          "urdu": "پانچ",
+          "en": "five",
+          "kind": "word"
+        }
+      ]
+    },
+    {
+      "id": "w11",
+      "kind": "words",
+      "title": "Numbers 6–10",
+      "objective": "Count from six to ten.",
+      "phrases": [
+        {
+          "id": "v-chhe",
+          "emoji": "6️⃣",
+          "roman": "chhe",
+          "urdu": "چھ",
+          "en": "six",
+          "kind": "word",
+          "note": "ch + a puff of air."
+        },
+        {
+          "id": "v-saat",
+          "emoji": "7️⃣",
+          "roman": "saat",
+          "urdu": "سات",
+          "en": "seven",
+          "kind": "word"
+        },
+        {
+          "id": "v-aath",
+          "emoji": "8️⃣",
+          "roman": "aath",
+          "urdu": "آٹھ",
+          "en": "eight",
+          "kind": "word",
+          "note": "Ends in a t with the tongue curled back, plus a puff of air."
+        },
+        {
+          "id": "v-nau",
+          "emoji": "9️⃣",
+          "roman": "nau",
+          "urdu": "نو",
+          "en": "nine",
+          "kind": "word"
+        },
+        {
+          "id": "v-das",
+          "emoji": "🔟",
+          "roman": "das",
+          "urdu": "دس",
+          "en": "ten",
+          "kind": "word"
+        }
+      ]
+    },
+    {
+      "id": "w12",
+      "kind": "words",
+      "title": "Money",
+      "objective": "Talk about prices.",
+      "phrases": [
+        {
+          "id": "v-sau",
+          "emoji": "💯",
+          "roman": "sau",
+          "urdu": "سو",
+          "en": "hundred",
+          "kind": "word"
+        },
+        {
+          "id": "v-rupay",
+          "emoji": "💵",
+          "roman": "rupay",
+          "urdu": "روپے",
+          "en": "rupees",
+          "kind": "word",
+          "note": "The money of Pakistan."
+        },
+        {
+          "id": "v-sasta",
+          "emoji": "🪙",
+          "roman": "sasta",
+          "urdu": "سستا",
+          "en": "cheap",
+          "kind": "word"
+        },
+        {
+          "id": "v-mehenga",
+          "emoji": "💎",
+          "roman": "mehenga",
+          "urdu": "مہنگا",
+          "en": "expensive",
+          "kind": "word"
+        }
+      ]
+    }
+  ],
+  "guide": [
+    {
+      "title": "Counting",
+      "body": "Numbers go before things, like English: do chai = two teas.",
+      "examples": [
+        "v-ek",
+        "v-do",
+        "v-paanch"
+      ]
+    },
+    {
+      "title": "Hundreds",
+      "body": "Put a number before sau: paanch sau = five hundred. Prices end with rupay.",
+      "examples": [
+        "v-sau",
+        "v-rupay"
+      ]
+    },
+    {
+      "title": "Cheap or expensive?",
+      "body": "In a bazaar you'll hear mehenga (expensive) a lot — usually from the customer!",
+      "examples": [
+        "v-sasta",
+        "v-mehenga"
+      ]
+    }
+  ]
+}

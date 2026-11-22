@@ -20,6 +20,8 @@ export interface Phrase {
   genderVariants?: { masculine: FormPair; feminine: FormPair; explain: string; by?: 'speaker' | 'listener' };
   /** Recorded audio file (relative to /content/audio). None are bundled yet. */
   audio?: string;
+  /** A picture for the word (an emoji), shown when the word is taught. */
+  emoji?: string;
   /** Words like "{name}" are slots the learner fills in. */
   slot?: 'name';
   /** Optional: excluded from auto-generated word-order exercises etc. */
@@ -141,7 +143,7 @@ export interface Lesson {
   roleplayId?: string;
   dialogue?: LessonDialogue;
   /** "build" lessons teach words + one sentence pattern, then have the learner build many sentences. */
-  kind?: 'build';
+  kind?: 'build' | 'words';
   pattern?: SentencePattern;
   /** Sentences the learner builds from the lesson's words (and earlier ones). */
   builds?: Phrase[];

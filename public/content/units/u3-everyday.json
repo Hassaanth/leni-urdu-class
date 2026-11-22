@@ -1,6 +1,6 @@
 {
   "id": "u3",
-  "level": 2,
+  "level": 4,
   "title": "Family, Food & Shopping",
   "description": "Talk about your family, eat and drink, and shop in the bazaar.",
   "lessons": [
@@ -687,7 +687,7 @@
     }
   ],
   "host": "khala",
-  "chapter": "Chapter 3 · Family dinner",
+  "chapter": "Chapter 13 · Family dinner",
   "story": "Khala has cooked a feast, and the whole family is coming over to meet you.",
   "guide": [
     {

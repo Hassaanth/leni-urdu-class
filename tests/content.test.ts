@@ -21,6 +21,13 @@ describe('curriculum content', () => {
     for (const u of course.units) {
       expect(u.lessons.length).toBeGreaterThanOrEqual(3);
       for (const l of u.lessons) {
+        if (l.kind === 'words') {
+          // Word lessons: a few words at a time, each with a picture
+          expect(l.phrases.length, l.id).toBeGreaterThanOrEqual(3);
+          expect(l.phrases.length, l.id).toBeLessThanOrEqual(5);
+          for (const p of l.phrases) expect(p.emoji, p.id).toBeTruthy();
+          continue;
+        }
         if (l.kind === 'build') {
           // Building Blocks: a handful of words, one pattern, many sentences
           expect(l.phrases.length, l.id).toBeGreaterThanOrEqual(6);
@@ -86,7 +93,7 @@ describe('characters, story and guidebooks', () => {
       expect(ids.has(u.host!), u.id).toBe(true);
       expect(u.guide!.length, u.id).toBeGreaterThanOrEqual(3);
       for (const g of u.guide!) for (const ex of g.examples) expect(idx.phraseById.has(ex), `${u.id}: ${ex}`).toBe(true);
-      for (const l of u.lessons) expect(ids.has(l.dialogue!.partner.character!), l.id).toBe(true);
+      for (const l of u.lessons) if (l.dialogue) expect(ids.has(l.dialogue.partner.character!), l.id).toBe(true);
     }
     for (const c of course.conversations) expect(ids.has(c.partner.character!), c.id).toBe(true);
   });
@@ -105,7 +112,11 @@ describe('Building Blocks path', () => {
   it('comes first, and every sentence only uses words already taught (or explained in a note)', async () => {
     const { course } = await loadCourse(fsFetcher);
     const idx = buildIndexes(course);
-    expect(idx.lessons[0].id).toBe('b1');
+    expect(idx.lessons[0].id).toBe('w1');
+    // all word lessons come before any sentence lesson
+    const firstSentence = idx.lessons.findIndex((l) => l.kind !== 'words');
+    expect(idx.lessons.slice(firstSentence).some((l) => l.kind === 'words')).toBe(false);
+    expect(firstSentence).toBeGreaterThanOrEqual(20);
     const { romanKey, romanWords } = await import('../src/lib/text');
     const known = new Set<string>();
     const extra = new Set(['ali', 'bilal', 'zara', 'acha', 'beta', 'kuch', 'please', 'aaya', 'bol', 'aayenge', 'jayenge', 'kaisi', 'gayi', 'aaungi', 'jaungi', 'rehte', 'khayi', 'pi', 'aapne', 'thori', 'ne']);

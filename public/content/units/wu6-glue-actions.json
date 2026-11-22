@@ -1,0 +1,247 @@
+{
+  "id": "wu6",
+  "level": 2,
+  "host": "hamza",
+  "title": "Small words & actions",
+  "chapter": "Chapter 7 · Out with Hamza",
+  "story": "Hamza takes you around Lahore. Learn the small words that hold sentences together, and the action words.",
+  "description": "am, is, are, also, to me, need, liked — and eat, drink, go, come, do, see, speak, learn, plus places.",
+  "lessons": [
+    {
+      "id": "w16",
+      "kind": "words",
+      "title": "Am, is, are",
+      "objective": "The small words that end almost every sentence.",
+      "phrases": [
+        {
+          "id": "v-hoon",
+          "emoji": "🙋",
+          "roman": "hoon",
+          "urdu": "ہوں",
+          "en": "am",
+          "kind": "word",
+          "note": "Only used with main (I)."
+        },
+        {
+          "id": "v-hai",
+          "emoji": "🟰",
+          "roman": "hai",
+          "urdu": "ہے",
+          "en": "is",
+          "kind": "word"
+        },
+        {
+          "id": "v-hain",
+          "emoji": "👥",
+          "roman": "hain",
+          "urdu": "ہیں",
+          "en": "are",
+          "kind": "word",
+          "note": "Also used with aap (you), to be polite."
+        },
+        {
+          "id": "v-bhi",
+          "emoji": "🔁",
+          "roman": "bhi",
+          "urdu": "بھی",
+          "en": "also / too",
+          "kind": "word"
+        }
+      ],
+      "tips": [
+        "In Urdu these little words come at the END of a sentence. You'll see that soon."
+      ]
+    },
+    {
+      "id": "w17",
+      "kind": "words",
+      "title": "Want & like",
+      "objective": "The words for needing and liking.",
+      "phrases": [
+        {
+          "id": "v-mujhe",
+          "emoji": "🫵",
+          "roman": "mujhe",
+          "urdu": "مجھے",
+          "en": "to me / me",
+          "kind": "word"
+        },
+        {
+          "id": "v-chahiye",
+          "emoji": "🛒",
+          "roman": "chahiye",
+          "urdu": "چاہیے",
+          "en": "needed / want",
+          "kind": "word"
+        },
+        {
+          "id": "v-pasand",
+          "emoji": "❤️",
+          "roman": "pasand",
+          "urdu": "پسند",
+          "en": "liked",
+          "kind": "word"
+        },
+        {
+          "id": "v-nahiwala",
+          "emoji": "🙅",
+          "roman": "nahi chahiye",
+          "urdu": "نہیں چاہیے",
+          "en": "don't want / no thanks",
+          "kind": "word",
+          "note": "Two words you know: nahi (no) + chahiye (want)."
+        }
+      ]
+    },
+    {
+      "id": "w18",
+      "kind": "words",
+      "title": "Action words 1",
+      "objective": "Eat, drink, go, come.",
+      "phrases": [
+        {
+          "id": "v-kha",
+          "emoji": "🍽️",
+          "roman": "kha",
+          "urdu": "کھا",
+          "en": "eat",
+          "kind": "word"
+        },
+        {
+          "id": "v-pee",
+          "emoji": "🚰",
+          "roman": "pee",
+          "urdu": "پی",
+          "en": "drink",
+          "kind": "word"
+        },
+        {
+          "id": "v-ja",
+          "emoji": "🚶",
+          "roman": "ja",
+          "urdu": "جا",
+          "en": "go",
+          "kind": "word"
+        },
+        {
+          "id": "v-aa",
+          "emoji": "🏃",
+          "roman": "aa",
+          "urdu": "آ",
+          "en": "come",
+          "kind": "word"
+        }
+      ],
+      "tips": [
+        "These are the \"root\" of each action. Later you'll add endings to them, like English adds -ing or -ed."
+      ]
+    },
+    {
+      "id": "w19",
+      "kind": "words",
+      "title": "Action words 2",
+      "objective": "Do, see, speak, learn.",
+      "phrases": [
+        {
+          "id": "v-kar",
+          "emoji": "🛠️",
+          "roman": "kar",
+          "urdu": "کر",
+          "en": "do",
+          "kind": "word"
+        },
+        {
+          "id": "v-dekh",
+          "emoji": "👀",
+          "roman": "dekh",
+          "urdu": "دیکھ",
+          "en": "see / look",
+          "kind": "word"
+        },
+        {
+          "id": "v-bol",
+          "emoji": "🗣️",
+          "roman": "bol",
+          "urdu": "بول",
+          "en": "speak",
+          "kind": "word"
+        },
+        {
+          "id": "v-seekh",
+          "emoji": "📚",
+          "roman": "seekh",
+          "urdu": "سیکھ",
+          "en": "learn",
+          "kind": "word"
+        }
+      ]
+    },
+    {
+      "id": "w20",
+      "kind": "words",
+      "title": "Places",
+      "objective": "Places you will go.",
+      "phrases": [
+        {
+          "id": "v-dukaan",
+          "emoji": "🏪",
+          "roman": "dukaan",
+          "urdu": "دکان",
+          "en": "shop",
+          "kind": "word"
+        },
+        {
+          "id": "v-bazaar",
+          "emoji": "🛍️",
+          "roman": "bazaar",
+          "urdu": "بازار",
+          "en": "market",
+          "kind": "word"
+        },
+        {
+          "id": "v-masjid",
+          "emoji": "🕌",
+          "roman": "masjid",
+          "urdu": "مسجد",
+          "en": "mosque",
+          "kind": "word"
+        },
+        {
+          "id": "v-daftar",
+          "emoji": "🏢",
+          "roman": "daftar",
+          "urdu": "دفتر",
+          "en": "office",
+          "kind": "word"
+        }
+      ]
+    }
+  ],
+  "guide": [
+    {
+      "title": "Endings come last",
+      "body": "hoon (am), hai (is), hain (are) go at the END: \"I happy am\". You'll start building these sentences in the next level.",
+      "examples": [
+        "v-hoon",
+        "v-hai"
+      ]
+    },
+    {
+      "title": "Mujhe + chahiye",
+      "body": "Urdu says \"to me, water is needed\" instead of \"I want water\". mujhe = to me, chahiye = needed.",
+      "examples": [
+        "v-mujhe",
+        "v-chahiye"
+      ]
+    },
+    {
+      "title": "Action roots",
+      "body": "kha (eat), pee (drink), ja (go), aa (come), kar (do), bol (speak), seekh (learn) are roots. Endings are added for \"I'm eating\", \"I ate\", \"I will eat\".",
+      "examples": [
+        "v-kha",
+        "v-ja",
+        "v-bol"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "id": "u2",
-  "level": 1,
+  "level": 4,
   "title": "Numbers, People & Questions",
   "description": "Count to ten, talk about people, and ask the key question words.",
   "lessons": [
@@ -616,8 +616,8 @@
     }
   ],
   "host": "zara",
-  "chapter": "Chapter 2 · Zara's questions",
-  "story": "Little Zara has a hundred questions — and she counts everything she sees.",
+  "chapter": "Chapter 12 · Real conversations: questions & people",
+  "story": "Zara wants to count everything and know everyone. Answer her questions in full conversations.",
   "guide": [
     {
       "title": "Question words start with \"k\"",

@@ -50,7 +50,29 @@ test.describe('core flows', () => {
     await page.reload();
     await page.goto('/#/learn');
     await expect(page.getByText(`${xp}`, { exact: true })).toBeVisible();
-    await expect(page.getByText('1/36')).toBeVisible();
+    await expect(page.getByText(`1/${60}`)).toBeVisible();
+  });
+
+  test('first word lesson: four words with pictures, practised until known', async ({ page }) => {
+    await installFakeRecognition(page);
+    await seedSettings(page, { recognitionConsent: 'granted' });
+    await page.goto('/#/learn');
+    await page.getByRole('link', { name: /Hello & thank you/ }).first().click();
+    await page.getByRole('button', { name: 'Start lesson' }).click();
+    await expect(page.locator('.ex-kicker')).toHaveText('New word');
+    await expect(page.locator('.word-pic')).toHaveText('👋');
+    await page.getByRole('button', { name: 'Continue' }).click();
+    await expect(page.locator('.picture-grid .option.picture')).toHaveCount(3);
+    const kinds = new Set<string>();
+    for (let i = 0; i < 60; i++) {
+      const k = await answerCurrentExercise(page);
+      if (!k) break;
+      kinds.add(k);
+    }
+    await expect(page.getByRole('heading', { name: 'Lesson complete!' })).toBeVisible();
+    for (const k of ['intro', 'mcq', 'listen', 'match', 'repeat']) expect(kinds).toContain(k);
+    const cards = await page.evaluate(() => JSON.parse(localStorage.getItem('bolo-urdu:v1')!).cards);
+    for (const id of ['v-salaam', 'v-shukriya', 'v-haan', 'v-nahi']) expect(cards[id].correct).toBeGreaterThan(0);
   });
 
   test('Building Blocks lesson 1: words, pattern, building sentences, conversation', async ({ page }) => {
