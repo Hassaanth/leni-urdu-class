@@ -41,16 +41,28 @@ export function teacherLine(ex: Exercise, style: LearnStyle, name: string, first
       return "I'll ask you a question. Answer out loud, in Urdu.";
     case 'readAloud':
       return 'Read this out loud, line by line. Tap a line to practise it on its own.';
+    case 'tip':
+      return "Let me explain how this part of Urdu works — it'll make the next phrases much easier.";
+    case 'pattern':
+      return "Here's the key idea of this lesson. Once you get this pattern, you can make lots of sentences with the words you know.";
+    case 'say': {
+      if (ex.id.includes(':warm:')) return "Warm-up from last time: how would you say this? Say it out loud first, then check.";
+      if (ex.id.includes(':recall:') || ex.id.includes(':final:')) return "Do you still remember this one from earlier? Say it first, then check.";
+      return "Your turn to build it. Say it out loud in Urdu — then tap to check. Mistakes are how you learn!";
+    }
   }
 }
 
+// Urdu text must match PRAISE in scripts/gen_audio.py so each character can say it out loud.
 const PRAISE = [
-  { roman: 'Shabash!', en: 'Well done!' },
-  { roman: 'Bohat acha!', en: 'Very good!' },
-  { roman: 'Zabardast!', en: 'Awesome!' },
-  { roman: 'Kamaal!', en: 'Amazing!' },
-  { roman: 'Bilkul theek!', en: 'Exactly right!' },
+  { roman: 'Shabash!', urdu: 'شاباش!', en: 'Well done!' },
+  { roman: 'Bohat acha!', urdu: 'بہت اچھا!', en: 'Very good!' },
+  { roman: 'Zabardast!', urdu: 'زبردست!', en: 'Awesome!' },
+  { roman: 'Kamaal!', urdu: 'کمال!', en: 'Amazing!' },
+  { roman: 'Bilkul theek!', urdu: 'بالکل ٹھیک!', en: 'Exactly right!' },
 ];
+export const ENCOURAGE = { roman: 'Koi baat nahi, phir koshish karein!', urdu: 'کوئی بات نہیں، پھر کوشش کریں!', en: 'No problem — try again!' };
+export const FINALE = { roman: 'Shabash! Aap ne kamaal kar diya!', urdu: 'شاباش! آپ نے کمال کر دیا!', en: 'Well done! You were amazing!' };
 
 export function praise(seed: number) {
   return PRAISE[Math.abs(seed) % PRAISE.length];

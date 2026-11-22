@@ -4,6 +4,7 @@ import { IconPlay } from '../components/Icons';
 import { useAudioState, useStopAudioOnUnmount } from '../hooks';
 import { href } from '../router';
 import { audio } from '../services/audio';
+import { useCourse } from '../state/course';
 
 const SOUNDS: { spell: string; like: string; roman: string; urdu: string; en: string }[] = [
   { spell: 'aa', like: 'long "a" as in father', roman: 'aaj', urdu: 'آج', en: 'today' },
@@ -38,6 +39,7 @@ function SayButton({ urdu, label }: { urdu: string; label: string }) {
 }
 
 export function StartPage() {
+  const { course } = useCourse();
   useAudioState();
   useStopAudioOnUnmount();
   return (
@@ -49,6 +51,25 @@ export function StartPage() {
           You'll start speaking today. Every phrase comes three ways — and you can tap 🔊 to hear a Pakistani Urdu voice say it, slowly if you like.
         </p>
       </section>
+
+      <h2>Meet the family</h2>
+      <p className="small muted" style={{ marginTop: -4 }}>
+        {course.story?.text}
+      </p>
+      <div className="grid-2">
+        {course.characters
+          .filter((c) => !c.id.startsWith('town'))
+          .map((c) => (
+            <div key={c.id} className="card" style={{ margin: 0 }}>
+              <div style={{ fontSize: '2rem' }} aria-hidden>
+                {c.avatar}
+              </div>
+              <strong>{c.name}</strong>
+              <div className="small muted">{c.role}</div>
+              <div className="small">{c.bio}</div>
+            </div>
+          ))}
+      </div>
 
       <h2>1 · How phrases are shown</h2>
       <div className="card">
@@ -134,8 +155,8 @@ export function StartPage() {
         <li>When a lesson has a role-play, do it: that's where you practise real conversation.</li>
       </ol>
 
-      <a className="btn primary block" style={{ marginTop: 16 }} href={href('/lesson/l1-intro')}>
-        Start lesson 1: Introducing Yourself
+      <a className="btn primary block" style={{ marginTop: 16 }} href={href('/lesson/b1')}>
+        Start lesson 1: I am…
       </a>
     </>
   );

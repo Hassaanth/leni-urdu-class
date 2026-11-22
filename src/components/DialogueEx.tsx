@@ -23,7 +23,7 @@ export function DialogueEx({ ex, api }: { ex: Of; api: ExApi }) {
     const base = l.who === 'you' && fem && l.f ? l.f : l;
     return { roman: fillSlots(base.roman, name), urdu: fillSlots(base.urdu, name), en: fillSlots(l.en, name) };
   };
-  const voiceOf = (l: DialogueTurn) => (l.who === 'them' ? d.partner.voice : 'f');
+  const voiceOf = (l: DialogueTurn) => (l.who === 'them' ? d.partner.character : 'leni');
   useEffect(() => api.setCheck(null), []); // eslint-disable-line
 
   return ex.mode === 'listen' ? <ListenAll ex={ex} form={form} voiceOf={voiceOf} /> : <SpeakPart ex={ex} api={api} form={form} voiceOf={voiceOf} name={name} />;
@@ -31,7 +31,7 @@ export function DialogueEx({ ex, api }: { ex: Of; api: ExApi }) {
 
 interface Helpers {
   form: (l: DialogueTurn) => { roman: string; urdu: string; en: string };
-  voiceOf: (l: DialogueTurn) => 'm' | 'f' | undefined;
+  voiceOf: (l: DialogueTurn) => string | undefined;
 }
 
 function ListenAll({ ex, form, voiceOf }: { ex: Of } & Helpers) {

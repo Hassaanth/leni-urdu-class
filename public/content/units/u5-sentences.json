@@ -216,7 +216,7 @@
         "title": "What are you doing?",
         "partner": {
           "name": "Bilal",
-          "voice": "m"
+          "character": "bilal"
         },
         "lines": [
           {
@@ -450,7 +450,7 @@
         "title": "Yesterday and today",
         "partner": {
           "name": "Hamza",
-          "voice": "m"
+          "character": "hamza"
         },
         "lines": [
           {
@@ -693,7 +693,7 @@
         "title": "At the front desk",
         "partner": {
           "name": "Receptionist",
-          "voice": "f"
+          "character": "townwoman"
         },
         "lines": [
           {
@@ -732,6 +732,43 @@
           }
         ]
       }
+    }
+  ],
+  "host": "ayesha",
+  "chapter": "Chapter 5 · Your day in Urdu",
+  "story": "Ayesha helps you talk about today, yesterday and tomorrow.",
+  "guide": [
+    {
+      "title": "Happening now: raha / rahi hoon",
+      "body": "Verb + raha/rahi + hoon = \"I am …-ing\". Men say raha, women say rahi: Main Urdu seekh raha / rahi hoon.",
+      "examples": [
+        "p-urdu-seekh",
+        "p-woh-kaam"
+      ]
+    },
+    {
+      "title": "The past: gaya / gayi, and \"maine\"",
+      "body": "Main bazaar gaya / gayi = I went to the bazaar. For \"doing\" verbs like eat or drink, use maine and the verb matches the THING: Maine chai pi (chai is feminine) — same for men and women.",
+      "examples": [
+        "p-bazaar-gaya",
+        "p-maine-chai"
+      ]
+    },
+    {
+      "title": "The future: -unga / -ungi",
+      "body": "Add -unga (men) or -ungi (women): Main kal aaunga / aaungi = I'll come tomorrow.",
+      "examples": [
+        "p-kal-aaunga",
+        "p-shaam-milenge"
+      ]
+    },
+    {
+      "title": "Can, and polite \"don't\"",
+      "body": "sakta / sakti = can: Kya main andar aa sakta hoon? For a polite \"please don't\", use na + -ein: Fikr na karein.",
+      "examples": [
+        "p-andar-aa",
+        "p-fikr-na"
+      ]
     }
   ]
 }

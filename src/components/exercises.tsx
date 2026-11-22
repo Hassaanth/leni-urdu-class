@@ -11,6 +11,9 @@ import { IconEye, IconPlay } from './Icons';
 import { SpeakPanel, type AttemptResult } from './SpeakPanel';
 import { WordBreakdown } from './WordBreakdown';
 import { DialogueEx } from './DialogueEx';
+import { PatternCard, SayEx } from './BuildEx';
+import { useCharacter } from '../state/course';
+import { TEACHER } from '../lib/teacher';
 
 export interface Feedback {
   correctAnswer?: ReactNode;
@@ -24,6 +27,8 @@ export interface ExApi {
   setCheck(fn: (() => void) | null): void;
   /** Speaking exercises report attempts so the footer can say "Continue" instead of "Skip". */
   noteAttempt(r: AttemptResult): void;
+  /** Character teaching this lesson: their voice says the phrases. */
+  host?: string;
 }
 
 type Of<K extends Exercise['kind']> = Extract<Exercise, { kind: K }>;
@@ -38,7 +43,7 @@ function useGender() {
 
 // ---------- Intro (new phrase) ----------
 
-export function IntroCard({ ex }: { ex: Of<'intro'> }) {
+export function IntroCard({ ex, api }: { ex: Of<'intro'>; api?: ExApi }) {
   const name = useName();
   const gender = useGender();
   const settings = useSettings();
@@ -48,10 +53,11 @@ export function IntroCard({ ex }: { ex: Of<'intro'> }) {
   return (
     <div>
       <Kicker>New phrase</Kicker>
+      <Speaker id={api?.host} line="teaches you:" />
       <div className="phrase-card">
         <PhraseText roman={f.roman} urdu={f.urdu} en={fillSlots(p.en, name)} show={{ en: true, roman: true }} size="lg" />
         <div style={{ marginTop: 12 }}>
-          <PlayButtons item={{ urdu: f.urdu, audio: p.audio }} autoPlay />
+          <PlayButtons item={{ urdu: f.urdu, audio: p.audio, voice: api?.host }} autoPlay />
         </div>
         {p.literal && (
           <p className="small muted" style={{ marginTop: 10 }}>
@@ -182,7 +188,7 @@ export function ListenEx({ ex, api }: { ex: Of<'listen'>; api: ExApi }) {
   const name = useName();
   const gender = useGender();
   const f = displayForm(ex.phrase, gender, name);
-  const item = { urdu: f.urdu, audio: ex.phrase.audio };
+  const item = { urdu: f.urdu, audio: ex.phrase.audio, voice: api.host };
   const source = audio.sourceFor(item);
   useEffect(() => {
     api.setCheck(
@@ -204,6 +210,7 @@ export function ListenEx({ ex, api }: { ex: Of<'listen'>; api: ExApi }) {
   return (
     <div>
       <Kicker>Listening</Kicker>
+      <Speaker id={api.host} line="says something:" />
       <h2 className="ex-title">What do you hear?</h2>
       {source !== 'none' ? (
         <div className="phrase-card center" style={{ marginBottom: 16 }}>
@@ -575,7 +582,7 @@ export function RepeatEx({ ex, api }: { ex: Of<'repeat'>; api: ExApi }) {
         phraseKey={p.id}
         label={f.roman}
         targets={speechTargets(p)}
-        model={{ urdu: f.urdu, audio: p.audio }}
+        model={{ urdu: f.urdu, audio: p.audio, voice: api.host }}
         name={name}
         onAttempt={api.noteAttempt}
       />
@@ -775,7 +782,7 @@ export function ReadAloudEx({ ex, api }: { ex: Of<'readAloud'>; api: ExApi }) {
 export function ExerciseView({ ex, api }: { ex: Exercise; api: ExApi }) {
   switch (ex.kind) {
     case 'intro':
-      return <IntroCard ex={ex} />;
+      return <IntroCard ex={ex} api={api} />;
     case 'mcq':
       return <McqEx ex={ex} api={api} />;
     case 'listen':
@@ -798,8 +805,58 @@ export function ExerciseView({ ex, api }: { ex: Exercise; api: ExApi }) {
       return <SpokenQAEx ex={ex} api={api} />;
     case 'readAloud':
       return <ReadAloudEx ex={ex} api={api} />;
+    case 'tip':
+      return <TipCard ex={ex} api={api} />;
+    case 'pattern':
+      return <PatternCard ex={ex} api={api} />;
+    case 'say':
+      return <SayEx ex={ex} api={api} />;
     case 'dialogue':
       return <DialogueEx ex={ex} api={api} />;
   }
 }
 
+
+/** "Bilal teaches you:" — shows which character is speaking. */
+export function Speaker({ id, line }: { id?: string; line: string }) {
+  const c = useCharacter(id);
+  return (
+    <div className="speaker">
+      <span className="speaker-avatar" aria-hidden>
+        {c.avatar}
+      </span>
+      <span>
+        <strong>{c.name}</strong> <span className="muted">{line}</span>
+      </span>
+    </div>
+  );
+}
+
+/** Leni explains a grammar or culture point, with an example from the lesson. */
+export function TipCard({ ex, api }: { ex: Of<'tip'>; api: ExApi }) {
+  const name = useName();
+  const gender = useGender();
+  useEffect(() => api.setCheck(null), []);
+  const f = ex.example ? displayForm(ex.example, gender, name) : null;
+  return (
+    <div>
+      <Kicker>How Urdu works</Kicker>
+      <div className="tip-card">
+        <div className="tip-head">
+          <span aria-hidden>{TEACHER.avatar}</span> <strong>Leni explains</strong>
+        </div>
+        <p style={{ fontSize: '1.1rem', margin: '8px 0 0' }}>{ex.text}</p>
+        {f && ex.example && (
+          <div className="tip-example">
+            <div className="small muted">For example:</div>
+            <PhraseText roman={f.roman} urdu={f.urdu} en={fillSlots(ex.example.en, name)} show={{ en: true, roman: true }} />
+            <div style={{ marginTop: 6 }}>
+              <PlayButtons item={{ urdu: f.urdu, audio: ex.example.audio, voice: api.host }} compact />
+            </div>
+            <WordBreakdown urdu={f.urdu} />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

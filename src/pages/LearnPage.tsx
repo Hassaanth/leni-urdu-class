@@ -9,6 +9,9 @@ import { href, navigate } from '../router';
 import { useCourse } from '../state/course';
 import { store, useProgress } from '../state/store';
 import { dailyTheme } from './SpeakGames';
+import { starsFor } from './LessonPage';
+import { useCharacter } from '../state/course';
+import type { Unit } from '../types';
 
 export function nextLesson(s: ProgressState, idx: CourseIndexes) {
   return idx.lessons.find((l) => !s.lessons[l.id]) ?? null;
@@ -181,7 +184,12 @@ export function LearnPage() {
       )}
       {due > 0 && <CardLink to="/practice/review" icon="🔁" title={`${due} phrase${due === 1 ? '' : 's'} due for review`} sub="Spaced review keeps words fresh" />}
 
-      <h2 id="course">Course</h2>
+      <h2 id="course">{course.story?.title ?? 'Course'}</h2>
+      {course.story && (
+        <p className="small muted" style={{ marginTop: -4 }}>
+          {course.story.text}
+        </p>
+      )}
       {course.levels.map((lvl) => {
         const units = course.units.filter((u) => u.level === lvl.id);
         if (!units.length) return null;
@@ -197,10 +205,7 @@ export function LearnPage() {
             </p>
             {units.map((u) => (
               <div className="card unit" key={u.id}>
-                <h3>{u.title}</h3>
-                <p className="small muted" style={{ margin: 0 }}>
-                  {u.description}
-                </p>
+                <ChapterHeader unit={u} />
                 <ul className="lesson-list">
                   {u.lessons.map((l) => {
                     const done = !!s.lessons[l.id];
@@ -214,7 +219,14 @@ export function LearnPage() {
                           <span className="grow">
                             <strong>{l.title}</strong>
                             <div className="small muted">
-                              {l.phrases.length} phrases{done ? ` · best ${Math.round(s.lessons[l.id].bestAccuracy * 100)}% first-try` : ''}
+                              {done ? (
+                                <span className="lesson-stars" aria-label={`${starsFor(s.lessons[l.id].bestAccuracy)} stars`}>
+                                  {'★'.repeat(starsFor(s.lessons[l.id].bestAccuracy))}
+                                  {'☆'.repeat(3 - starsFor(s.lessons[l.id].bestAccuracy))}
+                                </span>
+                              ) : (
+                                `${l.phrases.length} phrases`
+                              )}
                               {current ? ' · up next' : ''}
                             </div>
                           </span>
@@ -304,3 +316,29 @@ export const GOAL_PICKS: Record<Settings['goal'], { lesson: string; talk: string
   work: { lesson: 'l7-phone-work', talk: 'c-phone', label: 'work and phone calls' },
   curious: { lesson: 'l1-greetings', talk: 'c-first-meeting', label: 'first conversations' },
 };
+
+function ChapterHeader({ unit }: { unit: Unit }) {
+  const host = useCharacter(unit.host);
+  return (
+    <>
+      <div className="chapter">
+        <span className="chapter-avatar" aria-hidden>
+          {host.avatar}
+        </span>
+        <div className="grow">
+          {unit.chapter && <div className="small" style={{ fontWeight: 800, color: 'var(--accent)' }}>{unit.chapter}</div>}
+          <h3 style={{ margin: 0 }}>{unit.title}</h3>
+          <div className="small muted">with {host.name}, {host.role}</div>
+        </div>
+      </div>
+      <p className="small" style={{ margin: '0 0 8px' }}>
+        {unit.story ?? unit.description}
+      </p>
+      {unit.guide && unit.guide.length > 0 && (
+        <a className="btn small" href={href(`/guide/${unit.id}`)}>
+          📖 Guidebook: how this Urdu works
+        </a>
+      )}
+    </>
+  );
+}

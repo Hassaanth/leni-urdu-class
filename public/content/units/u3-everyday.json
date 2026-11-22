@@ -176,7 +176,7 @@
         "title": "Khala asks about the family",
         "partner": {
           "name": "Khala",
-          "voice": "f"
+          "character": "khala"
         },
         "lines": [
           {
@@ -410,8 +410,8 @@
       "dialogue": {
         "title": "Dinner at Aunty’s",
         "partner": {
-          "name": "Aunty",
-          "voice": "f"
+          "name": "Khala",
+          "character": "khala"
         },
         "lines": [
           {
@@ -642,8 +642,8 @@
       "dialogue": {
         "title": "Bargaining for a scarf",
         "partner": {
-          "name": "Shopkeeper",
-          "voice": "m"
+          "name": "Chacha Rashid",
+          "character": "rashid"
         },
         "lines": [
           {
@@ -684,6 +684,43 @@
           }
         ]
       }
+    }
+  ],
+  "host": "khala",
+  "chapter": "Chapter 3 · Family dinner",
+  "story": "Khala has cooked a feast, and the whole family is coming over to meet you.",
+  "guide": [
+    {
+      "title": "mera, meri, mere",
+      "body": "\"My\" matches the thing you own, not you: mera bhai (my brother, masculine), meri behen (my sister, feminine), mere bhai (my brothers, plural or respectful).",
+      "examples": [
+        "p-do-bhai",
+        "p-behen-bhai"
+      ]
+    },
+    {
+      "title": "Saying what you like",
+      "body": "Mujhe … pasand hai = I like … (literally \"to me … is liked\"). Add nahi for don't: Mujhe yeh pasand nahi.",
+      "examples": [
+        "p-chai-pasand",
+        "p-pasand-nahi"
+      ]
+    },
+    {
+      "title": "Hungry and thirsty",
+      "body": "Urdu says hunger \"is attached\" to you: Mujhe bhook lagi hai = I'm hungry. Same pattern for thirst.",
+      "examples": [
+        "p-bhook",
+        "p-pyaas"
+      ]
+    },
+    {
+      "title": "Hospitality",
+      "body": "Hosts will offer you more food again and again. Bas, shukriya (that's enough, thanks) is the polite way to stop. Praising the food always goes down well.",
+      "examples": [
+        "p-bas-shukriya",
+        "p-mazay-ka"
+      ]
     }
   ]
 }

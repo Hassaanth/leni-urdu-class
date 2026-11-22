@@ -140,6 +140,11 @@ export async function answerCurrentExercise(page: Page): Promise<string | null> 
         await sleep(400);
         break;
       }
+      case 'say':
+        byText("I've said it — show me the answer");
+        await sleep(150);
+        byText('I got it!');
+        break;
       case 'dialogue':
         if (ex.mode === 'speak') {
           for (let i = 0; i < 20 && document.querySelector('.session-body .btn.primary.block'); i++) {

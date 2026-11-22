@@ -11,7 +11,7 @@ test.describe('core flows', () => {
     await page.getByPlaceholder('e.g. Sara').fill('Sara');
     await page.getByRole('button', { name: 'Feminine (-i)' }).click();
     await page.getByRole('button', { name: "Let's start" }).click();
-    await expect(page.getByText('Introducing Yourself').first()).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Start here' })).toBeVisible();
 
     const nav = page.locator('.bottom-nav');
     for (const [label, heading] of [
@@ -50,7 +50,28 @@ test.describe('core flows', () => {
     await page.reload();
     await page.goto('/#/learn');
     await expect(page.getByText(`${xp}`, { exact: true })).toBeVisible();
-    await expect(page.getByText('1/24')).toBeVisible();
+    await expect(page.getByText('1/36')).toBeVisible();
+  });
+
+  test('Building Blocks lesson 1: words, pattern, building sentences, conversation', async ({ page }) => {
+    await installFakeRecognition(page);
+    await seedSettings(page, { learnerName: 'Sara', learnerGender: 'feminine', recognitionConsent: 'granted' });
+    await page.goto('/#/learn');
+    await expect(page.getByText('I am…').first()).toBeVisible();
+    await page.goto('/#/lesson/b1');
+    await expect(page.getByText("The pattern you'll master")).toBeVisible();
+    await page.getByRole('button', { name: 'Start lesson' }).click();
+    const kinds = new Set<string>();
+    for (let i = 0; i < 90; i++) {
+      const k = await answerCurrentExercise(page);
+      if (!k) break;
+      kinds.add(k);
+    }
+    await expect(page.getByRole('heading', { name: 'Lesson complete!' })).toBeVisible();
+    for (const k of ['dialogue', 'intro', 'pattern', 'order', 'say', 'repeat']) expect(kinds).toContain(k);
+    const cards = await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('bolo-urdu:v1')!).cards));
+    expect(cards).toContain('w-khush');
+    expect(cards).toContain('s-b1-3');
   });
 
   test('wrong answers are explained and come back at the end', async ({ page }) => {

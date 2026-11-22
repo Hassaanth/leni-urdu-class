@@ -2,7 +2,8 @@
 // records progress, and reports a summary at the end. Used by lessons and practice modes.
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useName, usePracticeTimer, useStopAudioOnUnmount } from '../hooks';
-import { praise, TEACHER, teacherLine } from '../lib/teacher';
+import { ENCOURAGE, praise, TEACHER, teacherLine } from '../lib/teacher';
+import { useCharacter } from '../state/course';
 import { dateKey } from '../lib/dates';
 import { isGraded, skillOf, SPEAKING, type Exercise } from '../lib/exercises';
 import { introducePhrases, recordAnswer } from '../lib/progress';
@@ -27,6 +28,8 @@ interface Props {
   exercises: Exercise[];
   /** Review sessions grade with review XP and don't re-queue flashcards. */
   review?: boolean;
+  /** Character teaching this session (their voice and face). */
+  host?: string;
   onFinish: (s: SessionSummary) => void;
   onExit: () => void;
 }
@@ -55,7 +58,10 @@ function tone(ok: boolean) {
   }
 }
 
-export function SessionRunner({ title, exercises, review, onFinish, onExit }: Props) {
+export function SessionRunner({ title, exercises, review, host, onFinish, onExit }: Props) {
+  const hostChar = useCharacter(host);
+  const [combo, setCombo] = useState(0);
+  const [xpPop, setXpPop] = useState(0);
   usePracticeTimer(true);
   useStopAudioOnUnmount();
   const settings = useSettings();
@@ -98,6 +104,13 @@ export function SessionRunner({ title, exercises, review, onFinish, onExit }: Pr
         setQueue((q) => [...q, { ex: item.ex, key: `${item.key}-retry`, retry: true }]);
       }
       if (settings.soundEffects) tone(correct);
+      if (isGraded(item.ex) || item.ex.kind === 'flashcard') {
+        setCombo((c) => (correct ? c + 1 : 0));
+        if (correct) setXpPop((n) => n + 1);
+        // The lesson's character reacts out loud, in Urdu.
+        const line = correct ? praise(pos) : ENCOURAGE;
+        setTimeout(() => void audio.play({ urdu: line.urdu, voice: host }), settings.soundEffects ? 320 : 0);
+      }
       setResult({ correct, fb });
       setCheckFn(null);
       requestAnimationFrame(() => footRef.current?.focus());
@@ -110,6 +123,7 @@ export function SessionRunner({ title, exercises, review, onFinish, onExit }: Pr
       locked: !!result,
       answer,
       setCheck: (fn) => setCheckFn(() => fn),
+      host,
       noteAttempt: (r: AttemptResult) => {
         if (r.outcome !== 'error') {
           setAttempted(true);
@@ -117,7 +131,7 @@ export function SessionRunner({ title, exercises, review, onFinish, onExit }: Pr
         }
       },
     }),
-    [answer, result],
+    [answer, result, host],
   );
 
   const next = () => {
@@ -146,6 +160,16 @@ export function SessionRunner({ title, exercises, review, onFinish, onExit }: Pr
   if (result) {
     footer = (
       <>
+        {result.correct || isGraded(ex) ? (
+          <div className="react">
+            <span className="speaker-avatar" aria-hidden>
+              {hostChar.avatar}
+            </span>
+            <span className="small">
+              <strong>{hostChar.name}:</strong> "{result.correct ? praise(pos).roman : ENCOURAGE.roman}" <span className="muted">— {result.correct ? praise(pos).en : ENCOURAGE.en}</span>
+            </span>
+          </div>
+        ) : null}
         <div className="feedback-title" role="status">
           {result.correct ? <IconCheck width={24} height={24} /> : <IconX width={24} height={24} />}
           {result.correct ? (item.retry ? 'Got it this time!' : `Correct! ${praise(pos).roman}`) : 'Not quite — that\x27s how we learn'}
@@ -164,14 +188,18 @@ export function SessionRunner({ title, exercises, review, onFinish, onExit }: Pr
         </button>
       </>
     );
-  } else if (graded && ex.kind !== 'flashcard' && ex.kind !== 'match') {
+  } else if (graded && ex.kind !== 'flashcard' && ex.kind !== 'match' && ex.kind !== 'say') {
     footer = (
       <button className="btn primary block" disabled={!check} onClick={() => check?.()}>
         Check
       </button>
     );
-  } else if (ex.kind === 'match' || ex.kind === 'flashcard') {
-    footer = <p className="small muted center" style={{ margin: 0 }}>{ex.kind === 'match' ? 'Match every pair to continue.' : 'Flip the card, then rate yourself.'}</p>;
+  } else if (ex.kind === 'match' || ex.kind === 'flashcard' || ex.kind === 'say') {
+    footer = (
+      <p className="small muted center" style={{ margin: 0 }}>
+        {ex.kind === 'match' ? 'Match every pair to continue.' : ex.kind === 'say' ? 'Say it, then check your answer.' : 'Flip the card, then rate yourself.'}
+      </p>
+    );
   } else if (ex.kind === 'readAloud' && ex.passage.question) {
     footer = (
       <button className="btn block" onClick={next}>
@@ -193,6 +221,16 @@ export function SessionRunner({ title, exercises, review, onFinish, onExit }: Pr
           <IconX />
         </button>
         <ProgressBar value={done / queue.length} label={`${title} progress`} />
+        {combo >= 2 && (
+          <span className="combo" aria-label={`${combo} in a row`}>
+            🔥 {combo}
+          </span>
+        )}
+        {xpPop > 0 && (
+          <span className="xp-pop" key={xpPop} aria-hidden>
+            +10 XP
+          </span>
+        )}
         <span className="small muted" aria-hidden>
           {done}/{queue.length}
         </span>

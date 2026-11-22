@@ -10,8 +10,8 @@ export interface Playable {
   roman?: string;
   /** Recorded audio file relative to ./content/audio/ */
   audio?: string;
-  /** Prefer the male voice (male conversation characters). */
-  voice?: 'm' | 'f';
+  /** Character id whose voice should say this (falls back to Leni, then any voice). */
+  voice?: string;
 }
 
 type Listener = () => void;
@@ -23,15 +23,17 @@ class AudioService {
   speaking = false;
   preferredVoiceURI: string | null = null;
   rate = 0.85;
-  private files = { f: new Map<string, string>(), m: new Map<string, string>(), w: new Map<string, string>() };
+  private files = new Map<string, Map<string, string>>(); // voice id (or 'w' for single words) -> text -> file
 
   constructor() {
     if (typeof fetch !== 'undefined' && typeof window !== 'undefined') {
       fetch('./content/audio/index.json')
         .then((r) => (r.ok ? r.json() : {}))
-        .then((idx: Partial<Record<'f' | 'm' | 'w', Record<string, string>>>) => {
-          for (const sec of ['f', 'm', 'w'] as const)
-            for (const [text, file] of Object.entries(idx[sec] ?? {})) this.files[sec].set(normalizeUrdu(text), file);
+        .then((idx: { voices?: Record<string, Record<string, string>>; w?: Record<string, string> }) => {
+          const put = (sec: string, entries: Record<string, string>) =>
+            this.files.set(sec, new Map(Object.entries(entries).map(([t, f]) => [normalizeUrdu(t), f])));
+          for (const [sec, entries] of Object.entries(idx.voices ?? {})) put(sec, entries);
+          put('w', idx.w ?? {});
           this.emit();
         })
         .catch(() => undefined);
@@ -80,9 +82,10 @@ class AudioService {
     if (item.audio) return item.audio;
     const key = normalizeUrdu(item.urdu);
     const slotKey = key.replace(/[A-Za-z][A-Za-z' -]*[A-Za-z]|[A-Za-z]/g, '{name}');
-    const order = item.voice === 'm' ? (['m', 'f', 'w'] as const) : (['f', 'w', 'm'] as const);
+    const order = [...new Set([item.voice ?? 'leni', 'leni', 'w', ...this.files.keys()])];
     for (const sec of order) {
-      const f = this.files[sec].get(key) ?? this.files[sec].get(slotKey);
+      const m = this.files.get(sec);
+      const f = m?.get(key) ?? m?.get(slotKey);
       if (f) return f;
     }
     return undefined;

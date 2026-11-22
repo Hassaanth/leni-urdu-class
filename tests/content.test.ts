@@ -21,6 +21,13 @@ describe('curriculum content', () => {
     for (const u of course.units) {
       expect(u.lessons.length).toBeGreaterThanOrEqual(3);
       for (const l of u.lessons) {
+        if (l.kind === 'build') {
+          // Building Blocks: a handful of words, one pattern, many sentences
+          expect(l.phrases.length, l.id).toBeGreaterThanOrEqual(6);
+          expect(l.builds!.length, l.id).toBeGreaterThanOrEqual(8);
+          expect(l.pattern, l.id).toBeDefined();
+          continue;
+        }
         expect(l.phrases.length, l.id).toBeGreaterThanOrEqual(8);
         expect(l.phrases.length, l.id).toBeLessThanOrEqual(12);
       }
@@ -65,5 +72,52 @@ describe('curriculum content', () => {
     };
     const { issues } = await loadCourse(bad);
     expect(issues.some((i) => i.includes('urdu must contain Urdu script'))).toBe(true);
+  });
+});
+
+describe('characters, story and guidebooks', () => {
+  it('every unit has a host and guidebook, every conversation partner is a real character', async () => {
+    const { course } = await loadCourse(fsFetcher);
+    const ids = new Set(course.characters.map((c) => c.id));
+    expect(ids.has('leni')).toBe(true);
+    expect(course.story?.title).toBeTruthy();
+    const idx = buildIndexes(course);
+    for (const u of course.units) {
+      expect(ids.has(u.host!), u.id).toBe(true);
+      expect(u.guide!.length, u.id).toBeGreaterThanOrEqual(3);
+      for (const g of u.guide!) for (const ex of g.examples) expect(idx.phraseById.has(ex), `${u.id}: ${ex}`).toBe(true);
+      for (const l of u.lessons) expect(ids.has(l.dialogue!.partner.character!), l.id).toBe(true);
+    }
+    for (const c of course.conversations) expect(ids.has(c.partner.character!), c.id).toBe(true);
+  });
+
+  it('lesson tips are taught inside the lesson', async () => {
+    const { course } = await loadCourse(fsFetcher);
+    const idx = buildIndexes(course);
+    const { buildLessonExercises } = await import('../src/lib/exercises');
+    const l = idx.lessonById.get('l1-intro')!;
+    const tips = buildLessonExercises(l, course, idx, { gender: 'masculine', name: 'Ali', seed: 1 }).filter((e) => e.kind === 'tip');
+    expect(tips.length).toBe(l.tips!.length);
+  });
+});
+
+describe('Building Blocks path', () => {
+  it('comes first, and every sentence only uses words already taught (or explained in a note)', async () => {
+    const { course } = await loadCourse(fsFetcher);
+    const idx = buildIndexes(course);
+    expect(idx.lessons[0].id).toBe('b1');
+    const { romanKey, romanWords } = await import('../src/lib/text');
+    const known = new Set<string>();
+    const extra = new Set(['ali', 'bilal', 'zara', 'acha', 'beta', 'kuch', 'please', 'aaya', 'bol', 'aayenge', 'jayenge', 'kaisi', 'gayi', 'aaungi', 'jaungi', 'rehte', 'khayi', 'pi', 'aapne', 'thori', 'ne']);
+    for (const l of idx.lessons.filter((x) => x.kind === 'build')) {
+      for (const w of l.phrases) for (const part of romanWords(w.roman)) known.add(romanKey(part));
+      for (const b of l.builds!) {
+        const unknown = romanWords(b.roman)
+          .filter((w) => !w.startsWith('{'))
+          .map(romanKey)
+          .filter((k) => !known.has(k) && !extra.has(k) && ![...extra].some((e) => romanKey(e) === k));
+        expect(unknown, `${l.id}: ${b.roman}`).toEqual([]);
+      }
+    }
   });
 });

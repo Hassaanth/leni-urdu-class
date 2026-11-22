@@ -162,7 +162,7 @@
         "title": "At the samosa stall",
         "partner": {
           "name": "Hamza",
-          "voice": "m"
+          "character": "hamza"
         },
         "lines": [
           {
@@ -378,7 +378,7 @@
         "title": "Where are you from?",
         "partner": {
           "name": "Ayesha",
-          "voice": "f"
+          "character": "ayesha"
         },
         "lines": [
           {
@@ -578,7 +578,7 @@
         "title": "Who is this?",
         "partner": {
           "name": "Bilal",
-          "voice": "m"
+          "character": "bilal"
         },
         "lines": [
           {
@@ -613,6 +613,44 @@
           }
         ]
       }
+    }
+  ],
+  "host": "zara",
+  "chapter": "Chapter 2 · Zara's questions",
+  "story": "Little Zara has a hundred questions — and she counts everything she sees.",
+  "guide": [
+    {
+      "title": "Question words start with \"k\"",
+      "body": "kya (what), kaun (who), kahan (where), kab (when), kyun (why), kaise (how). Put the question word where the answer would go: Aap kahan se hain? → Main London se hoon.",
+      "examples": [
+        "p-kahan-se",
+        "p-yeh-kya"
+      ]
+    },
+    {
+      "title": "Yes/no questions",
+      "body": "Put Kya at the very start of a sentence to turn it into a yes/no question — like \"Do…?\" in English.",
+      "examples": [
+        "p-english-bolte",
+        "p-door-hai"
+      ]
+    },
+    {
+      "title": "Every noun is masculine or feminine",
+      "body": "Words that describe a noun change to match it. A male friend is mera dost, a female friend is meri dost. You'll pick these up by hearing them — don't try to memorise lists.",
+      "examples": [
+        "p-mera-dost",
+        "p-hum-dost"
+      ]
+    },
+    {
+      "title": "Counting",
+      "body": "Numbers come before the thing: do bhai (two brothers), paanch minute (five minutes).",
+      "examples": [
+        "p-ek",
+        "p-paanch",
+        "p-das"
+      ]
     }
   ]
 }

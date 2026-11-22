@@ -1,0 +1,767 @@
+{
+  "id": "bb2",
+  "title": "Building Blocks 2: Everyday Urdu",
+  "description": "Likes, places, where you're from, prices — building on every word you already know.",
+  "host": "khala",
+  "chapter": "Building Blocks · Settling in",
+  "story": "Khala's house is full of food and questions. Time to tell everyone about yourself.",
+  "lessons": [
+    {
+      "id": "b5",
+      "title": "I like…",
+      "objective": "Say what you like and don't like, and ask others.",
+      "phrases": [
+        {
+          "id": "w-pasand",
+          "roman": "pasand",
+          "urdu": "پسند",
+          "en": "liked",
+          "kind": "word"
+        },
+        {
+          "id": "w-biryani",
+          "roman": "biryani",
+          "urdu": "بریانی",
+          "en": "biryani (spiced rice dish)",
+          "kind": "word"
+        },
+        {
+          "id": "w-aam",
+          "roman": "aam",
+          "urdu": "آم",
+          "en": "mango",
+          "kind": "word",
+          "note": "Pakistan is famous for its mangoes — expect to be asked about them!"
+        },
+        {
+          "id": "w-mithai",
+          "roman": "mithai",
+          "urdu": "مٹھائی",
+          "en": "sweets",
+          "kind": "word"
+        },
+        {
+          "id": "w-pakistan",
+          "roman": "Pakistan",
+          "urdu": "پاکستان",
+          "en": "Pakistan",
+          "kind": "word"
+        },
+        {
+          "id": "w-urdu",
+          "roman": "Urdu",
+          "urdu": "اردو",
+          "en": "Urdu",
+          "kind": "word"
+        }
+      ],
+      "pattern": {
+        "title": "Mujhe ___ pasand hai = I like ___",
+        "frame": {
+          "roman": "Mujhe ___ pasand hai.",
+          "urdu": "مجھے ___ پسند ہے۔",
+          "en": "I like ___."
+        },
+        "literal": "to me ___ liked is",
+        "explain": "Same idea as chahiye: \"to me, tea is liked\" — Mujhe chai pasand hai. Ask someone else with aap ko. For plural things (mangoes) the end becomes hain: Mujhe aam pasand hain."
+      },
+      "builds": [
+        {
+          "id": "s-b5-1",
+          "en": "I like tea.",
+          "roman": "Mujhe chai pasand hai.",
+          "urdu": "مجھے چائے پسند ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b5-2",
+          "en": "I really like biryani.",
+          "roman": "Mujhe biryani bohat pasand hai.",
+          "urdu": "مجھے بریانی بہت پسند ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b5-3",
+          "en": "I really like mangoes.",
+          "roman": "Mujhe aam bohat pasand hain.",
+          "urdu": "مجھے آم بہت پسند ہیں۔",
+          "kind": "sentence",
+          "note": "Hain, because \"mangoes\" is plural.",
+          "accept": [
+            "mujhe aam bohat pasand hai"
+          ]
+        },
+        {
+          "id": "s-b5-4",
+          "en": "I like Pakistan.",
+          "roman": "Mujhe Pakistan pasand hai.",
+          "urdu": "مجھے پاکستان پسند ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b5-5",
+          "en": "I like Urdu.",
+          "roman": "Mujhe Urdu pasand hai.",
+          "urdu": "مجھے اردو پسند ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b5-6",
+          "en": "I don't like this.",
+          "roman": "Mujhe yeh pasand nahi hai.",
+          "urdu": "مجھے یہ پسند نہیں ہے۔",
+          "kind": "sentence",
+          "accept": [
+            "mujhe yeh pasand nahi"
+          ]
+        },
+        {
+          "id": "s-b5-7",
+          "en": "Do you like biryani?",
+          "roman": "Kya aap ko biryani pasand hai?",
+          "urdu": "کیا آپ کو بریانی پسند ہے؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b5-8",
+          "en": "What do you like?",
+          "roman": "Aap ko kya pasand hai?",
+          "urdu": "آپ کو کیا پسند ہے؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b5-9",
+          "en": "I don't like sweets.",
+          "roman": "Mujhe mithai pasand nahi hai.",
+          "urdu": "مجھے مٹھائی پسند نہیں ہے۔",
+          "kind": "sentence"
+        }
+      ],
+      "dialogue": {
+        "title": "What does the guest like?",
+        "partner": {
+          "name": "Khala",
+          "character": "khala"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap ko kya pasand hai? Biryani?",
+            "urdu": "آپ کو کیا پسند ہے؟ بریانی؟",
+            "en": "What do you like? Biryani?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji haan! Mujhe biryani bohat pasand hai.",
+            "urdu": "جی ہاں! مجھے بریانی بہت پسند ہے۔",
+            "en": "Yes! I really like biryani."
+          },
+          {
+            "who": "them",
+            "roman": "Aur aam?",
+            "urdu": "اور آم؟",
+            "en": "And mangoes?"
+          },
+          {
+            "who": "you",
+            "roman": "Mujhe aam bhi bohat pasand hain.",
+            "urdu": "مجھے آم بھی بہت پسند ہیں۔",
+            "en": "I really like mangoes too."
+          },
+          {
+            "who": "them",
+            "roman": "Mujhe bhi!",
+            "urdu": "مجھے بھی!",
+            "en": "Me too!"
+          }
+        ]
+      },
+      "kind": "build"
+    },
+    {
+      "id": "b6",
+      "title": "Where is…?",
+      "objective": "Ask where things are and understand \"here\" and \"there\".",
+      "phrases": [
+        {
+          "id": "w-kahan",
+          "roman": "kahan",
+          "urdu": "کہاں",
+          "en": "where",
+          "kind": "word"
+        },
+        {
+          "id": "w-yahan",
+          "roman": "yahan",
+          "urdu": "یہاں",
+          "en": "here",
+          "kind": "word"
+        },
+        {
+          "id": "w-wahan",
+          "roman": "wahan",
+          "urdu": "وہاں",
+          "en": "there",
+          "kind": "word"
+        },
+        {
+          "id": "w-dukaan",
+          "roman": "dukaan",
+          "urdu": "دکان",
+          "en": "shop",
+          "kind": "word"
+        },
+        {
+          "id": "w-masjid",
+          "roman": "masjid",
+          "urdu": "مسجد",
+          "en": "mosque",
+          "kind": "word"
+        },
+        {
+          "id": "w-washroom",
+          "roman": "washroom",
+          "urdu": "واش روم",
+          "en": "washroom / toilet",
+          "kind": "word",
+          "note": "Pakistanis usually say the English word \"washroom\"."
+        },
+        {
+          "id": "w-bazaar",
+          "roman": "bazaar",
+          "urdu": "بازار",
+          "en": "market",
+          "kind": "word"
+        }
+      ],
+      "pattern": {
+        "title": "___ kahan hai? = Where is ___?",
+        "frame": {
+          "roman": "___ kahan hai?",
+          "urdu": "___ کہاں ہے؟",
+          "en": "Where is ___?"
+        },
+        "literal": "___ where is?",
+        "explain": "The question word sits where the answer will go. Question: Dukaan kahan hai? (shop where is?) — Answer: Dukaan wahan hai (shop there is). Just swap kahan for yahan or wahan."
+      },
+      "builds": [
+        {
+          "id": "s-b6-1",
+          "en": "Where is the washroom?",
+          "roman": "Washroom kahan hai?",
+          "urdu": "واش روم کہاں ہے؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b6-2",
+          "en": "Where is the shop?",
+          "roman": "Dukaan kahan hai?",
+          "urdu": "دکان کہاں ہے؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b6-3",
+          "en": "The mosque is there.",
+          "roman": "Masjid wahan hai.",
+          "urdu": "مسجد وہاں ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b6-4",
+          "en": "My house is here.",
+          "roman": "Mera ghar yahan hai.",
+          "urdu": "میرا گھر یہاں ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b6-5",
+          "en": "Where is your house?",
+          "roman": "Aap ka ghar kahan hai?",
+          "urdu": "آپ کا گھر کہاں ہے؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b6-6",
+          "en": "Where is the market?",
+          "roman": "Bazaar kahan hai?",
+          "urdu": "بازار کہاں ہے؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b6-7",
+          "en": "The water is here.",
+          "roman": "Paani yahan hai.",
+          "urdu": "پانی یہاں ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b6-8",
+          "en": "Where is my brother?",
+          "roman": "Mera bhai kahan hai?",
+          "urdu": "میرا بھائی کہاں ہے؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b6-9",
+          "en": "The shop isn't here.",
+          "roman": "Dukaan yahan nahi hai.",
+          "urdu": "دکان یہاں نہیں ہے۔",
+          "kind": "sentence"
+        }
+      ],
+      "dialogue": {
+        "title": "Lost near the market",
+        "partner": {
+          "name": "Hamza",
+          "character": "hamza"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Assalamu alaikum!",
+            "urdu": "السلام علیکم!",
+            "en": "Hello!"
+          },
+          {
+            "who": "you",
+            "roman": "Wa alaikum assalam. Bazaar kahan hai?",
+            "urdu": "وعلیکم السلام۔ بازار کہاں ہے؟",
+            "en": "Hello. Where is the market?"
+          },
+          {
+            "who": "them",
+            "roman": "Bazaar wahan hai.",
+            "urdu": "بازار وہاں ہے۔",
+            "en": "The market is there."
+          },
+          {
+            "who": "you",
+            "roman": "Aur masjid?",
+            "urdu": "اور مسجد؟",
+            "en": "And the mosque?"
+          },
+          {
+            "who": "them",
+            "roman": "Masjid yahan hai.",
+            "urdu": "مسجد یہاں ہے۔",
+            "en": "The mosque is here."
+          },
+          {
+            "who": "you",
+            "roman": "Bohat shukriya!",
+            "urdu": "بہت شکریہ!",
+            "en": "Thank you very much!"
+          }
+        ]
+      },
+      "kind": "build"
+    },
+    {
+      "id": "b7",
+      "title": "Where you're from & where you live",
+      "objective": "Say where you're from and where you live, and ask others.",
+      "phrases": [
+        {
+          "id": "w-se",
+          "roman": "se",
+          "urdu": "سے",
+          "en": "from",
+          "kind": "word",
+          "note": "Goes AFTER the place: London se = from London."
+        },
+        {
+          "id": "w-mein",
+          "roman": "mein",
+          "urdu": "میں",
+          "en": "in",
+          "kind": "word",
+          "note": "Spelled exactly like main (I) in Urdu script! Context tells you which. Goes after the place: Lahore mein = in Lahore."
+        },
+        {
+          "id": "w-rehta",
+          "roman": "rehta",
+          "urdu": "رہتا",
+          "en": "live(s) — man speaking",
+          "kind": "word",
+          "note": "A man says Main … rehta hoon; a woman says rehti hoon."
+        },
+        {
+          "id": "w-rehti",
+          "roman": "rehti",
+          "urdu": "رہتی",
+          "en": "live(s) — woman speaking",
+          "kind": "word"
+        },
+        {
+          "id": "w-lahore",
+          "roman": "Lahore",
+          "urdu": "لاہور",
+          "en": "Lahore",
+          "kind": "word"
+        },
+        {
+          "id": "w-london",
+          "roman": "London",
+          "urdu": "لندن",
+          "en": "London",
+          "kind": "word"
+        },
+        {
+          "id": "w-karachi",
+          "roman": "Karachi",
+          "urdu": "کراچی",
+          "en": "Karachi",
+          "kind": "word"
+        }
+      ],
+      "pattern": {
+        "title": "Main ___ se hoon = I am from ___",
+        "frame": {
+          "roman": "Main ___ se hoon.",
+          "urdu": "میں ___ سے ہوں۔",
+          "en": "I'm from ___."
+        },
+        "literal": "I ___ from am",
+        "explain": "Urdu puts \"from\" and \"in\" AFTER the place: London se (London from), Lahore mein (Lahore in). For \"I live\", the verb shows if you're a man or a woman: Main Lahore mein rehta hoon (man) / rehti hoon (woman). With aap it's rehte hain."
+      },
+      "builds": [
+        {
+          "id": "s-b7-1",
+          "en": "I'm from London.",
+          "roman": "Main London se hoon.",
+          "urdu": "میں لندن سے ہوں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b7-2",
+          "en": "Where are you from?",
+          "roman": "Aap kahan se hain?",
+          "urdu": "آپ کہاں سے ہیں؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b7-3",
+          "en": "My friend is from Lahore.",
+          "roman": "Mera dost Lahore se hai.",
+          "urdu": "میرا دوست لاہور سے ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b7-4",
+          "en": "I live in Lahore.",
+          "roman": "Main Lahore mein rehta hoon.",
+          "urdu": "میں لاہور میں رہتا ہوں۔",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main Lahore mein rehta hoon.",
+              "urdu": "میں لاہور میں رہتا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main Lahore mein rehti hoon.",
+              "urdu": "میں لاہور میں رہتی ہوں۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        },
+        {
+          "id": "s-b7-5",
+          "en": "Where do you live?",
+          "roman": "Aap kahan rehte hain?",
+          "urdu": "آپ کہاں رہتے ہیں؟",
+          "kind": "sentence",
+          "note": "With aap, \"live\" becomes rehte."
+        },
+        {
+          "id": "s-b7-6",
+          "en": "My sister lives in Karachi.",
+          "roman": "Meri behen Karachi mein rehti hai.",
+          "urdu": "میری بہن کراچی میں رہتی ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b7-7",
+          "en": "My brother lives in London.",
+          "roman": "Mera bhai London mein rehta hai.",
+          "urdu": "میرا بھائی لندن میں رہتا ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b7-8",
+          "en": "I'm not from Pakistan.",
+          "roman": "Main Pakistan se nahi hoon.",
+          "urdu": "میں پاکستان سے نہیں ہوں۔",
+          "kind": "sentence"
+        }
+      ],
+      "dialogue": {
+        "title": "Ayesha asks about home",
+        "partner": {
+          "name": "Ayesha",
+          "character": "ayesha"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap kahan se hain?",
+            "urdu": "آپ کہاں سے ہیں؟",
+            "en": "Where are you from?"
+          },
+          {
+            "who": "you",
+            "roman": "Main London se hoon. Aap kahan se hain?",
+            "urdu": "میں لندن سے ہوں۔ آپ کہاں سے ہیں؟",
+            "en": "I'm from London. Where are you from?"
+          },
+          {
+            "who": "them",
+            "roman": "Main Lahore se hoon. Aap kahan rehte hain?",
+            "urdu": "میں لاہور سے ہوں۔ آپ کہاں رہتے ہیں؟",
+            "en": "I'm from Lahore. Where do you live?"
+          },
+          {
+            "who": "you",
+            "roman": "Main London mein rehta hoon.",
+            "urdu": "میں لندن میں رہتا ہوں۔",
+            "en": "I live in London.",
+            "f": {
+              "roman": "Main London mein rehti hoon.",
+              "urdu": "میں لندن میں رہتی ہوں۔"
+            }
+          },
+          {
+            "who": "them",
+            "roman": "Acha! Meri behen bhi London mein rehti hai.",
+            "urdu": "اچھا! میری بہن بھی لندن میں رہتی ہے۔",
+            "en": "Oh! My sister lives in London too."
+          }
+        ]
+      },
+      "kind": "build"
+    },
+    {
+      "id": "b8",
+      "title": "How much is it?",
+      "objective": "Count, ask prices and order more than one thing.",
+      "phrases": [
+        {
+          "id": "w-kitne",
+          "roman": "kitne",
+          "urdu": "کتنے",
+          "en": "how much / how many",
+          "kind": "word"
+        },
+        {
+          "id": "w-ek",
+          "roman": "ek",
+          "urdu": "ایک",
+          "en": "one",
+          "kind": "word"
+        },
+        {
+          "id": "w-do",
+          "roman": "do",
+          "urdu": "دو",
+          "en": "two",
+          "kind": "word"
+        },
+        {
+          "id": "w-teen",
+          "roman": "teen",
+          "urdu": "تین",
+          "en": "three",
+          "kind": "word"
+        },
+        {
+          "id": "w-paanch",
+          "roman": "paanch",
+          "urdu": "پانچ",
+          "en": "five",
+          "kind": "word"
+        },
+        {
+          "id": "w-das",
+          "roman": "das",
+          "urdu": "دس",
+          "en": "ten",
+          "kind": "word"
+        },
+        {
+          "id": "w-sau",
+          "roman": "sau",
+          "urdu": "سو",
+          "en": "hundred",
+          "kind": "word"
+        },
+        {
+          "id": "w-rupay",
+          "roman": "rupay",
+          "urdu": "روپے",
+          "en": "rupees",
+          "kind": "word"
+        },
+        {
+          "id": "w-mehenga",
+          "roman": "mehenga",
+          "urdu": "مہنگا",
+          "en": "expensive",
+          "kind": "word"
+        }
+      ],
+      "pattern": {
+        "title": "Yeh kitne ka hai? = How much is this?",
+        "frame": {
+          "roman": "Yeh kitne ka hai?",
+          "urdu": "یہ کتنے کا ہے؟",
+          "en": "How much is this?"
+        },
+        "literal": "this how-much of is?",
+        "explain": "Learn this one as a block — you'll use it every day at a market. Numbers go before the thing: do chai = two teas, paanch sau = five hundred. Combine with what you know: Mujhe do chai chahiye."
+      },
+      "builds": [
+        {
+          "id": "s-b8-1",
+          "en": "How much is this?",
+          "roman": "Yeh kitne ka hai?",
+          "urdu": "یہ کتنے کا ہے؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b8-2",
+          "en": "Ten rupees.",
+          "roman": "Das rupay.",
+          "urdu": "دس روپے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b8-3",
+          "en": "A hundred rupees.",
+          "roman": "Sau rupay.",
+          "urdu": "سو روپے۔",
+          "kind": "sentence",
+          "accept": [
+            "ek sau rupay"
+          ]
+        },
+        {
+          "id": "s-b8-4",
+          "en": "Five hundred rupees.",
+          "roman": "Paanch sau rupay.",
+          "urdu": "پانچ سو روپے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b8-5",
+          "en": "This is very expensive.",
+          "roman": "Yeh bohat mehenga hai.",
+          "urdu": "یہ بہت مہنگا ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b8-6",
+          "en": "I want two teas.",
+          "roman": "Mujhe do chai chahiye.",
+          "urdu": "مجھے دو چائے چاہیے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b8-7",
+          "en": "I want three mangoes.",
+          "roman": "Mujhe teen aam chahiye.",
+          "urdu": "مجھے تین آم چاہیے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b8-8",
+          "en": "This isn't expensive.",
+          "roman": "Yeh mehenga nahi hai.",
+          "urdu": "یہ مہنگا نہیں ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b8-9",
+          "en": "One water, please.",
+          "roman": "Ek paani, please.",
+          "urdu": "ایک پانی، پلیز۔",
+          "kind": "sentence"
+        }
+      ],
+      "dialogue": {
+        "title": "At Chacha Rashid's shop",
+        "partner": {
+          "name": "Chacha Rashid",
+          "character": "rashid"
+        },
+        "lines": [
+          {
+            "who": "you",
+            "roman": "Assalamu alaikum! Yeh kitne ka hai?",
+            "urdu": "السلام علیکم! یہ کتنے کا ہے؟",
+            "en": "Hello! How much is this?"
+          },
+          {
+            "who": "them",
+            "roman": "Das rupay.",
+            "urdu": "دس روپے۔",
+            "en": "Ten rupees."
+          },
+          {
+            "who": "you",
+            "roman": "Mujhe do chahiye.",
+            "urdu": "مجھے دو چاہیے۔",
+            "en": "I want two."
+          },
+          {
+            "who": "them",
+            "roman": "Theek hai. Aur kuch?",
+            "urdu": "ٹھیک ہے۔ اور کچھ؟",
+            "en": "Okay. Anything else?"
+          },
+          {
+            "who": "you",
+            "roman": "Nahi, shukriya.",
+            "urdu": "نہیں، شکریہ۔",
+            "en": "No, thank you."
+          }
+        ]
+      },
+      "kind": "build"
+    }
+  ],
+  "level": 1,
+  "guide": [
+    {
+      "title": "Mujhe ___ pasand hai = I like ___",
+      "body": "Same idea as chahiye: \"to me, tea is liked\" — Mujhe chai pasand hai. Ask someone else with aap ko. For plural things (mangoes) the end becomes hain: Mujhe aam pasand hain.",
+      "examples": [
+        "s-b5-1",
+        "s-b5-2"
+      ]
+    },
+    {
+      "title": "___ kahan hai? = Where is ___?",
+      "body": "The question word sits where the answer will go. Question: Dukaan kahan hai? (shop where is?) — Answer: Dukaan wahan hai (shop there is). Just swap kahan for yahan or wahan.",
+      "examples": [
+        "s-b6-1",
+        "s-b6-2"
+      ]
+    },
+    {
+      "title": "Main ___ se hoon = I am from ___",
+      "body": "Urdu puts \"from\" and \"in\" AFTER the place: London se (London from), Lahore mein (Lahore in). For \"I live\", the verb shows if you're a man or a woman: Main Lahore mein rehta hoon (man) / rehti hoon (woman). With aap it's rehte hain.",
+      "examples": [
+        "s-b7-1",
+        "s-b7-2"
+      ]
+    },
+    {
+      "title": "Yeh kitne ka hai? = How much is this?",
+      "body": "Learn this one as a block — you'll use it every day at a market. Numbers go before the thing: do chai = two teas, paanch sau = five hundred. Combine with what you know: Mujhe do chai chahiye.",
+      "examples": [
+        "s-b8-1",
+        "s-b8-2"
+      ]
+    }
+  ]
+}

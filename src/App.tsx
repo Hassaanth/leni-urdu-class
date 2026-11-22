@@ -10,6 +10,7 @@ import { ProgressPage } from './pages/ProgressPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { SpeakGamePage } from './pages/SpeakGames';
 import { StartPage } from './pages/StartPage';
+import { GuidePage } from './pages/GuidePage';
 import { PronunciationDrillPage, PronunciationListPage } from './pages/PronunciationPage';
 import { ReadAloudListPage, ReadAloudPage, RepeatPage, SpokenQAPage, SpeakPage } from './pages/SpeakPage';
 import { TutorPage } from './pages/TutorPage';
@@ -36,6 +37,8 @@ function Page() {
   switch (a) {
     case 'start':
       return <StartPage />;
+    case 'guide':
+      return <GuidePage unitId={b} />;
     case 'lesson':
       return <LessonPage id={b} />;
     case 'practice':

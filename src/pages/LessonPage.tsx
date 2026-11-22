@@ -3,9 +3,11 @@ import { CardLink, PageHead, PhraseText, PlayButtons } from '../components/commo
 import { SessionRunner, type SessionSummary } from '../components/SessionRunner';
 import { useName } from '../hooks';
 import { dateKey } from '../lib/dates';
-import { buildLessonExercises, displayForm } from '../lib/exercises';
+import { buildLessonExercises, buildPatternLesson, displayForm } from '../lib/exercises';
 import { completeLesson, weakestSkill } from '../lib/progress';
-import { TEACHER } from '../lib/teacher';
+import { FINALE, TEACHER } from '../lib/teacher';
+import { audio } from '../services/audio';
+import { useCharacter } from '../state/course';
 import { dueQueue } from '../lib/srs';
 import type { Phrase } from '../types';
 import { fillSlots } from '../lib/text';
@@ -21,22 +23,28 @@ export function LessonPage({ id }: { id?: string }) {
   const name = useName();
   const record = useProgress((s) => (id ? s.lessons[id] : undefined));
   const [phase, setPhase] = useState<'intro' | 'session' | 'results'>('intro');
+  const hostChar = useCharacter(lesson?.dialogue?.partner.character ?? (lesson ? idx.unitByLesson.get(lesson.id)?.host : undefined));
   const [seed, setSeed] = useState(() => Date.now());
   const [summary, setSummary] = useState<(SessionSummary & { xp: number }) | null>(null);
   const [xpAtStart, setXpAtStart] = useState(0);
 
-  const exercises = useMemo(
-    () => (lesson ? buildLessonExercises(lesson, course, idx, {
-            gender: settings.learnerGender,
-            name,
-            seed,
-            style: settings.learnStyle,
-            pace: settings.pace,
-            weakSkill: weakestSkill(store.getState()),
-            warmup: dueQueue(Object.values(store.getState().cards), dateKey())
-              .map((c) => idx.phraseById.get(c.id))
-              .filter((p): p is Phrase => !!p && !lesson.phrases.includes(p)),
-          }) : []),
+  const exercises = useMemo(() => {
+    if (!lesson) return [];
+    const st = store.getState();
+    const due = dueQueue(Object.values(st.cards), dateKey())
+      .map((c) => idx.phraseById.get(c.id))
+      .filter((p): p is Phrase => !!p && !lesson.phrases.includes(p) && !(lesson.builds ?? []).includes(p));
+    const opts = { gender: settings.learnerGender, name, seed, style: settings.learnStyle, pace: settings.pace, weakSkill: weakestSkill(st) };
+    if (lesson.kind === 'build') {
+      // Warm-up: earlier sentences that are due or were missed; otherwise the previous lesson's sentences.
+      const earlier = idx.lessons.slice(0, idx.lessons.indexOf(lesson)).filter((l) => l.kind === 'build');
+      const dueBuilds = due.filter((p) => idx.buildIds.has(p.id));
+      const prev = earlier.length ? (earlier[earlier.length - 1].builds ?? []) : [];
+      const previousBuilds = [...dueBuilds, ...prev.filter((b) => !b.slot && !dueBuilds.includes(b))];
+      return buildPatternLesson(lesson, idx, { ...opts, previousBuilds });
+    }
+    return buildLessonExercises(lesson, course, idx, { ...opts, warmup: due });
+  },
     // Rebuild only when a new attempt starts, not when settings change mid-lesson.
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [lesson, seed],
@@ -54,12 +62,14 @@ export function LessonPage({ id }: { id?: string }) {
     );
   }
   const unit = idx.unitByLesson.get(lesson.id);
+  const host = lesson.dialogue?.partner.character ?? unit?.host ?? 'leni';
   const scenario = lesson.roleplayId ? course.conversations.find((c) => c.id === lesson.roleplayId) : undefined;
 
   if (phase === 'session') {
     return (
       <SessionRunner
         title={lesson.title}
+        host={host}
         exercises={exercises}
         onExit={() => setPhase('intro')}
         onFinish={(sum) => {
@@ -71,6 +81,7 @@ export function LessonPage({ id }: { id?: string }) {
           });
           setSummary({ ...sum, xp: store.getState().xp - xpAtStart || earned });
           setPhase('results');
+          setTimeout(() => void audio.play({ urdu: FINALE.urdu, voice: host }), 400);
         }}
       />
     );
@@ -84,9 +95,16 @@ export function LessonPage({ id }: { id?: string }) {
       <>
         <div className="celebrate">
           <div className="big" aria-hidden>
-            {pct >= 90 ? '🏆' : pct >= 60 ? '🎉' : '💪'}
+            {hostChar.avatar}
+          </div>
+          <div className="stars" aria-label={`${starsFor(summary.accuracy)} of 3 stars`}>
+            {'★'.repeat(starsFor(summary.accuracy))}
+            <span className="muted">{'☆'.repeat(3 - starsFor(summary.accuracy))}</span>
           </div>
           <h1 style={{ marginBottom: 4 }}>Lesson complete!</h1>
+          <p style={{ margin: 0 }}>
+            <strong>{hostChar.name}:</strong> "{FINALE.roman}" <span className="muted">— {FINALE.en}</span>
+          </p>
           <p className="muted">{lesson.title}</p>
         </div>
         <div className="stat-row">
@@ -210,7 +228,21 @@ export function LessonPage({ id }: { id?: string }) {
           </ul>
         </>
       )}
-      <h2>You'll learn</h2>
+      {lesson.pattern && (
+        <>
+          <h2>The pattern you'll master</h2>
+          <div className="pattern-card">
+            <div className="roman" lang="ur-Latn" style={{ fontSize: '1.3rem' }}>
+              {lesson.pattern.frame.roman}
+            </div>
+            <div className="en">{lesson.pattern.frame.en}</div>
+          </div>
+          <p className="small muted" style={{ marginTop: 8 }}>
+            You'll use it to build {lesson.builds?.length ?? 0} different sentences — first with word tiles, then from memory.
+          </p>
+        </>
+      )}
+      <h2>{lesson.kind === 'build' ? 'New words' : "You'll learn"}</h2>
       <div className="card">
         {lesson.phrases.map((p) => {
           const f = displayForm(p, settings.learnerGender, name);
@@ -244,4 +276,9 @@ export function LessonPage({ id }: { id?: string }) {
       </div>
     </>
   );
+}
+
+/** 3 stars = 90%+ right first time, 2 = 60%+, otherwise 1 for finishing. */
+export function starsFor(accuracy: number): number {
+  return accuracy >= 0.9 ? 3 : accuracy >= 0.6 ? 2 : 1;
 }

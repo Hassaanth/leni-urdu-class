@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { buildIndexes, loadCourse, type CourseIndexes } from '../content/loader';
-import type { Course } from '../types';
+import type { Character, Course } from '../types';
 import { store } from './store';
 
 interface CourseCtx {
@@ -59,4 +59,12 @@ export function useCourse(): CourseCtx {
   const c = useContext(Ctx);
   if (!c) throw new Error('useCourse outside CourseProvider');
   return c;
+}
+
+const LENI: Character = { id: 'leni', name: 'Leni', role: 'your Urdu teacher', avatar: '👩🏽‍🏫', bio: '' };
+
+/** A character from the cast (falls back to Leni). */
+export function useCharacter(id?: string): Character {
+  const c = useContext(Ctx);
+  return c?.course.characters.find((x) => x.id === id) ?? c?.course.characters.find((x) => x.id === 'leni') ?? LENI;
 }

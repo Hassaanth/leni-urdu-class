@@ -7,6 +7,7 @@ import type {
   FormPair,
   Lesson,
   LessonDialogue,
+  SentencePattern,
   Phrase,
   ReadAloudPassage,
   SpokenQuestion,
@@ -89,12 +90,16 @@ export type Exercise =
   | { kind: 'repeat'; id: string; phrase: Phrase }
   | { kind: 'spokenQA'; id: string; question: SpokenQuestion }
   | { kind: 'readAloud'; id: string; passage: ReadAloudPassage }
-  | { kind: 'dialogue'; id: string; mode: 'listen' | 'speak'; dialogue: LessonDialogue };
+  | { kind: 'dialogue'; id: string; mode: 'listen' | 'speak'; dialogue: LessonDialogue }
+  | { kind: 'tip'; id: string; text: string; example?: Phrase }
+  | { kind: 'pattern'; id: string; pattern: SentencePattern; examples: Phrase[] }
+  /** Anticipation: see the English, try to say it in Urdu, then hear and check the answer. */
+  | { kind: 'say'; id: string; phrase: Phrase; hintWords: string[]; phraseIds: string[] };
 
 export type ExerciseKind = Exercise['kind'];
 
 /** Exercises that must be answered correctly to advance (wrong answers come back later). */
-export const GRADED: ExerciseKind[] = ['mcq', 'listen', 'match', 'order', 'translate', 'fill', 'complete'];
+export const GRADED: ExerciseKind[] = ['mcq', 'listen', 'match', 'order', 'translate', 'fill', 'complete', 'say'];
 /** Speaking exercises: always skippable, never block progress. */
 export const SPEAKING: ExerciseKind[] = ['repeat', 'spokenQA', 'readAloud'];
 
@@ -112,6 +117,8 @@ export function skillOf(e: Exercise): Skill | undefined {
     case 'translate':
     case 'fill':
       return 'writing';
+    case 'say':
+      return 'speaking';
     default:
       return undefined;
   }
@@ -220,10 +227,20 @@ export function buildLessonExercises(lesson: Lesson, course: Course, idx: Course
 
   // 2. Hear the whole conversation first
   if (lesson.dialogue) out.push({ kind: 'dialogue', id: nid('dialogue-listen'), mode: 'listen', dialogue: lesson.dialogue });
+  // Grammar/culture tips are taught inside the lesson, one per step, with an example from the lesson.
+  const tips = [...(lesson.tips ?? [])];
+  const tipFor = (chunk: Phrase[]): Exercise | null => {
+    const text = tips.shift();
+    if (!text) return null;
+    const example = chunk.find((p) => romanWords(p.roman).length >= 2) ?? chunk[0];
+    return { kind: 'tip', id: nid('tip'), text, example };
+  };
 
   // 3. Small steps
   for (let i = 0; i < phrases.length; i += chunkSize) {
     const chunk = phrases.slice(i, i + chunkSize);
+    const tip = tipFor(chunk);
+    if (tip) out.push(tip);
     for (const p of chunk) {
       out.push({ kind: 'intro', id: nid('intro'), phrase: p });
       if (style === 'speak') out.push({ kind: 'repeat', id: nid('repeat'), phrase: p });
@@ -295,6 +312,69 @@ export function buildLessonExercises(lesson: Lesson, course: Course, idx: Course
   return out;
 }
 
+/**
+ * "Building Blocks" lesson: words first, then one sentence pattern, then the learner builds many
+ * sentences from words they know — with tiles at first, then from memory (anticipation), with
+ * earlier words and sentences recalled at growing intervals.
+ */
+export function buildPatternLesson(lesson: Lesson, _idx: CourseIndexes, opts: BuildOptions & { previousBuilds?: Phrase[] }): Exercise[] {
+  const rand = rng(opts.seed ?? Date.now());
+  const { gender, name } = opts;
+  const pace = opts.pace ?? 'steady';
+  const style = opts.style ?? 'listen';
+  const words = lesson.phrases;
+  const builds = lesson.builds ?? [];
+  const out: Exercise[] = [];
+  let n = 0;
+  const nid = (k: string) => `${lesson.id}:${k}:${n++}`;
+  const knownWords = words; // distractors come from this lesson's words, which the learner has just met
+  const tileWords = (p: Phrase) => romanWords(displayForm(p, gender, name).roman);
+  const say = (p: Phrase, k = 'say'): Exercise => ({
+    kind: 'say',
+    id: nid(k),
+    phrase: p,
+    hintWords: shuffle(tileWords(p).map((w) => w.replace(/[.,!?]/g, '')), rand),
+    phraseIds: [p.id],
+  });
+  const tiles = (p: Phrase): Exercise => {
+    const f = displayForm(p, gender, name);
+    const inSentence = new Set(romanWords(f.roman).map((w) => w.toLowerCase()));
+    const extra = sample(knownWords.flatMap((w) => romanWords(w.roman)).filter((w) => !inSentence.has(w.toLowerCase())), pace === 'fast' ? 3 : 2, rand);
+    return orderFor(nid('build'), fillSlots(p.en, name), f.roman, f.urdu, extra, rand, [p.id]);
+  };
+  const wordCheck = (w: Phrase, pool: Phrase[]): Exercise =>
+    style === 'see' || pool.length < 3 ? mcqFor(w, pool.length >= 3 ? pool : knownWords, rand, gender, name, nid('word')) : listenFor(w, pool, rand, name, nid('word'));
+
+  // 1. Warm-up: say a few sentences from earlier lessons (graduated recall)
+  for (const p of (opts.previousBuilds ?? []).slice(0, pace === 'relaxed' ? 2 : 3)) out.push(say(p, 'warm'));
+  // 2. Hear today's conversation first
+  if (lesson.dialogue) out.push({ kind: 'dialogue', id: nid('dialogue-listen'), mode: 'listen', dialogue: lesson.dialogue });
+  // 3. Meet each word, and check it straight away once there are enough to choose from
+  words.forEach((w, i) => {
+    out.push({ kind: 'intro', id: nid('intro'), phrase: w });
+    if (i >= 2) out.push(wordCheck(w, words.slice(0, i + 1)));
+    if (style === 'speak') out.push({ kind: 'repeat', id: nid('repeat'), phrase: w });
+  });
+  // quick recall of the first two words after a gap
+  for (const w of words.slice(0, 2)) out.push(wordCheck(w, words));
+  // 4. The pattern
+  if (lesson.pattern) out.push({ kind: 'pattern', id: nid('pattern'), pattern: lesson.pattern, examples: builds.slice(0, 2) });
+  // 5. Build sentences: tiles first, then from memory; listen to new combinations; recall earlier ones
+  const tileCount = pace === 'relaxed' ? 4 : pace === 'fast' ? 1 : 2;
+  builds.forEach((b, j) => {
+    const canTile = !b.slot && romanWords(b.roman).length >= 2;
+    out.push(j < tileCount && canTile ? tiles(b) : say(b));
+    if (j === 1 || j === 4) out.push({ kind: 'repeat', id: nid('repeat'), phrase: b });
+    if (j >= 2 && j % 3 === 2) out.push(listenFor(builds[j - 1], builds, rand, name, nid('understand')));
+    if (j === 5 && builds[0]) out.push(say(builds[0], 'recall'));
+  });
+  // 6. Have the conversation
+  if (lesson.dialogue) out.push({ kind: 'dialogue', id: nid('dialogue-speak'), mode: 'speak', dialogue: lesson.dialogue });
+  // 7. Final recall of a couple of sentences from the start of the lesson
+  for (const b of [builds[2], builds[3]].filter(Boolean)) out.push(say(b, 'final'));
+  return out;
+}
+
 /** Mixed review from due/weak phrases: recall in both directions, listening and flashcards. */
 export function buildReviewExercises(phrases: Phrase[], idx: CourseIndexes, opts: BuildOptions & { mode?: 'mixed' | 'flashcards' | 'listening' | 'recall' }): Exercise[] {
   const rand = rng(opts.seed ?? Date.now());
@@ -304,6 +384,10 @@ export function buildReviewExercises(phrases: Phrase[], idx: CourseIndexes, opts
     const lesson = idx.lessonByPhrase.get(p.id);
     const pool = lesson ? distractorPool(lesson, idx) : idx.allPhrases;
     const id = `review:${p.id}:${i}`;
+    if (idx.buildIds.has(p.id) && mode !== 'listening') {
+      out.push({ kind: 'say', id, phrase: p, hintWords: shuffle(romanWords(displayForm(p, opts.gender, opts.name).roman), rand), phraseIds: [p.id] });
+      return;
+    }
     const kind =
       mode === 'flashcards'
         ? 'flash'

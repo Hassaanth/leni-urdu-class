@@ -115,8 +115,18 @@ export interface DialogueTurn {
 /** A short real conversation: heard at the start of a lesson, spoken by the learner at the end. */
 export interface LessonDialogue {
   title: string;
-  partner: { name: string; voice?: 'm' | 'f' };
+  /** character = id in characters.json (decides voice and avatar). */
+  partner: { name: string; character?: string };
   lines: DialogueTurn[];
+}
+
+/** A reusable sentence frame, e.g. "Mujhe ___ chahiye" = "I need ___". */
+export interface SentencePattern {
+  title: string;
+  explain: string;
+  frame: FormPair & { en: string };
+  /** Word-for-word gloss of the frame, e.g. "to me ___ is needed". */
+  literal?: string;
 }
 
 export interface Lesson {
@@ -130,6 +140,18 @@ export interface Lesson {
   /** Conversation scenario that practises this lesson. */
   roleplayId?: string;
   dialogue?: LessonDialogue;
+  /** "build" lessons teach words + one sentence pattern, then have the learner build many sentences. */
+  kind?: 'build';
+  pattern?: SentencePattern;
+  /** Sentences the learner builds from the lesson's words (and earlier ones). */
+  builds?: Phrase[];
+}
+
+export interface GuideSection {
+  title: string;
+  body: string;
+  /** Phrase ids used as examples (they already have audio). */
+  examples: string[];
 }
 
 export interface Unit {
@@ -138,6 +160,21 @@ export interface Unit {
   title: string;
   description: string;
   lessons: Lesson[];
+  /** Character who hosts this chapter of the story. */
+  host?: string;
+  chapter?: string;
+  story?: string;
+  /** Guidebook: how this unit's Urdu works, in plain English. */
+  guide?: GuideSection[];
+}
+
+export interface Character {
+  id: string;
+  name: string;
+  role: string;
+  avatar: string;
+  bio: string;
+  aliases?: string[];
 }
 
 export interface Level {
@@ -151,7 +188,8 @@ export interface CourseIndex {
   version: number;
   levels: Level[];
   units: { id: string; level: number; file: string }[];
-  extras: { conversations: string; pronunciation: string; speaking: string };
+  extras: { conversations: string; pronunciation: string; speaking: string; characters?: string };
+  story?: { title: string; text: string };
 }
 
 // ---------- Conversations ----------
@@ -184,7 +222,7 @@ export interface ConversationScenario {
   emoji: string;
   context: string;
   goal: string;
-  partner: { name: string; role: string; voice?: 'm' | 'f' };
+  partner: { name: string; role: string; character?: string };
   start: string;
   nodes: ConversationNode[];
 }
@@ -219,4 +257,6 @@ export interface Course {
   conversations: ConversationScenario[];
   pronunciation: PronunciationDrill[];
   speaking: SpeakingContent;
+  characters: Character[];
+  story?: { title: string; text: string };
 }

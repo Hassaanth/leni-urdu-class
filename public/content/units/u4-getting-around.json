@@ -183,7 +183,7 @@
         "title": "Finding the mosque",
         "partner": {
           "name": "Passer-by",
-          "voice": "m"
+          "character": "townman"
         },
         "lines": [
           {
@@ -387,7 +387,7 @@
         "title": "When shall we meet?",
         "partner": {
           "name": "Hamza",
-          "voice": "m"
+          "character": "hamza"
         },
         "lines": [
           {
@@ -620,7 +620,7 @@
         "title": "What do you like?",
         "partner": {
           "name": "Ayesha",
-          "voice": "f"
+          "character": "ayesha"
         },
         "lines": [
           {
@@ -655,6 +655,37 @@
           }
         ]
       }
+    }
+  ],
+  "host": "hamza",
+  "chapter": "Chapter 4 · Around Lahore",
+  "story": "Hamza shows you around the city — markets, mosques and rickshaws.",
+  "guide": [
+    {
+      "title": "Polite requests end in -ein / -iye",
+      "body": "To ask someone politely to do something, use the -ein or -iye form: jaayen (please go), murein (please turn), boliye (please speak).",
+      "examples": [
+        "p-seedha-jaayen",
+        "p-daayen-murein",
+        "p-aahista"
+      ]
+    },
+    {
+      "title": "Telling the time",
+      "body": "baje means o'clock: Do baje hain = it's two o'clock. Kal means both yesterday AND tomorrow — the verb tells you which.",
+      "examples": [
+        "p-kitne-baje",
+        "p-do-baje",
+        "p-kal"
+      ]
+    },
+    {
+      "title": "Habits: -ta / -ti hoon",
+      "body": "Here's your first verb that changes with YOU: a man says Main kaam par jaata hoon, a woman says jaati hoon. The app shows your version first.",
+      "examples": [
+        "p-kaam-par",
+        "p-jaldi-uthta"
+      ]
     }
   ]
 }

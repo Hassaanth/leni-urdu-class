@@ -175,7 +175,7 @@
         "title": "A taxi to the airport",
         "partner": {
           "name": "Driver",
-          "voice": "m"
+          "character": "townman"
         },
         "lines": [
           {
@@ -419,7 +419,7 @@
         "title": "Calling an office",
         "partner": {
           "name": "Receptionist",
-          "voice": "f"
+          "character": "townwoman"
         },
         "lines": [
           {
@@ -669,7 +669,7 @@
         "title": "A problem at the hotel",
         "partner": {
           "name": "Clerk",
-          "voice": "m"
+          "character": "townman"
         },
         "lines": [
           {
@@ -704,6 +704,36 @@
           }
         ]
       }
+    }
+  ],
+  "host": "ayesha",
+  "chapter": "Chapter 7 · Out on your own",
+  "story": "Time to get around without your cousins: taxis, phone calls, and the odd misunderstanding.",
+  "guide": [
+    {
+      "title": "\"I need to go to…\"",
+      "body": "Mujhe … jaana hai = I need to go to … It's the same for everyone. Swap in any place.",
+      "examples": [
+        "p-airport-jaana",
+        "p-raasta-bata"
+      ]
+    },
+    {
+      "title": "On the phone",
+      "body": "Phone calls start with Hello and often Assalamu alaikum. Kaun bol raha hai? = who's speaking? Awaaz nahi aa rahi = I can't hear you.",
+      "examples": [
+        "p-kaun-bol",
+        "p-awaaz-nahi"
+      ]
+    },
+    {
+      "title": "Fixing misunderstandings",
+      "body": "Check meaning with Aap ka matlab hai…? (you mean…?). Correct yourself with Mera matlab yeh nahi tha. It's normal — native speakers do it all the time.",
+      "examples": [
+        "p-aap-ka-matlab",
+        "p-matlab-nahi-tha",
+        "p-samjha-nahi"
+      ]
     }
   ]
 }

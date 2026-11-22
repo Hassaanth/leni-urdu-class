@@ -595,7 +595,7 @@ function ResponseChallenge() {
   const [heardMatch, setHeardMatch] = useState(false);
   const item = items[i];
   useEffect(() => {
-    if (item) void audio.play({ urdu: item.node.line.urdu, voice: item.scenario.partner.voice });
+    if (item) void audio.play({ urdu: item.node.line.urdu, voice: item.scenario.partner.character });
   }, [item]);
   if (!item)
     return (
@@ -618,7 +618,7 @@ function ResponseChallenge() {
       <div className="bubble them" style={{ maxWidth: '100%' }}>
         <div className="who">{item.scenario.partner.name}</div>
         <PhraseText roman={fillSlots(item.node.line.roman, name)} urdu={item.node.line.urdu} en={item.node.line.en} />
-        <button className="btn small ghost" onClick={() => void audio.play({ urdu: item.node.line.urdu, voice: item.scenario.partner.voice })}>
+        <button className="btn small ghost" onClick={() => void audio.play({ urdu: item.node.line.urdu, voice: item.scenario.partner.character })}>
           <IconPlay /> Play
         </button>
       </div>

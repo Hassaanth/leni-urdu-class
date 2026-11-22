@@ -155,7 +155,19 @@ export function validateLesson(raw: unknown, path: string, issues: Issues): Less
       dialogue = undefined;
     }
   }
-  return { ...(raw as unknown as Lesson), phrases, exercises, dialogue };
+  let builds: Phrase[] | undefined;
+  if (Array.isArray(raw.builds)) {
+    builds = raw.builds.map((b, i) => validatePhrase(b, `${p}.builds[${i}]`, issues)).filter((x): x is Phrase => x !== null);
+  }
+  let pattern = raw.pattern as Lesson['pattern'];
+  if (pattern !== undefined) {
+    const pt = pattern as unknown;
+    if (!(isObj(pt) && isStr(pt.title) && isStr(pt.explain) && isObj(pt.frame) && checkForms(pt.frame, `${p}.pattern`, issues))) {
+      issues.add(p, 'pattern is invalid and was skipped');
+      pattern = undefined;
+    }
+  }
+  return { ...(raw as unknown as Lesson), phrases, exercises, dialogue, builds, pattern };
 }
 
 export function validateUnit(raw: unknown, path: string, issues: Issues): Unit | null {
@@ -283,7 +295,7 @@ export function crossValidate(
     for (const l of u.lessons) {
       if (lessonIds.has(l.id)) issues.add(l.id, 'duplicate lesson id');
       lessonIds.add(l.id);
-      for (const ph of l.phrases) {
+      for (const ph of [...l.phrases, ...(l.builds ?? [])]) {
         if (phraseIds.has(ph.id)) issues.add(`${l.id}.${ph.id}`, 'duplicate phrase id');
         phraseIds.add(ph.id);
       }

@@ -34,7 +34,7 @@ export function ConversationPlayer({ id }: { id: string }) {
   const node = sc && st ? getNode(sc, st.nodeId) : null;
 
   useEffect(() => {
-    if (node) void audio.play({ urdu: fillSlots(node.line.urdu, name), voice: sc?.partner.voice });
+    if (node) void audio.play({ urdu: fillSlots(node.line.urdu, name), voice: sc?.partner.character });
     setShowLineHelp(false);
     setShowOptions(false);
     endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
@@ -125,10 +125,10 @@ export function ConversationPlayer({ id }: { id: string }) {
             <p className="muted small">Listen carefully…</p>
           )}
           <div className="row wrap">
-            <button className="btn small ghost" onClick={() => void audio.play({ urdu: fillSlots(node.line.urdu, name), voice: sc.partner.voice })}>
+            <button className="btn small ghost" onClick={() => void audio.play({ urdu: fillSlots(node.line.urdu, name), voice: sc.partner.character })}>
               <IconPlay /> Play
             </button>
-            <button className="btn small ghost" onClick={() => void audio.play({ urdu: fillSlots(node.line.urdu, name), voice: sc.partner.voice }, { slow: true })}>
+            <button className="btn small ghost" onClick={() => void audio.play({ urdu: fillSlots(node.line.urdu, name), voice: sc.partner.character }, { slow: true })}>
               Slow
             </button>
             {!showLineHelp && mode !== 'beginner' && (

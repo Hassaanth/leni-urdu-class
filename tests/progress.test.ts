@@ -259,3 +259,36 @@ describe('adaptive teaching flow', async () => {
     expect(weakestSkill(s)).toBe('listening');
   });
 });
+
+describe('Building Blocks engine', async () => {
+  const base = join(__dirname, '..', 'public', 'content');
+  const { course } = await loadCourse(async (f) => JSON.parse(readFileSync(join(base, f), 'utf8')));
+  const idx = buildIndexes(course);
+  const { buildPatternLesson } = await import('../src/lib/exercises');
+
+  it('teaches every word before the pattern, and the pattern before building sentences', () => {
+    for (const l of idx.lessons.filter((x) => x.kind === 'build')) {
+      const ex = buildPatternLesson(l, idx, { gender: 'feminine', name: 'Sara', seed: 4 });
+      const kinds = ex.map((e) => e.kind);
+      const lastIntro = kinds.lastIndexOf('intro');
+      const pattern = kinds.indexOf('pattern');
+      const firstBuild = kinds.findIndex((k, i) => i > pattern && (k === 'order' || k === 'say'));
+      expect(lastIntro, l.id).toBeLessThan(pattern);
+      expect(pattern, l.id).toBeLessThan(firstBuild);
+      // every sentence of the lesson is practised
+      const practised = new Set(ex.flatMap((e) => ('phraseIds' in e ? e.phraseIds : [])));
+      for (const b of l.builds!) expect(practised.has(b.id), `${l.id}:${b.id}`).toBe(true);
+      // and some are recalled again later in the lesson
+      expect(ex.some((e) => e.id.includes(':final:')), l.id).toBe(true);
+    }
+  });
+
+  it('warms up with earlier sentences and uses tiles before free recall', () => {
+    const b2 = idx.lessonById.get('b2')!;
+    const prev = idx.lessonById.get('b1')!.builds!.slice(0, 3);
+    const ex = buildPatternLesson(b2, idx, { gender: 'masculine', name: 'Ali', seed: 1, previousBuilds: prev });
+    expect(ex.slice(0, 3).map((e) => e.kind)).toEqual(['say', 'say', 'say']);
+    const afterPattern = ex.slice(ex.findIndex((e) => e.kind === 'pattern') + 1).filter((e) => e.kind === 'order' || e.kind === 'say');
+    expect(afterPattern[0].kind).toBe('order');
+  });
+});

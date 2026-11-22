@@ -176,7 +176,7 @@
         "title": "Zara’s little brother",
         "partner": {
           "name": "Zara",
-          "voice": "f"
+          "character": "zara"
         },
         "lines": [
           {
@@ -378,7 +378,7 @@
         "title": "Caught in the rain",
         "partner": {
           "name": "Zara",
-          "voice": "f"
+          "character": "zara"
         },
         "lines": [
           {
@@ -575,8 +575,8 @@
       "dialogue": {
         "title": "City life: a debate",
         "partner": {
-          "name": "Uncle",
-          "voice": "m"
+          "name": "Dada ji",
+          "character": "dada"
         },
         "lines": [
           {
@@ -611,6 +611,36 @@
           }
         ]
       }
+    }
+  ],
+  "host": "dada",
+  "chapter": "Chapter 8 · Stories with Dada ji",
+  "story": "Every evening Dada ji tells stories full of old sayings — and now you can join in.",
+  "guide": [
+    {
+      "title": "Idioms: learn the situation",
+      "body": "Idioms rarely translate word for word. Learn when people say them: Der aayad durust aayad when someone arrives late; Ek anaar sau beemar when everyone wants the same thing.",
+      "examples": [
+        "p-der-aayad",
+        "p-ek-anaar"
+      ]
+    },
+    {
+      "title": "Telling a story",
+      "body": "Linking words carry a story: pehle (first), phir (then), achanak (suddenly), uske baad (after that), aakhir mein (in the end). Start with Pata hai kya hua?",
+      "examples": [
+        "p-pata-hai-kya-hua",
+        "p-achanak",
+        "p-aakhir-mein"
+      ]
+    },
+    {
+      "title": "Disagreeing gently",
+      "body": "With elders especially, agree a little before disagreeing: Aap ki baat theek hai, lekin… or Kisi had tak… (to some extent).",
+      "examples": [
+        "p-baat-theek-lekin",
+        "p-kisi-had-tak"
+      ]
     }
   ]
 }

@@ -39,18 +39,70 @@
     }
   ],
   "units": [
-    { "id": "u1", "level": 1, "file": "units/u1-greetings.json" },
-    { "id": "u2", "level": 1, "file": "units/u2-basics.json" },
-    { "id": "u3", "level": 2, "file": "units/u3-everyday.json" },
-    { "id": "u4", "level": 2, "file": "units/u4-getting-around.json" },
-    { "id": "u5", "level": 3, "file": "units/u5-sentences.json" },
-    { "id": "u6", "level": 4, "file": "units/u6-social.json" },
-    { "id": "u7", "level": 5, "file": "units/u7-real-world.json" },
-    { "id": "u8", "level": 6, "file": "units/u8-advanced.json" }
+    {
+      "id": "bb1",
+      "level": 1,
+      "file": "units/bb1-first-words.json"
+    },
+    {
+      "id": "bb2",
+      "level": 1,
+      "file": "units/bb2-everyday.json"
+    },
+    {
+      "id": "bb3",
+      "level": 1,
+      "file": "units/bb3-actions.json"
+    },
+    {
+      "id": "u1",
+      "level": 1,
+      "file": "units/u1-greetings.json"
+    },
+    {
+      "id": "u2",
+      "level": 1,
+      "file": "units/u2-basics.json"
+    },
+    {
+      "id": "u3",
+      "level": 2,
+      "file": "units/u3-everyday.json"
+    },
+    {
+      "id": "u4",
+      "level": 2,
+      "file": "units/u4-getting-around.json"
+    },
+    {
+      "id": "u5",
+      "level": 3,
+      "file": "units/u5-sentences.json"
+    },
+    {
+      "id": "u6",
+      "level": 4,
+      "file": "units/u6-social.json"
+    },
+    {
+      "id": "u7",
+      "level": 5,
+      "file": "units/u7-real-world.json"
+    },
+    {
+      "id": "u8",
+      "level": 6,
+      "file": "units/u8-advanced.json"
+    }
   ],
   "extras": {
     "conversations": "conversations.json",
     "pronunciation": "pronunciation.json",
-    "speaking": "speaking.json"
+    "speaking": "speaking.json",
+    "characters": "characters.json"
+  },
+  "story": {
+    "title": "Summer in Lahore",
+    "text": "You've just landed in Lahore to spend the summer with your Khala's family. Your cousin Bilal, his sister Ayesha, little Zara and Dada ji can't wait to meet you — but at home, everyone speaks Urdu. Leni, your teacher, will help you every step of the way."
   }
 }

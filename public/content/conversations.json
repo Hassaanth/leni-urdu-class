@@ -9,7 +9,7 @@
     "partner": {
       "name": "Bilal",
       "role": "your friend's cousin",
-      "voice": "m"
+      "character": "bilal"
     },
     "start": "n1",
     "nodes": [
@@ -209,7 +209,7 @@
     "partner": {
       "name": "Khala",
       "role": "your mother's sister",
-      "voice": "f"
+      "character": "khala"
     },
     "start": "n1",
     "nodes": [
@@ -388,7 +388,7 @@
     "partner": {
       "name": "Rashid sahab",
       "role": "your new neighbour",
-      "voice": "m"
+      "character": "rashid"
     },
     "start": "n1",
     "nodes": [
@@ -533,7 +533,7 @@
     "partner": {
       "name": "Waiter",
       "role": "restaurant waiter",
-      "voice": "m"
+      "character": "townman"
     },
     "start": "n1",
     "nodes": [
@@ -738,7 +738,7 @@
     "partner": {
       "name": "Shopkeeper",
       "role": "clothes seller",
-      "voice": "m"
+      "character": "rashid"
     },
     "start": "n1",
     "nodes": [
@@ -942,7 +942,7 @@
     "partner": {
       "name": "Passer-by",
       "role": "a helpful stranger",
-      "voice": "m"
+      "character": "townman"
     },
     "start": "n1",
     "nodes": [
@@ -1084,7 +1084,7 @@
     "partner": {
       "name": "Aunty",
       "role": "your friend's mother",
-      "voice": "f"
+      "character": "khala"
     },
     "start": "n1",
     "nodes": [
@@ -1309,7 +1309,7 @@
     "partner": {
       "name": "Hamza",
       "role": "your friend",
-      "voice": "m"
+      "character": "hamza"
     },
     "start": "n1",
     "nodes": [
@@ -1488,7 +1488,7 @@
     "partner": {
       "name": "Ayesha",
       "role": "an old friend",
-      "voice": "f"
+      "character": "ayesha"
     },
     "start": "n1",
     "nodes": [
@@ -1655,7 +1655,7 @@
     "partner": {
       "name": "Receptionist",
       "role": "office receptionist",
-      "voice": "f"
+      "character": "townwoman"
     },
     "start": "n1",
     "nodes": [
@@ -1826,7 +1826,7 @@
     "partner": {
       "name": "Driver",
       "role": "taxi driver",
-      "voice": "m"
+      "character": "townman"
     },
     "start": "n1",
     "nodes": [
@@ -1996,7 +1996,7 @@
     "partner": {
       "name": "Zara",
       "role": "your cousin",
-      "voice": "f"
+      "character": "zara"
     },
     "start": "n1",
     "nodes": [

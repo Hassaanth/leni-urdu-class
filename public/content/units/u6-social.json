@@ -210,7 +210,7 @@
         "title": "Tea at Hamza’s",
         "partner": {
           "name": "Hamza",
-          "voice": "m"
+          "character": "hamza"
         },
         "lines": [
           {
@@ -452,8 +452,8 @@
       "dialogue": {
         "title": "Good news from Sana",
         "partner": {
-          "name": "Sana",
-          "voice": "f"
+          "name": "Ayesha",
+          "character": "ayesha"
         },
         "lines": [
           {
@@ -672,8 +672,8 @@
       "dialogue": {
         "title": "Chatting with Ali",
         "partner": {
-          "name": "Ali",
-          "voice": "m"
+          "name": "Hamza",
+          "character": "hamza"
         },
         "lines": [
           {
@@ -714,6 +714,44 @@
           }
         ]
       }
+    }
+  ],
+  "host": "bilal",
+  "chapter": "Chapter 6 · Friends & feelings",
+  "story": "Bilal's friends invite you everywhere. Time to sound relaxed, share how you feel, and make plans.",
+  "guide": [
+    {
+      "title": "\"Let's…\": Chalo + -te hain",
+      "body": "Chalo, chai peete hain = come on, let's have tea. Chalo + verb-te hain is the friendly way to suggest something.",
+      "examples": [
+        "p-chalo-chai",
+        "p-ghar-aaiye"
+      ]
+    },
+    {
+      "title": "Giving your opinion",
+      "body": "Mujhe lagta hai ke… = I think that… Mere khayal mein… = in my opinion… Both soften what you say.",
+      "examples": [
+        "p-lagta-hai",
+        "p-khayal-mein"
+      ]
+    },
+    {
+      "title": "Casual vs polite",
+      "body": "With friends: yaar (mate), tum, and short replies like Sab theek! With elders, stay with aap and ji.",
+      "examples": [
+        "p-kya-haal",
+        "p-yaar",
+        "p-acha"
+      ]
+    },
+    {
+      "title": "Insha'Allah and Masha'Allah",
+      "body": "People add Insha'Allah (God willing) to future plans, and Masha'Allah when praising something. You'll hear both constantly.",
+      "examples": [
+        "p-inshallah",
+        "p-mashallah"
+      ]
     }
   ]
 }

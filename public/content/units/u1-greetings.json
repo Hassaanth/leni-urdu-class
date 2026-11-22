@@ -282,7 +282,7 @@
         "title": "Meeting Bilal",
         "partner": {
           "name": "Bilal",
-          "voice": "m"
+          "character": "bilal"
         },
         "lines": [
           {
@@ -564,7 +564,7 @@
         "title": "Saying goodbye to Khala",
         "partner": {
           "name": "Khala",
-          "voice": "f"
+          "character": "khala"
         },
         "lines": [
           {
@@ -824,8 +824,8 @@
       "dialogue": {
         "title": "At a small shop",
         "partner": {
-          "name": "Shopkeeper",
-          "voice": "m"
+          "name": "Chacha Rashid",
+          "character": "rashid"
         },
         "lines": [
           {
@@ -866,6 +866,44 @@
           }
         ]
       }
+    }
+  ],
+  "host": "bilal",
+  "chapter": "Chapter 1 · Arrival",
+  "story": "Bilal picks you up from the airport. Time for your very first Urdu words!",
+  "guide": [
+    {
+      "title": "\"Aap\" — the polite \"you\"",
+      "body": "Urdu has three words for \"you\": aap (respectful), tum (friends and family your age) and tu (very close, or rude). Start with aap — it is always safe and polite.",
+      "examples": [
+        "p-naam-kya",
+        "p-kaise-hain"
+      ]
+    },
+    {
+      "title": "The verb comes last",
+      "body": "English says \"My name is Ali\". Urdu says \"My name Ali is\": Mera naam Ali hai. The little verb at the end tells you who: hoon = am, hai = is, hain = are (and polite \"is\").",
+      "examples": [
+        "p-mera-naam",
+        "p-theek-hoon"
+      ]
+    },
+    {
+      "title": "\"Mujhe\" — to me",
+      "body": "Needs and feelings are often said \"to me\". Mujhe paani chahiye is literally \"to me, water is needed\" — that's how Urdu says \"I need water\".",
+      "examples": [
+        "p-paani-chahiye",
+        "p-samajh-nahi"
+      ]
+    },
+    {
+      "title": "Greeting with respect",
+      "body": "When someone says Assalamu alaikum, reply Wa alaikum assalam. Adding ji makes anything more polite: Ji haan = yes (politely).",
+      "examples": [
+        "p-salaam",
+        "p-walaikum",
+        "p-ji-haan"
+      ]
     }
   ]
 }
