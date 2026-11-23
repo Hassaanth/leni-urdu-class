@@ -57,10 +57,10 @@ test.describe('core flows', () => {
     await installFakeRecognition(page);
     await seedSettings(page, { recognitionConsent: 'granted' });
     await page.goto('/#/learn');
-    await page.getByRole('link', { name: /Hello & thank you/ }).first().click();
+    await page.getByRole('link', { name: /Thank you, yes & no/ }).first().click();
     await page.getByRole('button', { name: 'Start lesson' }).click();
     await expect(page.locator('.ex-kicker')).toHaveText('New word');
-    await expect(page.locator('.word-pic')).toHaveText('👋');
+    await expect(page.locator('.word-pic')).toHaveText('🙏');
     await page.getByRole('button', { name: 'Continue' }).click();
     await expect(page.locator('.picture-grid .option.picture')).toHaveCount(3);
     const kinds = new Set<string>();
@@ -72,7 +72,7 @@ test.describe('core flows', () => {
     await expect(page.getByRole('heading', { name: 'Lesson complete!' })).toBeVisible();
     for (const k of ['intro', 'mcq', 'listen', 'match', 'repeat']) expect(kinds).toContain(k);
     const cards = await page.evaluate(() => JSON.parse(localStorage.getItem('bolo-urdu:v1')!).cards);
-    for (const id of ['v-salaam', 'v-shukriya', 'v-haan', 'v-nahi']) expect(cards[id].correct).toBeGreaterThan(0);
+    for (const id of ['v-suniye', 'v-shukriya', 'v-haan', 'v-nahi']) expect(cards[id].correct).toBeGreaterThan(0);
   });
 
   test('Building Blocks lesson 1: words, pattern, building sentences, conversation', async ({ page }) => {
@@ -154,7 +154,7 @@ test.describe('speaking', () => {
     expect(await page.evaluate(() => (window as unknown as { __speechStarts: number }).__speechStarts)).toBe(0); // no mic before consent
     await page.getByRole('button', { name: 'Allow speech recognition' }).click();
 
-    await queueSpeech(page, { alts: ['آداب'] });
+    await queueSpeech(page, { alts: ['سنیے'] });
     await page.getByRole('button', { name: 'Tap and speak' }).click();
     await expect(page.getByText('Microphone on — speak now')).toBeVisible();
     await expect(page.getByText('We recognized your phrase.')).toBeVisible();
@@ -176,9 +176,9 @@ test.describe('speaking', () => {
 
     // Recognition failures never change the review schedule
     const state = await page.evaluate(() => JSON.parse(localStorage.getItem('bolo-urdu:v1')!));
-    expect(state.cards['p-salaam']).toBeUndefined();
+    expect(state.cards['p-suniye']).toBeUndefined();
     expect(state.speaking.recognitionErrors).toBe(1);
-    expect(state.speaking.byPhrase['p-salaam'].attempts).toBe(3);
+    expect(state.speaking.byPhrase['p-suniye'].attempts).toBe(3);
   });
 
   test('permission denial falls back to self-practice without re-prompting', async ({ page }) => {
@@ -231,7 +231,7 @@ test.describe('conversations', () => {
     await page.getByRole('button', { name: /Khuda hafiz!/ }).click();
     await expect(page.getByText("❌ That doesn't fit")).toBeVisible();
     await page.getByRole('button', { name: 'Try another reply' }).click();
-    for (const reply of [/^Aadaab!/, /^Mera naam/, /^Main theek hoon, shukriya/, /^Mujhe samajh nahi aaya/, /^Main London se hoon/, /^Ji, phir milenge/]) {
+    for (const reply of [/^Ji, boliye/, /^Mera naam/, /^Main theek hoon, shukriya/, /^Mujhe samajh nahi aaya/, /^Main London se hoon/, /^Ji, phir milenge/]) {
       await page.getByRole('button', { name: reply }).click();
       await page.getByRole('button', { name: 'Continue' }).click();
     }

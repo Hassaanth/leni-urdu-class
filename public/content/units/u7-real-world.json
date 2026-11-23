@@ -222,7 +222,7 @@
       "title": "Phone Calls & Work",
       "objective": "Start and end a phone call, ask for someone, and talk about meetings.",
       "tips": [
-        "On the phone people often start with \"Hello\" and then \"Aadaab\".",
+        "Pakistanis answer the phone with a quick \"Ji?\" and then ask \"Kaun bol raha hai?\" (who's speaking?).",
         "\"Sahab\" (Mr / sir) after a name shows respect: \"Ahmed sahab\". For women: \"sahiba\" (formal) or \"ji\": \"Ayesha ji\"."
       ],
       "phrases": [
@@ -382,9 +382,9 @@
           "context": [
             {
               "speaker": "Caller",
-              "roman": "Hello? Hello? Aap sun rahe hain?",
-              "urdu": "ہیلو؟ ہیلو؟ آپ سن رہے ہیں؟",
-              "en": "Hello? Hello? Can you hear me?"
+              "roman": "Ji? Aap sun rahe hain?",
+              "urdu": "جی؟ آپ سن رہے ہیں؟",
+              "en": "Yes? Can you hear me?"
             }
           ],
           "prompt": "The line is bad. Tell them you can't hear and you'll call later.",
@@ -424,9 +424,9 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Hello, kaun bol raha hai?",
-            "urdu": "ہیلو، کون بول رہا ہے؟",
-            "en": "Hello, who's speaking?"
+            "roman": "Ji, kaun bol raha hai?",
+            "urdu": "جی، کون بول رہا ہے؟",
+            "en": "Yes, who's speaking?"
           },
           {
             "who": "you",
@@ -720,7 +720,7 @@
     },
     {
       "title": "On the phone",
-      "body": "Phone calls start with Hello and often Aadaab. Kaun bol raha hai? = who's speaking? Awaaz nahi aa rahi = I can't hear you.",
+      "body": "Phone calls start with a quick \"Ji?\". Kaun bol raha hai? = who's speaking? Awaaz nahi aa rahi = I can't hear you.",
       "examples": [
         "p-kaun-bol",
         "p-awaaz-nahi"

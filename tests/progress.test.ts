@@ -203,7 +203,7 @@ describe('lesson engine and conversations over the real course', async () => {
     expect(r.advanced).toBe(false);
     expect(r.state.nodeId).toBe(st.nodeId);
     expect(r.state.wrong).toBe(1);
-    expect(choiceForTarget(node, 'Aadaab!')?.quality).toBe('best');
+    expect(choiceForTarget(node, 'Ji, boliye.')?.quality).toBe('best');
   });
 });
 
@@ -376,5 +376,12 @@ describe('tests: placement and unit tests', async () => {
     const text = JSON.stringify(course);
     for (const w of ['Assalamu', 'alaikum', 'Alhamdulillah', "Insha'Allah", "Masha'Allah", 'Allah hafiz', 'السلام', 'علیکم', 'الحمدللہ', 'ان شاء اللہ', 'ماشاءاللہ'])
       expect(text.includes(w), w).toBe(false);
+  });
+
+  it('teaches no "hello": no Aadaab, no Hello ji', () => {
+    const text = JSON.stringify(course);
+    for (const w of ['Aadaab', 'aadaab', 'آداب', 'Hello ji', 'ہیلو']) expect(text.includes(w), w).toBe(false);
+    const items = course.units.flatMap((u) => u.lessons.flatMap((l) => [...l.phrases, ...(l.builds ?? [])]));
+    expect(items.filter((p) => /\bhello\b/i.test(p.en)).map((p) => p.id)).toEqual([]);
   });
 });

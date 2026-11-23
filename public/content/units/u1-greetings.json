@@ -2,7 +2,7 @@
   "id": "u1",
   "level": 4,
   "title": "Greetings & Introductions",
-  "description": "Say hello, introduce yourself, and get through your first conversation.",
+  "description": "Get attention politely, introduce yourself, and get through your first conversation.",
   "lessons": [
     {
       "id": "l1-intro",
@@ -15,28 +15,30 @@
       ],
       "phrases": [
         {
-          "id": "p-salaam",
-          "en": "hello (respectful)",
-          "roman": "Aadaab",
-          "urdu": "آداب",
+          "id": "p-suniye",
+          "en": "excuse me / listen (to get attention)",
+          "roman": "Suniye",
+          "urdu": "سنیے",
           "accept": [
-            "adaab",
-            "aadab",
-            "adab"
+            "suniye",
+            "suniyay",
+            "sunie",
+            "suniye ji"
           ],
-          "note": "A traditional, respectful Urdu greeting you can say to anyone, often with a small raise of the hand. Say it: aa-DAAB.",
+          "note": "The polite way to get someone's attention, like \"excuse me\". Say it: su-NI-ye.",
           "kind": "phrase"
         },
         {
-          "id": "p-hello-ji",
-          "en": "hello (friendly and polite)",
-          "roman": "Hello ji",
-          "urdu": "ہیلو جی",
+          "id": "p-ji-boliye",
+          "en": "Yes, go ahead / Yes, tell me",
+          "roman": "Ji, boliye",
+          "urdu": "جی، بولیے",
           "accept": [
-            "hello jee",
-            "helo ji"
+            "ji boliye",
+            "jee boliye",
+            "ji bolie"
           ],
-          "note": "Pakistanis use the English \"hello\" all the time. Adding ji makes it polite.",
+          "note": "The polite answer when someone says \"Suniye!\" or wants to ask you something.",
           "kind": "phrase"
         },
         {
@@ -167,17 +169,17 @@
           "context": [
             {
               "speaker": "Bilal",
-              "roman": "Aadaab!",
-              "urdu": "آداب!",
-              "en": "Hello!"
+              "roman": "Suniye!",
+              "urdu": "سنیے!",
+              "en": "Excuse me!"
             }
           ],
-          "prompt": "Bilal greets you. What do you reply?",
+          "prompt": "Bilal wants your attention. What do you reply?",
           "options": [
             {
-              "roman": "Aadaab!",
-              "urdu": "آداب!",
-              "en": "Hello!"
+              "roman": "Ji, boliye.",
+              "urdu": "جی، بولیے۔",
+              "en": "Yes, go ahead."
             },
             {
               "roman": "Main theek hoon.",
@@ -191,7 +193,7 @@
             }
           ],
           "answer": 0,
-          "explain": "When someone greets you, greet them back: \"Aadaab!\" (or a friendly \"Hello ji!\")."
+          "explain": "When someone says \"Suniye!\" (excuse me), answer \"Ji, boliye\" (yes, go ahead)."
         },
         {
           "type": "complete",
@@ -223,9 +225,9 @@
               "en": "Yes."
             },
             {
-              "roman": "Aadaab.",
-              "urdu": "آداب۔",
-              "en": "Hello!."
+              "roman": "Khuda hafiz.",
+              "urdu": "خدا حافظ۔",
+              "en": "Goodbye."
             }
           ],
           "answer": 0,
@@ -277,15 +279,15 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Aadaab!",
-            "urdu": "آداب!",
-            "en": "Hello!"
+            "roman": "Suniye!",
+            "urdu": "سنیے!",
+            "en": "Excuse me!"
           },
           {
             "who": "you",
-            "roman": "Aadaab!",
-            "urdu": "آداب!",
-            "en": "Hello to you too!"
+            "roman": "Ji, boliye.",
+            "urdu": "جی، بولیے۔",
+            "en": "Yes, go ahead."
           },
           {
             "who": "them",
@@ -322,7 +324,7 @@
     },
     {
       "id": "l1-greetings",
-      "title": "Hellos, Thanks & Goodbyes",
+      "title": "Thanks & Goodbyes",
       "objective": "Greet people, thank them, apologise politely and say goodbye.",
       "tips": [
         "\"Shukriya\" is the everyday \"thank you\". Many Pakistanis also simply say \"thank you\" in English.",
@@ -559,9 +561,9 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Aadaab, beta! Sab khairiyat hai?",
-            "urdu": "آداب بیٹا! سب خیریت ہے؟",
-            "en": "Hello, dear! Is everything well?"
+            "roman": "Beta, sab khairiyat hai?",
+            "urdu": "بیٹا، سب خیریت ہے؟",
+            "en": "Dear, is everything well?"
           },
           {
             "who": "you",
@@ -887,11 +889,11 @@
       ]
     },
     {
-      "title": "Greeting people",
-      "body": "Say Aadaab (respectful) or Hello ji (friendly and polite). Adding ji makes almost anything more polite: Ji haan = yes, politely.",
+      "title": "Getting someone's attention",
+      "body": "Suniye! (excuse me / listen) is the polite way to get attention. Answer with Ji, boliye (yes, go ahead). Adding ji makes almost anything more polite: Ji haan = yes, politely.",
       "examples": [
-        "p-salaam",
-        "p-hello-ji",
+        "p-suniye",
+        "p-ji-boliye",
         "p-ji-haan"
       ]
     }

@@ -48,8 +48,8 @@ describe('curriculum content', () => {
     expect(lesson).toBeDefined();
     const romans = lesson!.phrases.map((p) => p.roman);
     for (const r of [
-      'Aadaab',
-      'Hello ji',
+      'Suniye',
+      'Ji, boliye',
       'Aap ka naam kya hai?',
       'Mera naam {name} hai.',
       'Aap kaise hain?',

@@ -4,7 +4,7 @@
     "level": 1,
     "title": "Meeting someone new",
     "emoji": "🤝",
-    "context": "You're at a friend's dinner party. A young man you haven't met walks over to say hello.",
+    "context": "You're at a friend's dinner party. A young man you haven't met walks over to you.",
     "goal": "Greet him, exchange names, ask how he is, and say goodbye.",
     "partner": {
       "name": "Bilal",
@@ -16,25 +16,25 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Aadaab!",
-          "urdu": "آداب!",
-          "en": "Hello!"
+          "roman": "Suniye!",
+          "urdu": "سنیے!",
+          "en": "Excuse me!"
         },
         "choices": [
           {
-            "roman": "Aadaab!",
-            "urdu": "آداب!",
-            "en": "Hello!",
+            "roman": "Ji, boliye.",
+            "urdu": "جی، بولیے۔",
+            "en": "Yes, go ahead.",
             "quality": "best",
-            "feedback": "Perfect — you greeted him back respectfully.",
+            "feedback": "Perfect — that is the polite way to answer \"Suniye!\".",
             "next": "n2"
           },
           {
-            "roman": "Hello ji!",
-            "urdu": "ہیلو جی!",
-            "en": "Hello!",
+            "roman": "Ji?",
+            "urdu": "جی؟",
+            "en": "Yes?",
             "quality": "ok",
-            "feedback": "Friendly and fine! \"Aadaab\" is a little more respectful when you first meet someone.",
+            "feedback": "Fine! \"Ji, boliye\" (yes, go ahead) sounds a little more welcoming.",
             "next": "n2"
           },
           {
@@ -42,7 +42,7 @@
             "urdu": "خدا حافظ!",
             "en": "Goodbye!",
             "quality": "wrong",
-            "feedback": "That means goodbye — you've only just met! Greet him back instead."
+            "feedback": "That means goodbye — you've only just met! Answer with \"Ji, boliye\" instead."
           }
         ]
       },
@@ -216,16 +216,16 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Aadaab, beta! Sab khairiyat hai?",
-          "urdu": "آداب بیٹا! سب خیریت ہے؟",
-          "en": "Hello, dear! Is everything well?"
+          "roman": "Beta, sab khairiyat hai?",
+          "urdu": "بیٹا، سب خیریت ہے؟",
+          "en": "Dear, is everything well?"
         },
         "note": "Elders often call younger people \"beta\" (lit. son) as a term of affection — for boys and girls.",
         "choices": [
           {
-            "roman": "Aadaab, Khala! Ji, sab khairiyat hai, shukriya.",
-            "urdu": "آداب خالہ! جی، سب خیریت ہے، شکریہ۔",
-            "en": "Hello, Auntie! Yes, all is well, thanks.",
+            "roman": "Ji, Khala, sab khairiyat hai, shukriya.",
+            "urdu": "جی خالہ، سب خیریت ہے، شکریہ۔",
+            "en": "Yes, Auntie, all is well, thanks.",
             "quality": "best",
             "feedback": "Respectful and warm — exactly right with an elder.",
             "next": "n2"
@@ -235,7 +235,7 @@
             "urdu": "جی، سب ٹھیک ہے۔",
             "en": "Yes, all's fine.",
             "quality": "ok",
-            "feedback": "Fine, though returning the greeting first (\"Aadaab\") is more polite.",
+            "feedback": "Fine, though adding \"Khala\" and \"shukriya\" sounds warmer with an elder.",
             "next": "n2"
           },
           {
@@ -395,15 +395,15 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Aadaab! Aap naye aaye hain is mohallay mein? Kab shift huay?",
-          "urdu": "آداب! آپ نئے آئے ہیں اس محلے میں؟ کب شفٹ ہوئے؟",
-          "en": "Hello! Are you new to this neighbourhood? When did you move in?"
+          "roman": "Aap naye aaye hain is mohallay mein? Kab shift huay?",
+          "urdu": "آپ نئے آئے ہیں اس محلے میں؟ کب شفٹ ہوئے؟",
+          "en": "Are you new to this neighbourhood? When did you move in?"
         },
         "choices": [
           {
-            "roman": "Aadaab. Maaf kijiye, mujhe samajh nahi aaya. Aahista boliye.",
-            "urdu": "آداب۔ معاف کیجیے، مجھے سمجھ نہیں آیا۔ آہستہ بولیے۔",
-            "en": "Hello. Sorry, I didn't understand. Please speak slowly.",
+            "roman": "Maaf kijiye, mujhe samajh nahi aaya. Aahista boliye.",
+            "urdu": "معاف کیجیے، مجھے سمجھ نہیں آیا۔ آہستہ بولیے۔",
+            "en": "Sorry, I didn't understand. Please speak slowly.",
             "quality": "best",
             "feedback": "Perfect — polite, honest and useful.",
             "next": "n2"
@@ -540,9 +540,9 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Aadaab! Ji, kya laaun?",
-          "urdu": "آداب! جی، کیا لاؤں؟",
-          "en": "Hello! What shall I bring you?"
+          "roman": "Ji, kya laaun?",
+          "urdu": "جی، کیا لاؤں؟",
+          "en": "What shall I bring you?"
         },
         "newWords": [
           {
@@ -553,9 +553,9 @@
         ],
         "choices": [
           {
-            "roman": "Aadaab. Mujhe chicken karahi aur do roti chahiye.",
-            "urdu": "آداب۔ مجھے چکن کڑاہی اور دو روٹی چاہیے۔",
-            "en": "Hello. I'd like chicken karahi and two rotis.",
+            "roman": "Mujhe chicken karahi aur do roti chahiye.",
+            "urdu": "مجھے چکن کڑاہی اور دو روٹی چاہیے۔",
+            "en": "I'd like chicken karahi and two rotis.",
             "quality": "best",
             "feedback": "Clear order using \"Mujhe ... chahiye\".",
             "next": "n2"
@@ -1091,15 +1091,15 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Aadaab! Aaiye, aaiye, andar aaiye.",
-          "urdu": "آداب! آئیے، آئیے، اندر آئیے۔",
-          "en": "Hello! Come in, come in, please come inside."
+          "roman": "Aaiye, aaiye, andar aaiye.",
+          "urdu": "آئیے، آئیے، اندر آئیے۔",
+          "en": "Come in, come in, please come inside."
         },
         "choices": [
           {
-            "roman": "Aadaab, Aunty. Shukriya!",
-            "urdu": "آداب آنٹی۔ شکریہ!",
-            "en": "Hello, Aunty. Thank you!",
+            "roman": "Shukriya, Aunty!",
+            "urdu": "شکریہ آنٹی!",
+            "en": "Thank you, Aunty!",
             "quality": "best",
             "feedback": "\"Aunty\" is the usual respectful way to address a friend's mother in Pakistan.",
             "next": "n2"
@@ -1516,9 +1516,9 @@
             "next": "n2"
           },
           {
-            "roman": "Aadaab. Aap kaisi hain?",
-            "urdu": "آداب۔ آپ کیسی ہیں؟",
-            "en": "Hello. How are you?",
+            "roman": "Aap kaisi hain?",
+            "urdu": "آپ کیسی ہیں؟",
+            "en": "How are you?",
             "quality": "ok",
             "feedback": "Polite and correct (\"kaisi\" for a woman) — just more formal than you need with a close friend.",
             "next": "n2"
@@ -1662,15 +1662,15 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Hello, aadaab. Rehman Traders.",
-          "urdu": "ہیلو، آداب۔ رحمان ٹریڈرز۔",
-          "en": "Hello. Rehman Traders."
+          "roman": "Ji, Rehman Traders.",
+          "urdu": "جی، رحمان ٹریڈرز۔",
+          "en": "Yes, Rehman Traders."
         },
         "choices": [
           {
-            "roman": "Aadaab. Kya main Ahmed sahab se baat kar sakta hoon?",
-            "urdu": "آداب۔ کیا میں احمد صاحب سے بات کر سکتا ہوں؟",
-            "en": "Hello. May I speak to Mr Ahmed?",
+            "roman": "Kya main Ahmed sahab se baat kar sakta hoon?",
+            "urdu": "کیا میں احمد صاحب سے بات کر سکتا ہوں؟",
+            "en": "May I speak to Mr Ahmed?",
             "quality": "best",
             "feedback": "Polite and professional. (Women: \"kar sakti hoon\".)",
             "next": "n2"

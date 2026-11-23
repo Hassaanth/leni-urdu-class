@@ -317,16 +317,10 @@
         },
         "lines": [
           {
-            "who": "them",
-            "roman": "Aadaab!",
-            "urdu": "آداب!",
-            "en": "Hello!"
-          },
-          {
             "who": "you",
-            "roman": "Aadaab. Bazaar kahan hai?",
-            "urdu": "آداب۔ بازار کہاں ہے؟",
-            "en": "Hello. Where is the market?"
+            "roman": "Bazaar kahan hai?",
+            "urdu": "بازار کہاں ہے؟",
+            "en": "Where is the market?"
           },
           {
             "who": "them",
@@ -696,9 +690,9 @@
         "lines": [
           {
             "who": "you",
-            "roman": "Aadaab! Yeh kitne ka hai?",
-            "urdu": "آداب! یہ کتنے کا ہے؟",
-            "en": "Hello! How much is this?"
+            "roman": "Yeh kitne ka hai?",
+            "urdu": "یہ کتنے کا ہے؟",
+            "en": "How much is this?"
           },
           {
             "who": "them",

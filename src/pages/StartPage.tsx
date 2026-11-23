@@ -23,7 +23,7 @@ const SOUNDS: { spell: string; like: string; roman: string; urdu: string; en: st
 ];
 
 const FIRST_FIVE: { roman: string; urdu: string; en: string }[] = [
-  { roman: 'Aadaab', urdu: 'آداب', en: 'Hello (respectful)' },
+  { roman: 'Suniye', urdu: 'سنیے', en: 'Excuse me (to get attention)' },
   { roman: 'Shukriya', urdu: 'شکریہ', en: 'Thank you' },
   { roman: 'Ji haan', urdu: 'جی ہاں', en: 'Yes (polite)' },
   { roman: 'Nahi', urdu: 'نہیں', en: 'No' },
@@ -156,7 +156,7 @@ export function StartPage() {
       </ol>
 
       <a className="btn primary block" style={{ marginTop: 16 }} href={href('/lesson/w1')}>
-        Start lesson 1: Hello &amp; thank you
+        Start lesson 1: Thank you, yes &amp; no
       </a>
     </>
   );

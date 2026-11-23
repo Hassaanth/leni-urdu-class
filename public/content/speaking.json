@@ -436,15 +436,15 @@
       "lines": [
         {
           "speaker": "Ali",
-          "roman": "Aadaab! Mera naam Ali hai.",
-          "urdu": "آداب! میرا نام علی ہے۔",
-          "en": "Hello! My name is Ali."
+          "roman": "Mera naam Ali hai.",
+          "urdu": "میرا نام علی ہے۔",
+          "en": "My name is Ali."
         },
         {
           "speaker": "Sara",
-          "roman": "Aadaab! Mera naam Sara hai.",
-          "urdu": "آداب! میرا نام سارہ ہے۔",
-          "en": "Hello! My name is Sara."
+          "roman": "Mera naam Sara hai.",
+          "urdu": "میرا نام سارہ ہے۔",
+          "en": "My name is Sara."
         },
         {
           "speaker": "Ali",
@@ -686,9 +686,9 @@
       "level": 5,
       "lines": [
         {
-          "roman": "Aadaab, Ahmed sahab. Main Bilal bol raha hoon.",
-          "urdu": "آداب احمد صاحب۔ میں بلال بول رہا ہوں۔",
-          "en": "Hello Mr Ahmed. This is Bilal speaking."
+          "roman": "Ahmed sahab, main Bilal bol raha hoon.",
+          "urdu": "احمد صاحب، میں بلال بول رہا ہوں۔",
+          "en": "Mr Ahmed, this is Bilal speaking."
         },
         {
           "roman": "Aaj ki meeting ke baare mein call kar raha tha.",
@@ -768,10 +768,10 @@
   "dailyThemes": [
     {
       "id": "d-greetings",
-      "title": "Greetings",
+      "title": "First conversation",
       "phraseIds": [
-        "p-salaam",
-        "p-hello-ji",
+        "p-suniye",
+        "p-ji-boliye",
         "p-kaise-hain",
         "p-theek-hoon",
         "p-khuda-hafiz"

@@ -12,31 +12,6 @@
       "objective": "Say how you are: \"I am fine\", \"I am happy\", \"me too\".",
       "phrases": [
         {
-          "id": "w-salaam",
-          "roman": "Aadaab",
-          "urdu": "آداب",
-          "en": "hello (respectful)",
-          "kind": "word",
-          "note": "A traditional, respectful Urdu greeting you can say to anyone. Say it: aa-DAAB.",
-          "accept": [
-            "adaab",
-            "aadab",
-            "adab"
-          ]
-        },
-        {
-          "id": "w-hello-ji",
-          "roman": "Hello ji",
-          "urdu": "ہیلو جی",
-          "en": "hello (friendly and polite)",
-          "kind": "word",
-          "note": "Pakistanis use the English \"hello\" all the time. Adding ji makes it polite.",
-          "accept": [
-            "hello jee",
-            "helo ji"
-          ]
-        },
-        {
           "id": "w-main",
           "roman": "main",
           "urdu": "میں",
@@ -183,18 +158,6 @@
           "character": "bilal"
         },
         "lines": [
-          {
-            "who": "them",
-            "roman": "Aadaab!",
-            "urdu": "آداب!",
-            "en": "Hello!"
-          },
-          {
-            "who": "you",
-            "roman": "Aadaab!",
-            "urdu": "آداب!",
-            "en": "Hello!"
-          },
           {
             "who": "them",
             "roman": "Main Bilal hoon. Main bohat khush hoon!",
@@ -366,7 +329,7 @@
         }
       ],
       "dialogue": {
-        "title": "Ayesha says hello",
+        "title": "Ayesha asks how you are",
         "partner": {
           "name": "Ayesha",
           "character": "ayesha"
@@ -374,15 +337,15 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Aadaab! Aap kaise hain?",
-            "urdu": "آداب! آپ کیسے ہیں؟",
-            "en": "Hello! How are you?"
+            "roman": "Aap kaise hain?",
+            "urdu": "آپ کیسے ہیں؟",
+            "en": "How are you?"
           },
           {
             "who": "you",
-            "roman": "Aadaab. Main theek hoon, shukriya.",
-            "urdu": "آداب۔ میں ٹھیک ہوں، شکریہ۔",
-            "en": "Hello. I'm fine, thank you."
+            "roman": "Main theek hoon, shukriya.",
+            "urdu": "میں ٹھیک ہوں، شکریہ۔",
+            "en": "I'm fine, thank you."
           },
           {
             "who": "them",
@@ -576,9 +539,9 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Aadaab! Aap ka naam kya hai?",
-            "urdu": "آداب! آپ کا نام کیا ہے؟",
-            "en": "Hello! What is your name?"
+            "roman": "Aap ka naam kya hai?",
+            "urdu": "آپ کا نام کیا ہے؟",
+            "en": "What is your name?"
           },
           {
             "who": "you",

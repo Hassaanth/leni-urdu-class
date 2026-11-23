@@ -1,21 +1,21 @@
 [
   {
     "id": "pr-greetings",
-    "title": "Saying greetings smoothly",
+    "title": "Saying everyday phrases smoothly",
     "focus": "Common greetings",
-    "tip": "Say each greeting as one smooth unit, not word by word. Long vowels (aa, ee) are held a little longer than in English.",
+    "tip": "Say each phrase as one smooth unit, not word by word. Long vowels (aa, ee) are held a little longer than in English.",
     "items": [
       {
-        "roman": "Aadaab",
-        "urdu": "آداب",
-        "en": "Hello (respectful)",
-        "guide": "aa-DAAB — two long aa sounds"
+        "roman": "Suniye",
+        "urdu": "سنیے",
+        "en": "Excuse me / listen",
+        "guide": "su-NI-ye — short u, stress the middle"
       },
       {
-        "roman": "Hello ji",
-        "urdu": "ہیلو جی",
-        "en": "Hello (polite)",
-        "guide": "he-LO jee"
+        "roman": "Ji, boliye",
+        "urdu": "جی، بولیے",
+        "en": "Yes, go ahead",
+        "guide": "jee, BO-li-ye"
       },
       {
         "roman": "Shukriya",

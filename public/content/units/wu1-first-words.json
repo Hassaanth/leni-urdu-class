@@ -3,30 +3,16 @@
   "level": 1,
   "host": "bilal",
   "title": "First words",
-  "chapter": "Chapter 1 · Hello!",
+  "chapter": "Chapter 1 · First words",
   "story": "Bilal meets you at the airport. Your very first Urdu words — just four at a time.",
-  "description": "Hello, thank you, yes, no — and the words for \"I\", \"you\", \"this\" and \"that\".",
+  "description": "Thank you, yes, no, excuse me — and the words for \"I\", \"you\", \"this\" and \"that\".",
   "lessons": [
     {
       "id": "w1",
       "kind": "words",
-      "title": "Hello & thank you",
+      "title": "Thank you, yes & no",
       "objective": "Learn 4 words you will use every single day.",
       "phrases": [
-        {
-          "id": "v-salaam",
-          "emoji": "👋",
-          "roman": "Aadaab",
-          "urdu": "آداب",
-          "en": "hello",
-          "kind": "word",
-          "note": "A traditional, respectful Urdu greeting you can say to anyone, often with a small raise of the hand. Say it: aa-DAAB.",
-          "accept": [
-            "adaab",
-            "aadab",
-            "adab"
-          ]
-        },
         {
           "id": "v-shukriya",
           "emoji": "🙏",
@@ -53,6 +39,21 @@
           "en": "no",
           "kind": "word",
           "note": "The n at the end is soft, through the nose: na-hee(n)."
+        },
+        {
+          "id": "v-suniye",
+          "emoji": "🙋",
+          "roman": "Suniye",
+          "urdu": "سنیے",
+          "en": "excuse me (to get attention)",
+          "kind": "word",
+          "note": "The polite way to get someone's attention, like \"excuse me\". Say it: su-NI-ye.",
+          "accept": [
+            "suniye",
+            "suniyay",
+            "sunie",
+            "suniye ji"
+          ]
         }
       ]
     },
