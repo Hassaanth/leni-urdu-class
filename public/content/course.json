@@ -75,6 +75,11 @@
       "file": "units/wu6-glue-actions.json"
     },
     {
+      "id": "wu7",
+      "level": 2,
+      "file": "units/wu7-everyday.json"
+    },
+    {
       "id": "bb1",
       "level": 3,
       "file": "units/bb1-first-words.json"

@@ -78,7 +78,7 @@ export async function answerCurrentExercise(page: Page): Promise<string | null> 
       return !!b;
     };
     const byText = (t: string) => click((b) => b.textContent!.trim() === t);
-    const el = document.querySelector('.session-body > :not(.teacher)');
+    const el = document.querySelector('.session-body > :not(.teacher):not(.test-head)');
     if (!el) return null;
     const key = Object.keys(el).find((k) => k.startsWith('__reactFiber$'))!;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

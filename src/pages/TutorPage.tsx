@@ -112,7 +112,7 @@ export function TutorPage() {
             </select>
           </label>
           <p className="small muted" style={{ margin: 0 }}>
-            Start by greeting the tutor, e.g. "Assalamu alaikum!"
+            Start by greeting the tutor, e.g. "Aadaab!" or "Hello ji!"
           </p>
         </div>
       )}

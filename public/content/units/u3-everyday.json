@@ -193,8 +193,8 @@
           },
           {
             "who": "them",
-            "roman": "Masha'Allah! Aur ammi abbu kaise hain?",
-            "urdu": "ماشاءاللہ! اور امی ابو کیسے ہیں؟",
+            "roman": "Wah! Aur ammi abbu kaise hain?",
+            "urdu": "واہ! اور امی ابو کیسے ہیں؟",
             "en": "Wonderful! And how are your mum and dad?"
           },
           {
@@ -687,7 +687,7 @@
     }
   ],
   "host": "khala",
-  "chapter": "Chapter 13 · Family dinner",
+  "chapter": "Chapter 14 · Family dinner",
   "story": "Khala has cooked a feast, and the whole family is coming over to meet you.",
   "guide": [
     {

@@ -1,0 +1,283 @@
+{
+  "id": "wu7",
+  "level": 2,
+  "host": "ayesha",
+  "title": "Everyday keywords",
+  "chapter": "Chapter 8 · Everyday keywords",
+  "story": "Ayesha fills in the everyday words you'll hear all day long — time, size, colours, directions and things at home.",
+  "description": "Today, now, morning · big, small, new, old · colours · car, road, left, right · room, door, chair, book.",
+  "lessons": [
+    {
+      "id": "w21",
+      "kind": "words",
+      "title": "Time words",
+      "objective": "Say when something happens.",
+      "phrases": [
+        {
+          "id": "v-aaj",
+          "emoji": "☀️",
+          "roman": "aaj",
+          "urdu": "آج",
+          "en": "today",
+          "kind": "word"
+        },
+        {
+          "id": "v-kal",
+          "emoji": "📅",
+          "roman": "kal",
+          "urdu": "کل",
+          "en": "yesterday / tomorrow",
+          "kind": "word",
+          "note": "Kal means BOTH! The rest of the sentence tells you which."
+        },
+        {
+          "id": "v-abhi",
+          "emoji": "⏱️",
+          "roman": "abhi",
+          "urdu": "ابھی",
+          "en": "right now",
+          "kind": "word"
+        },
+        {
+          "id": "v-subah",
+          "emoji": "🌅",
+          "roman": "subah",
+          "urdu": "صبح",
+          "en": "morning",
+          "kind": "word"
+        },
+        {
+          "id": "v-raat",
+          "emoji": "🌙",
+          "roman": "raat",
+          "urdu": "رات",
+          "en": "night",
+          "kind": "word"
+        }
+      ]
+    },
+    {
+      "id": "w22",
+      "kind": "words",
+      "title": "Big & small",
+      "objective": "Describe things.",
+      "phrases": [
+        {
+          "id": "v-bara",
+          "emoji": "🐘",
+          "roman": "bara",
+          "urdu": "بڑا",
+          "en": "big",
+          "kind": "word",
+          "note": "The r is a quick flap with the tongue curled back."
+        },
+        {
+          "id": "v-chhota",
+          "emoji": "🐭",
+          "roman": "chhota",
+          "urdu": "چھوٹا",
+          "en": "small",
+          "kind": "word"
+        },
+        {
+          "id": "v-naya",
+          "emoji": "✨",
+          "roman": "naya",
+          "urdu": "نیا",
+          "en": "new",
+          "kind": "word"
+        },
+        {
+          "id": "v-purana",
+          "emoji": "🏚️",
+          "roman": "purana",
+          "urdu": "پرانا",
+          "en": "old (things)",
+          "kind": "word"
+        },
+        {
+          "id": "v-bura",
+          "emoji": "👎",
+          "roman": "bura",
+          "urdu": "برا",
+          "en": "bad",
+          "kind": "word"
+        }
+      ]
+    },
+    {
+      "id": "w23",
+      "kind": "words",
+      "title": "Colours",
+      "objective": "Name the colours around you.",
+      "phrases": [
+        {
+          "id": "v-laal",
+          "emoji": "🔴",
+          "roman": "laal",
+          "urdu": "لال",
+          "en": "red",
+          "kind": "word"
+        },
+        {
+          "id": "v-neela",
+          "emoji": "🔵",
+          "roman": "neela",
+          "urdu": "نیلا",
+          "en": "blue",
+          "kind": "word"
+        },
+        {
+          "id": "v-hara",
+          "emoji": "🟢",
+          "roman": "hara",
+          "urdu": "ہرا",
+          "en": "green",
+          "kind": "word",
+          "note": "Green is on Pakistan's flag."
+        },
+        {
+          "id": "v-peela",
+          "emoji": "🟡",
+          "roman": "peela",
+          "urdu": "پیلا",
+          "en": "yellow",
+          "kind": "word"
+        },
+        {
+          "id": "v-safed",
+          "emoji": "⚪",
+          "roman": "safed",
+          "urdu": "سفید",
+          "en": "white",
+          "kind": "word"
+        }
+      ]
+    },
+    {
+      "id": "w24",
+      "kind": "words",
+      "title": "Getting around",
+      "objective": "Words for finding your way.",
+      "phrases": [
+        {
+          "id": "v-gaari",
+          "emoji": "🚗",
+          "roman": "gaari",
+          "urdu": "گاڑی",
+          "en": "car",
+          "kind": "word"
+        },
+        {
+          "id": "v-sarak",
+          "emoji": "🛣️",
+          "roman": "sarak",
+          "urdu": "سڑک",
+          "en": "road",
+          "kind": "word"
+        },
+        {
+          "id": "v-seedha",
+          "emoji": "⬆️",
+          "roman": "seedha",
+          "urdu": "سیدھا",
+          "en": "straight (ahead)",
+          "kind": "word"
+        },
+        {
+          "id": "v-daayen",
+          "emoji": "➡️",
+          "roman": "daayen",
+          "urdu": "دائیں",
+          "en": "right",
+          "kind": "word"
+        },
+        {
+          "id": "v-baayen",
+          "emoji": "⬅️",
+          "roman": "baayen",
+          "urdu": "بائیں",
+          "en": "left",
+          "kind": "word",
+          "note": "Many people also just say the English \"left\" and \"right\"."
+        }
+      ]
+    },
+    {
+      "id": "w25",
+      "kind": "words",
+      "title": "Around the house",
+      "objective": "Things you see at home.",
+      "phrases": [
+        {
+          "id": "v-kamra",
+          "emoji": "🛏️",
+          "roman": "kamra",
+          "urdu": "کمرہ",
+          "en": "room",
+          "kind": "word"
+        },
+        {
+          "id": "v-darwaza",
+          "emoji": "🚪",
+          "roman": "darwaza",
+          "urdu": "دروازہ",
+          "en": "door",
+          "kind": "word"
+        },
+        {
+          "id": "v-kursi",
+          "emoji": "🪑",
+          "roman": "kursi",
+          "urdu": "کرسی",
+          "en": "chair",
+          "kind": "word"
+        },
+        {
+          "id": "v-kitaab",
+          "emoji": "📖",
+          "roman": "kitaab",
+          "urdu": "کتاب",
+          "en": "book",
+          "kind": "word"
+        },
+        {
+          "id": "v-phone",
+          "emoji": "📱",
+          "roman": "phone",
+          "urdu": "فون",
+          "en": "phone",
+          "kind": "word",
+          "note": "Urdu uses lots of English words like phone, bus and TV — easy wins!"
+        }
+      ]
+    }
+  ],
+  "guide": [
+    {
+      "title": "Kal — yesterday AND tomorrow",
+      "body": "Kal means both yesterday and tomorrow. The verb shows which one: you'll see this in the sentence lessons.",
+      "examples": [
+        "v-kal",
+        "v-aaj"
+      ]
+    },
+    {
+      "title": "Describing words change a little",
+      "body": "Words ending in -a often change to -i for feminine things: bara → bari, naya → nayi. You'll pick this up by hearing it.",
+      "examples": [
+        "v-bara",
+        "v-naya"
+      ]
+    },
+    {
+      "title": "Directions",
+      "body": "seedha (straight), daayen (right), baayen (left). You'll use them with the question word kahan (where).",
+      "examples": [
+        "v-seedha",
+        "v-daayen",
+        "v-baayen"
+      ]
+    }
+  ]
+}

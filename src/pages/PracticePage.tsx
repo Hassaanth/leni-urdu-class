@@ -49,6 +49,11 @@ export function PracticePage() {
       {Object.entries(MODES).map(([k, m]) => (
         <CardLink key={k} to={`/practice/${k}`} icon={m.icon} title={m.title} sub={m.sub} right={k === 'review' && pool.dueCount ? <span className="chip amber">{pool.dueCount}</span> : undefined} />
       ))}
+      <h2>Test yourself</h2>
+      <CardLink to="/test/placement" icon="📝" title="Placement test" sub="Find your level and see what to work on" />
+      <CardLink to="/progress" icon="📊" title="Your report card" sub="Your level, skills, test results and what to practise" />
+      <p className="small muted">Each unit also has its own test — find it on the unit card in Learn.</p>
+
       <h2>Speaking practice</h2>
       <CardLink to="/speak/game/memory" icon="🧠" accent title="Speak from memory" sub="See English, say the Urdu, check yourself" />
       <CardLink to="/speak/game/quick" icon="⚡" accent title="Quick response" sub="Answer spoken questions fast" />

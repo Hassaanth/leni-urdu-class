@@ -11,6 +11,7 @@ import { SettingsPage } from './pages/SettingsPage';
 import { SpeakGamePage } from './pages/SpeakGames';
 import { StartPage } from './pages/StartPage';
 import { GuidePage } from './pages/GuidePage';
+import { TestPage } from './pages/TestPage';
 import { PronunciationDrillPage, PronunciationListPage } from './pages/PronunciationPage';
 import { ReadAloudListPage, ReadAloudPage, RepeatPage, SpokenQAPage, SpeakPage } from './pages/SpeakPage';
 import { TutorPage } from './pages/TutorPage';
@@ -39,6 +40,8 @@ function Page() {
       return <StartPage />;
     case 'guide':
       return <GuidePage unitId={b} />;
+    case 'test':
+      return <TestPage kind={b} id={c} />;
     case 'lesson':
       return <LessonPage id={b} />;
     case 'practice':
@@ -90,6 +93,7 @@ export function App() {
       '/progress': 'Progress',
       '/settings': 'Settings',
       '/lesson': 'Lesson',
+      '/test': 'Test',
     };
     document.title = `${titles[section] ?? 'Learn'} · Leni Urdu Class`;
   }, [section]);

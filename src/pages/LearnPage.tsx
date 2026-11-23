@@ -116,6 +116,9 @@ export function LearnPage() {
       </header>
 
       {!s.settings.onboarded && <Onboarding />}
+      {s.settings.onboarded && !s.placement && doneLessons < 5 && (
+        <CardLink to="/test/placement" icon="📝" title="Already know some Urdu?" sub="Take the placement test to find your level and skip what you know" />
+      )}
       {s.settings.onboarded && doneLessons < 3 && (
         <CardLink to="/start" icon="👋" accent title="New to Urdu? Start here" sub="How to read Roman Urdu, key sounds, and your first five phrases" />
       )}
@@ -319,6 +322,7 @@ export const GOAL_PICKS: Record<Settings['goal'], { lesson: string; talk: string
 
 function ChapterHeader({ unit }: { unit: Unit }) {
   const host = useCharacter(unit.host);
+  const test = useProgress((s) => s.tests[`unit:${unit.id}`]);
   return (
     <>
       <div className="chapter">
@@ -334,11 +338,17 @@ function ChapterHeader({ unit }: { unit: Unit }) {
       <p className="small" style={{ margin: '0 0 8px' }}>
         {unit.story ?? unit.description}
       </p>
-      {unit.guide && unit.guide.length > 0 && (
-        <a className="btn small" href={href(`/guide/${unit.id}`)}>
-          📖 Guidebook: how this Urdu works
+      <div className="row wrap">
+        {unit.guide && unit.guide.length > 0 && (
+          <a className="btn small" href={href(`/guide/${unit.id}`)}>
+            📖 Guidebook
+          </a>
+        )}
+        <a className="btn small" href={href(`/test/unit/${unit.id}`)}>
+          📝 Unit test{test ? ` · best ${Math.round((test.best ?? test.score) * 100)}%` : ''}
         </a>
-      )}
+        {test && (test.best ?? test.score) >= 0.8 && <span className="chip green">Passed</span>}
+      </div>
     </>
   );
 }

@@ -23,7 +23,7 @@ const SOUNDS: { spell: string; like: string; roman: string; urdu: string; en: st
 ];
 
 const FIRST_FIVE: { roman: string; urdu: string; en: string }[] = [
-  { roman: 'Assalamu alaikum', urdu: 'السلام علیکم', en: 'Hello (peace be upon you)' },
+  { roman: 'Aadaab', urdu: 'آداب', en: 'Hello (respectful)' },
   { roman: 'Shukriya', urdu: 'شکریہ', en: 'Thank you' },
   { roman: 'Ji haan', urdu: 'جی ہاں', en: 'Yes (polite)' },
   { roman: 'Nahi', urdu: 'نہیں', en: 'No' },

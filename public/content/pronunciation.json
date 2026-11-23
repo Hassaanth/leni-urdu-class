@@ -3,19 +3,19 @@
     "id": "pr-greetings",
     "title": "Saying greetings smoothly",
     "focus": "Common greetings",
-    "tip": "Say the greeting as one flowing unit, not word by word. In \"Assalamu alaikum\", the double s and double l are held a fraction longer than single letters.",
+    "tip": "Say each greeting as one smooth unit, not word by word. Long vowels (aa, ee) are held a little longer than in English.",
     "items": [
       {
-        "roman": "Assalamu alaikum",
-        "urdu": "السلام علیکم",
-        "en": "Peace be upon you",
-        "guide": "as-sa-LAA-mu a-LAI-kum"
+        "roman": "Aadaab",
+        "urdu": "آداب",
+        "en": "Hello (respectful)",
+        "guide": "aa-DAAB — two long aa sounds"
       },
       {
-        "roman": "Wa alaikum assalam",
-        "urdu": "وعلیکم السلام",
-        "en": "And peace be upon you too",
-        "guide": "wa-LAI-kum as-sa-LAAM"
+        "roman": "Hello ji",
+        "urdu": "ہیلو جی",
+        "en": "Hello (polite)",
+        "guide": "he-LO jee"
       },
       {
         "roman": "Shukriya",

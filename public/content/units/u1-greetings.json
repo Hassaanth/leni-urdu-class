@@ -16,37 +16,27 @@
       "phrases": [
         {
           "id": "p-salaam",
-          "en": "Peace be upon you (hello)",
-          "roman": "Assalamu alaikum",
-          "urdu": "السلام علیکم",
+          "en": "hello (respectful)",
+          "roman": "Aadaab",
+          "urdu": "آداب",
           "accept": [
-            "assalam o alaikum",
-            "assalamualaikum",
-            "asalam alaikum",
-            "assalam alaikum",
-            "salam alaikum",
-            "asalamualaikum",
-            "assalamu alaykum",
-            "assalam-o-alaikum"
+            "adaab",
+            "aadab",
+            "adab"
           ],
-          "note": "The most common greeting in Pakistan, used at any time of day, with anyone. It is a religious greeting in origin, and it is used everywhere in daily life.",
+          "note": "A traditional, respectful Urdu greeting you can say to anyone, often with a small raise of the hand. Say it: aa-DAAB.",
           "kind": "phrase"
         },
         {
-          "id": "p-walaikum",
-          "en": "And peace be upon you too (reply to a greeting)",
-          "roman": "Wa alaikum assalam",
-          "urdu": "وعلیکم السلام",
+          "id": "p-hello-ji",
+          "en": "hello (friendly and polite)",
+          "roman": "Hello ji",
+          "urdu": "ہیلو جی",
           "accept": [
-            "walaikum assalam",
-            "wa alaikum salam",
-            "walaikum salam",
-            "waalaikum assalam",
-            "wa alaykum assalam",
-            "walaikumassalam",
-            "wa alaikum as salam"
+            "hello jee",
+            "helo ji"
           ],
-          "note": "The standard reply to \"Assalamu alaikum\". When someone greets you, reply with this rather than repeating their greeting.",
+          "note": "Pakistanis use the English \"hello\" all the time. Adding ji makes it polite.",
           "kind": "phrase"
         },
         {
@@ -177,17 +167,17 @@
           "context": [
             {
               "speaker": "Bilal",
-              "roman": "Assalamu alaikum!",
-              "urdu": "السلام علیکم!",
-              "en": "Peace be upon you!"
+              "roman": "Aadaab!",
+              "urdu": "آداب!",
+              "en": "Hello!"
             }
           ],
           "prompt": "Bilal greets you. What do you reply?",
           "options": [
             {
-              "roman": "Wa alaikum assalam!",
-              "urdu": "وعلیکم السلام!",
-              "en": "And peace be upon you too!"
+              "roman": "Aadaab!",
+              "urdu": "آداب!",
+              "en": "Hello!"
             },
             {
               "roman": "Main theek hoon.",
@@ -201,7 +191,7 @@
             }
           ],
           "answer": 0,
-          "explain": "\"Wa alaikum assalam\" is the standard reply to \"Assalamu alaikum\"."
+          "explain": "When someone greets you, greet them back: \"Aadaab!\" (or a friendly \"Hello ji!\")."
         },
         {
           "type": "complete",
@@ -233,9 +223,9 @@
               "en": "Yes."
             },
             {
-              "roman": "Wa alaikum assalam.",
-              "urdu": "وعلیکم السلام۔",
-              "en": "And peace be upon you too."
+              "roman": "Aadaab.",
+              "urdu": "آداب۔",
+              "en": "Hello!."
             }
           ],
           "answer": 0,
@@ -287,14 +277,14 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Assalamu alaikum!",
-            "urdu": "السلام علیکم!",
+            "roman": "Aadaab!",
+            "urdu": "آداب!",
             "en": "Hello!"
           },
           {
             "who": "you",
-            "roman": "Wa alaikum assalam!",
-            "urdu": "وعلیکم السلام!",
+            "roman": "Aadaab!",
+            "urdu": "آداب!",
             "en": "Hello to you too!"
           },
           {
@@ -336,7 +326,7 @@
       "objective": "Greet people, thank them, apologise politely and say goodbye.",
       "tips": [
         "\"Shukriya\" is the everyday \"thank you\". Many Pakistanis also simply say \"thank you\" in English.",
-        "For goodbye you will hear both \"Khuda hafiz\" and \"Allah hafiz\". Both are normal; follow what the people around you use."
+        "For goodbye, \"Khuda hafiz\" is the most common. Friends often say \"Phir milte hain\" (see you later) or just \"bye\"."
       ],
       "phrases": [
         {
@@ -353,14 +343,15 @@
         },
         {
           "id": "p-allah-hafiz",
-          "en": "Goodbye (also very common)",
-          "roman": "Allah hafiz",
-          "urdu": "اللہ حافظ",
+          "en": "See you later",
+          "roman": "Phir milte hain",
+          "urdu": "پھر ملتے ہیں",
           "accept": [
-            "allahafiz",
-            "allah hafis"
+            "phir milte hai",
+            "fir milte hain"
           ],
-          "kind": "phrase"
+          "kind": "phrase",
+          "note": "A friendly way to say goodbye."
         },
         {
           "id": "p-phir-milenge",
@@ -457,15 +448,14 @@
         },
         {
           "id": "p-alhamdulillah",
-          "en": "Praise be to God (often: all good, thank God)",
-          "roman": "Alhamdulillah",
-          "urdu": "الحمدللہ",
+          "en": "All is well / everything's fine",
+          "roman": "Sab theek hai",
+          "urdu": "سب ٹھیک ہے",
           "accept": [
-            "alhamdolillah",
-            "alhamdu lillah",
-            "alhumdulillah"
+            "sab thik hai",
+            "sab theek he"
           ],
-          "note": "A very common reply to \"How are you?\" meaning things are good. People of all backgrounds in Pakistan hear and understand it.",
+          "note": "A very common reply to \"How are you?\" or \"Is everything okay?\".",
           "kind": "word"
         }
       ],
@@ -569,15 +559,15 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Assalamu alaikum, beta! Sab khairiyat hai?",
-            "urdu": "السلام علیکم بیٹا! سب خیریت ہے؟",
+            "roman": "Aadaab, beta! Sab khairiyat hai?",
+            "urdu": "آداب بیٹا! سب خیریت ہے؟",
             "en": "Hello, dear! Is everything well?"
           },
           {
             "who": "you",
-            "roman": "Ji, Alhamdulillah. Bohat shukriya.",
-            "urdu": "جی، الحمدللہ۔ بہت شکریہ۔",
-            "en": "Yes, thank God. Thank you very much."
+            "roman": "Ji, sab theek hai. Bohat shukriya.",
+            "urdu": "جی، سب ٹھیک ہے۔ بہت شکریہ۔",
+            "en": "Yes, thanks. Thank you very much."
           },
           {
             "who": "them",
@@ -593,8 +583,8 @@
           },
           {
             "who": "them",
-            "roman": "Allah hafiz!",
-            "urdu": "اللہ حافظ!",
+            "roman": "Khuda hafiz!",
+            "urdu": "خدا حافظ!",
             "en": "Goodbye!"
           }
         ]
@@ -869,7 +859,7 @@
     }
   ],
   "host": "bilal",
-  "chapter": "Chapter 11 · Real conversations: greetings",
+  "chapter": "Chapter 12 · Real conversations: greetings",
   "story": "With the basics in place, it's time for real conversations: greetings, goodbyes and getting out of trouble.",
   "guide": [
     {
@@ -897,11 +887,11 @@
       ]
     },
     {
-      "title": "Greeting with respect",
-      "body": "When someone says Assalamu alaikum, reply Wa alaikum assalam. Adding ji makes anything more polite: Ji haan = yes (politely).",
+      "title": "Greeting people",
+      "body": "Say Aadaab (respectful) or Hello ji (friendly and polite). Adding ji makes almost anything more polite: Ji haan = yes, politely.",
       "examples": [
         "p-salaam",
-        "p-walaikum",
+        "p-hello-ji",
         "p-ji-haan"
       ]
     }

@@ -3,7 +3,7 @@
   "title": "Building Blocks 3: Actions & time",
   "description": "What you're doing now, what you did yesterday, what you'll do tomorrow — and how to ask for help.",
   "host": "ayesha",
-  "chapter": "Chapter 10 · Sentences about yesterday & tomorrow",
+  "chapter": "Chapter 11 · Sentences about yesterday & tomorrow",
   "story": "Ayesha helps you talk about your day — yesterday, today and tomorrow.",
   "lessons": [
     {
@@ -220,8 +220,8 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Assalamu alaikum! Aap kya kar rahe hain?",
-            "urdu": "السلام علیکم! آپ کیا کر رہے ہیں؟",
+            "roman": "Aadaab! Aap kya kar rahe hain?",
+            "urdu": "آداب! آپ کیا کر رہے ہیں؟",
             "en": "Hello! What are you doing?"
           },
           {
@@ -694,11 +694,11 @@
         },
         {
           "id": "w-inshallah",
-          "roman": "Insha'Allah",
-          "urdu": "ان شاء اللہ",
-          "en": "God willing",
+          "roman": "zaroor",
+          "urdu": "ضرور",
+          "en": "definitely / of course",
           "kind": "word",
-          "note": "Added to almost any future plan in Pakistan."
+          "note": "Add it to plans to sound keen: \"Zaroor, hum phir milenge!\""
         },
         {
           "id": "w-khudahafiz",
@@ -811,9 +811,9 @@
         },
         {
           "id": "s-b12-7",
-          "en": "God willing, we'll meet again.",
-          "roman": "Insha'Allah, hum phir milenge.",
-          "urdu": "ان شاء اللہ، ہم پھر ملیں گے۔",
+          "en": "Of course, we'll meet again.",
+          "roman": "Zaroor, hum phir milenge.",
+          "urdu": "ضرور، ہم پھر ملیں گے۔",
           "kind": "sentence",
           "accept": [
             "inshallah hum phir milenge"
@@ -880,9 +880,9 @@
           },
           {
             "who": "you",
-            "roman": "Insha'Allah! Phir milenge.",
-            "urdu": "ان شاء اللہ! پھر ملیں گے۔",
-            "en": "God willing! See you then."
+            "roman": "Zaroor! Phir milenge.",
+            "urdu": "ضرور! پھر ملیں گے۔",
+            "en": "Definitely! See you then."
           },
           {
             "who": "them",

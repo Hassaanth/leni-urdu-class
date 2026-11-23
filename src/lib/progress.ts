@@ -100,7 +100,7 @@ export interface ProgressState {
   version: 1;
   settings: Settings;
   xp: number;
-  lessons: Record<string, { completedOn: DateKey; bestAccuracy: number; times: number }>;
+  lessons: Record<string, { completedOn: DateKey; bestAccuracy: number; times: number; testedOut?: boolean }>;
   days: Record<DateKey, DayStats>;
   cards: Record<string, SrsCard>;
   speaking: {
@@ -118,6 +118,20 @@ export interface ProgressState {
   dailyChallenge: Record<DateKey, string[]>;
   /** Right / total answers per skill, used to give more practice where the learner struggles. */
   skills: Record<Skill, { right: number; total: number }>;
+  /** Unit tests and the placement test. */
+  tests: Record<string, TestRecord>;
+  placement?: { date: DateKey; level: number };
+}
+
+export interface TestRecord {
+  date: DateKey;
+  score: number;
+  right: number;
+  total: number;
+  passed: boolean;
+  best?: number;
+  skills: Partial<Record<Skill, { right: number; total: number }>>;
+  missed: string[];
 }
 
 export function initialState(): ProgressState {
@@ -142,6 +156,7 @@ export function initialState(): ProgressState {
     conversations: {},
     dailyChallenge: {},
     skills: { listening: { right: 0, total: 0 }, reading: { right: 0, total: 0 }, writing: { right: 0, total: 0 }, speaking: { right: 0, total: 0 } },
+    tests: {},
   };
 }
 
@@ -355,6 +370,7 @@ export function migrate(raw: unknown): ProgressState {
     settings: { ...base.settings, ...(r.settings ?? {}) },
     speaking: { ...base.speaking, ...(r.speaking ?? {}) },
     skills: { ...base.skills, ...(r.skills ?? {}) },
+    tests: { ...(r.tests ?? {}) },
   } as ProgressState;
 }
 

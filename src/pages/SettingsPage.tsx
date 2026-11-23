@@ -184,7 +184,7 @@ export function SettingsPage() {
           <span className="small muted">The "Slow" button plays at about two-thirds of this.</span>
         </label>
         {voice && (
-          <button className="btn small" onClick={() => void audio.play({ urdu: 'السلام علیکم، آپ کیسے ہیں؟' })}>
+          <button className="btn small" onClick={() => void audio.play({ urdu: 'آداب، آپ کیسے ہیں؟' })}>
             Test voice
           </button>
         )}

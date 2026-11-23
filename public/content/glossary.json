@@ -83,10 +83,6 @@
   "ga",
   "will (masculine)"
  ],
- "السلام": [
-  "assalamu",
-  "the peace"
- ],
  "میرا": [
   "mera",
   "my (with masculine words)"
@@ -199,10 +195,6 @@
   "rahi",
   "-ing (feminine)"
  ],
- "علیکم": [
-  "alaikum",
-  "upon you"
- ],
  "گے": [
   "ge",
   "will (plural / respectful)"
@@ -283,10 +275,6 @@
   "to",
   "so / then / (emphasis)"
  ],
- "وعلیکم": [
-  "wa alaikum",
-  "and upon you"
- ],
  "بھی": [
   "bhi",
   "also / too"
@@ -346,10 +334,6 @@
  "ہوئی": [
   "hui",
   "happened (feminine)"
- ],
- "اللہ": [
-  "Allah",
-  "God"
  ],
  "آیا": [
   "aaya",
@@ -490,10 +474,6 @@
  "خیریت": [
   "khairiyat",
   "well-being"
- ],
- "الحمدللہ": [
-  "Alhamdulillah",
-  "praise be to God"
  ],
  "مطلب": [
   "matlab",
@@ -659,10 +639,6 @@
   "mazaa",
   "fun / enjoyment"
  ],
- "شاء": [
-  "sha",
-  "wills (in Insha'Allah)"
- ],
  "جاؤں": [
   "jaaun",
   "go (I)"
@@ -778,10 +754,6 @@
  "مبارک": [
   "mubarak",
   "congratulations / blessed"
- ],
- "ماشاءاللہ": [
-  "Masha'Allah",
-  "wonderful (what God has willed)"
  ],
  "راستہ": [
   "raasta",
@@ -2150,5 +2122,13 @@
  "دفتر": [
   "daftar",
   "office"
+ ],
+ "آداب": [
+  "aadaab",
+  "hello (respectful)"
+ ],
+ "امید": [
+  "umeed",
+  "hope"
  ]
 }

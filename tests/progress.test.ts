@@ -203,7 +203,7 @@ describe('lesson engine and conversations over the real course', async () => {
     expect(r.advanced).toBe(false);
     expect(r.state.nodeId).toBe(st.nodeId);
     expect(r.state.wrong).toBe(1);
-    expect(choiceForTarget(node, 'Wa alaikum assalam!')?.quality).toBe('best');
+    expect(choiceForTarget(node, 'Aadaab!')?.quality).toBe('best');
   });
 });
 
@@ -326,5 +326,55 @@ describe('word lessons (Duolingo pace)', async () => {
     expect(taught).not.toContain('shukriya');
     expect(taught).not.toContain('main');
     expect(ex.some((e) => e.id.includes(':known:'))).toBe(true);
+  });
+});
+
+describe('tests: placement and unit tests', async () => {
+  const base = join(__dirname, '..', 'public', 'content');
+  const { course } = await loadCourse(async (f) => JSON.parse(readFileSync(join(base, f), 'utf8')));
+  const idx = buildIndexes(course);
+  const T = await import('../src/lib/testing');
+
+  it('builds only objective, auto-checked questions with valid answers', () => {
+    for (const u of course.units) {
+      const ex = T.buildTestExercises(T.unitItems(u), { n: 10, seed: 5, gender: 'masculine', name: 'Ali', allowTyping: true, prefix: 't' });
+      expect(ex.length, u.id).toBe(Math.min(10, T.unitItems(u).length));
+      for (const e of ex) {
+        expect(['listen', 'mcq', 'translate', 'order'], `${u.id}:${e.kind}`).toContain(e.kind);
+        if (e.kind === 'mcq' || e.kind === 'listen') {
+          expect(e.answer).toBeGreaterThanOrEqual(0);
+          expect(e.options.length).toBe(3);
+          if (e.kind === 'mcq') expect(e.options.some((o) => o.emoji)).toBe(false); // no picture give-aways
+        }
+        if (e.kind === 'order') for (const w of e.answer) expect(e.tokens).toContain(w);
+      }
+    }
+  });
+
+  it('placement stages go from easiest to hardest', () => {
+    const st = T.placementStages(course);
+    expect(st.map((x) => x.level)).toEqual([1, 2, 3, 4, 5]);
+    expect(st.every((x) => x.items.length >= 6)).toBe(true);
+  });
+
+  it('records results, keeps the best score, and testing out skips earlier levels', () => {
+    let s = initialState();
+    const r = T.resultFrom({ graded: 10, firstTryCorrect: 9, missedPhraseIds: ['v-chai'], skills: { listening: { right: 4, total: 5 } } }, today);
+    expect(r.passed).toBe(true);
+    s = T.recordTest(s, 'unit:wu1', r);
+    s = T.recordTest(s, 'unit:wu1', { ...r, score: 0.5, passed: false });
+    expect(s.tests['unit:wu1'].score).toBe(0.5);
+    expect(s.tests['unit:wu1'].best).toBe(0.9);
+    expect(T.currentLevel(s, course)).toBe(0);
+    s = T.testOut(s, idx, course, 2, today);
+    expect(T.currentLevel(s, course)).toBe(2);
+    expect(s.lessons['w1'].testedOut).toBe(true);
+    expect(s.lessons['b1']).toBeUndefined();
+  });
+
+  it('there are no religious greetings left in the course', () => {
+    const text = JSON.stringify(course);
+    for (const w of ['Assalamu', 'alaikum', 'Alhamdulillah', "Insha'Allah", "Masha'Allah", 'Allah hafiz', 'السلام', 'علیکم', 'الحمدللہ', 'ان شاء اللہ', 'ماشاءاللہ'])
+      expect(text.includes(w), w).toBe(false);
   });
 });

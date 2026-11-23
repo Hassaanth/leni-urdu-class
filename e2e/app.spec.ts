@@ -50,7 +50,7 @@ test.describe('core flows', () => {
     await page.reload();
     await page.goto('/#/learn');
     await expect(page.getByText(`${xp}`, { exact: true })).toBeVisible();
-    await expect(page.getByText(`1/${60}`)).toBeVisible();
+    await expect(page.getByText(`1/${65}`)).toBeVisible();
   });
 
   test('first word lesson: four words with pictures, practised until known', async ({ page }) => {
@@ -108,7 +108,7 @@ test.describe('core flows', () => {
     const total = await page.locator('.session-top > span').innerText();
     // pick an option that is wrong (read the answer index from the page props)
     const wrongIndex = await page.evaluate(() => {
-      const el = document.querySelector('.session-body > :not(.teacher)')!;
+      const el = document.querySelector('.session-body > :not(.teacher):not(.test-head)')!;
       const key = Object.keys(el).find((k) => k.startsWith('__reactFiber$'))!;
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let f: any = (el as any)[key];
@@ -130,7 +130,7 @@ test.describe('core flows', () => {
     await expect(prompt).toBeVisible();
     // Answer whatever is asked using a spelling variant of the accepted answer when possible.
     const accepted: string[] = await page.evaluate(() => {
-      const el = document.querySelector('.session-body > :not(.teacher)')!;
+      const el = document.querySelector('.session-body > :not(.teacher):not(.test-head)')!;
       const key = Object.keys(el).find((k) => k.startsWith('__reactFiber$'))!;
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let f: any = (el as any)[key];
@@ -154,7 +154,7 @@ test.describe('speaking', () => {
     expect(await page.evaluate(() => (window as unknown as { __speechStarts: number }).__speechStarts)).toBe(0); // no mic before consent
     await page.getByRole('button', { name: 'Allow speech recognition' }).click();
 
-    await queueSpeech(page, { alts: ['السلام علیکم'] });
+    await queueSpeech(page, { alts: ['آداب'] });
     await page.getByRole('button', { name: 'Tap and speak' }).click();
     await expect(page.getByText('Microphone on — speak now')).toBeVisible();
     await expect(page.getByText('We recognized your phrase.')).toBeVisible();
@@ -231,7 +231,7 @@ test.describe('conversations', () => {
     await page.getByRole('button', { name: /Khuda hafiz!/ }).click();
     await expect(page.getByText("❌ That doesn't fit")).toBeVisible();
     await page.getByRole('button', { name: 'Try another reply' }).click();
-    for (const reply of [/^Wa alaikum assalam!/, /^Mera naam/, /^Main theek hoon, shukriya/, /^Mujhe samajh nahi aaya/, /^Main London se hoon/, /^Ji, phir milenge/]) {
+    for (const reply of [/^Aadaab!/, /^Mera naam/, /^Main theek hoon, shukriya/, /^Mujhe samajh nahi aaya/, /^Main London se hoon/, /^Ji, phir milenge/]) {
       await page.getByRole('button', { name: reply }).click();
       await page.getByRole('button', { name: 'Continue' }).click();
     }
@@ -257,5 +257,51 @@ test.describe('pwa', () => {
     await page.goto('/#/settings');
     await expect(page.getByText('Offline', { exact: true })).toBeVisible();
     await context.setOffline(false);
+  });
+});
+
+test.describe('tests', () => {
+  test('placement test: passing levels lets you skip ahead', async ({ page }) => {
+    await seedSettings(page);
+    await page.goto('/#/learn');
+    await page.getByRole('link', { name: /Already know some Urdu/ }).click();
+    await page.getByRole('button', { name: 'Start the placement test' }).click();
+    // pass Level 1, then stop
+    for (let i = 0; i < 12; i++) if (!(await answerCurrentExercise(page))) break;
+    await expect(page.getByRole('heading', { name: 'Level 1 passed!' })).toBeVisible();
+    await page.getByRole('button', { name: 'Stop here' }).click();
+    await expect(page.getByRole('heading', { name: /Your level: 1/ })).toBeVisible();
+    await expect(page.getByText('How you did in each skill')).toBeVisible();
+    await page.getByRole('button', { name: /Skip Level 1 and start/ }).click();
+    await expect(page).toHaveURL(/#\/lesson\/p1/);
+    const lessons = await page.evaluate(() => JSON.parse(localStorage.getItem('bolo-urdu:v1')!).lessons);
+    expect(lessons.w1.testedOut).toBe(true);
+    await page.goto('/#/progress');
+    await expect(page.getByText('Level 1: Your first words').first()).toBeVisible();
+  });
+
+  test('unit test: wrong answers show up as things to practise', async ({ page }) => {
+    await seedSettings(page);
+    await page.goto('/#/test/unit/wu1');
+    await page.getByRole('button', { name: 'Start the test' }).click();
+    await expect(page.getByText('Test · question 1 of 10')).toBeVisible();
+    // answer the first question wrongly, the rest correctly
+    const wrong = await page.evaluate(() => {
+      const el = document.querySelector('.session-body > :not(.teacher):not(.test-head)')!;
+      const key = Object.keys(el).find((k) => k.startsWith('__reactFiber$'))!;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      let f: any = (el as any)[key];
+      while (!f.memoizedProps?.ex) f = f.return;
+      const ex = f.memoizedProps.ex;
+      return { i: (ex.answer + 1) % ex.options.length, kind: ex.kind };
+    });
+    await page.locator('.session-body .options button.option').nth(wrong.i).click();
+    await page.getByRole('button', { name: 'Check' }).click();
+    await expect(page.getByText('This one will come back at the end.')).toHaveCount(0); // no second chances in tests
+    await page.getByRole('button', { name: 'Continue' }).click();
+    for (let i = 0; i < 12; i++) if (!(await answerCurrentExercise(page))) break;
+    await expect(page.getByText('90%')).toBeVisible();
+    await expect(page.getByText('Practise these')).toBeVisible();
+    await expect(page.getByRole('link', { name: /Review what you missed/ })).toBeVisible();
   });
 });

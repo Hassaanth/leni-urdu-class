@@ -153,11 +153,11 @@ describe('assessSpeech (speech-recognition result handling)', () => {
   it('picks the matching answer among several acceptable answers (spoken Q&A)', () => {
     const answers = [
       { roman: 'Main theek hoon.', urdu: 'میں ٹھیک ہوں۔' },
-      { roman: 'Alhamdulillah, theek hoon.', urdu: 'الحمدللہ، ٹھیک ہوں۔' },
+      { roman: 'Bilkul theek hoon.', urdu: 'بالکل ٹھیک ہوں۔' },
     ];
-    const a = assessSpeech(['الحمدللہ ٹھیک ہوں'], answers);
+    const a = assessSpeech(['بالکل ٹھیک ہوں'], answers);
     expect(a.status).toBe('match');
-    expect(a.target.roman).toBe('Alhamdulillah, theek hoon.');
+    expect(a.target.roman).toBe('Bilkul theek hoon.');
   });
 
   it('accepts any name in a {name} slot', () => {

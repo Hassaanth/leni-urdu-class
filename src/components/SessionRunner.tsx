@@ -6,6 +6,7 @@ import { ENCOURAGE, praise, TEACHER, teacherLine } from '../lib/teacher';
 import { useCharacter } from '../state/course';
 import { dateKey } from '../lib/dates';
 import { isGraded, skillOf, SPEAKING, type Exercise } from '../lib/exercises';
+import type { Skill } from '../lib/progress';
 import { introducePhrases, recordAnswer } from '../lib/progress';
 import { audio } from '../services/audio';
 import { store, useSettings } from '../state/store';
@@ -21,6 +22,8 @@ export interface SessionSummary {
   speakingAttempts: number;
   missedPhraseIds: string[];
   practicedPhraseIds: string[];
+  /** First-try results per skill (listening, reading, writing, speaking). */
+  skills: Partial<Record<Skill, { right: number; total: number }>>;
 }
 
 interface Props {
@@ -28,6 +31,8 @@ interface Props {
   exercises: Exercise[];
   /** Review sessions grade with review XP and don't re-queue flashcards. */
   review?: boolean;
+  /** Test mode: no teacher hints and no second chances — the score is what you know right now. */
+  test?: boolean;
   /** Character teaching this session (their voice and face). */
   host?: string;
   onFinish: (s: SessionSummary) => void;
@@ -58,7 +63,7 @@ function tone(ok: boolean) {
   }
 }
 
-export function SessionRunner({ title, exercises, review, host, onFinish, onExit }: Props) {
+export function SessionRunner({ title, exercises, review, test, host, onFinish, onExit }: Props) {
   const hostChar = useCharacter(host);
   const [combo, setCombo] = useState(0);
   const [xpPop, setXpPop] = useState(0);
@@ -72,7 +77,14 @@ export function SessionRunner({ title, exercises, review, host, onFinish, onExit
   const [check, setCheckFn] = useState<null | (() => void)>(null);
   const [attempted, setAttempted] = useState(false);
   const [confirmExit, setConfirmExit] = useState(false);
-  const stats = useRef({ graded: 0, firstTry: 0, speaking: 0, missed: new Set<string>(), practiced: new Set<string>() });
+  const stats = useRef({
+    graded: 0,
+    firstTry: 0,
+    speaking: 0,
+    missed: new Set<string>(),
+    practiced: new Set<string>(),
+    skills: {} as Partial<Record<Skill, { right: number; total: number }>>,
+  });
   const bodyRef = useRef<HTMLDivElement>(null);
   const footRef = useRef<HTMLDivElement>(null);
 
@@ -95,11 +107,16 @@ export function SessionRunner({ title, exercises, review, host, onFinish, onExit
       if (firstTry) {
         stats.current.graded++;
         if (correct) stats.current.firstTry++;
+        const sk = skillOf(item.ex);
+        if (sk) {
+          const t = stats.current.skills[sk] ?? { right: 0, total: 0 };
+          stats.current.skills[sk] = { right: t.right + (correct ? 1 : 0), total: t.total + 1 };
+        }
       }
       if (!correct) phraseIds.forEach((id) => stats.current.missed.add(id));
       phraseIds.forEach((id) => stats.current.practiced.add(id));
       store.update((s) => recordAnswer(s, { phraseIds, correct, firstTry, review, skill: skillOf(item.ex) }, dateKey()));
-      const requeue = opts.requeue ?? true;
+      const requeue = !test && (opts.requeue ?? true);
       if (!correct && requeue && isGraded(item.ex) && !item.retry) {
         setQueue((q) => [...q, { ex: item.ex, key: `${item.key}-retry`, retry: true }]);
       }
@@ -115,7 +132,7 @@ export function SessionRunner({ title, exercises, review, host, onFinish, onExit
       setCheckFn(null);
       requestAnimationFrame(() => footRef.current?.focus());
     },
-    [item, result, review, settings.soundEffects],
+    [item, result, review, test, host, settings.soundEffects],
   );
 
   const api: ExApi = useMemo(
@@ -148,6 +165,7 @@ export function SessionRunner({ title, exercises, review, host, onFinish, onExit
         speakingAttempts: s.speaking,
         missedPhraseIds: [...s.missed],
         practicedPhraseIds: [...s.practiced],
+        skills: { ...s.skills },
       });
     } else setPos(pos + 1);
   };
@@ -182,7 +200,7 @@ export function SessionRunner({ title, exercises, review, host, onFinish, onExit
         )}
         {result.fb.hint && <div className="small">{result.fb.hint}</div>}
         {result.fb.explain && <div className="small">{result.fb.explain}</div>}
-        {!result.correct && isGraded(ex) && !item.retry && <div className="small muted">This one will come back at the end.</div>}
+        {!result.correct && isGraded(ex) && !item.retry && !test && <div className="small muted">This one will come back at the end.</div>}
         <button className={`btn block ${result.correct ? 'primary' : 'danger'}`} onClick={next} autoFocus>
           Continue
         </button>
@@ -236,7 +254,12 @@ export function SessionRunner({ title, exercises, review, host, onFinish, onExit
         </span>
       </div>
       <div className="session-body" ref={bodyRef} tabIndex={-1} key={item.key}>
-        {!result && (
+        {test && !result && (
+          <div className="ex-kicker test-head" style={{ color: 'var(--accent)' }}>
+            Test · question {pos + 1} of {queue.length}
+          </div>
+        )}
+        {!result && !test && (
           <div className="teacher">
             <span className="t-avatar" aria-hidden>
               {TEACHER.avatar}

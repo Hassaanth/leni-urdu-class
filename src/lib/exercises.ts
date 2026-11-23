@@ -37,7 +37,7 @@ export function shuffle<T>(arr: T[], rand: () => number): T[] {
   return a;
 }
 
-function sample<T>(arr: T[], n: number, rand: () => number): T[] {
+export function sample<T>(arr: T[], n: number, rand: () => number): T[] {
   return shuffle(arr, rand).slice(0, n);
 }
 
@@ -219,6 +219,7 @@ export function buildLessonExercises(lesson: Lesson, course: Course, idx: Course
     style === 'see' ? mcqFor(p, pool, rand, gender, name, nid(k)) : listenFor(p, pool, rand, name, nid(k));
   const build = (p: Phrase): Exercise => {
     const f = displayForm(p, gender, name);
+    if (!multiWord(p) && pace === 'relaxed') return mcqFor(p, pool, rand, gender, name, nid('choose')); // gentle pace: no typing
     if (pace === 'fast' || !multiWord(p)) return { kind: 'translate', id: nid('translate'), phrase: p, accepted: acceptedRoman(p), phraseIds: [p.id] };
     const extra = sample(pool.flatMap((x) => romanWords(x.roman)).filter((w) => !romanWords(f.roman).includes(w) && !w.includes('{')), 1, rand);
     return orderFor(nid('build'), fillSlots(p.en, name), f.roman, f.urdu, extra, rand, [p.id]);

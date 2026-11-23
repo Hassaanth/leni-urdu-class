@@ -3,7 +3,7 @@
   "title": "Building Blocks 2: Everyday Urdu",
   "description": "Likes, places, where you're from, prices — building on every word you already know.",
   "host": "khala",
-  "chapter": "Chapter 9 · Sentences about your life",
+  "chapter": "Chapter 10 · Sentences about your life",
   "story": "Khala's house is full of food and questions. Time to tell everyone about yourself.",
   "lessons": [
     {
@@ -318,14 +318,14 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Assalamu alaikum!",
-            "urdu": "السلام علیکم!",
+            "roman": "Aadaab!",
+            "urdu": "آداب!",
             "en": "Hello!"
           },
           {
             "who": "you",
-            "roman": "Wa alaikum assalam. Bazaar kahan hai?",
-            "urdu": "وعلیکم السلام۔ بازار کہاں ہے؟",
+            "roman": "Aadaab. Bazaar kahan hai?",
+            "urdu": "آداب۔ بازار کہاں ہے؟",
             "en": "Hello. Where is the market?"
           },
           {
@@ -696,8 +696,8 @@
         "lines": [
           {
             "who": "you",
-            "roman": "Assalamu alaikum! Yeh kitne ka hai?",
-            "urdu": "السلام علیکم! یہ کتنے کا ہے؟",
+            "roman": "Aadaab! Yeh kitne ka hai?",
+            "urdu": "آداب! یہ کتنے کا ہے؟",
             "en": "Hello! How much is this?"
           },
           {

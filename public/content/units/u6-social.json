@@ -9,7 +9,7 @@
       "title": "Invitations & Plans",
       "objective": "Invite someone, accept or decline, and agree on a time.",
       "tips": [
-        "Pakistani hospitality is warm: an invitation (\"Hamare ghar aaiye\") is often sincere. Saying \"Zaroor, Insha'Allah\" is a friendly reply.",
+        "Pakistani hospitality is warm: an invitation (\"Hamare ghar aaiye\") is usually sincere. \"Zaroor!\" (definitely) is a friendly reply.",
         "Everyday Urdu borrows many English words: plan, weekend, free, late. That's natural, not \"wrong\" Urdu."
       ],
       "phrases": [
@@ -585,28 +585,26 @@
         },
         {
           "id": "p-inshallah",
-          "en": "God willing (about future plans)",
-          "roman": "Insha'Allah",
-          "urdu": "ان شاء اللہ",
+          "en": "hopefully / I hope so",
+          "roman": "Umeed hai",
+          "urdu": "امید ہے",
           "accept": [
-            "inshallah",
-            "insha allah",
-            "inshaallah"
+            "ummeed hai",
+            "umeed he"
           ],
-          "note": "Very commonly added to future plans: \"Kal milenge, Insha'Allah.\"",
+          "note": "Add it to future plans: \"Kal milenge, umeed hai\" — we'll meet tomorrow, hopefully.",
           "kind": "word"
         },
         {
           "id": "p-mashallah",
-          "en": "Wonderful! (praising something, lit. what God has willed)",
-          "roman": "Masha'Allah",
-          "urdu": "ماشاءاللہ",
+          "en": "How wonderful! / Amazing!",
+          "roman": "Kya baat hai!",
+          "urdu": "کیا بات ہے!",
           "accept": [
-            "mashallah",
-            "masha allah",
-            "maashallah"
+            "kya baat hai",
+            "kia baat hai"
           ],
-          "note": "Used when praising someone's child, home, success, etc.",
+          "note": "Said when praising something — someone's cooking, home, or good news.",
           "kind": "word"
         },
         {
@@ -628,12 +626,12 @@
           "id": "x-cas-mcq-1",
           "prompt": "Your friend's aunt shows you her new home. What fits best?",
           "options": [
-            "Masha'Allah, bohat acha hai!",
+            "Wah, bohat acha hai!",
             "Yaar, kya scene hai?",
             "Bas."
           ],
           "answer": 0,
-          "explain": "\"Masha'Allah\" is a warm compliment, and suits speaking to an elder. \"Yaar\" is too casual for an aunt."
+          "explain": "\"Wah\" is a warm compliment, and suits speaking to an elder. \"Yaar\" is too casual for an aunt."
         },
         {
           "type": "complete",
@@ -702,22 +700,22 @@
           },
           {
             "who": "them",
-            "roman": "Haan! Chalo, kal phir khelenge, Insha'Allah.",
-            "urdu": "ہاں! چلو، کل پھر کھیلیں گے، ان شاء اللہ۔",
-            "en": "Yes! Let's play again tomorrow, God willing."
+            "roman": "Haan! Chalo, kal phir khelenge, zaroor.",
+            "urdu": "ہاں! چلو، کل پھر کھیلیں گے، ضرور۔",
+            "en": "Yes! Let's play again tomorrow, definitely."
           },
           {
             "who": "you",
-            "roman": "Insha'Allah!",
-            "urdu": "ان شاء اللہ!",
-            "en": "God willing!"
+            "roman": "Zaroor!",
+            "urdu": "ضرور!",
+            "en": "Definitely!"
           }
         ]
       }
     }
   ],
   "host": "bilal",
-  "chapter": "Chapter 16 · Friends & feelings",
+  "chapter": "Chapter 17 · Friends & feelings",
   "story": "Bilal's friends invite you everywhere. Time to sound relaxed, share how you feel, and make plans.",
   "guide": [
     {
@@ -746,11 +744,11 @@
       ]
     },
     {
-      "title": "Insha'Allah and Masha'Allah",
-      "body": "People add Insha'Allah (God willing) to future plans, and Masha'Allah when praising something. You'll hear both constantly.",
+      "title": "Little reactions",
+      "body": "Kya baat hai! (how wonderful) when praising something, and umeed hai (hopefully) for plans. You'll hear them constantly.",
       "examples": [
-        "p-inshallah",
-        "p-mashallah"
+        "p-mashallah",
+        "p-inshallah"
       ]
     }
   ]

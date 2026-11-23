@@ -3,7 +3,7 @@
   "title": "Building Blocks 1: First words",
   "description": "Your first words and sentences — say how you are, ask questions, introduce people, ask for things.",
   "host": "bilal",
-  "chapter": "Chapter 8 · First sentences",
+  "chapter": "Chapter 9 · First sentences",
   "story": "Now you know the words — time to put them into real sentences, one pattern at a time.",
   "lessons": [
     {
@@ -13,19 +13,28 @@
       "phrases": [
         {
           "id": "w-salaam",
-          "roman": "Assalamu alaikum",
-          "urdu": "السلام علیکم",
-          "en": "hello (peace be upon you)",
+          "roman": "Aadaab",
+          "urdu": "آداب",
+          "en": "hello (respectful)",
           "kind": "word",
-          "note": "The everyday greeting in Pakistan, any time of day."
+          "note": "A traditional, respectful Urdu greeting you can say to anyone. Say it: aa-DAAB.",
+          "accept": [
+            "adaab",
+            "aadab",
+            "adab"
+          ]
         },
         {
-          "id": "w-walaikum",
-          "roman": "Wa alaikum assalam",
-          "urdu": "وعلیکم السلام",
-          "en": "hello back (and peace upon you)",
+          "id": "w-hello-ji",
+          "roman": "Hello ji",
+          "urdu": "ہیلو جی",
+          "en": "hello (friendly and polite)",
           "kind": "word",
-          "note": "The reply when someone greets you first."
+          "note": "Pakistanis use the English \"hello\" all the time. Adding ji makes it polite.",
+          "accept": [
+            "hello jee",
+            "helo ji"
+          ]
         },
         {
           "id": "w-main",
@@ -176,14 +185,14 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Assalamu alaikum!",
-            "urdu": "السلام علیکم!",
+            "roman": "Aadaab!",
+            "urdu": "آداب!",
             "en": "Hello!"
           },
           {
             "who": "you",
-            "roman": "Wa alaikum assalam!",
-            "urdu": "وعلیکم السلام!",
+            "roman": "Aadaab!",
+            "urdu": "آداب!",
             "en": "Hello!"
           },
           {
@@ -365,14 +374,14 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Assalamu alaikum! Aap kaise hain?",
-            "urdu": "السلام علیکم! آپ کیسے ہیں؟",
+            "roman": "Aadaab! Aap kaise hain?",
+            "urdu": "آداب! آپ کیسے ہیں؟",
             "en": "Hello! How are you?"
           },
           {
             "who": "you",
-            "roman": "Wa alaikum assalam. Main theek hoon, shukriya.",
-            "urdu": "وعلیکم السلام۔ میں ٹھیک ہوں، شکریہ۔",
+            "roman": "Aadaab. Main theek hoon, shukriya.",
+            "urdu": "آداب۔ میں ٹھیک ہوں، شکریہ۔",
             "en": "Hello. I'm fine, thank you."
           },
           {
@@ -567,8 +576,8 @@
         "lines": [
           {
             "who": "them",
-            "roman": "Assalamu alaikum! Aap ka naam kya hai?",
-            "urdu": "السلام علیکم! آپ کا نام کیا ہے؟",
+            "roman": "Aadaab! Aap ka naam kya hai?",
+            "urdu": "آداب! آپ کا نام کیا ہے؟",
             "en": "Hello! What is your name?"
           },
           {

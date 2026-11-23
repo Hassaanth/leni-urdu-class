@@ -7,6 +7,10 @@ import { isActiveDay, practiceStreak, speakingStreak } from '../lib/progress';
 import { mastery, weakest } from '../lib/srs';
 import { useCourse } from '../state/course';
 import { useProgress } from '../state/store';
+import { currentLevel, PASS_MARK, SKILL_INFO } from '../lib/testing';
+import type { Skill } from '../lib/progress';
+import { dueQueue } from '../lib/srs';
+import { TEACHER } from '../lib/teacher';
 
 const dayLabel = (k: string) => ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'][new Date(k + 'T12:00:00').getDay()];
 
@@ -74,6 +78,8 @@ export function ProgressPage() {
           <span>Best streak</span>
         </div>
       </div>
+
+      <ReportCard />
 
       <h2>This week</h2>
       <div className="card">
@@ -249,6 +255,112 @@ export function ProgressPage() {
             </div>
           ))}
       </div>
+    </>
+  );
+}
+
+/** Where the learner is, how strong each skill is, test results, and what to do next. */
+function ReportCard() {
+  const { course, idx } = useCourse();
+  const s = useProgress((st) => st);
+  const today = useToday();
+  const level = currentLevel(s, course);
+  const nextLvl = course.levels.find((l) => l.id === level + 1);
+  const nextLessons = nextLvl ? course.units.filter((u) => u.level === nextLvl.id).flatMap((u) => u.lessons) : [];
+  const nextDone = nextLessons.filter((l) => s.lessons[l.id]).length;
+  const skills = (Object.entries(s.skills) as [Skill, { right: number; total: number }][]).filter(([, v]) => v.total > 0);
+  const weak = skills.filter(([, v]) => v.total >= 4).sort((a, b) => a[1].right / a[1].total - b[1].right / b[1].total)[0];
+  const due = dueQueue(Object.values(s.cards), today).length;
+  const units = course.units.filter((u) => u.lessons.some((l) => s.lessons[l.id]));
+  const untested = units.filter((u) => u.lessons.every((l) => s.lessons[l.id]) && !((s.tests[`unit:${u.id}`]?.best ?? 0) >= PASS_MARK));
+  const todo: { to: string; icon: string; title: string; sub: string }[] = [];
+  if (due) todo.push({ to: '/practice/review', icon: '🔁', title: `Review ${due} word${due === 1 ? '' : 's'}`, sub: 'Due now or missed recently' });
+  if (weak && weak[1].right / weak[1].total < 0.85)
+    todo.push({ to: SKILL_INFO[weak[0]].to, icon: '🎯', title: `Practise: ${SKILL_INFO[weak[0]].practise}`, sub: `Your weakest skill: ${SKILL_INFO[weak[0]].label.toLowerCase()}` });
+  for (const u of untested.slice(0, 2)) todo.push({ to: `/test/unit/${u.id}`, icon: '📝', title: `Take the "${u.title}" test`, sub: 'You finished this unit — check what stuck' });
+  const next = idx.lessons.find((l) => !s.lessons[l.id]);
+  if (next) todo.push({ to: `/lesson/${next.id}`, icon: '➡️', title: `Next lesson: ${next.title}`, sub: idx.unitByLesson.get(next.id)?.title ?? '' });
+
+  return (
+    <>
+      <h2>Your report card</h2>
+      <div className="card stack">
+        <div>
+          <div className="small muted">Your level</div>
+          <div style={{ fontSize: '1.2rem', fontWeight: 900 }}>
+            {level ? `Level ${level}: ${course.levels.find((l) => l.id === level)?.title}` : 'Just getting started'}
+          </div>
+          {nextLvl && (
+            <>
+              <div className="small" style={{ margin: '4px 0' }}>
+                Next: Level {nextLvl.id} — {nextLvl.title} ({nextDone}/{nextLessons.length} lessons)
+              </div>
+              <ProgressBar value={nextLessons.length ? nextDone / nextLessons.length : 0} label="Progress to next level" />
+            </>
+          )}
+        </div>
+        <div>
+          <div className="small muted" style={{ marginBottom: 4 }}>
+            Your skills (right first time)
+          </div>
+          {skills.length === 0 && <p className="small muted">Finish a lesson to see how you're doing in each skill.</p>}
+          {skills.map(([k, v]) => (
+            <div key={k} style={{ marginBottom: 6 }}>
+              <div className="row small" style={{ justifyContent: 'space-between' }}>
+                <span>
+                  {SKILL_INFO[k].label}
+                  {weak && weak[0] === k && v.right / v.total < 0.85 ? ' — needs practice' : ''}
+                </span>
+                <strong>{Math.round((v.right / v.total) * 100)}%</strong>
+              </div>
+              <ProgressBar value={v.right / v.total} label={SKILL_INFO[k].label} />
+            </div>
+          ))}
+        </div>
+        <div>
+          <div className="small muted" style={{ marginBottom: 4 }}>
+            Tests
+          </div>
+          {s.tests.placement && (
+            <div className="row small" style={{ justifyContent: 'space-between' }}>
+              <span>Placement test</span>
+              <span>
+                placed at Level {s.placement?.level ?? 0} · {Math.round(s.tests.placement.score * 100)}%
+              </span>
+            </div>
+          )}
+          {course.units
+            .filter((u) => s.tests[`unit:${u.id}`])
+            .map((u) => {
+              const t = s.tests[`unit:${u.id}`];
+              const best = t.best ?? t.score;
+              return (
+                <div key={u.id} className="row small" style={{ justifyContent: 'space-between' }}>
+                  <span>{u.title}</span>
+                  <span className={`chip ${best >= PASS_MARK ? 'green' : 'amber'}`}>
+                    best {Math.round(best * 100)}%{best >= PASS_MARK ? ' ✓' : ''}
+                  </span>
+                </div>
+              );
+            })}
+          <div className="row wrap" style={{ marginTop: 8 }}>
+            <a className="btn small" href="#/test/placement">
+              📝 {s.tests.placement ? 'Retake' : 'Take'} the placement test
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="teacher" style={{ marginTop: 12 }}>
+        <span className="t-avatar" aria-hidden>
+          {TEACHER.avatar}
+        </span>
+        <div className="t-bubble">
+          {todo.length ? "Here's what I'd do next:" : "You're all caught up — amazing work!"}
+        </div>
+      </div>
+      {todo.slice(0, 4).map((t) => (
+        <CardLink key={t.to} to={t.to} icon={t.icon} title={t.title} sub={t.sub} />
+      ))}
     </>
   );
 }

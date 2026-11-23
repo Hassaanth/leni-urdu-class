@@ -16,25 +16,25 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Assalamu alaikum!",
-          "urdu": "السلام علیکم!",
-          "en": "Peace be upon you! (Hello!)"
+          "roman": "Aadaab!",
+          "urdu": "آداب!",
+          "en": "Hello!"
         },
         "choices": [
           {
-            "roman": "Wa alaikum assalam!",
-            "urdu": "وعلیکم السلام!",
-            "en": "And peace be upon you too!",
+            "roman": "Aadaab!",
+            "urdu": "آداب!",
+            "en": "Hello!",
             "quality": "best",
-            "feedback": "Perfect — this is the standard reply.",
+            "feedback": "Perfect — you greeted him back respectfully.",
             "next": "n2"
           },
           {
-            "roman": "Assalamu alaikum!",
-            "urdu": "السلام علیکم!",
-            "en": "Peace be upon you!",
+            "roman": "Hello ji!",
+            "urdu": "ہیلو جی!",
+            "en": "Hello!",
             "quality": "ok",
-            "feedback": "Understandable, but when someone greets you first, the usual reply is \"Wa alaikum assalam\".",
+            "feedback": "Friendly and fine! \"Aadaab\" is a little more respectful when you first meet someone.",
             "next": "n2"
           },
           {
@@ -42,7 +42,7 @@
             "urdu": "خدا حافظ!",
             "en": "Goodbye!",
             "quality": "wrong",
-            "feedback": "That means goodbye — you've only just met! Try the reply to a greeting."
+            "feedback": "That means goodbye — you've only just met! Greet him back instead."
           }
         ]
       },
@@ -114,9 +114,9 @@
       {
         "id": "n4",
         "line": {
-          "roman": "Main bhi theek hoon, Alhamdulillah. Aap kahan se hain?",
-          "urdu": "میں بھی ٹھیک ہوں، الحمدللہ۔ آپ کہاں سے ہیں؟",
-          "en": "I'm fine too, thank God. Where are you from?"
+          "roman": "Main bhi theek hoon, shukriya. Aap kahan se hain?",
+          "urdu": "میں بھی ٹھیک ہوں، شکریہ۔ آپ کہاں سے ہیں؟",
+          "en": "I'm fine too, thanks. Where are you from?"
         },
         "newWords": [
           {
@@ -179,8 +179,8 @@
             "next": "end"
           },
           {
-            "roman": "Aapse mil kar khushi hui. Allah hafiz!",
-            "urdu": "آپ سے مل کر خوشی ہوئی۔ اللہ حافظ!",
+            "roman": "Aapse mil kar khushi hui. Khuda hafiz!",
+            "urdu": "آپ سے مل کر خوشی ہوئی۔ خدا حافظ!",
             "en": "Nice to meet you. Goodbye!",
             "quality": "best",
             "feedback": "Lovely — polite and friendly.",
@@ -216,16 +216,16 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Assalamu alaikum, beta! Sab khairiyat hai?",
-          "urdu": "السلام علیکم بیٹا! سب خیریت ہے؟",
-          "en": "Peace be upon you, dear! Is everything well?"
+          "roman": "Aadaab, beta! Sab khairiyat hai?",
+          "urdu": "آداب بیٹا! سب خیریت ہے؟",
+          "en": "Hello, dear! Is everything well?"
         },
         "note": "Elders often call younger people \"beta\" (lit. son) as a term of affection — for boys and girls.",
         "choices": [
           {
-            "roman": "Wa alaikum assalam, Khala! Ji, sab khairiyat hai, Alhamdulillah.",
-            "urdu": "وعلیکم السلام خالہ! جی، سب خیریت ہے، الحمدللہ۔",
-            "en": "And peace be upon you, Auntie! Yes, all is well, thank God.",
+            "roman": "Aadaab, Khala! Ji, sab khairiyat hai, shukriya.",
+            "urdu": "آداب خالہ! جی، سب خیریت ہے، شکریہ۔",
+            "en": "Hello, Auntie! Yes, all is well, thanks.",
             "quality": "best",
             "feedback": "Respectful and warm — exactly right with an elder.",
             "next": "n2"
@@ -235,7 +235,7 @@
             "urdu": "جی، سب ٹھیک ہے۔",
             "en": "Yes, all's fine.",
             "quality": "ok",
-            "feedback": "Fine, though returning the greeting first (\"Wa alaikum assalam\") is more polite.",
+            "feedback": "Fine, though returning the greeting first (\"Aadaab\") is more polite.",
             "next": "n2"
           },
           {
@@ -301,8 +301,8 @@
       {
         "id": "n4",
         "line": {
-          "roman": "Masha'Allah! Chai piyenge?",
-          "urdu": "ماشاءاللہ! چائے پئیں گے؟",
+          "roman": "Wah! Chai piyenge?",
+          "urdu": "واہ! چائے پئیں گے؟",
           "en": "Wonderful! Will you have some tea?"
         },
         "choices": [
@@ -358,9 +358,9 @@
         },
         "choices": [
           {
-            "roman": "Ji, Insha'Allah. Khuda hafiz, Khala!",
-            "urdu": "جی، ان شاء اللہ۔ خدا حافظ خالہ!",
-            "en": "Yes, God willing. Goodbye, Auntie!",
+            "roman": "Ji, zaroor. Khuda hafiz, Khala!",
+            "urdu": "جی، ضرور۔ خدا حافظ خالہ!",
+            "en": "Yes, definitely. Goodbye, Auntie!",
             "quality": "best",
             "feedback": "Polite and warm.",
             "next": "end"
@@ -395,15 +395,15 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Assalamu alaikum! Aap naye aaye hain is mohallay mein? Kab shift huay?",
-          "urdu": "السلام علیکم! آپ نئے آئے ہیں اس محلے میں؟ کب شفٹ ہوئے؟",
-          "en": "Peace be upon you! Are you new to this neighbourhood? When did you move in?"
+          "roman": "Aadaab! Aap naye aaye hain is mohallay mein? Kab shift huay?",
+          "urdu": "آداب! آپ نئے آئے ہیں اس محلے میں؟ کب شفٹ ہوئے؟",
+          "en": "Hello! Are you new to this neighbourhood? When did you move in?"
         },
         "choices": [
           {
-            "roman": "Wa alaikum assalam. Maaf kijiye, mujhe samajh nahi aaya. Aahista boliye.",
-            "urdu": "وعلیکم السلام۔ معاف کیجیے، مجھے سمجھ نہیں آیا۔ آہستہ بولیے۔",
-            "en": "And peace be upon you. Sorry, I didn't understand. Please speak slowly.",
+            "roman": "Aadaab. Maaf kijiye, mujhe samajh nahi aaya. Aahista boliye.",
+            "urdu": "آداب۔ معاف کیجیے، مجھے سمجھ نہیں آیا۔ آہستہ بولیے۔",
+            "en": "Hello. Sorry, I didn't understand. Please speak slowly.",
             "quality": "best",
             "feedback": "Perfect — polite, honest and useful.",
             "next": "n2"
@@ -540,8 +540,8 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Assalamu alaikum! Ji, kya laaun?",
-          "urdu": "السلام علیکم! جی، کیا لاؤں؟",
+          "roman": "Aadaab! Ji, kya laaun?",
+          "urdu": "آداب! جی، کیا لاؤں؟",
           "en": "Hello! What shall I bring you?"
         },
         "newWords": [
@@ -553,8 +553,8 @@
         ],
         "choices": [
           {
-            "roman": "Wa alaikum assalam. Mujhe chicken karahi aur do roti chahiye.",
-            "urdu": "وعلیکم السلام۔ مجھے چکن کڑاہی اور دو روٹی چاہیے۔",
+            "roman": "Aadaab. Mujhe chicken karahi aur do roti chahiye.",
+            "urdu": "آداب۔ مجھے چکن کڑاہی اور دو روٹی چاہیے۔",
             "en": "Hello. I'd like chicken karahi and two rotis.",
             "quality": "best",
             "feedback": "Clear order using \"Mujhe ... chahiye\".",
@@ -1091,15 +1091,15 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Assalamu alaikum! Aaiye, aaiye, andar aaiye.",
-          "urdu": "السلام علیکم! آئیے، آئیے، اندر آئیے۔",
+          "roman": "Aadaab! Aaiye, aaiye, andar aaiye.",
+          "urdu": "آداب! آئیے، آئیے، اندر آئیے۔",
           "en": "Hello! Come in, come in, please come inside."
         },
         "choices": [
           {
-            "roman": "Wa alaikum assalam, Aunty. Shukriya!",
-            "urdu": "وعلیکم السلام آنٹی۔ شکریہ!",
-            "en": "And peace be upon you, Aunty. Thank you!",
+            "roman": "Aadaab, Aunty. Shukriya!",
+            "urdu": "آداب آنٹی۔ شکریہ!",
+            "en": "Hello, Aunty. Thank you!",
             "quality": "best",
             "feedback": "\"Aunty\" is the usual respectful way to address a friend's mother in Pakistan.",
             "next": "n2"
@@ -1220,8 +1220,8 @@
         },
         "choices": [
           {
-            "roman": "Masha'Allah, bohat mazay ke hain!",
-            "urdu": "ماشاءاللہ، بہت مزے کے ہیں!",
+            "roman": "Wah, bohat mazay ke hain!",
+            "urdu": "واہ، بہت مزے کے ہیں!",
             "en": "Wonderful, they're delicious!",
             "quality": "best",
             "feedback": "\"Mazay ke\" — plural, to match samosay.",
@@ -1427,15 +1427,15 @@
       {
         "id": "n4",
         "line": {
-          "roman": "Done! Saturday milte hain, Insha'Allah.",
-          "urdu": "ڈن! سیٹرڈے ملتے ہیں، ان شاء اللہ۔",
-          "en": "Done! See you Saturday, God willing."
+          "roman": "Done! Saturday milte hain, zaroor.",
+          "urdu": "ڈن! سیٹرڈے ملتے ہیں، ضرور۔",
+          "en": "Done! See you Saturday, definitely."
         },
         "choices": [
           {
-            "roman": "Insha'Allah! Phir milenge.",
-            "urdu": "ان شاء اللہ! پھر ملیں گے۔",
-            "en": "God willing! See you then.",
+            "roman": "Zaroor! Phir milenge.",
+            "urdu": "ضرور! پھر ملیں گے۔",
+            "en": "Definitely! See you then.",
             "quality": "best",
             "feedback": "Natural close.",
             "next": "end"
@@ -1516,8 +1516,8 @@
             "next": "n2"
           },
           {
-            "roman": "Assalamu alaikum. Aap kaisi hain?",
-            "urdu": "السلام علیکم۔ آپ کیسی ہیں؟",
+            "roman": "Aadaab. Aap kaisi hain?",
+            "urdu": "آداب۔ آپ کیسی ہیں؟",
             "en": "Hello. How are you?",
             "quality": "ok",
             "feedback": "Polite and correct (\"kaisi\" for a woman) — just more formal than you need with a close friend.",
@@ -1662,14 +1662,14 @@
       {
         "id": "n1",
         "line": {
-          "roman": "Hello, Assalamu alaikum. Rehman Traders.",
-          "urdu": "ہیلو، السلام علیکم۔ رحمان ٹریڈرز۔",
-          "en": "Hello, peace be upon you. Rehman Traders."
+          "roman": "Hello, aadaab. Rehman Traders.",
+          "urdu": "ہیلو، آداب۔ رحمان ٹریڈرز۔",
+          "en": "Hello. Rehman Traders."
         },
         "choices": [
           {
-            "roman": "Wa alaikum assalam. Kya main Ahmed sahab se baat kar sakta hoon?",
-            "urdu": "وعلیکم السلام۔ کیا میں احمد صاحب سے بات کر سکتا ہوں؟",
+            "roman": "Aadaab. Kya main Ahmed sahab se baat kar sakta hoon?",
+            "urdu": "آداب۔ کیا میں احمد صاحب سے بات کر سکتا ہوں؟",
             "en": "Hello. May I speak to Mr Ahmed?",
             "quality": "best",
             "feedback": "Polite and professional. (Women: \"kar sakti hoon\".)",

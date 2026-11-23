@@ -16,11 +16,16 @@
         {
           "id": "v-salaam",
           "emoji": "👋",
-          "roman": "Assalamu alaikum",
-          "urdu": "السلام علیکم",
+          "roman": "Aadaab",
+          "urdu": "آداب",
           "en": "hello",
           "kind": "word",
-          "note": "The everyday greeting in Pakistan. Literally \"peace be upon you\". Say it as one word: as-sa-LAA-mu a-LAI-kum."
+          "note": "A traditional, respectful Urdu greeting you can say to anyone, often with a small raise of the hand. Say it: aa-DAAB.",
+          "accept": [
+            "adaab",
+            "aadab",
+            "adab"
+          ]
         },
         {
           "id": "v-shukriya",
