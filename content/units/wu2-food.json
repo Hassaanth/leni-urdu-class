@@ -1,0 +1,162 @@
+{
+  "id": "wu2",
+  "level": 1,
+  "host": "khala",
+  "title": "Food & drink",
+  "chapter": "Chapter 2 · Khala's kitchen",
+  "story": "Khala wants to feed you. Learn the words for what is on the table.",
+  "description": "Water, tea, milk, food, roti, rice, mangoes — and hot, cold, sweet and tasty.",
+  "lessons": [
+    {
+      "id": "w4",
+      "kind": "words",
+      "title": "Drinks",
+      "objective": "Name the drinks on the table.",
+      "phrases": [
+        {
+          "id": "v-paani",
+          "emoji": "💧",
+          "roman": "paani",
+          "urdu": "پانی",
+          "en": "water",
+          "kind": "word"
+        },
+        {
+          "id": "v-chai",
+          "emoji": "🍵",
+          "roman": "chai",
+          "urdu": "چائے",
+          "en": "tea",
+          "kind": "word",
+          "note": "In Pakistan chai usually means milky, sweet tea."
+        },
+        {
+          "id": "v-doodh",
+          "emoji": "🥛",
+          "roman": "doodh",
+          "urdu": "دودھ",
+          "en": "milk",
+          "kind": "word",
+          "note": "The \"dh\" is d + a puff of air."
+        },
+        {
+          "id": "v-lassi",
+          "emoji": "🥤",
+          "roman": "lassi",
+          "urdu": "لسی",
+          "en": "lassi (yogurt drink)",
+          "kind": "word"
+        }
+      ]
+    },
+    {
+      "id": "w5",
+      "kind": "words",
+      "title": "Food",
+      "objective": "Name the food you eat every day.",
+      "phrases": [
+        {
+          "id": "v-khaana",
+          "emoji": "🍛",
+          "roman": "khaana",
+          "urdu": "کھانا",
+          "en": "food",
+          "kind": "word",
+          "note": "The kh here is k + a puff of air — different from the throat sound in Khuda."
+        },
+        {
+          "id": "v-roti",
+          "emoji": "🫓",
+          "roman": "roti",
+          "urdu": "روٹی",
+          "en": "flatbread (roti)",
+          "kind": "word"
+        },
+        {
+          "id": "v-chawal",
+          "emoji": "🍚",
+          "roman": "chawal",
+          "urdu": "چاول",
+          "en": "rice",
+          "kind": "word"
+        },
+        {
+          "id": "v-aam",
+          "emoji": "🥭",
+          "roman": "aam",
+          "urdu": "آم",
+          "en": "mango",
+          "kind": "word",
+          "note": "Pakistani mangoes are famous — expect to be asked if you like them!"
+        }
+      ]
+    },
+    {
+      "id": "w6",
+      "kind": "words",
+      "title": "Hot, cold, sweet",
+      "objective": "Describe food and drinks.",
+      "phrases": [
+        {
+          "id": "v-garam",
+          "emoji": "🔥",
+          "roman": "garam",
+          "urdu": "گرم",
+          "en": "hot",
+          "kind": "word"
+        },
+        {
+          "id": "v-thanda",
+          "emoji": "🧊",
+          "roman": "thanda",
+          "urdu": "ٹھنڈا",
+          "en": "cold",
+          "kind": "word"
+        },
+        {
+          "id": "v-meetha",
+          "emoji": "🍬",
+          "roman": "meetha",
+          "urdu": "میٹھا",
+          "en": "sweet",
+          "kind": "word"
+        },
+        {
+          "id": "v-mazedaar",
+          "emoji": "😋",
+          "roman": "mazedaar",
+          "urdu": "مزیدار",
+          "en": "tasty / delicious",
+          "kind": "word",
+          "note": "Say \"Bohat mazedaar!\" to any cook and they will be happy."
+        }
+      ]
+    }
+  ],
+  "guide": [
+    {
+      "title": "Some words sound like English",
+      "body": "Chai, lassi and roti are already used in English! Urdu also borrows English words — you'll hear \"phone\", \"bus\" and \"washroom\" every day.",
+      "examples": [
+        "v-chai",
+        "v-roti"
+      ]
+    },
+    {
+      "title": "Two kinds of \"kh\"",
+      "body": "Khaana (food) uses k + a puff of air. Khuda (God, in Khuda hafiz) uses a scrape in the throat. Listen to both and hear the difference.",
+      "examples": [
+        "v-khaana",
+        "v-khudahafiz"
+      ]
+    },
+    {
+      "title": "Describing words",
+      "body": "Words like garam (hot) and thanda (cold) describe things. Later you'll put them in front of food words: garam chai = hot tea — just like English.",
+      "examples": [
+        "v-garam",
+        "v-thanda"
+      ]
+    }
+  ]
+}

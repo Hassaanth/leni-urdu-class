@@ -1,0 +1,426 @@
+[
+  {
+    "id": "pr-greetings",
+    "title": "Saying everyday phrases smoothly",
+    "focus": "Common greetings",
+    "tip": "Say each phrase as one smooth unit, not word by word. Long vowels (aa, ee) are held a little longer than in English.",
+    "items": [
+      {
+        "roman": "Suniye",
+        "urdu": "سنیے",
+        "en": "Excuse me / listen",
+        "guide": "su-NI-ye — short u, stress the middle"
+      },
+      {
+        "roman": "Ji, boliye",
+        "urdu": "جی، بولیے",
+        "en": "Yes, go ahead",
+        "guide": "jee, BO-li-ye"
+      },
+      {
+        "roman": "Shukriya",
+        "urdu": "شکریہ",
+        "en": "Thank you",
+        "guide": "shuk-ri-yaa"
+      },
+      {
+        "roman": "Khuda hafiz",
+        "urdu": "خدا حافظ",
+        "en": "Goodbye",
+        "guide": "khu-DAA haa-fiz (kh = throaty خ)"
+      },
+      {
+        "roman": "Aapse mil kar khushi hui",
+        "urdu": "آپ سے مل کر خوشی ہوئی",
+        "en": "Nice to meet you",
+        "guide": "aap-se mil-kar khu-shi hu-i"
+      }
+    ]
+  },
+  {
+    "id": "pr-long-short",
+    "title": "Long vs short vowels",
+    "focus": "Vowel length",
+    "tip": "Vowel length can change meaning. Long vowels (aa, ee, oo) are held noticeably longer than short ones (a, i, u). English speakers often shorten them — exaggerate at first.",
+    "items": [
+      {
+        "roman": "kam",
+        "urdu": "کم",
+        "en": "less",
+        "guide": "short a, like the u in \"cup\""
+      },
+      {
+        "roman": "kaam",
+        "urdu": "کام",
+        "en": "work",
+        "guide": "long aa, like \"father\""
+      },
+      {
+        "roman": "mil",
+        "urdu": "مل",
+        "en": "meet!",
+        "guide": "short i, like \"bit\""
+      },
+      {
+        "roman": "meel",
+        "urdu": "میل",
+        "en": "mile",
+        "guide": "long ee, like \"see\""
+      },
+      {
+        "roman": "jal",
+        "urdu": "جل",
+        "en": "burn!",
+        "guide": "short a"
+      },
+      {
+        "roman": "jaal",
+        "urdu": "جال",
+        "en": "net",
+        "guide": "long aa"
+      }
+    ]
+  },
+  {
+    "id": "pr-dental-retroflex-t",
+    "title": "Two kinds of t",
+    "focus": "Dental t (ت) vs retroflex ṭ (ٹ)",
+    "tip": "English t is in between these two sounds, so neither is identical to English t. For dental t (ت), touch the back of your top front teeth with the tongue tip. For retroflex ṭ (ٹ), curl the tongue tip back and touch the roof of your mouth behind the ridge.",
+    "items": [
+      {
+        "roman": "teen",
+        "urdu": "تین",
+        "en": "three",
+        "guide": "dental t — tongue on teeth"
+      },
+      {
+        "roman": "tum",
+        "urdu": "تم",
+        "en": "you (informal)",
+        "guide": "dental t"
+      },
+      {
+        "roman": "tamatar",
+        "urdu": "ٹماٹر",
+        "en": "tomato",
+        "guide": "ṭamāṭar — both t's retroflex"
+      },
+      {
+        "roman": "topi",
+        "urdu": "ٹوپی",
+        "en": "cap",
+        "guide": "ṭopi — retroflex, tongue curled back"
+      },
+      {
+        "roman": "theek",
+        "urdu": "ٹھیک",
+        "en": "fine / okay",
+        "guide": "ṭh — retroflex with a puff of air"
+      }
+    ]
+  },
+  {
+    "id": "pr-dental-retroflex-d",
+    "title": "Two kinds of d",
+    "focus": "Dental d (د) vs retroflex ḍ (ڈ)",
+    "tip": "Same tongue positions as the two t's: dental d with the tongue on your teeth, retroflex ḍ with the tongue curled back. Neither is quite the English d.",
+    "items": [
+      {
+        "roman": "dil",
+        "urdu": "دل",
+        "en": "heart",
+        "guide": "dental d"
+      },
+      {
+        "roman": "dard",
+        "urdu": "درد",
+        "en": "pain",
+        "guide": "dental d (both)"
+      },
+      {
+        "roman": "dabba",
+        "urdu": "ڈبہ",
+        "en": "box",
+        "guide": "ḍabbā — retroflex"
+      },
+      {
+        "roman": "dar",
+        "urdu": "ڈر",
+        "en": "fear",
+        "guide": "ḍar — retroflex"
+      },
+      {
+        "roman": "doctor",
+        "urdu": "ڈاکٹر",
+        "en": "doctor",
+        "guide": "ḍākṭar — Urdu hears English d and t as retroflex"
+      }
+    ]
+  },
+  {
+    "id": "pr-aspiration",
+    "title": "Breathy consonants",
+    "focus": "Plain vs aspirated: p/ph, k/kh, b/bh, ch/chh, g/gh",
+    "tip": "Hold your hand in front of your mouth. Aspirated sounds (written with h: ph, kh, bh, chh, gh) release a clear puff of air; plain ones release almost none. \"Ph\" is NOT \"f\" in careful speech — it's p + breath.",
+    "items": [
+      {
+        "roman": "pal",
+        "urdu": "پل",
+        "en": "moment",
+        "guide": "plain p — no puff"
+      },
+      {
+        "roman": "phal",
+        "urdu": "پھل",
+        "en": "fruit",
+        "guide": "ph — p with a strong puff"
+      },
+      {
+        "roman": "kal",
+        "urdu": "کل",
+        "en": "yesterday / tomorrow",
+        "guide": "plain k"
+      },
+      {
+        "roman": "khel",
+        "urdu": "کھیل",
+        "en": "game",
+        "guide": "kh (کھ) — k with a puff, not the throaty خ"
+      },
+      {
+        "roman": "baari",
+        "urdu": "باری",
+        "en": "turn (my turn)",
+        "guide": "plain b"
+      },
+      {
+        "roman": "bhaari",
+        "urdu": "بھاری",
+        "en": "heavy",
+        "guide": "bh — voiced b with breath"
+      },
+      {
+        "roman": "ghar",
+        "urdu": "گھر",
+        "en": "house",
+        "guide": "gh (گھ) — breathy g"
+      }
+    ]
+  },
+  {
+    "id": "pr-throat",
+    "title": "Throat sounds",
+    "focus": "kh (خ), gh (غ) and q (ق)",
+    "tip": "Roman Urdu writes \"kh\" and \"gh\" for two different sounds each. خ (as in khush) is a rough, scraping sound at the back of the mouth, like Scottish \"loch\". غ (as in ghalat) is the voiced version, a little like a French r. ق (q) is a k made further back, deep in the throat. Many speakers relax q into k in casual speech.",
+    "items": [
+      {
+        "roman": "khush",
+        "urdu": "خوش",
+        "en": "happy",
+        "guide": "خ — scraping, like \"loch\""
+      },
+      {
+        "roman": "khabar",
+        "urdu": "خبر",
+        "en": "news",
+        "guide": "خ"
+      },
+      {
+        "roman": "ghalat",
+        "urdu": "غلط",
+        "en": "wrong",
+        "guide": "غ — gargled g"
+      },
+      {
+        "roman": "qeemat",
+        "urdu": "قیمت",
+        "en": "price",
+        "guide": "ق — k from deep in the throat"
+      },
+      {
+        "roman": "qareeb",
+        "urdu": "قریب",
+        "en": "near",
+        "guide": "ق"
+      }
+    ]
+  },
+  {
+    "id": "pr-flap",
+    "title": "The flapped ṛ",
+    "focus": "ṛ (ڑ) vs r (ر)",
+    "tip": "Ordinary r (ر) is a light tap of the tongue tip behind the teeth, a bit like the tt in American \"butter\". ڑ is a flap with the tongue curled back, flicking forward. It is not the English r.",
+    "items": [
+      {
+        "roman": "larka",
+        "urdu": "لڑکا",
+        "en": "boy",
+        "guide": "laṛkā — flap"
+      },
+      {
+        "roman": "bara",
+        "urdu": "بڑا",
+        "en": "big",
+        "guide": "baṛā — flap"
+      },
+      {
+        "roman": "parhna",
+        "urdu": "پڑھنا",
+        "en": "to read / study",
+        "guide": "paṛhnā — flap with breath"
+      },
+      {
+        "roman": "raat",
+        "urdu": "رات",
+        "en": "night",
+        "guide": "plain tapped r"
+      },
+      {
+        "roman": "ghar",
+        "urdu": "گھر",
+        "en": "house",
+        "guide": "plain tapped r at the end"
+      }
+    ]
+  },
+  {
+    "id": "pr-nasal",
+    "title": "Nasal vowels",
+    "focus": "Final -n in main, hain, nahin",
+    "tip": "In words like main, hain and nahin, the n is usually not a full n. Instead, the vowel goes through your nose. Try saying the vowel while letting air out through your nose, without touching your tongue to the roof of your mouth.",
+    "items": [
+      {
+        "roman": "main",
+        "urdu": "میں",
+        "en": "I",
+        "guide": "mẽ — nasal vowel"
+      },
+      {
+        "roman": "hain",
+        "urdu": "ہیں",
+        "en": "are",
+        "guide": "hẽ — nasal"
+      },
+      {
+        "roman": "nahi",
+        "urdu": "نہیں",
+        "en": "no / not",
+        "guide": "nahĩ — nasal at the end"
+      },
+      {
+        "roman": "haan",
+        "urdu": "ہاں",
+        "en": "yes",
+        "guide": "hā̃ — nasal aa"
+      },
+      {
+        "roman": "maan",
+        "urdu": "ماں",
+        "en": "mother",
+        "guide": "mā̃ — nasal aa"
+      }
+    ]
+  },
+  {
+    "id": "pr-rhythm",
+    "title": "Rhythm in sentences",
+    "focus": "Word stress and natural rhythm",
+    "tip": "Urdu stress is lighter than English stress. Avoid shrinking unstressed vowels to \"uh\" the way English does. Give each syllable its full vowel, and let long vowels take a little more time.",
+    "items": [
+      {
+        "roman": "Aap kaise hain?",
+        "urdu": "آپ کیسے ہیں؟",
+        "en": "How are you?",
+        "guide": "aap KAI-se hãi — even beats"
+      },
+      {
+        "roman": "Main theek hoon.",
+        "urdu": "میں ٹھیک ہوں۔",
+        "en": "I'm fine.",
+        "guide": "mẽ ṭheek hū̃"
+      },
+      {
+        "roman": "Mujhe samajh nahi aaya.",
+        "urdu": "مجھے سمجھ نہیں آیا۔",
+        "en": "I didn't understand.",
+        "guide": "mu-jhe sa-majh na-hĩ aa-yaa"
+      },
+      {
+        "roman": "Aahista boliye.",
+        "urdu": "آہستہ بولیے۔",
+        "en": "Please speak slowly.",
+        "guide": "aa-his-taa bo-li-ye"
+      }
+    ]
+  },
+  {
+    "id": "pr-connected",
+    "title": "Connected speech",
+    "focus": "Joining words smoothly",
+    "tip": "In everyday speech, small words glue onto the word before them: \"aap ka\" sounds like \"aapka\", \"aap se\" like \"aapse\", \"mil kar\" like \"milkar\". Practise saying each phrase as one breath.",
+    "items": [
+      {
+        "roman": "Aap ka naam kya hai?",
+        "urdu": "آپ کا نام کیا ہے؟",
+        "en": "What's your name?",
+        "guide": "aapka-naam-kyaa-hai"
+      },
+      {
+        "roman": "Aapse mil kar khushi hui.",
+        "urdu": "آپ سے مل کر خوشی ہوئی۔",
+        "en": "Nice to meet you.",
+        "guide": "aapse-milkar-khushi-hui"
+      },
+      {
+        "roman": "Mujhe paani chahiye.",
+        "urdu": "مجھے پانی چاہیے۔",
+        "en": "I need water.",
+        "guide": "mujhe-paani-chaahiye"
+      },
+      {
+        "roman": "Kya aap meri madad kar sakte hain?",
+        "urdu": "کیا آپ میری مدد کر سکتے ہیں؟",
+        "en": "Can you help me?",
+        "guide": "kyaa-aap meri-madad kar-sakte-hãi"
+      }
+    ]
+  },
+  {
+    "id": "pr-everyday",
+    "title": "Everyday words",
+    "focus": "High-frequency vocabulary",
+    "tip": "These words come up constantly. Say each one three times, slowly first and then at normal speed.",
+    "items": [
+      {
+        "roman": "acha",
+        "urdu": "اچھا",
+        "en": "good / okay",
+        "guide": "ach-chhā — double ch with breath"
+      },
+      {
+        "roman": "paani",
+        "urdu": "پانی",
+        "en": "water",
+        "guide": "paa-ni"
+      },
+      {
+        "roman": "khaana",
+        "urdu": "کھانا",
+        "en": "food",
+        "guide": "khaa-naa (کھ — puff of air)"
+      },
+      {
+        "roman": "zaroor",
+        "urdu": "ضرور",
+        "en": "of course",
+        "guide": "za-roor"
+      },
+      {
+        "roman": "bohat",
+        "urdu": "بہت",
+        "en": "very / a lot",
+        "guide": "ba-hut, often said bo-hat"
+      }
+    ]
+  }
+]

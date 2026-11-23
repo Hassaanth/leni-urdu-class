@@ -1,0 +1,933 @@
+{
+  "id": "bb3",
+  "title": "Building Blocks 3: Actions & time",
+  "description": "What you're doing now, what you did yesterday, what you'll do tomorrow — and how to ask for help.",
+  "host": "ayesha",
+  "chapter": "Chapter 11 · Sentences about yesterday & tomorrow",
+  "story": "Ayesha helps you talk about your day — yesterday, today and tomorrow.",
+  "lessons": [
+    {
+      "id": "b9",
+      "title": "What you're doing right now",
+      "objective": "Say what you and others are doing: \"I'm learning Urdu\".",
+      "phrases": [
+        {
+          "id": "w-kar",
+          "roman": "kar",
+          "urdu": "کر",
+          "en": "do",
+          "kind": "word"
+        },
+        {
+          "id": "w-raha",
+          "roman": "raha",
+          "urdu": "رہا",
+          "en": "-ing (man / boy)",
+          "kind": "word",
+          "note": "Verb + raha + hoon = \"I am …-ing\" (for a man)."
+        },
+        {
+          "id": "w-rahi",
+          "roman": "rahi",
+          "urdu": "رہی",
+          "en": "-ing (woman / girl)",
+          "kind": "word"
+        },
+        {
+          "id": "w-rahe",
+          "roman": "rahe",
+          "urdu": "رہے",
+          "en": "-ing (with aap, or plural)",
+          "kind": "word"
+        },
+        {
+          "id": "w-kaam",
+          "roman": "kaam",
+          "urdu": "کام",
+          "en": "work",
+          "kind": "word"
+        },
+        {
+          "id": "w-seekh",
+          "roman": "seekh",
+          "urdu": "سیکھ",
+          "en": "learn",
+          "kind": "word"
+        },
+        {
+          "id": "w-kha",
+          "roman": "kha",
+          "urdu": "کھا",
+          "en": "eat",
+          "kind": "word"
+        },
+        {
+          "id": "w-pee",
+          "roman": "pee",
+          "urdu": "پی",
+          "en": "drink",
+          "kind": "word"
+        }
+      ],
+      "pattern": {
+        "title": "Main ___ raha / rahi hoon = I am ___ing",
+        "frame": {
+          "roman": "Main ___ raha hoon.",
+          "urdu": "میں ___ رہا ہوں۔",
+          "en": "I am ___ing."
+        },
+        "literal": "I ___ -ing am",
+        "explain": "To say what's happening now: verb + raha/rahi + hoon. Men say raha, women say rahi — this little word shows who's speaking. \"Work\" is kaam kar (work do): Main kaam kar raha hoon. With aap, use rahe hain."
+      },
+      "builds": [
+        {
+          "id": "s-b9-1",
+          "en": "I'm working.",
+          "roman": "Main kaam kar raha hoon.",
+          "urdu": "میں کام کر رہا ہوں۔",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main kaam kar raha hoon.",
+              "urdu": "میں کام کر رہا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main kaam kar rahi hoon.",
+              "urdu": "میں کام کر رہی ہوں۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        },
+        {
+          "id": "s-b9-2",
+          "en": "I'm learning Urdu.",
+          "roman": "Main Urdu seekh raha hoon.",
+          "urdu": "میں اردو سیکھ رہا ہوں۔",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main Urdu seekh raha hoon.",
+              "urdu": "میں اردو سیکھ رہا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main Urdu seekh rahi hoon.",
+              "urdu": "میں اردو سیکھ رہی ہوں۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        },
+        {
+          "id": "s-b9-3",
+          "en": "I'm drinking tea.",
+          "roman": "Main chai pee raha hoon.",
+          "urdu": "میں چائے پی رہا ہوں۔",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main chai pee raha hoon.",
+              "urdu": "میں چائے پی رہا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main chai pee rahi hoon.",
+              "urdu": "میں چائے پی رہی ہوں۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        },
+        {
+          "id": "s-b9-4",
+          "en": "I'm eating.",
+          "roman": "Main khaana kha raha hoon.",
+          "urdu": "میں کھانا کھا رہا ہوں۔",
+          "kind": "sentence",
+          "note": "Literally \"I am eating food\" — that's how Urdu says \"I'm eating\".",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main khaana kha raha hoon.",
+              "urdu": "میں کھانا کھا رہا ہوں۔"
+            },
+            "feminine": {
+              "roman": "Main khaana kha rahi hoon.",
+              "urdu": "میں کھانا کھا رہی ہوں۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        },
+        {
+          "id": "s-b9-5",
+          "en": "What are you doing?",
+          "roman": "Aap kya kar rahe hain?",
+          "urdu": "آپ کیا کر رہے ہیں؟",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Aap kya kar rahe hain?",
+              "urdu": "آپ کیا کر رہے ہیں؟"
+            },
+            "feminine": {
+              "roman": "Aap kya kar rahi hain?",
+              "urdu": "آپ کیا کر رہی ہیں؟"
+            },
+            "explain": "Rahe when asking a man (or a group), rahi when asking a woman.",
+            "by": "listener"
+          }
+        },
+        {
+          "id": "s-b9-6",
+          "en": "My brother is working.",
+          "roman": "Mera bhai kaam kar raha hai.",
+          "urdu": "میرا بھائی کام کر رہا ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b9-7",
+          "en": "My sister is learning Urdu.",
+          "roman": "Meri behen Urdu seekh rahi hai.",
+          "urdu": "میری بہن اردو سیکھ رہی ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b9-8",
+          "en": "I'm not working.",
+          "roman": "Main kaam nahi kar raha.",
+          "urdu": "میں کام نہیں کر رہا۔",
+          "kind": "sentence",
+          "note": "With nahi, people usually drop hoon at the end.",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main kaam nahi kar raha.",
+              "urdu": "میں کام نہیں کر رہا۔"
+            },
+            "feminine": {
+              "roman": "Main kaam nahi kar rahi.",
+              "urdu": "میں کام نہیں کر رہی۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        }
+      ],
+      "dialogue": {
+        "title": "Hamza drops by",
+        "partner": {
+          "name": "Hamza",
+          "character": "hamza"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap kya kar rahe hain?",
+            "urdu": "آپ کیا کر رہے ہیں؟",
+            "en": "What are you doing?"
+          },
+          {
+            "who": "you",
+            "roman": "Main Urdu seekh raha hoon.",
+            "urdu": "میں اردو سیکھ رہا ہوں۔",
+            "en": "I'm learning Urdu.",
+            "f": {
+              "roman": "Main Urdu seekh rahi hoon.",
+              "urdu": "میں اردو سیکھ رہی ہوں۔"
+            }
+          },
+          {
+            "who": "them",
+            "roman": "Bohat acha! Main chai pee raha hoon. Kya aap ko chai chahiye?",
+            "urdu": "بہت اچھا! میں چائے پی رہا ہوں۔ کیا آپ کو چائے چاہیے؟",
+            "en": "Great! I'm drinking tea. Do you want tea?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji haan, shukriya!",
+            "urdu": "جی ہاں، شکریہ!",
+            "en": "Yes, thank you!"
+          }
+        ]
+      },
+      "kind": "build"
+    },
+    {
+      "id": "b10",
+      "title": "Help! Please speak slowly",
+      "objective": "Ask people to slow down or repeat, ask for help, and say you know a little Urdu.",
+      "phrases": [
+        {
+          "id": "w-boliye",
+          "roman": "boliye",
+          "urdu": "بولیے",
+          "en": "please speak / please say",
+          "kind": "word"
+        },
+        {
+          "id": "w-aahista",
+          "roman": "aahista",
+          "urdu": "آہستہ",
+          "en": "slowly",
+          "kind": "word"
+        },
+        {
+          "id": "w-dobara",
+          "roman": "dobara",
+          "urdu": "دوبارہ",
+          "en": "again",
+          "kind": "word"
+        },
+        {
+          "id": "w-madad",
+          "roman": "madad",
+          "urdu": "مدد",
+          "en": "help",
+          "kind": "word"
+        },
+        {
+          "id": "w-sakte",
+          "roman": "sakte",
+          "urdu": "سکتے",
+          "en": "can (with aap)",
+          "kind": "word",
+          "note": "Kya aap … kar sakte hain? = Can you …? (asking a woman: sakti hain)"
+        },
+        {
+          "id": "w-samajh",
+          "roman": "samajh",
+          "urdu": "سمجھ",
+          "en": "understanding",
+          "kind": "word"
+        },
+        {
+          "id": "w-aati",
+          "roman": "aati",
+          "urdu": "آتی",
+          "en": "comes (I know — for a language)",
+          "kind": "word",
+          "note": "Mujhe Urdu aati hai = \"to me Urdu comes\" = I know Urdu."
+        }
+      ],
+      "pattern": {
+        "title": "___ boliye = Please say ___",
+        "frame": {
+          "roman": "Kya aap ___ sakte hain?",
+          "urdu": "کیا آپ ___ سکتے ہیں؟",
+          "en": "Can you ___?"
+        },
+        "literal": "(question) you ___ can?",
+        "explain": "Two polite tools. 1) Add -iye to a verb for \"please …\": boliye = please speak. 2) Kya aap … sakte hain? = Can you …? These are your safety net — when you're lost in a conversation, they keep it going."
+      },
+      "builds": [
+        {
+          "id": "s-b10-1",
+          "en": "Please speak slowly.",
+          "roman": "Aahista boliye.",
+          "urdu": "آہستہ بولیے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b10-2",
+          "en": "Please say it again.",
+          "roman": "Dobara boliye.",
+          "urdu": "دوبارہ بولیے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b10-3",
+          "en": "I didn't understand.",
+          "roman": "Mujhe samajh nahi aaya.",
+          "urdu": "مجھے سمجھ نہیں آیا۔",
+          "kind": "sentence",
+          "note": "Literally \"to me understanding didn't come\". Learn it as a block.",
+          "accept": [
+            "mujhe samajh nahi aai"
+          ]
+        },
+        {
+          "id": "s-b10-4",
+          "en": "Can you help me?",
+          "roman": "Kya aap meri madad kar sakte hain?",
+          "urdu": "کیا آپ میری مدد کر سکتے ہیں؟",
+          "kind": "sentence",
+          "note": "Meri madad = my help (madad is feminine)."
+        },
+        {
+          "id": "s-b10-5",
+          "en": "Can you speak slowly?",
+          "roman": "Kya aap aahista bol sakte hain?",
+          "urdu": "کیا آپ آہستہ بول سکتے ہیں؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b10-6",
+          "en": "Can you say it again?",
+          "roman": "Kya aap dobara bol sakte hain?",
+          "urdu": "کیا آپ دوبارہ بول سکتے ہیں؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b10-7",
+          "en": "I know a little Urdu.",
+          "roman": "Mujhe thori Urdu aati hai.",
+          "urdu": "مجھے تھوڑی اردو آتی ہے۔",
+          "kind": "sentence",
+          "note": "Thori (not thora) because Urdu, the language, is feminine."
+        },
+        {
+          "id": "s-b10-8",
+          "en": "Thank you very much.",
+          "roman": "Bohat shukriya.",
+          "urdu": "بہت شکریہ۔",
+          "kind": "sentence"
+        }
+      ],
+      "dialogue": {
+        "title": "Dada ji talks fast",
+        "partner": {
+          "name": "Dada ji",
+          "character": "dada"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Beta, aap kahan se hain aur aap kya kar rahe hain?",
+            "urdu": "بیٹا، آپ کہاں سے ہیں اور آپ کیا کر رہے ہیں؟",
+            "en": "Dear, where are you from and what are you doing?"
+          },
+          {
+            "who": "you",
+            "roman": "Dobara boliye, please. Mujhe samajh nahi aaya.",
+            "urdu": "دوبارہ بولیے، پلیز۔ مجھے سمجھ نہیں آیا۔",
+            "en": "Please say it again. I didn't understand."
+          },
+          {
+            "who": "them",
+            "roman": "Aap... kahan... se... hain?",
+            "urdu": "آپ... کہاں... سے... ہیں؟",
+            "en": "Where... are... you... from?"
+          },
+          {
+            "who": "you",
+            "roman": "Main London se hoon. Mujhe thori Urdu aati hai.",
+            "urdu": "میں لندن سے ہوں۔ مجھے تھوڑی اردو آتی ہے۔",
+            "en": "I'm from London. I know a little Urdu."
+          },
+          {
+            "who": "them",
+            "roman": "Shabash, beta!",
+            "urdu": "شاباش، بیٹا!",
+            "en": "Well done, dear!"
+          }
+        ]
+      },
+      "kind": "build"
+    },
+    {
+      "id": "b11",
+      "title": "Yesterday: what happened",
+      "objective": "Say where you went and what you ate or drank.",
+      "phrases": [
+        {
+          "id": "w-kal",
+          "roman": "kal",
+          "urdu": "کل",
+          "en": "yesterday · tomorrow",
+          "kind": "word",
+          "note": "Kal means both! The verb tells you which."
+        },
+        {
+          "id": "w-gaya",
+          "roman": "gaya",
+          "urdu": "گیا",
+          "en": "went (man)",
+          "kind": "word"
+        },
+        {
+          "id": "w-gayi",
+          "roman": "gayi",
+          "urdu": "گئی",
+          "en": "went (woman)",
+          "kind": "word"
+        },
+        {
+          "id": "w-gaye",
+          "roman": "gaye",
+          "urdu": "گئے",
+          "en": "went (with aap)",
+          "kind": "word"
+        },
+        {
+          "id": "w-maine",
+          "roman": "maine",
+          "urdu": "میں نے",
+          "en": "I (did)",
+          "kind": "word",
+          "note": "Use maine instead of main for past actions that DO something to a thing: eat, drink, see."
+        },
+        {
+          "id": "w-khaya",
+          "roman": "khaya",
+          "urdu": "کھایا",
+          "en": "ate",
+          "kind": "word"
+        },
+        {
+          "id": "w-piya",
+          "roman": "piya",
+          "urdu": "پیا",
+          "en": "drank",
+          "kind": "word",
+          "note": "Becomes pi with feminine things: Maine chai pi."
+        },
+        {
+          "id": "w-dekha",
+          "roman": "dekha",
+          "urdu": "دیکھا",
+          "en": "saw",
+          "kind": "word"
+        }
+      ],
+      "pattern": {
+        "title": "Main ___ gaya / gayi = I went to ___",
+        "frame": {
+          "roman": "Main kal ___ gaya.",
+          "urdu": "میں کل ___ گیا۔",
+          "en": "Yesterday I went to ___."
+        },
+        "literal": "I yesterday ___ went",
+        "explain": "Going somewhere: Main bazaar gaya (man) / gayi (woman). Doing something to a thing (eat, drink, see): use maine, and the verb matches the THING, not you: Maine paani piya (water is masculine), Maine chai pi (tea is feminine) — same for men and women."
+      },
+      "builds": [
+        {
+          "id": "s-b11-1",
+          "en": "Yesterday I went to the market.",
+          "roman": "Main kal bazaar gaya.",
+          "urdu": "میں کل بازار گیا۔",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main kal bazaar gaya.",
+              "urdu": "میں کل بازار گیا۔"
+            },
+            "feminine": {
+              "roman": "Main kal bazaar gayi.",
+              "urdu": "میں کل بازار گئی۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        },
+        {
+          "id": "s-b11-2",
+          "en": "I went home.",
+          "roman": "Main ghar gaya.",
+          "urdu": "میں گھر گیا۔",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main ghar gaya.",
+              "urdu": "میں گھر گیا۔"
+            },
+            "feminine": {
+              "roman": "Main ghar gayi.",
+              "urdu": "میں گھر گئی۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        },
+        {
+          "id": "s-b11-3",
+          "en": "I ate (food).",
+          "roman": "Maine khaana khaya.",
+          "urdu": "میں نے کھانا کھایا۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b11-4",
+          "en": "I drank tea.",
+          "roman": "Maine chai pi.",
+          "urdu": "میں نے چائے پی۔",
+          "kind": "sentence",
+          "note": "Pi, because chai is feminine."
+        },
+        {
+          "id": "s-b11-5",
+          "en": "I drank water.",
+          "roman": "Maine paani piya.",
+          "urdu": "میں نے پانی پیا۔",
+          "kind": "sentence",
+          "note": "Piya, because paani is masculine."
+        },
+        {
+          "id": "s-b11-6",
+          "en": "I saw the market.",
+          "roman": "Maine bazaar dekha.",
+          "urdu": "میں نے بازار دیکھا۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b11-7",
+          "en": "Where did you go yesterday?",
+          "roman": "Aap kal kahan gaye?",
+          "urdu": "آپ کل کہاں گئے؟",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Aap kal kahan gaye?",
+              "urdu": "آپ کل کہاں گئے؟"
+            },
+            "feminine": {
+              "roman": "Aap kal kahan gayi?",
+              "urdu": "آپ کل کہاں گئیں؟"
+            },
+            "explain": "Asking a woman: gayi (written گئیں).",
+            "by": "listener"
+          }
+        },
+        {
+          "id": "s-b11-8",
+          "en": "Did you eat?",
+          "roman": "Kya aap ne khaana khaya?",
+          "urdu": "کیا آپ نے کھانا کھایا؟",
+          "kind": "sentence",
+          "accept": [
+            "kya aapne khaana khaya"
+          ],
+          "note": "Aap ne = you (did). Just like maine (I did), ne marks who did it in the past — main → maine, aap → aap ne."
+        },
+        {
+          "id": "s-b11-9",
+          "en": "I ate biryani.",
+          "roman": "Maine biryani khayi.",
+          "urdu": "میں نے بریانی کھائی۔",
+          "kind": "sentence",
+          "note": "Khayi (not khaya) because biryani is feminine."
+        }
+      ],
+      "dialogue": {
+        "title": "Ayesha asks about your day",
+        "partner": {
+          "name": "Ayesha",
+          "character": "ayesha"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap kal kahan gaye?",
+            "urdu": "آپ کل کہاں گئے؟",
+            "en": "Where did you go yesterday?"
+          },
+          {
+            "who": "you",
+            "roman": "Main kal bazaar gaya.",
+            "urdu": "میں کل بازار گیا۔",
+            "en": "Yesterday I went to the market.",
+            "f": {
+              "roman": "Main kal bazaar gayi.",
+              "urdu": "میں کل بازار گئی۔"
+            }
+          },
+          {
+            "who": "them",
+            "roman": "Acha! Kya aap ne khaana khaya?",
+            "urdu": "اچھا! کیا آپ نے کھانا کھایا؟",
+            "en": "Oh nice! Did you eat?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji haan, maine biryani khayi.",
+            "urdu": "جی ہاں، میں نے بریانی کھائی۔",
+            "en": "Yes, I ate biryani."
+          },
+          {
+            "who": "them",
+            "roman": "Mujhe bhi biryani bohat pasand hai!",
+            "urdu": "مجھے بھی بریانی بہت پسند ہے!",
+            "en": "I really like biryani too!"
+          }
+        ]
+      },
+      "kind": "build"
+    },
+    {
+      "id": "b12",
+      "title": "Tomorrow: plans",
+      "objective": "Say what you will do, make plans and say goodbye.",
+      "phrases": [
+        {
+          "id": "w-hum",
+          "roman": "hum",
+          "urdu": "ہم",
+          "en": "we",
+          "kind": "word"
+        },
+        {
+          "id": "w-aaunga",
+          "roman": "aaunga",
+          "urdu": "آؤں گا",
+          "en": "will come (man)",
+          "kind": "word",
+          "note": "Women say aaungi."
+        },
+        {
+          "id": "w-jaunga",
+          "roman": "jaunga",
+          "urdu": "جاؤں گا",
+          "en": "will go (man)",
+          "kind": "word",
+          "note": "Women say jaungi."
+        },
+        {
+          "id": "w-milenge",
+          "roman": "milenge",
+          "urdu": "ملیں گے",
+          "en": "will meet (we)",
+          "kind": "word"
+        },
+        {
+          "id": "w-phir",
+          "roman": "phir",
+          "urdu": "پھر",
+          "en": "again · then",
+          "kind": "word"
+        },
+        {
+          "id": "w-inshallah",
+          "roman": "zaroor",
+          "urdu": "ضرور",
+          "en": "definitely / of course",
+          "kind": "word",
+          "note": "Add it to plans to sound keen: \"Zaroor, hum phir milenge!\""
+        },
+        {
+          "id": "w-khudahafiz",
+          "roman": "Khuda hafiz",
+          "urdu": "خدا حافظ",
+          "en": "goodbye",
+          "kind": "word"
+        }
+      ],
+      "pattern": {
+        "title": "Main ___ jaunga / jaungi = I will go to ___",
+        "frame": {
+          "roman": "Main kal ___ jaunga.",
+          "urdu": "میں کل ___ جاؤں گا۔",
+          "en": "Tomorrow I'll go to ___."
+        },
+        "literal": "I tomorrow ___ will-go",
+        "explain": "The future adds -ga (men) or -gi (women) to the end: jaunga / jaungi (will go), aaunga / aaungi (will come). For \"we\": hum … milenge (we will meet). Remember: kal + future = tomorrow."
+      },
+      "builds": [
+        {
+          "id": "s-b12-1",
+          "en": "I'll come tomorrow.",
+          "roman": "Main kal aaunga.",
+          "urdu": "میں کل آؤں گا۔",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main kal aaunga.",
+              "urdu": "میں کل آؤں گا۔"
+            },
+            "feminine": {
+              "roman": "Main kal aaungi.",
+              "urdu": "میں کل آؤں گی۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        },
+        {
+          "id": "s-b12-2",
+          "en": "I'll go to the market.",
+          "roman": "Main bazaar jaunga.",
+          "urdu": "میں بازار جاؤں گا۔",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main bazaar jaunga.",
+              "urdu": "میں بازار جاؤں گا۔"
+            },
+            "feminine": {
+              "roman": "Main bazaar jaungi.",
+              "urdu": "میں بازار جاؤں گی۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        },
+        {
+          "id": "s-b12-3",
+          "en": "We'll meet tomorrow.",
+          "roman": "Hum kal milenge.",
+          "urdu": "ہم کل ملیں گے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b12-4",
+          "en": "See you again.",
+          "roman": "Phir milenge.",
+          "urdu": "پھر ملیں گے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b12-5",
+          "en": "Will you come tomorrow?",
+          "roman": "Kya aap kal aayenge?",
+          "urdu": "کیا آپ کل آئیں گے؟",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Kya aap kal aayenge?",
+              "urdu": "کیا آپ کل آئیں گے؟"
+            },
+            "feminine": {
+              "roman": "Kya aap kal aayengi?",
+              "urdu": "کیا آپ کل آئیں گی؟"
+            },
+            "explain": "Use the first form when talking to a man, the second when talking to a woman.",
+            "by": "listener"
+          }
+        },
+        {
+          "id": "s-b12-6",
+          "en": "I'll go home.",
+          "roman": "Main ghar jaunga.",
+          "urdu": "میں گھر جاؤں گا۔",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main ghar jaunga.",
+              "urdu": "میں گھر جاؤں گا۔"
+            },
+            "feminine": {
+              "roman": "Main ghar jaungi.",
+              "urdu": "میں گھر جاؤں گی۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        },
+        {
+          "id": "s-b12-7",
+          "en": "Of course, we'll meet again.",
+          "roman": "Zaroor, hum phir milenge.",
+          "urdu": "ضرور، ہم پھر ملیں گے۔",
+          "kind": "sentence",
+          "accept": [
+            "inshallah hum phir milenge"
+          ]
+        },
+        {
+          "id": "s-b12-8",
+          "en": "Goodbye!",
+          "roman": "Khuda hafiz!",
+          "urdu": "خدا حافظ!",
+          "kind": "sentence",
+          "accept": [
+            "allah hafiz"
+          ]
+        },
+        {
+          "id": "s-b12-9",
+          "en": "Tomorrow I'll go to the mosque.",
+          "roman": "Main kal masjid jaunga.",
+          "urdu": "میں کل مسجد جاؤں گا۔",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Main kal masjid jaunga.",
+              "urdu": "میں کل مسجد جاؤں گا۔"
+            },
+            "feminine": {
+              "roman": "Main kal masjid jaungi.",
+              "urdu": "میں کل مسجد جاؤں گی۔"
+            },
+            "explain": "Men say the -a form, women say the -i form. The verb matches the speaker.",
+            "by": "speaker"
+          }
+        }
+      ],
+      "dialogue": {
+        "title": "Making plans with Bilal",
+        "partner": {
+          "name": "Bilal",
+          "character": "bilal"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Kya aap kal aayenge?",
+            "urdu": "کیا آپ کل آئیں گے؟",
+            "en": "Will you come tomorrow?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji haan, main kal aaunga.",
+            "urdu": "جی ہاں، میں کل آؤں گا۔",
+            "en": "Yes, I'll come tomorrow.",
+            "f": {
+              "roman": "Ji haan, main kal aaungi.",
+              "urdu": "جی ہاں، میں کل آؤں گی۔"
+            }
+          },
+          {
+            "who": "them",
+            "roman": "Bohat acha! Hum kal bazaar jayenge.",
+            "urdu": "بہت اچھا! ہم کل بازار جائیں گے۔",
+            "en": "Great! We'll go to the market tomorrow."
+          },
+          {
+            "who": "you",
+            "roman": "Zaroor! Phir milenge.",
+            "urdu": "ضرور! پھر ملیں گے۔",
+            "en": "Definitely! See you then."
+          },
+          {
+            "who": "them",
+            "roman": "Khuda hafiz!",
+            "urdu": "خدا حافظ!",
+            "en": "Goodbye!"
+          }
+        ]
+      },
+      "kind": "build"
+    }
+  ],
+  "level": 3,
+  "guide": [
+    {
+      "title": "Main ___ raha / rahi hoon = I am ___ing",
+      "body": "To say what's happening now: verb + raha/rahi + hoon. Men say raha, women say rahi — this little word shows who's speaking. \"Work\" is kaam kar (work do): Main kaam kar raha hoon. With aap, use rahe hain.",
+      "examples": [
+        "s-b9-1",
+        "s-b9-2"
+      ]
+    },
+    {
+      "title": "___ boliye = Please say ___",
+      "body": "Two polite tools. 1) Add -iye to a verb for \"please …\": boliye = please speak. 2) Kya aap … sakte hain? = Can you …? These are your safety net — when you're lost in a conversation, they keep it going.",
+      "examples": [
+        "s-b10-1",
+        "s-b10-2"
+      ]
+    },
+    {
+      "title": "Main ___ gaya / gayi = I went to ___",
+      "body": "Going somewhere: Main bazaar gaya (man) / gayi (woman). Doing something to a thing (eat, drink, see): use maine, and the verb matches the THING, not you: Maine paani piya (water is masculine), Maine chai pi (tea is feminine) — same for men and women.",
+      "examples": [
+        "s-b11-1",
+        "s-b11-2"
+      ]
+    },
+    {
+      "title": "Main ___ jaunga / jaungi = I will go to ___",
+      "body": "The future adds -ga (men) or -gi (women) to the end: jaunga / jaungi (will go), aaunga / aaungi (will come). For \"we\": hum … milenge (we will meet). Remember: kal + future = tomorrow.",
+      "examples": [
+        "s-b12-1",
+        "s-b12-2"
+      ]
+    }
+  ]
+}

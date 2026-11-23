@@ -1,0 +1,794 @@
+{
+  "id": "bb1",
+  "title": "Building Blocks 1: First words",
+  "description": "Your first words and sentences — say how you are, ask questions, introduce people, ask for things.",
+  "host": "bilal",
+  "chapter": "Chapter 9 · First sentences",
+  "story": "Now you know the words — time to put them into real sentences, one pattern at a time.",
+  "lessons": [
+    {
+      "id": "b1",
+      "title": "I am…",
+      "objective": "Say how you are: \"I am fine\", \"I am happy\", \"me too\".",
+      "phrases": [
+        {
+          "id": "w-main",
+          "roman": "main",
+          "urdu": "میں",
+          "en": "I",
+          "kind": "word",
+          "note": "The \"n\" is soft — air goes through the nose. Sounds close to \"meh(n)\"."
+        },
+        {
+          "id": "w-hoon",
+          "roman": "hoon",
+          "urdu": "ہوں",
+          "en": "am",
+          "kind": "word",
+          "note": "Only ever used with main (I). It always goes at the END of the sentence."
+        },
+        {
+          "id": "w-theek",
+          "roman": "theek",
+          "urdu": "ٹھیک",
+          "en": "fine / okay",
+          "kind": "word",
+          "note": "The \"th\" is a \"t\" with a puff of air — not the \"th\" in \"think\"."
+        },
+        {
+          "id": "w-khush",
+          "roman": "khush",
+          "urdu": "خوش",
+          "en": "happy",
+          "kind": "word",
+          "note": "Starts with a soft scrape in the throat (kh), like Scottish \"loch\"."
+        },
+        {
+          "id": "w-pareshan",
+          "roman": "pareshan",
+          "urdu": "پریشان",
+          "en": "worried / upset",
+          "kind": "word"
+        },
+        {
+          "id": "w-bohat",
+          "roman": "bohat",
+          "urdu": "بہت",
+          "en": "very / a lot",
+          "kind": "word",
+          "note": "Goes right before the word it makes stronger: bohat khush = very happy."
+        },
+        {
+          "id": "w-bhi",
+          "roman": "bhi",
+          "urdu": "بھی",
+          "en": "also / too",
+          "kind": "word",
+          "note": "Goes right after the word it's about: main bhi = me too."
+        },
+        {
+          "id": "w-shukriya",
+          "roman": "shukriya",
+          "urdu": "شکریہ",
+          "en": "thank you",
+          "kind": "word"
+        }
+      ],
+      "pattern": {
+        "title": "Main ___ hoon = I am ___",
+        "frame": {
+          "roman": "Main ___ hoon.",
+          "urdu": "میں ___ ہوں۔",
+          "en": "I am ___."
+        },
+        "literal": "I ___ am",
+        "explain": "In Urdu the verb goes LAST. English says \"I am happy\"; Urdu says \"I happy am\" — Main khush hoon. Put any describing word in the gap. Add bohat before it for \"very\", and bhi after main for \"too\"."
+      },
+      "builds": [
+        {
+          "id": "s-b1-1",
+          "en": "I am fine.",
+          "roman": "Main theek hoon.",
+          "urdu": "میں ٹھیک ہوں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b1-2",
+          "en": "I am happy.",
+          "roman": "Main khush hoon.",
+          "urdu": "میں خوش ہوں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b1-3",
+          "en": "I am very happy.",
+          "roman": "Main bohat khush hoon.",
+          "urdu": "میں بہت خوش ہوں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b1-4",
+          "en": "I am worried.",
+          "roman": "Main pareshan hoon.",
+          "urdu": "میں پریشان ہوں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b1-5",
+          "en": "I am fine too.",
+          "roman": "Main bhi theek hoon.",
+          "urdu": "میں بھی ٹھیک ہوں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b1-6",
+          "en": "I am {name}.",
+          "roman": "Main {name} hoon.",
+          "urdu": "میں {name} ہوں۔",
+          "kind": "sentence",
+          "note": "A friendly way to say your name: \"I am …\".",
+          "slot": "name"
+        },
+        {
+          "id": "s-b1-7",
+          "en": "I'm fine, thank you.",
+          "roman": "Main theek hoon, shukriya.",
+          "urdu": "میں ٹھیک ہوں، شکریہ۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b1-8",
+          "en": "I'm very happy too.",
+          "roman": "Main bhi bohat khush hoon.",
+          "urdu": "میں بھی بہت خوش ہوں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b1-9",
+          "en": "I'm very worried.",
+          "roman": "Main bohat pareshan hoon.",
+          "urdu": "میں بہت پریشان ہوں۔",
+          "kind": "sentence"
+        }
+      ],
+      "dialogue": {
+        "title": "Bilal meets you at the airport",
+        "partner": {
+          "name": "Bilal",
+          "character": "bilal"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Main Bilal hoon. Main bohat khush hoon!",
+            "urdu": "میں بلال ہوں۔ میں بہت خوش ہوں!",
+            "en": "I'm Bilal. I'm so happy!"
+          },
+          {
+            "who": "you",
+            "roman": "Main {name} hoon. Main bhi bohat khush hoon.",
+            "urdu": "میں {name} ہوں۔ میں بھی بہت خوش ہوں۔",
+            "en": "I'm {name}. I'm very happy too."
+          },
+          {
+            "who": "them",
+            "roman": "Shukriya!",
+            "urdu": "شکریہ!",
+            "en": "Thank you!"
+          }
+        ]
+      },
+      "kind": "build"
+    },
+    {
+      "id": "b2",
+      "title": "You are… / Are you…?",
+      "objective": "Ask how someone is, ask yes/no questions, and say \"not\".",
+      "phrases": [
+        {
+          "id": "w-aap",
+          "roman": "aap",
+          "urdu": "آپ",
+          "en": "you (polite)",
+          "kind": "word",
+          "note": "The respectful \"you\". Use it with everyone you don't know well — and all elders."
+        },
+        {
+          "id": "w-hain",
+          "roman": "hain",
+          "urdu": "ہیں",
+          "en": "are",
+          "kind": "word",
+          "note": "Goes with aap: aap … hain. Like hoon, it comes last."
+        },
+        {
+          "id": "w-kaise",
+          "roman": "kaise",
+          "urdu": "کیسے",
+          "en": "how",
+          "kind": "word",
+          "note": "When asking a woman, it becomes kaisi."
+        },
+        {
+          "id": "w-kya",
+          "roman": "kya",
+          "urdu": "کیا",
+          "en": "what · (turns a sentence into a question)",
+          "kind": "word",
+          "note": "At the START of a sentence, kya makes a yes/no question, like \"Do…?\" / \"Are…?\"."
+        },
+        {
+          "id": "w-nahi",
+          "roman": "nahi",
+          "urdu": "نہیں",
+          "en": "no / not",
+          "kind": "word",
+          "note": "For \"not\", put it right before the verb: theek nahi hoon = not fine am."
+        },
+        {
+          "id": "w-haan",
+          "roman": "haan",
+          "urdu": "ہاں",
+          "en": "yes",
+          "kind": "word"
+        },
+        {
+          "id": "w-ji",
+          "roman": "ji",
+          "urdu": "جی",
+          "en": "yes (polite) · polite word",
+          "kind": "word",
+          "note": "Ji haan = yes (politely). Adding ji is like saying \"sir/ma'am\"."
+        }
+      ],
+      "pattern": {
+        "title": "Aap ___ hain = You are ___",
+        "frame": {
+          "roman": "Kya aap ___ hain?",
+          "urdu": "کیا آپ ___ ہیں؟",
+          "en": "Are you ___?"
+        },
+        "literal": "(question) you ___ are?",
+        "explain": "Main goes with hoon; aap goes with hain. To ask a yes/no question, just put Kya at the start. To say \"not\", put nahi right before the verb: Main theek nahi hoon."
+      },
+      "builds": [
+        {
+          "id": "s-b2-1",
+          "en": "How are you?",
+          "roman": "Aap kaise hain?",
+          "urdu": "آپ کیسے ہیں؟",
+          "kind": "sentence",
+          "genderVariants": {
+            "masculine": {
+              "roman": "Aap kaise hain?",
+              "urdu": "آپ کیسے ہیں؟"
+            },
+            "feminine": {
+              "roman": "Aap kaisi hain?",
+              "urdu": "آپ کیسی ہیں؟"
+            },
+            "explain": "Kaise when asking a man, kaisi when asking a woman.",
+            "by": "listener"
+          }
+        },
+        {
+          "id": "s-b2-2",
+          "en": "You are happy.",
+          "roman": "Aap khush hain.",
+          "urdu": "آپ خوش ہیں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b2-3",
+          "en": "Are you happy?",
+          "roman": "Kya aap khush hain?",
+          "urdu": "کیا آپ خوش ہیں؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b2-4",
+          "en": "Yes, I am happy.",
+          "roman": "Ji haan, main khush hoon.",
+          "urdu": "جی ہاں، میں خوش ہوں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b2-5",
+          "en": "Are you okay?",
+          "roman": "Kya aap theek hain?",
+          "urdu": "کیا آپ ٹھیک ہیں؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b2-6",
+          "en": "No, I'm not okay.",
+          "roman": "Nahi, main theek nahi hoon.",
+          "urdu": "نہیں، میں ٹھیک نہیں ہوں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b2-7",
+          "en": "I'm not worried.",
+          "roman": "Main pareshan nahi hoon.",
+          "urdu": "میں پریشان نہیں ہوں۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b2-8",
+          "en": "Are you worried?",
+          "roman": "Kya aap pareshan hain?",
+          "urdu": "کیا آپ پریشان ہیں؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b2-9",
+          "en": "You are very happy too.",
+          "roman": "Aap bhi bohat khush hain.",
+          "urdu": "آپ بھی بہت خوش ہیں۔",
+          "kind": "sentence"
+        }
+      ],
+      "dialogue": {
+        "title": "Ayesha asks how you are",
+        "partner": {
+          "name": "Ayesha",
+          "character": "ayesha"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap kaise hain?",
+            "urdu": "آپ کیسے ہیں؟",
+            "en": "How are you?"
+          },
+          {
+            "who": "you",
+            "roman": "Main theek hoon, shukriya.",
+            "urdu": "میں ٹھیک ہوں، شکریہ۔",
+            "en": "I'm fine, thank you."
+          },
+          {
+            "who": "them",
+            "roman": "Kya aap khush hain?",
+            "urdu": "کیا آپ خوش ہیں؟",
+            "en": "Are you happy?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji haan, main bohat khush hoon. Kya aap bhi khush hain?",
+            "urdu": "جی ہاں، میں بہت خوش ہوں۔ کیا آپ بھی خوش ہیں؟",
+            "en": "Yes, I'm very happy. Are you happy too?"
+          },
+          {
+            "who": "them",
+            "roman": "Ji haan, main bhi khush hoon!",
+            "urdu": "جی ہاں، میں بھی خوش ہوں!",
+            "en": "Yes, I'm happy too!"
+          }
+        ]
+      },
+      "kind": "build"
+    },
+    {
+      "id": "b3",
+      "title": "This is my…",
+      "objective": "Introduce people and things: \"This is my brother\", \"My name is…\".",
+      "phrases": [
+        {
+          "id": "w-yeh",
+          "roman": "yeh",
+          "urdu": "یہ",
+          "en": "this / he / she (nearby)",
+          "kind": "word"
+        },
+        {
+          "id": "w-hai",
+          "roman": "hai",
+          "urdu": "ہے",
+          "en": "is",
+          "kind": "word",
+          "note": "For he, she, it or this. Like hoon and hain, it goes last."
+        },
+        {
+          "id": "w-mera",
+          "roman": "mera",
+          "urdu": "میرا",
+          "en": "my (for masculine words)",
+          "kind": "word",
+          "note": "Use with masculine words: mera ghar, mera bhai, mera naam."
+        },
+        {
+          "id": "w-meri",
+          "roman": "meri",
+          "urdu": "میری",
+          "en": "my (for feminine words)",
+          "kind": "word",
+          "note": "Use with feminine words: meri behen."
+        },
+        {
+          "id": "w-naam",
+          "roman": "naam",
+          "urdu": "نام",
+          "en": "name",
+          "kind": "word"
+        },
+        {
+          "id": "w-dost",
+          "roman": "dost",
+          "urdu": "دوست",
+          "en": "friend",
+          "kind": "word",
+          "note": "A male friend is mera dost, a female friend is meri dost."
+        },
+        {
+          "id": "w-ghar",
+          "roman": "ghar",
+          "urdu": "گھر",
+          "en": "house / home",
+          "kind": "word"
+        },
+        {
+          "id": "w-bhai",
+          "roman": "bhai",
+          "urdu": "بھائی",
+          "en": "brother",
+          "kind": "word"
+        },
+        {
+          "id": "w-behen",
+          "roman": "behen",
+          "urdu": "بہن",
+          "en": "sister",
+          "kind": "word"
+        },
+        {
+          "id": "w-ka",
+          "roman": "ka",
+          "urdu": "کا",
+          "en": "'s / of",
+          "kind": "word",
+          "note": "aap ka = your (literally \"you's\"). aap ka ghar = your house."
+        }
+      ],
+      "pattern": {
+        "title": "Yeh mera ___ hai = This is my ___",
+        "frame": {
+          "roman": "Yeh mera ___ hai.",
+          "urdu": "یہ میرا ___ ہے۔",
+          "en": "This is my ___."
+        },
+        "literal": "this my ___ is",
+        "explain": "Hai means \"is\" and goes last. \"My\" changes to match the thing: mera for masculine words (ghar, bhai, naam), meri for feminine words (behen). \"Your\" is aap ka: aap ka naam = your name. And kya in the middle of a sentence means \"what\": Aap ka naam kya hai? = your name what is?"
+      },
+      "builds": [
+        {
+          "id": "s-b3-1",
+          "en": "This is my house.",
+          "roman": "Yeh mera ghar hai.",
+          "urdu": "یہ میرا گھر ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b3-2",
+          "en": "This is my brother.",
+          "roman": "Yeh mera bhai hai.",
+          "urdu": "یہ میرا بھائی ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b3-3",
+          "en": "This is my sister.",
+          "roman": "Yeh meri behen hai.",
+          "urdu": "یہ میری بہن ہے۔",
+          "kind": "sentence",
+          "note": "Meri, because behen is feminine."
+        },
+        {
+          "id": "s-b3-4",
+          "en": "This is my friend.",
+          "roman": "Yeh mera dost hai.",
+          "urdu": "یہ میرا دوست ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b3-5",
+          "en": "My name is {name}.",
+          "roman": "Mera naam {name} hai.",
+          "urdu": "میرا نام {name} ہے۔",
+          "kind": "sentence",
+          "slot": "name"
+        },
+        {
+          "id": "s-b3-6",
+          "en": "What is your name?",
+          "roman": "Aap ka naam kya hai?",
+          "urdu": "آپ کا نام کیا ہے؟",
+          "kind": "sentence",
+          "accept": [
+            "aapka naam kya hai"
+          ]
+        },
+        {
+          "id": "s-b3-7",
+          "en": "Is this your house?",
+          "roman": "Kya yeh aap ka ghar hai?",
+          "urdu": "کیا یہ آپ کا گھر ہے؟",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b3-8",
+          "en": "This isn't my house.",
+          "roman": "Yeh mera ghar nahi hai.",
+          "urdu": "یہ میرا گھر نہیں ہے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b3-9",
+          "en": "My brother is very happy.",
+          "roman": "Mera bhai bohat khush hai.",
+          "urdu": "میرا بھائی بہت خوش ہے۔",
+          "kind": "sentence"
+        }
+      ],
+      "dialogue": {
+        "title": "Little Zara wants to know everything",
+        "partner": {
+          "name": "Zara",
+          "character": "zara"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Aap ka naam kya hai?",
+            "urdu": "آپ کا نام کیا ہے؟",
+            "en": "What is your name?"
+          },
+          {
+            "who": "you",
+            "roman": "Mera naam {name} hai. Aap ka naam kya hai?",
+            "urdu": "میرا نام {name} ہے۔ آپ کا نام کیا ہے؟",
+            "en": "My name is {name}. What is your name?"
+          },
+          {
+            "who": "them",
+            "roman": "Mera naam Zara hai! Yeh mera bhai hai, Bilal.",
+            "urdu": "میرا نام زارا ہے! یہ میرا بھائی ہے، بلال۔",
+            "en": "My name is Zara! This is my brother, Bilal."
+          },
+          {
+            "who": "you",
+            "roman": "Kya yeh aap ka ghar hai?",
+            "urdu": "کیا یہ آپ کا گھر ہے؟",
+            "en": "Is this your house?"
+          },
+          {
+            "who": "them",
+            "roman": "Ji haan! Yeh mera ghar hai.",
+            "urdu": "جی ہاں! یہ میرا گھر ہے۔",
+            "en": "Yes! This is my house."
+          }
+        ]
+      },
+      "kind": "build"
+    },
+    {
+      "id": "b4",
+      "title": "I want… / I need…",
+      "objective": "Ask for what you want: water, tea, food — and say no thanks.",
+      "phrases": [
+        {
+          "id": "w-mujhe",
+          "roman": "mujhe",
+          "urdu": "مجھے",
+          "en": "to me / me",
+          "kind": "word"
+        },
+        {
+          "id": "w-chahiye",
+          "roman": "chahiye",
+          "urdu": "چاہیے",
+          "en": "is needed / want",
+          "kind": "word",
+          "note": "Always goes last: mujhe … chahiye."
+        },
+        {
+          "id": "w-paani",
+          "roman": "paani",
+          "urdu": "پانی",
+          "en": "water",
+          "kind": "word"
+        },
+        {
+          "id": "w-chai",
+          "roman": "chai",
+          "urdu": "چائے",
+          "en": "tea",
+          "kind": "word"
+        },
+        {
+          "id": "w-khaana",
+          "roman": "khaana",
+          "urdu": "کھانا",
+          "en": "food",
+          "kind": "word",
+          "note": "The kh here is k + a puff of air (not the throat sound in khush)."
+        },
+        {
+          "id": "w-thora",
+          "roman": "thora",
+          "urdu": "تھوڑا",
+          "en": "a little",
+          "kind": "word"
+        },
+        {
+          "id": "w-aur",
+          "roman": "aur",
+          "urdu": "اور",
+          "en": "and · more",
+          "kind": "word"
+        },
+        {
+          "id": "w-ko",
+          "roman": "ko",
+          "urdu": "کو",
+          "en": "to",
+          "kind": "word",
+          "note": "aap ko = to you. Kya aap ko chai chahiye? = Do you want tea?"
+        }
+      ],
+      "pattern": {
+        "title": "Mujhe ___ chahiye = I need/want ___",
+        "frame": {
+          "roman": "Mujhe ___ chahiye.",
+          "urdu": "مجھے ___ چاہیے۔",
+          "en": "I need ___."
+        },
+        "literal": "to me ___ is needed",
+        "explain": "Urdu doesn't say \"I want tea\". It says \"to me, tea is needed\": Mujhe chai chahiye. It's the same for men and women. For \"you\", use aap ko (to you). Put nahi before chahiye for \"don't want\"."
+      },
+      "builds": [
+        {
+          "id": "s-b4-1",
+          "en": "I need water.",
+          "roman": "Mujhe paani chahiye.",
+          "urdu": "مجھے پانی چاہیے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b4-2",
+          "en": "I want tea.",
+          "roman": "Mujhe chai chahiye.",
+          "urdu": "مجھے چائے چاہیے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b4-3",
+          "en": "I want food.",
+          "roman": "Mujhe khaana chahiye.",
+          "urdu": "مجھے کھانا چاہیے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b4-4",
+          "en": "I need a little water.",
+          "roman": "Mujhe thora paani chahiye.",
+          "urdu": "مجھے تھوڑا پانی چاہیے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b4-5",
+          "en": "I want more tea.",
+          "roman": "Mujhe aur chai chahiye.",
+          "urdu": "مجھے اور چائے چاہیے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b4-6",
+          "en": "I don't want food.",
+          "roman": "Mujhe khaana nahi chahiye.",
+          "urdu": "مجھے کھانا نہیں چاہیے۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b4-7",
+          "en": "Do you want tea?",
+          "roman": "Kya aap ko chai chahiye?",
+          "urdu": "کیا آپ کو چائے چاہیے؟",
+          "kind": "sentence",
+          "accept": [
+            "kya aapko chai chahiye"
+          ]
+        },
+        {
+          "id": "s-b4-8",
+          "en": "Yes, thank you.",
+          "roman": "Ji haan, shukriya.",
+          "urdu": "جی ہاں، شکریہ۔",
+          "kind": "sentence"
+        },
+        {
+          "id": "s-b4-9",
+          "en": "I want tea and water.",
+          "roman": "Mujhe chai aur paani chahiye.",
+          "urdu": "مجھے چائے اور پانی چاہیے۔",
+          "kind": "sentence"
+        }
+      ],
+      "dialogue": {
+        "title": "Khala's kitchen",
+        "partner": {
+          "name": "Khala",
+          "character": "khala"
+        },
+        "lines": [
+          {
+            "who": "them",
+            "roman": "Beta, kya aap ko chai chahiye?",
+            "urdu": "بیٹا، کیا آپ کو چائے چاہیے؟",
+            "en": "Dear, do you want tea?"
+          },
+          {
+            "who": "you",
+            "roman": "Ji haan, shukriya.",
+            "urdu": "جی ہاں، شکریہ۔",
+            "en": "Yes, thank you."
+          },
+          {
+            "who": "them",
+            "roman": "Aur khaana?",
+            "urdu": "اور کھانا؟",
+            "en": "And food?"
+          },
+          {
+            "who": "you",
+            "roman": "Nahi, mujhe khaana nahi chahiye. Mujhe thora paani chahiye.",
+            "urdu": "نہیں، مجھے کھانا نہیں چاہیے۔ مجھے تھوڑا پانی چاہیے۔",
+            "en": "No, I don't want food. I need a little water."
+          },
+          {
+            "who": "them",
+            "roman": "Theek hai, beta!",
+            "urdu": "ٹھیک ہے، بیٹا!",
+            "en": "Okay, dear!"
+          }
+        ]
+      },
+      "kind": "build"
+    }
+  ],
+  "level": 3,
+  "guide": [
+    {
+      "title": "Main ___ hoon = I am ___",
+      "body": "In Urdu the verb goes LAST. English says \"I am happy\"; Urdu says \"I happy am\" — Main khush hoon. Put any describing word in the gap. Add bohat before it for \"very\", and bhi after main for \"too\".",
+      "examples": [
+        "s-b1-1",
+        "s-b1-2"
+      ]
+    },
+    {
+      "title": "Aap ___ hain = You are ___",
+      "body": "Main goes with hoon; aap goes with hain. To ask a yes/no question, just put Kya at the start. To say \"not\", put nahi right before the verb: Main theek nahi hoon.",
+      "examples": [
+        "s-b2-1",
+        "s-b2-2"
+      ]
+    },
+    {
+      "title": "Yeh mera ___ hai = This is my ___",
+      "body": "Hai means \"is\" and goes last. \"My\" changes to match the thing: mera for masculine words (ghar, bhai, naam), meri for feminine words (behen). \"Your\" is aap ka: aap ka naam = your name. And kya in the middle of a sentence means \"what\": Aap ka naam kya hai? = your name what is?",
+      "examples": [
+        "s-b3-1",
+        "s-b3-2"
+      ]
+    },
+    {
+      "title": "Mujhe ___ chahiye = I need/want ___",
+      "body": "Urdu doesn't say \"I want tea\". It says \"to me, tea is needed\": Mujhe chai chahiye. It's the same for men and women. For \"you\", use aap ko (to you). Put nahi before chahiye for \"don't want\".",
+      "examples": [
+        "s-b4-1",
+        "s-b4-2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2160 @@
+[
+  {
+    "id": "c-first-meeting",
+    "level": 1,
+    "title": "Meeting someone new",
+    "emoji": "🤝",
+    "context": "You're at a friend's dinner party. A young man you haven't met walks over to you.",
+    "goal": "Greet him, exchange names, ask how he is, and say goodbye.",
+    "partner": {
+      "name": "Bilal",
+      "role": "your friend's cousin",
+      "character": "bilal"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Suniye!",
+          "urdu": "سنیے!",
+          "en": "Excuse me!"
+        },
+        "choices": [
+          {
+            "roman": "Ji, boliye.",
+            "urdu": "جی، بولیے۔",
+            "en": "Yes, go ahead.",
+            "quality": "best",
+            "feedback": "Perfect — that is the polite way to answer \"Suniye!\".",
+            "next": "n2"
+          },
+          {
+            "roman": "Ji?",
+            "urdu": "جی؟",
+            "en": "Yes?",
+            "quality": "ok",
+            "feedback": "Fine! \"Ji, boliye\" (yes, go ahead) sounds a little more welcoming.",
+            "next": "n2"
+          },
+          {
+            "roman": "Khuda hafiz!",
+            "urdu": "خدا حافظ!",
+            "en": "Goodbye!",
+            "quality": "wrong",
+            "feedback": "That means goodbye — you've only just met! Answer with \"Ji, boliye\" instead."
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Mera naam Bilal hai. Aap ka naam kya hai?",
+          "urdu": "میرا نام بلال ہے۔ آپ کا نام کیا ہے؟",
+          "en": "My name is Bilal. What is your name?"
+        },
+        "choices": [
+          {
+            "roman": "Mera naam {name} hai.",
+            "urdu": "میرا نام {name} ہے۔",
+            "en": "My name is {name}.",
+            "quality": "best",
+            "feedback": "Great introduction. \"Mera naam\" is the same for every speaker.",
+            "next": "n3"
+          },
+          {
+            "roman": "Aap ka naam kya hai?",
+            "urdu": "آپ کا نام کیا ہے؟",
+            "en": "What is your name?",
+            "quality": "wrong",
+            "feedback": "He already told you his name (Bilal). Now he's asking yours."
+          },
+          {
+            "roman": "Main theek hoon.",
+            "urdu": "میں ٹھیک ہوں۔",
+            "en": "I'm fine.",
+            "quality": "wrong",
+            "feedback": "He asked your name, not how you are. Listen for \"naam\"."
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Aapse mil kar khushi hui! Aap kaise hain?",
+          "urdu": "آپ سے مل کر خوشی ہوئی! آپ کیسے ہیں؟",
+          "en": "Nice to meet you! How are you?"
+        },
+        "choices": [
+          {
+            "roman": "Main theek hoon, shukriya. Aap sunayein?",
+            "urdu": "میں ٹھیک ہوں، شکریہ۔ آپ سنائیں؟",
+            "en": "I'm fine, thanks. And you?",
+            "quality": "best",
+            "feedback": "Excellent — you answered and bounced the question back.",
+            "next": "n4"
+          },
+          {
+            "roman": "Main theek hoon.",
+            "urdu": "میں ٹھیک ہوں۔",
+            "en": "I'm fine.",
+            "quality": "ok",
+            "feedback": "Correct! Adding \"Aap sunayein?\" would keep the conversation going.",
+            "next": "n4"
+          },
+          {
+            "roman": "Ji haan.",
+            "urdu": "جی ہاں۔",
+            "en": "Yes.",
+            "quality": "wrong",
+            "feedback": "\"Kaise hain?\" means \"how are you?\" — \"yes\" doesn't answer it."
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "line": {
+          "roman": "Main bhi theek hoon, shukriya. Aap kahan se hain?",
+          "urdu": "میں بھی ٹھیک ہوں، شکریہ۔ آپ کہاں سے ہیں؟",
+          "en": "I'm fine too, thanks. Where are you from?"
+        },
+        "newWords": [
+          {
+            "roman": "kahan se",
+            "urdu": "کہاں سے",
+            "en": "from where"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Main London se hoon.",
+            "urdu": "میں لندن سے ہوں۔",
+            "en": "I'm from London.",
+            "quality": "best",
+            "feedback": "Nice. Swap in your own city any time.",
+            "next": "n5"
+          },
+          {
+            "roman": "Mujhe samajh nahi aaya. Aahista boliye.",
+            "urdu": "مجھے سمجھ نہیں آیا۔ آہستہ بولیے۔",
+            "en": "I didn't understand. Please speak slowly.",
+            "quality": "ok",
+            "feedback": "Totally fine — asking someone to slow down is a key skill.",
+            "next": "n4slow"
+          }
+        ]
+      },
+      {
+        "id": "n4slow",
+        "line": {
+          "roman": "Ji, zaroor. Aap... kahan... se... hain?",
+          "urdu": "جی، ضرور۔ آپ... کہاں... سے... ہیں؟",
+          "en": "Of course. Where... are... you... from?"
+        },
+        "choices": [
+          {
+            "roman": "Main London se hoon.",
+            "urdu": "میں لندن سے ہوں۔",
+            "en": "I'm from London.",
+            "quality": "best",
+            "feedback": "Well done — you recovered and answered.",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "line": {
+          "roman": "Acha! Bohat acha. Chalo, phir milenge!",
+          "urdu": "اچھا! بہت اچھا۔ چلو، پھر ملیں گے!",
+          "en": "Oh nice! Very good. Okay, see you again!"
+        },
+        "choices": [
+          {
+            "roman": "Ji, phir milenge. Khuda hafiz!",
+            "urdu": "جی، پھر ملیں گے۔ خدا حافظ!",
+            "en": "Yes, see you again. Goodbye!",
+            "quality": "best",
+            "feedback": "A warm, natural goodbye.",
+            "next": "end"
+          },
+          {
+            "roman": "Aapse mil kar khushi hui. Khuda hafiz!",
+            "urdu": "آپ سے مل کر خوشی ہوئی۔ خدا حافظ!",
+            "en": "Nice to meet you. Goodbye!",
+            "quality": "best",
+            "feedback": "Lovely — polite and friendly.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Khuda hafiz!",
+          "urdu": "خدا حافظ!",
+          "en": "Goodbye!"
+        },
+        "end": "You greeted Bilal, introduced yourself, answered his questions and said goodbye."
+      }
+    ]
+  },
+  {
+    "id": "c-relatives",
+    "level": 1,
+    "title": "Visiting your aunt",
+    "emoji": "👵",
+    "context": "Your mother's sister (your Khala) has come to visit. She's warm, talkative and asks about the family.",
+    "goal": "Greet an elder respectfully, answer family questions and accept or decline tea.",
+    "partner": {
+      "name": "Khala",
+      "role": "your mother's sister",
+      "character": "khala"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Beta, sab khairiyat hai?",
+          "urdu": "بیٹا، سب خیریت ہے؟",
+          "en": "Dear, is everything well?"
+        },
+        "note": "Elders often call younger people \"beta\" (lit. son) as a term of affection — for boys and girls.",
+        "choices": [
+          {
+            "roman": "Ji, Khala, sab khairiyat hai, shukriya.",
+            "urdu": "جی خالہ، سب خیریت ہے، شکریہ۔",
+            "en": "Yes, Auntie, all is well, thanks.",
+            "quality": "best",
+            "feedback": "Respectful and warm — exactly right with an elder.",
+            "next": "n2"
+          },
+          {
+            "roman": "Ji, sab theek hai.",
+            "urdu": "جی، سب ٹھیک ہے۔",
+            "en": "Yes, all's fine.",
+            "quality": "ok",
+            "feedback": "Fine, though adding \"Khala\" and \"shukriya\" sounds warmer with an elder.",
+            "next": "n2"
+          },
+          {
+            "roman": "Yaar, kya scene hai?",
+            "urdu": "یار، کیا سین ہے؟",
+            "en": "Mate, what's up?",
+            "quality": "wrong",
+            "feedback": "Far too casual for an aunt! Save \"yaar\" for friends."
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Ammi abbu kaise hain?",
+          "urdu": "امی ابو کیسے ہیں؟",
+          "en": "How are your mum and dad?"
+        },
+        "choices": [
+          {
+            "roman": "Woh theek hain, shukriya.",
+            "urdu": "وہ ٹھیک ہیں، شکریہ۔",
+            "en": "They're fine, thank you.",
+            "quality": "best",
+            "feedback": "\"Woh ... hain\" — plural for two people (and respectful).",
+            "next": "n3"
+          },
+          {
+            "roman": "Main theek hoon.",
+            "urdu": "میں ٹھیک ہوں۔",
+            "en": "I'm fine.",
+            "quality": "wrong",
+            "feedback": "She asked about your parents (ammi abbu), not you. Try \"Woh theek hain\"."
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Aap ke kitne behen bhai hain? Main bhool gayi!",
+          "urdu": "آپ کے کتنے بہن بھائی ہیں؟ میں بھول گئی!",
+          "en": "How many brothers and sisters do you have? I forgot!"
+        },
+        "note": "\"Bhool gayi\" — Khala is a woman, so she says gayi.",
+        "choices": [
+          {
+            "roman": "Mere do bhai hain aur ek behen hai.",
+            "urdu": "میرے دو بھائی ہیں اور ایک بہن ہے۔",
+            "en": "I have two brothers and one sister.",
+            "quality": "best",
+            "feedback": "Great sentence — notice \"hain\" for two brothers and \"hai\" for one sister.",
+            "next": "n4"
+          },
+          {
+            "roman": "Mujhe nahi pata.",
+            "urdu": "مجھے نہیں پتا۔",
+            "en": "I don't know.",
+            "quality": "wrong",
+            "feedback": "You probably know how many siblings you have! Try \"Mere ... bhai hain\"."
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "line": {
+          "roman": "Wah! Chai piyenge?",
+          "urdu": "واہ! چائے پئیں گے؟",
+          "en": "Wonderful! Will you have some tea?"
+        },
+        "choices": [
+          {
+            "roman": "Ji, shukriya!",
+            "urdu": "جی، شکریہ!",
+            "en": "Yes, thank you!",
+            "quality": "best",
+            "feedback": "Accepting tea graciously is always welcome.",
+            "next": "n5"
+          },
+          {
+            "roman": "Bas, shukriya. Abhi nahi.",
+            "urdu": "بس، شکریہ۔ ابھی نہیں۔",
+            "en": "No thanks, not right now.",
+            "quality": "ok",
+            "feedback": "Polite. Expect elders to insist a little — that's part of hospitality.",
+            "next": "n5alt"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "line": {
+          "roman": "Yeh lo, garam garam chai.",
+          "urdu": "یہ لو، گرم گرم چائے۔",
+          "en": "Here you go, nice hot tea."
+        },
+        "newWords": [
+          {
+            "roman": "garam",
+            "urdu": "گرم",
+            "en": "hot"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Bohat shukriya, Khala. Bohat mazay ki hai!",
+            "urdu": "بہت شکریہ خالہ۔ بہت مزے کی ہے!",
+            "en": "Thank you so much, Auntie. It's delicious!",
+            "quality": "best",
+            "feedback": "\"Mazay ki\" agrees with chai (feminine). Lovely.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "n5alt",
+        "line": {
+          "roman": "Acha, theek hai. Phir kabhi!",
+          "urdu": "اچھا، ٹھیک ہے۔ پھر کبھی!",
+          "en": "Alright then. Another time!"
+        },
+        "choices": [
+          {
+            "roman": "Ji, zaroor. Khuda hafiz, Khala!",
+            "urdu": "جی، ضرور۔ خدا حافظ خالہ!",
+            "en": "Yes, definitely. Goodbye, Auntie!",
+            "quality": "best",
+            "feedback": "Polite and warm.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Khuda hafiz, beta. Ammi ko salaam kehna!",
+          "urdu": "خدا حافظ بیٹا۔ امی کو سلام کہنا!",
+          "en": "Goodbye, dear. Give my regards to your mum!"
+        },
+        "end": "You greeted your aunt respectfully, talked about family and handled tea like a pro."
+      }
+    ]
+  },
+  {
+    "id": "c-speak-slowly",
+    "level": 1,
+    "title": "Please speak slowly",
+    "emoji": "🐢",
+    "context": "A friendly neighbour stops you in the street and starts talking quickly.",
+    "goal": "Admit you didn't understand, ask him to slow down, then introduce yourself.",
+    "partner": {
+      "name": "Rashid sahab",
+      "role": "your new neighbour",
+      "character": "rashid"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Aap naye aaye hain is mohallay mein? Kab shift huay?",
+          "urdu": "آپ نئے آئے ہیں اس محلے میں؟ کب شفٹ ہوئے؟",
+          "en": "Are you new to this neighbourhood? When did you move in?"
+        },
+        "choices": [
+          {
+            "roman": "Maaf kijiye, mujhe samajh nahi aaya. Aahista boliye.",
+            "urdu": "معاف کیجیے، مجھے سمجھ نہیں آیا۔ آہستہ بولیے۔",
+            "en": "Sorry, I didn't understand. Please speak slowly.",
+            "quality": "best",
+            "feedback": "Perfect — polite, honest and useful.",
+            "next": "n2"
+          },
+          {
+            "roman": "Ji haan.",
+            "urdu": "جی ہاں۔",
+            "en": "Yes.",
+            "quality": "ok",
+            "feedback": "Nodding along is tempting, but it usually leads to more questions you can't follow.",
+            "next": "n1b"
+          },
+          {
+            "roman": "Khuda hafiz.",
+            "urdu": "خدا حافظ۔",
+            "en": "Goodbye.",
+            "quality": "wrong",
+            "feedback": "Walking away won't help! Ask him to slow down instead."
+          }
+        ]
+      },
+      {
+        "id": "n1b",
+        "line": {
+          "roman": "Acha! To kab shift huay? Kis gali mein?",
+          "urdu": "اچھا! تو کب شفٹ ہوئے؟ کس گلی میں؟",
+          "en": "Oh good! So when did you move? Which street?"
+        },
+        "choices": [
+          {
+            "roman": "Maaf kijiye, mujhe samajh nahi aaya. Aahista boliye, please.",
+            "urdu": "معاف کیجیے، مجھے سمجھ نہیں آیا۔ آہستہ بولیے، پلیز۔",
+            "en": "Sorry, I didn't understand. Please speak slowly.",
+            "quality": "best",
+            "feedback": "Good recovery. It's never too late to ask.",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Ji, ji. Aap... naye... hain?",
+          "urdu": "جی، جی۔ آپ... نئے... ہیں؟",
+          "en": "Yes, yes. Are... you... new?"
+        },
+        "newWords": [
+          {
+            "roman": "naya / naye",
+            "urdu": "نیا / نئے",
+            "en": "new"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Ji haan. Mujhe thori Urdu aati hai.",
+            "urdu": "جی ہاں۔ مجھے تھوڑی اردو آتی ہے۔",
+            "en": "Yes. I know a little Urdu.",
+            "quality": "best",
+            "feedback": "Great — telling people you're learning makes them slow down naturally.",
+            "next": "n3"
+          },
+          {
+            "roman": "Dobara boliye.",
+            "urdu": "دوبارہ بولیے۔",
+            "en": "Please say it again.",
+            "quality": "ok",
+            "feedback": "Fine to ask again!",
+            "next": "n2b"
+          }
+        ]
+      },
+      {
+        "id": "n2b",
+        "line": {
+          "roman": "Aap. Naye. Hain? New?",
+          "urdu": "آپ۔ نئے۔ ہیں؟ نیو؟",
+          "en": "You. New. Are? New?"
+        },
+        "choices": [
+          {
+            "roman": "Ji haan! Mujhe thori Urdu aati hai.",
+            "urdu": "جی ہاں! مجھے تھوڑی اردو آتی ہے۔",
+            "en": "Yes! I know a little Urdu.",
+            "quality": "best",
+            "feedback": "You got there.",
+            "next": "n3"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Koi baat nahi! Aap ki Urdu achi hai. Mera naam Rashid hai.",
+          "urdu": "کوئی بات نہیں! آپ کی اردو اچھی ہے۔ میرا نام راشد ہے۔",
+          "en": "No problem! Your Urdu is good. My name is Rashid."
+        },
+        "choices": [
+          {
+            "roman": "Shukriya! Mera naam {name} hai. Aapse mil kar khushi hui.",
+            "urdu": "شکریہ! میرا نام {name} ہے۔ آپ سے مل کر خوشی ہوئی۔",
+            "en": "Thanks! My name is {name}. Nice to meet you.",
+            "quality": "best",
+            "feedback": "A great introduction.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Mujhe bhi khushi hui. Koi kaam ho to batayein!",
+          "urdu": "مجھے بھی خوشی ہوئی۔ کوئی کام ہو تو بتائیں!",
+          "en": "Nice to meet you too. If you need anything, let me know!"
+        },
+        "end": "You handled fast speech by asking politely for help — one of the most important skills for real conversations."
+      }
+    ]
+  },
+  {
+    "id": "c-restaurant",
+    "level": 2,
+    "title": "Ordering at a restaurant",
+    "emoji": "🍛",
+    "context": "You sit down at a busy local restaurant. A waiter comes over.",
+    "goal": "Order food and a drink, comment on the meal and pay the bill.",
+    "partner": {
+      "name": "Waiter",
+      "role": "restaurant waiter",
+      "character": "townman"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Ji, kya laaun?",
+          "urdu": "جی، کیا لاؤں؟",
+          "en": "What shall I bring you?"
+        },
+        "newWords": [
+          {
+            "roman": "laana",
+            "urdu": "لانا",
+            "en": "to bring"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Mujhe chicken karahi aur do roti chahiye.",
+            "urdu": "مجھے چکن کڑاہی اور دو روٹی چاہیے۔",
+            "en": "I'd like chicken karahi and two rotis.",
+            "quality": "best",
+            "feedback": "Clear order using \"Mujhe ... chahiye\".",
+            "next": "n2"
+          },
+          {
+            "roman": "Mujhe bhook lagi hai.",
+            "urdu": "مجھے بھوک لگی ہے۔",
+            "en": "I'm hungry.",
+            "quality": "ok",
+            "feedback": "True, but the waiter still needs to know what you want!",
+            "next": "n1b"
+          },
+          {
+            "roman": "Yeh bohat mehenga hai.",
+            "urdu": "یہ بہت مہنگا ہے۔",
+            "en": "This is very expensive.",
+            "quality": "wrong",
+            "feedback": "You haven't ordered yet! Tell him what you'd like with \"Mujhe ... chahiye\"."
+          }
+        ]
+      },
+      {
+        "id": "n1b",
+        "line": {
+          "roman": "Ji, yeh menu dekhiye. Kya chahiye?",
+          "urdu": "جی، یہ مینو دیکھیے۔ کیا چاہیے؟",
+          "en": "Here, have a look at the menu. What would you like?"
+        },
+        "choices": [
+          {
+            "roman": "Mujhe chicken karahi aur do roti chahiye.",
+            "urdu": "مجھے چکن کڑاہی اور دو روٹی چاہیے۔",
+            "en": "I'd like chicken karahi and two rotis.",
+            "quality": "best",
+            "feedback": "That's an order!",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Ji. Aur kuch? Peene ke liye?",
+          "urdu": "جی۔ اور کچھ؟ پینے کے لیے؟",
+          "en": "Sure. Anything else? Something to drink?"
+        },
+        "choices": [
+          {
+            "roman": "Ek paani ki bottle, aur khaane ke baad chai.",
+            "urdu": "ایک پانی کی بوتل، اور کھانے کے بعد چائے۔",
+            "en": "A bottle of water, and tea after the meal.",
+            "quality": "best",
+            "feedback": "\"Khaane ke baad\" = after the meal. Very natural.",
+            "next": "n3"
+          },
+          {
+            "roman": "Bas, itna hi.",
+            "urdu": "بس، اتنا ہی۔",
+            "en": "That's all.",
+            "quality": "ok",
+            "feedback": "Perfectly fine.",
+            "next": "n3"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Yeh lijiye. Khaana kaisa hai?",
+          "urdu": "یہ لیجیے۔ کھانا کیسا ہے؟",
+          "en": "Here you go. How's the food?"
+        },
+        "choices": [
+          {
+            "roman": "Bohat mazay ka hai! Shukriya.",
+            "urdu": "بہت مزے کا ہے! شکریہ۔",
+            "en": "It's delicious! Thanks.",
+            "quality": "best",
+            "feedback": "Compliments go a long way.",
+            "next": "n4"
+          },
+          {
+            "roman": "Acha hai. Ek roti aur, please.",
+            "urdu": "اچھا ہے۔ ایک روٹی اور، پلیز۔",
+            "en": "It's good. One more roti, please.",
+            "quality": "best",
+            "feedback": "\"Ek ... aur\" = one more. Useful!",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "line": {
+          "roman": "Shukriya, ji. Aur kuch chahiye?",
+          "urdu": "شکریہ جی۔ اور کچھ چاہیے؟",
+          "en": "Thank you. Need anything else?"
+        },
+        "choices": [
+          {
+            "roman": "Nahi, bas. Bill, please.",
+            "urdu": "نہیں، بس۔ بل، پلیز۔",
+            "en": "No, that's it. The bill, please.",
+            "quality": "best",
+            "feedback": "Short and clear.",
+            "next": "n5"
+          },
+          {
+            "roman": "Mujhe pyaas lagi hai. Paani aur dein.",
+            "urdu": "مجھے پیاس لگی ہے۔ پانی اور دیں۔",
+            "en": "I'm thirsty. More water, please.",
+            "quality": "ok",
+            "feedback": "Correct — you can ask for the bill afterwards.",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "line": {
+          "roman": "Ji, bill aath sau rupay hai.",
+          "urdu": "جی، بل آٹھ سو روپے ہے۔",
+          "en": "The bill is eight hundred rupees."
+        },
+        "choices": [
+          {
+            "roman": "Yeh lijiye. Bohat shukriya!",
+            "urdu": "یہ لیجیے۔ بہت شکریہ!",
+            "en": "Here you are. Thanks a lot!",
+            "quality": "best",
+            "feedback": "\"Yeh lijiye\" = here you are (polite).",
+            "next": "end"
+          },
+          {
+            "roman": "Kya aap card lete hain?",
+            "urdu": "کیا آپ کارڈ لیتے ہیں؟",
+            "en": "Do you take card?",
+            "quality": "best",
+            "feedback": "Good practical question.",
+            "next": "n6"
+          }
+        ]
+      },
+      {
+        "id": "n6",
+        "line": {
+          "roman": "Ji haan, card bhi chalta hai.",
+          "urdu": "جی ہاں، کارڈ بھی چلتا ہے۔",
+          "en": "Yes, card works too."
+        },
+        "choices": [
+          {
+            "roman": "Bohat acha. Yeh lijiye. Shukriya!",
+            "urdu": "بہت اچھا۔ یہ لیجیے۔ شکریہ!",
+            "en": "Great. Here you are. Thanks!",
+            "quality": "best",
+            "feedback": "All paid!",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Shukriya! Phir aaiye ga.",
+          "urdu": "شکریہ! پھر آئیے گا۔",
+          "en": "Thank you! Do come again."
+        },
+        "end": "You ordered a meal, complimented the food and paid — a complete restaurant visit in Urdu."
+      }
+    ]
+  },
+  {
+    "id": "c-shopping",
+    "level": 2,
+    "title": "Bargaining in the bazaar",
+    "emoji": "🛍️",
+    "context": "You're at a clothes stall in a busy bazaar, looking for a kurta. Prices here are negotiable.",
+    "goal": "Ask the price, bargain politely, and agree on a deal.",
+    "partner": {
+      "name": "Shopkeeper",
+      "role": "clothes seller",
+      "character": "rashid"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Aaiye, aaiye! Kya chahiye?",
+          "urdu": "آئیے، آئیے! کیا چاہیے؟",
+          "en": "Come in, come in! What do you need?"
+        },
+        "choices": [
+          {
+            "roman": "Mujhe ek kurta chahiye.",
+            "urdu": "مجھے ایک کرتا چاہیے۔",
+            "en": "I need a kurta.",
+            "quality": "best",
+            "feedback": "Clear and direct.",
+            "next": "n2"
+          },
+          {
+            "roman": "Mujhe paani chahiye.",
+            "urdu": "مجھے پانی چاہیے۔",
+            "en": "I need water.",
+            "quality": "wrong",
+            "feedback": "It's a clothes shop! Use \"Mujhe ek kurta chahiye\"."
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Yeh dekhiye, bohat acha kurta hai.",
+          "urdu": "یہ دیکھیے، بہت اچھا کرتا ہے۔",
+          "en": "Look at this one, it's a very nice kurta."
+        },
+        "choices": [
+          {
+            "roman": "Iski qeemat kya hai?",
+            "urdu": "اس کی قیمت کیا ہے؟",
+            "en": "What's the price?",
+            "quality": "best",
+            "feedback": "Good question to ask first.",
+            "next": "n3"
+          },
+          {
+            "roman": "Yeh kitne ka hai?",
+            "urdu": "یہ کتنے کا ہے؟",
+            "en": "How much is this?",
+            "quality": "best",
+            "feedback": "The most common way to ask a price.",
+            "next": "n3"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Sirf teen hazaar rupay.",
+          "urdu": "صرف تین ہزار روپے۔",
+          "en": "Only three thousand rupees."
+        },
+        "newWords": [
+          {
+            "roman": "sirf",
+            "urdu": "صرف",
+            "en": "only"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Yeh bohat mehenga hai. Thora kam karein.",
+            "urdu": "یہ بہت مہنگا ہے۔ تھوڑا کم کریں۔",
+            "en": "That's very expensive. Please lower it a bit.",
+            "quality": "best",
+            "feedback": "Classic polite bargaining.",
+            "next": "n4"
+          },
+          {
+            "roman": "Mujhe yeh pasand nahi. Aur kuch hai?",
+            "urdu": "مجھے یہ پسند نہیں۔ اور کچھ ہے؟",
+            "en": "I don't like this one. Is there anything else?",
+            "quality": "ok",
+            "feedback": "Fine — let's see another one.",
+            "next": "n3b"
+          },
+          {
+            "roman": "Theek hai.",
+            "urdu": "ٹھیک ہے۔",
+            "en": "Okay.",
+            "quality": "ok",
+            "feedback": "You can pay the first price, but in a bazaar a little bargaining is normal.",
+            "next": "paid"
+          }
+        ]
+      },
+      {
+        "id": "n3b",
+        "line": {
+          "roman": "Acha, yeh doosra dekhiye. Yeh do hazaar ka hai.",
+          "urdu": "اچھا، یہ دوسرا دیکھیے۔ یہ دو ہزار کا ہے۔",
+          "en": "Alright, look at this other one. It's two thousand."
+        },
+        "choices": [
+          {
+            "roman": "Yeh acha hai! Thora kam karein?",
+            "urdu": "یہ اچھا ہے! تھوڑا کم کریں؟",
+            "en": "This is nice! Could you lower it a little?",
+            "quality": "best",
+            "feedback": "Nice bargaining.",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "line": {
+          "roman": "Acha, aap ke liye... dhai hazaar.",
+          "urdu": "اچھا، آپ کے لیے... ڈھائی ہزار۔",
+          "en": "Okay, for you... two and a half thousand."
+        },
+        "newWords": [
+          {
+            "roman": "dhai",
+            "urdu": "ڈھائی",
+            "en": "two and a half"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Do hazaar theek hai?",
+            "urdu": "دو ہزار ٹھیک ہے؟",
+            "en": "Is two thousand okay?",
+            "quality": "best",
+            "feedback": "A sensible counter-offer.",
+            "next": "n5"
+          },
+          {
+            "roman": "Theek hai, dhai hazaar.",
+            "urdu": "ٹھیک ہے، ڈھائی ہزار۔",
+            "en": "Okay, two and a half thousand.",
+            "quality": "ok",
+            "feedback": "A fair deal — you already saved 500.",
+            "next": "paid"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "line": {
+          "roman": "Chalo, theek hai. Do hazaar.",
+          "urdu": "چلو، ٹھیک ہے۔ دو ہزار۔",
+          "en": "Alright, fine. Two thousand."
+        },
+        "choices": [
+          {
+            "roman": "Bohat shukriya! Yeh lijiye.",
+            "urdu": "بہت شکریہ! یہ لیجیے۔",
+            "en": "Thanks a lot! Here you are.",
+            "quality": "best",
+            "feedback": "Deal done!",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "paid",
+        "line": {
+          "roman": "Shukriya! Aur kuch?",
+          "urdu": "شکریہ! اور کچھ؟",
+          "en": "Thank you! Anything else?"
+        },
+        "choices": [
+          {
+            "roman": "Bas, itna hi. Shukriya!",
+            "urdu": "بس، اتنا ہی۔ شکریہ!",
+            "en": "That's all. Thanks!",
+            "quality": "best",
+            "feedback": "Polite finish.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Phir aaiye ga! Khuda hafiz.",
+          "urdu": "پھر آئیے گا! خدا حافظ۔",
+          "en": "Come again! Goodbye."
+        },
+        "end": "You asked a price, bargained politely and bought a kurta."
+      }
+    ]
+  },
+  {
+    "id": "c-directions",
+    "level": 2,
+    "title": "Asking for directions",
+    "emoji": "🧭",
+    "context": "You're lost on your way to the bazaar. You stop a passer-by.",
+    "goal": "Ask the way, follow the directions, and check the distance.",
+    "partner": {
+      "name": "Passer-by",
+      "role": "a helpful stranger",
+      "character": "townman"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Ji, farmaiye?",
+          "urdu": "جی، فرمائیے؟",
+          "en": "Yes, how can I help?"
+        },
+        "newWords": [
+          {
+            "roman": "farmaiye",
+            "urdu": "فرمائیے",
+            "en": "please say (very polite: how can I help?)"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Maaf kijiye, bazaar kahan hai?",
+            "urdu": "معاف کیجیے، بازار کہاں ہے؟",
+            "en": "Excuse me, where is the bazaar?",
+            "quality": "best",
+            "feedback": "Polite and clear.",
+            "next": "n2"
+          },
+          {
+            "roman": "Bazaar?",
+            "urdu": "بازار؟",
+            "en": "Bazaar?",
+            "quality": "ok",
+            "feedback": "Understandable, but a bit abrupt. Adding \"Maaf kijiye\" and \"kahan hai\" sounds friendlier.",
+            "next": "n2"
+          },
+          {
+            "roman": "Mujhe nahi pata.",
+            "urdu": "مجھے نہیں پتا۔",
+            "en": "I don't know.",
+            "quality": "wrong",
+            "feedback": "You're the one asking! Try \"... kahan hai?\"."
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Seedha jaayen, phir daayen murein.",
+          "urdu": "سیدھا جائیں، پھر دائیں مڑیں۔",
+          "en": "Go straight, then turn right."
+        },
+        "choices": [
+          {
+            "roman": "Acha, seedha aur phir daayen. Kya yeh door hai?",
+            "urdu": "اچھا، سیدھا اور پھر دائیں۔ کیا یہ دور ہے؟",
+            "en": "Okay, straight and then right. Is it far?",
+            "quality": "best",
+            "feedback": "Repeating directions back is a great way to check you understood.",
+            "next": "n3"
+          },
+          {
+            "roman": "Mujhe samajh nahi aaya. Dobara boliye.",
+            "urdu": "مجھے سمجھ نہیں آیا۔ دوبارہ بولیے۔",
+            "en": "I didn't understand. Please say it again.",
+            "quality": "ok",
+            "feedback": "Good — no shame in asking again.",
+            "next": "n2b"
+          },
+          {
+            "roman": "Acha, baayen?",
+            "urdu": "اچھا، بائیں؟",
+            "en": "Okay, left?",
+            "quality": "wrong",
+            "feedback": "He said \"daayen\" (right), not \"baayen\" (left). Listen again."
+          }
+        ]
+      },
+      {
+        "id": "n2b",
+        "line": {
+          "roman": "Seedha... jaayen. Phir... daayen. Right side.",
+          "urdu": "سیدھا... جائیں۔ پھر... دائیں۔ رائٹ سائیڈ۔",
+          "en": "Go... straight. Then... right. Right side."
+        },
+        "choices": [
+          {
+            "roman": "Acha, seedha aur phir daayen. Kya yeh door hai?",
+            "urdu": "اچھا، سیدھا اور پھر دائیں۔ کیا یہ دور ہے؟",
+            "en": "Okay, straight and then right. Is it far?",
+            "quality": "best",
+            "feedback": "Got it!",
+            "next": "n3"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Nahi, qareeb hai. Paanch minute.",
+          "urdu": "نہیں، قریب ہے۔ پانچ منٹ۔",
+          "en": "No, it's close. Five minutes."
+        },
+        "choices": [
+          {
+            "roman": "Bohat shukriya!",
+            "urdu": "بہت شکریہ!",
+            "en": "Thank you very much!",
+            "quality": "best",
+            "feedback": "Perfect.",
+            "next": "end"
+          },
+          {
+            "roman": "Paanch minute? Bohat acha, shukriya!",
+            "urdu": "پانچ منٹ؟ بہت اچھا، شکریہ!",
+            "en": "Five minutes? Great, thanks!",
+            "quality": "best",
+            "feedback": "Nice — you checked the detail and thanked him.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Koi baat nahi. Khuda hafiz!",
+          "urdu": "کوئی بات نہیں۔ خدا حافظ!",
+          "en": "No problem. Goodbye!"
+        },
+        "end": "You asked for directions, confirmed them and found out the distance."
+      }
+    ]
+  },
+  {
+    "id": "c-visit-home",
+    "level": 4,
+    "title": "Visiting someone's home",
+    "emoji": "🏠",
+    "context": "You've been invited to a friend's home for the first time. Their mother (Aunty) opens the door.",
+    "goal": "Greet the host, make small talk, handle hospitality, and leave politely.",
+    "partner": {
+      "name": "Aunty",
+      "role": "your friend's mother",
+      "character": "khala"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Aaiye, aaiye, andar aaiye.",
+          "urdu": "آئیے، آئیے، اندر آئیے۔",
+          "en": "Come in, come in, please come inside."
+        },
+        "choices": [
+          {
+            "roman": "Shukriya, Aunty!",
+            "urdu": "شکریہ آنٹی!",
+            "en": "Thank you, Aunty!",
+            "quality": "best",
+            "feedback": "\"Aunty\" is the usual respectful way to address a friend's mother in Pakistan.",
+            "next": "n2"
+          },
+          {
+            "roman": "Kya main andar aa sakta hoon?",
+            "urdu": "کیا میں اندر آ سکتا ہوں؟",
+            "en": "May I come in?",
+            "quality": "ok",
+            "feedback": "Polite, though she's already invited you in! Returning her greeting comes first.",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Baithiye. Ghar dhoondhne mein mushkil to nahi hui?",
+          "urdu": "بیٹھیے۔ گھر ڈھونڈنے میں مشکل تو نہیں ہوئی؟",
+          "en": "Please sit. You didn't have trouble finding the house?"
+        },
+        "newWords": [
+          {
+            "roman": "baithiye",
+            "urdu": "بیٹھیے",
+            "en": "please sit"
+          },
+          {
+            "roman": "mushkil",
+            "urdu": "مشکل",
+            "en": "difficulty"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Nahi, bilkul nahi. Raasta aasaan tha.",
+            "urdu": "نہیں، بالکل نہیں۔ راستہ آسان تھا۔",
+            "en": "No, not at all. The way was easy.",
+            "quality": "best",
+            "feedback": "Smooth answer.",
+            "next": "n3"
+          },
+          {
+            "roman": "Thori si. Pehle main ghalat gali mein chala gaya!",
+            "urdu": "تھوڑی سی۔ پہلے میں غلط گلی میں چلا گیا!",
+            "en": "A little. At first I went into the wrong street!",
+            "quality": "best",
+            "feedback": "A friendly, honest answer. A woman would say \"chali gayi\".",
+            "next": "n3"
+          },
+          {
+            "roman": "Mubarak ho!",
+            "urdu": "مبارک ہو!",
+            "en": "Congratulations!",
+            "quality": "wrong",
+            "feedback": "She asked if you had trouble finding the house."
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Chai lenge ya kuch thanda?",
+          "urdu": "چائے لیں گے یا کچھ ٹھنڈا؟",
+          "en": "Will you have tea or something cold?"
+        },
+        "newWords": [
+          {
+            "roman": "thanda",
+            "urdu": "ٹھنڈا",
+            "en": "cold"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Chai, please. Shukriya.",
+            "urdu": "چائے، پلیز۔ شکریہ۔",
+            "en": "Tea, please. Thank you.",
+            "quality": "best",
+            "feedback": "Accepting is gracious.",
+            "next": "n4"
+          },
+          {
+            "roman": "Kuch nahi, shukriya.",
+            "urdu": "کچھ نہیں، شکریہ۔",
+            "en": "Nothing, thanks.",
+            "quality": "ok",
+            "feedback": "Polite, but expect the host to insist!",
+            "next": "n3b"
+          }
+        ]
+      },
+      {
+        "id": "n3b",
+        "line": {
+          "roman": "Arre, aise kaise? Kuch to lena parega!",
+          "urdu": "ارے، ایسے کیسے؟ کچھ تو لینا پڑے گا!",
+          "en": "Oh, how can that be? You'll have to have something!"
+        },
+        "note": "Hosts insisting is part of Pakistani hospitality — accepting something small is gracious.",
+        "choices": [
+          {
+            "roman": "Acha, theek hai. Chai, please!",
+            "urdu": "اچھا، ٹھیک ہے۔ چائے، پلیز!",
+            "en": "Alright then. Tea, please!",
+            "quality": "best",
+            "feedback": "Good call.",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "line": {
+          "roman": "Yeh lijiye. Aur samosay bhi lijiye.",
+          "urdu": "یہ لیجیے۔ اور سموسے بھی لیجیے۔",
+          "en": "Here you go. And have some samosas too."
+        },
+        "choices": [
+          {
+            "roman": "Wah, bohat mazay ke hain!",
+            "urdu": "واہ، بہت مزے کے ہیں!",
+            "en": "Wonderful, they're delicious!",
+            "quality": "best",
+            "feedback": "\"Mazay ke\" — plural, to match samosay.",
+            "next": "n5"
+          },
+          {
+            "roman": "Shukriya, bohat acha hai.",
+            "urdu": "شکریہ، بہت اچھا ہے۔",
+            "en": "Thanks, it's very good.",
+            "quality": "ok",
+            "feedback": "Fine. For several samosas you could say \"bohat ache hain\".",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "line": {
+          "roman": "Aur lijiye na! Aap ne to kuch khaya hi nahi.",
+          "urdu": "اور لیجیے نا! آپ نے تو کچھ کھایا ہی نہیں۔",
+          "en": "Have more! You've hardly eaten anything."
+        },
+        "newWords": [
+          {
+            "roman": "pet bhar gaya",
+            "urdu": "پیٹ بھر گیا",
+            "en": "I'm full (lit. the stomach filled)"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Bas, shukriya, Aunty. Pet bhar gaya!",
+            "urdu": "بس، شکریہ آنٹی۔ پیٹ بھر گیا!",
+            "en": "That's enough, thanks Aunty. I'm full!",
+            "quality": "best",
+            "feedback": "The polite way to stop — warm and clear.",
+            "next": "n6"
+          },
+          {
+            "roman": "Mujhe nahi chahiye.",
+            "urdu": "مجھے نہیں چاہیے۔",
+            "en": "I don't want it.",
+            "quality": "ok",
+            "feedback": "Grammatically right, but it can sound blunt to a host. \"Bas, shukriya\" is softer.",
+            "next": "n6"
+          }
+        ]
+      },
+      {
+        "id": "n6",
+        "line": {
+          "roman": "Acha, phir aate rehna. Ghar walon ko salaam kehna.",
+          "urdu": "اچھا، پھر آتے رہنا۔ گھر والوں کو سلام کہنا۔",
+          "en": "Alright, keep visiting. Give my regards to your family."
+        },
+        "choices": [
+          {
+            "roman": "Ji, zaroor. Bohat shukriya, Aunty. Khuda hafiz!",
+            "urdu": "جی، ضرور۔ بہت شکریہ آنٹی۔ خدا حافظ!",
+            "en": "Of course. Thank you so much, Aunty. Goodbye!",
+            "quality": "best",
+            "feedback": "A perfect, polite exit.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Khuda hafiz, beta!",
+          "urdu": "خدا حافظ بیٹا!",
+          "en": "Goodbye, dear!"
+        },
+        "end": "You navigated a home visit: greeting, small talk, hospitality and a polite goodbye."
+      }
+    ]
+  },
+  {
+    "id": "c-weekend",
+    "level": 4,
+    "title": "Weekend plans",
+    "emoji": "🏏",
+    "context": "Your friend Hamza calls to make plans for the weekend.",
+    "goal": "Discuss options, agree on a plan and a time.",
+    "partner": {
+      "name": "Hamza",
+      "role": "your friend",
+      "character": "hamza"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Yaar, is weekend kya plan hai?",
+          "urdu": "یار، اس ویک اینڈ کیا پلان ہے؟",
+          "en": "Mate, what's the plan this weekend?"
+        },
+        "choices": [
+          {
+            "roman": "Abhi koi plan nahi. Tum batao?",
+            "urdu": "ابھی کوئی پلان نہیں۔ تم بتاؤ؟",
+            "en": "No plans yet. What about you?",
+            "quality": "best",
+            "feedback": "\"Tum batao\" — informal, right for a friend.",
+            "next": "n2"
+          },
+          {
+            "roman": "Pata nahi.",
+            "urdu": "پتا نہیں۔",
+            "en": "Dunno.",
+            "quality": "ok",
+            "feedback": "Natural! Asking back keeps it going, though.",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Chalo, Saturday ko cricket khelte hain, phir bahar khaana khayenge.",
+          "urdu": "چلو، سیٹرڈے کو کرکٹ کھیلتے ہیں، پھر باہر کھانا کھائیں گے۔",
+          "en": "Let's play cricket on Saturday, then we'll eat out."
+        },
+        "newWords": [
+          {
+            "roman": "bahar",
+            "urdu": "باہر",
+            "en": "outside / out"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Zabardast! Kitne baje milein?",
+            "urdu": "زبردست! کتنے بجے ملیں؟",
+            "en": "Awesome! What time shall we meet?",
+            "quality": "best",
+            "feedback": "\"Zabardast\" = awesome. Great energy.",
+            "next": "n3"
+          },
+          {
+            "roman": "Mujhe cricket pasand nahi. Kuch aur karte hain?",
+            "urdu": "مجھے کرکٹ پسند نہیں۔ کچھ اور کرتے ہیں؟",
+            "en": "I don't like cricket. Shall we do something else?",
+            "quality": "ok",
+            "feedback": "Honest — and you suggested an alternative.",
+            "next": "n2b"
+          },
+          {
+            "roman": "Main nahi jaa sakta. Phir kabhi.",
+            "urdu": "میں نہیں جا سکتا۔ پھر کبھی۔",
+            "en": "I can't go. Some other time.",
+            "quality": "ok",
+            "feedback": "A polite decline. (Women: \"nahi jaa sakti\".)",
+            "next": "decline"
+          }
+        ]
+      },
+      {
+        "id": "n2b",
+        "line": {
+          "roman": "Acha, to movie dekhte hain?",
+          "urdu": "اچھا، تو مووی دیکھتے ہیں؟",
+          "en": "Okay, so shall we watch a movie?"
+        },
+        "choices": [
+          {
+            "roman": "Haan, yeh acha plan hai! Kitne baje?",
+            "urdu": "ہاں، یہ اچھا پلان ہے! کتنے بجے؟",
+            "en": "Yes, that's a good plan! What time?",
+            "quality": "best",
+            "feedback": "Agreed!",
+            "next": "n3"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Shaam paanch baje. Main tumhe le loonga.",
+          "urdu": "شام پانچ بجے۔ میں تمہیں لے لوں گا۔",
+          "en": "Five in the evening. I'll pick you up."
+        },
+        "choices": [
+          {
+            "roman": "Perfect! Main intezaar karunga.",
+            "urdu": "پرفیکٹ! میں انتظار کروں گا۔",
+            "en": "Perfect! I'll wait for you.",
+            "quality": "best",
+            "feedback": "(Women: \"intezaar karungi\".)",
+            "next": "n4"
+          },
+          {
+            "roman": "Paanch baje? Thora late, chhe baje?",
+            "urdu": "پانچ بجے؟ تھوڑا لیٹ، چھ بجے؟",
+            "en": "Five? A bit later, six?",
+            "quality": "best",
+            "feedback": "Good negotiation.",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "line": {
+          "roman": "Done! Saturday milte hain, zaroor.",
+          "urdu": "ڈن! سیٹرڈے ملتے ہیں، ضرور۔",
+          "en": "Done! See you Saturday, definitely."
+        },
+        "choices": [
+          {
+            "roman": "Zaroor! Phir milenge.",
+            "urdu": "ضرور! پھر ملیں گے۔",
+            "en": "Definitely! See you then.",
+            "quality": "best",
+            "feedback": "Natural close.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "decline",
+        "line": {
+          "roman": "Koi masla nahi, yaar. Agle hafte?",
+          "urdu": "کوئی مسئلہ نہیں یار۔ اگلے ہفتے؟",
+          "en": "No problem, mate. Next week?"
+        },
+        "newWords": [
+          {
+            "roman": "agle hafte",
+            "urdu": "اگلے ہفتے",
+            "en": "next week"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Haan, agle hafte zaroor!",
+            "urdu": "ہاں، اگلے ہفتے ضرور!",
+            "en": "Yes, definitely next week!",
+            "quality": "best",
+            "feedback": "Friendship saved.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Chalo, bye!",
+          "urdu": "چلو، بائے!",
+          "en": "Okay, bye!"
+        },
+        "end": "You discussed options, made (or postponed) a plan and agreed a time."
+      }
+    ]
+  },
+  {
+    "id": "c-friends",
+    "level": 4,
+    "title": "Catching up with a friend",
+    "emoji": "☕",
+    "context": "You bump into your friend Ayesha after a long time.",
+    "goal": "Use casual Urdu, react to news and keep the conversation flowing.",
+    "partner": {
+      "name": "Ayesha",
+      "role": "an old friend",
+      "character": "ayesha"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Arre! Kitne dinon baad! Kya haal hai?",
+          "urdu": "ارے! کتنے دنوں بعد! کیا حال ہے؟",
+          "en": "Oh! It's been ages! How's it going?"
+        },
+        "newWords": [
+          {
+            "roman": "arre",
+            "urdu": "ارے",
+            "en": "oh! / hey! (surprise)"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Sab theek! Tum sunao?",
+            "urdu": "سب ٹھیک! تم سناؤ؟",
+            "en": "All good! What about you?",
+            "quality": "best",
+            "feedback": "Relaxed and natural between friends.",
+            "next": "n2"
+          },
+          {
+            "roman": "Aap kaisi hain?",
+            "urdu": "آپ کیسی ہیں؟",
+            "en": "How are you?",
+            "quality": "ok",
+            "feedback": "Polite and correct (\"kaisi\" for a woman) — just more formal than you need with a close friend.",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Main bhi theek. Bas kaam bohat hai aaj kal.",
+          "urdu": "میں بھی ٹھیک۔ بس کام بہت ہے آج کل۔",
+          "en": "I'm fine too. Just a lot of work these days."
+        },
+        "newWords": [
+          {
+            "roman": "aaj kal",
+            "urdu": "آج کل",
+            "en": "these days"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Acha? Kaam kaisa chal raha hai?",
+            "urdu": "اچھا؟ کام کیسا چل رہا ہے؟",
+            "en": "Oh yeah? How's work going?",
+            "quality": "best",
+            "feedback": "A good follow-up question.",
+            "next": "n3"
+          },
+          {
+            "roman": "Mubarak ho!",
+            "urdu": "مبارک ہو!",
+            "en": "Congratulations!",
+            "quality": "wrong",
+            "feedback": "Being overworked isn't really good news! Ask a follow-up instead."
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Theek hai, lekin boss ne naak mein dam kar diya hai!",
+          "urdu": "ٹھیک ہے، لیکن باس نے ناک میں دم کر دیا ہے!",
+          "en": "It's okay, but my boss is driving me up the wall!"
+        },
+        "choices": [
+          {
+            "roman": "Haha, sach mein? Kya hua?",
+            "urdu": "ہاہا، سچ میں؟ کیا ہوا؟",
+            "en": "Haha, really? What happened?",
+            "quality": "best",
+            "feedback": "Showing interest keeps her talking — great listening practice.",
+            "next": "n4"
+          },
+          {
+            "roman": "Mujhe sun kar dukh hua.",
+            "urdu": "مجھے سن کر دکھ ہوا۔",
+            "en": "Sorry to hear that.",
+            "quality": "ok",
+            "feedback": "Kind, if a bit serious for a joking complaint.",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "line": {
+          "roman": "Har roz late tak kaam! Khair, tumhari Urdu to kamaal ki ho gayi hai!",
+          "urdu": "ہر روز لیٹ تک کام! خیر، تمہاری اردو تو کمال کی ہو گئی ہے!",
+          "en": "Working late every day! Anyway, your Urdu has become amazing!"
+        },
+        "newWords": [
+          {
+            "roman": "khair",
+            "urdu": "خیر",
+            "en": "anyway"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Shukriya! Main roz practice karta hoon.",
+            "urdu": "شکریہ! میں روز پریکٹس کرتا ہوں۔",
+            "en": "Thanks! I practise every day.",
+            "quality": "best",
+            "feedback": "(Women: \"karti hoon\".)",
+            "next": "n5"
+          },
+          {
+            "roman": "Bas, thori thori.",
+            "urdu": "بس، تھوڑی تھوڑی۔",
+            "en": "Just a little bit.",
+            "quality": "best",
+            "feedback": "Modest — very natural.",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "line": {
+          "roman": "Wah! Chalo, kal coffee peete hain?",
+          "urdu": "واہ! چلو، کل کافی پیتے ہیں؟",
+          "en": "Wow! Hey, shall we get coffee tomorrow?"
+        },
+        "choices": [
+          {
+            "roman": "Haan, zaroor! Mazaa aayega.",
+            "urdu": "ہاں، ضرور! مزہ آئے گا۔",
+            "en": "Yes, definitely! It'll be fun.",
+            "quality": "best",
+            "feedback": "Perfect.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Done! Kal milte hain.",
+          "urdu": "ڈن! کل ملتے ہیں۔",
+          "en": "Done! See you tomorrow."
+        },
+        "end": "You kept a casual conversation flowing with reactions and follow-up questions."
+      }
+    ]
+  },
+  {
+    "id": "c-phone",
+    "level": 5,
+    "title": "A phone call to an office",
+    "emoji": "📞",
+    "context": "You call a company to speak to Mr Ahmed about a delivery. The receptionist answers.",
+    "goal": "Ask for someone, introduce yourself, and arrange a callback or leave a message.",
+    "partner": {
+      "name": "Receptionist",
+      "role": "office receptionist",
+      "character": "townwoman"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Ji, Rehman Traders.",
+          "urdu": "جی، رحمان ٹریڈرز۔",
+          "en": "Yes, Rehman Traders."
+        },
+        "choices": [
+          {
+            "roman": "Kya main Ahmed sahab se baat kar sakta hoon?",
+            "urdu": "کیا میں احمد صاحب سے بات کر سکتا ہوں؟",
+            "en": "May I speak to Mr Ahmed?",
+            "quality": "best",
+            "feedback": "Polite and professional. (Women: \"kar sakti hoon\".)",
+            "next": "n2"
+          },
+          {
+            "roman": "Kaun bol raha hai?",
+            "urdu": "کون بول رہا ہے؟",
+            "en": "Who's speaking?",
+            "quality": "ok",
+            "feedback": "She already said the company name — it's you who called!",
+            "next": "n1b"
+          }
+        ]
+      },
+      {
+        "id": "n1b",
+        "line": {
+          "roman": "Ji, main receptionist bol rahi hoon. Aap ko kis se baat karni hai?",
+          "urdu": "جی، میں ریسیپشنسٹ بول رہی ہوں۔ آپ کو کس سے بات کرنی ہے؟",
+          "en": "This is the receptionist. Who do you want to speak to?"
+        },
+        "choices": [
+          {
+            "roman": "Kya main Ahmed sahab se baat kar sakta hoon?",
+            "urdu": "کیا میں احمد صاحب سے بات کر سکتا ہوں؟",
+            "en": "May I speak to Mr Ahmed?",
+            "quality": "best",
+            "feedback": "That's it.",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Ji, aap kaun bol rahe hain?",
+          "urdu": "جی، آپ کون بول رہے ہیں؟",
+          "en": "May I ask who's speaking?"
+        },
+        "choices": [
+          {
+            "roman": "Main {name} bol raha hoon.",
+            "urdu": "میں {name} بول رہا ہوں۔",
+            "en": "This is {name} speaking.",
+            "quality": "best",
+            "feedback": "(Women: \"bol rahi hoon\".)",
+            "next": "n3"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Ahmed sahab abhi meeting mein hain. Aap baad mein call kar lein, ya message chhor dein?",
+          "urdu": "احمد صاحب ابھی میٹنگ میں ہیں۔ آپ بعد میں کال کر لیں، یا میسج چھوڑ دیں؟",
+          "en": "Mr Ahmed is in a meeting right now. Would you call later, or leave a message?"
+        },
+        "newWords": [
+          {
+            "roman": "chhorna",
+            "urdu": "چھوڑنا",
+            "en": "to leave"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Main baad mein call karta hoon. Meeting kitne baje khatam hogi?",
+            "urdu": "میں بعد میں کال کرتا ہوں۔ میٹنگ کتنے بجے ختم ہوگی؟",
+            "en": "I'll call later. What time will the meeting end?",
+            "quality": "best",
+            "feedback": "A useful follow-up question.",
+            "next": "n4"
+          },
+          {
+            "roman": "Message chhor deta hoon: please mujhe call karein.",
+            "urdu": "میسج چھوڑ دیتا ہوں: پلیز مجھے کال کریں۔",
+            "en": "I'll leave a message: please call me.",
+            "quality": "best",
+            "feedback": "Clear. (Women: \"chhor deti hoon\".)",
+            "next": "n5"
+          },
+          {
+            "roman": "Awaaz nahi aa rahi. Dobara boliye?",
+            "urdu": "آواز نہیں آ رہی۔ دوبارہ بولیے؟",
+            "en": "I can't hear you. Could you say it again?",
+            "quality": "ok",
+            "feedback": "Fair — phone lines are hard. She'll repeat it.",
+            "next": "n3"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "line": {
+          "roman": "Taqreeban teen baje.",
+          "urdu": "تقریباً تین بجے۔",
+          "en": "Around three o'clock."
+        },
+        "newWords": [
+          {
+            "roman": "taqreeban",
+            "urdu": "تقریباً",
+            "en": "approximately"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Theek hai, shukriya. Main teen baje call karunga.",
+            "urdu": "ٹھیک ہے، شکریہ۔ میں تین بجے کال کروں گا۔",
+            "en": "Okay, thanks. I'll call at three.",
+            "quality": "best",
+            "feedback": "(Women: \"karungi\".)",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "line": {
+          "roman": "Ji, aap ka number?",
+          "urdu": "جی، آپ کا نمبر؟",
+          "en": "And your number?"
+        },
+        "choices": [
+          {
+            "roman": "Unke paas mera number hai. Shukriya!",
+            "urdu": "ان کے پاس میرا نمبر ہے۔ شکریہ!",
+            "en": "He has my number. Thanks!",
+            "quality": "best",
+            "feedback": "\"Unke paas\" = he has (respectful).",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Ji, zaroor. Khuda hafiz.",
+          "urdu": "جی، ضرور۔ خدا حافظ۔",
+          "en": "Certainly. Goodbye."
+        },
+        "end": "You handled a phone call: asked for someone, introduced yourself and arranged next steps."
+      }
+    ]
+  },
+  {
+    "id": "c-misunderstanding",
+    "level": 5,
+    "title": "Fixing a misunderstanding",
+    "emoji": "🚕",
+    "context": "Your taxi driver has taken you to Liberty Market, but you wanted Liberty Hotel.",
+    "goal": "Explain the problem, clarify, negotiate, and stay polite.",
+    "partner": {
+      "name": "Driver",
+      "role": "taxi driver",
+      "character": "townman"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Lijiye, aa gaye. Liberty Market.",
+          "urdu": "لیجیے، آ گئے۔ لبرٹی مارکیٹ۔",
+          "en": "Here we are. Liberty Market."
+        },
+        "choices": [
+          {
+            "roman": "Maaf kijiye, mujhe Liberty Hotel jaana hai, market nahi.",
+            "urdu": "معاف کیجیے، مجھے لبرٹی ہوٹل جانا ہے، مارکیٹ نہیں۔",
+            "en": "Excuse me, I need to go to Liberty Hotel, not the market.",
+            "quality": "best",
+            "feedback": "Clear and polite.",
+            "next": "n2"
+          },
+          {
+            "roman": "Shukriya!",
+            "urdu": "شکریہ!",
+            "en": "Thanks!",
+            "quality": "wrong",
+            "feedback": "You'd be getting out at the wrong place! Explain where you need to go."
+          },
+          {
+            "roman": "Yeh kaam nahi kar raha.",
+            "urdu": "یہ کام نہیں کر رہا۔",
+            "en": "This isn't working.",
+            "quality": "wrong",
+            "feedback": "That's for broken things. Say where you need to go: \"Mujhe ... jaana hai\"."
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Acha? Aap ne to market kaha tha!",
+          "urdu": "اچھا؟ آپ نے تو مارکیٹ کہا تھا!",
+          "en": "Really? You said market!"
+        },
+        "choices": [
+          {
+            "roman": "Galti ho gayi, maazrat. Kya aap hotel le ja sakte hain?",
+            "urdu": "غلطی ہو گئی، معذرت۔ کیا آپ ہوٹل لے جا سکتے ہیں؟",
+            "en": "My mistake, sorry. Can you take me to the hotel?",
+            "quality": "best",
+            "feedback": "Taking the blame lightly smooths things over. \"Le jaana\" = to take (someone).",
+            "next": "n3"
+          },
+          {
+            "roman": "Nahi, mera matlab hotel tha.",
+            "urdu": "نہیں، میرا مطلب ہوٹل تھا۔",
+            "en": "No, I meant the hotel.",
+            "quality": "ok",
+            "feedback": "Clear enough. A softer tone usually gets better results.",
+            "next": "n3"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Theek hai, lekin kiraya thora zyada hoga. Teen sau aur.",
+          "urdu": "ٹھیک ہے، لیکن کرایہ تھوڑا زیادہ ہوگا۔ تین سو اور۔",
+          "en": "Alright, but the fare will be a bit more. Three hundred more."
+        },
+        "newWords": [
+          {
+            "roman": "zyada",
+            "urdu": "زیادہ",
+            "en": "more / too much"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Aap ka matlab hai teen sau rupay aur?",
+            "urdu": "آپ کا مطلب ہے تین سو روپے اور؟",
+            "en": "You mean three hundred rupees more?",
+            "quality": "best",
+            "feedback": "Checking the number is smart.",
+            "next": "n4"
+          },
+          {
+            "roman": "Yeh bohat zyada hai! Do sau theek hai?",
+            "urdu": "یہ بہت زیادہ ہے! دو سو ٹھیک ہے؟",
+            "en": "That's too much! Is two hundred okay?",
+            "quality": "best",
+            "feedback": "Fair negotiation.",
+            "next": "n4b"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "line": {
+          "roman": "Ji, teen sau aur. Hotel door hai.",
+          "urdu": "جی، تین سو اور۔ ہوٹل دور ہے۔",
+          "en": "Yes, three hundred more. The hotel is far."
+        },
+        "choices": [
+          {
+            "roman": "Theek hai, chaliye.",
+            "urdu": "ٹھیک ہے، چلیے۔",
+            "en": "Okay, let's go.",
+            "quality": "best",
+            "feedback": "\"Chaliye\" = let's go (polite).",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n4b",
+        "line": {
+          "roman": "Chalo, dhai sau. Bas.",
+          "urdu": "چلو، ڈھائی سو۔ بس۔",
+          "en": "Okay, two-fifty. Final."
+        },
+        "choices": [
+          {
+            "roman": "Theek hai, chaliye.",
+            "urdu": "ٹھیک ہے، چلیے۔",
+            "en": "Okay, let's go.",
+            "quality": "best",
+            "feedback": "Deal.",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "line": {
+          "roman": "Lijiye, Liberty Hotel.",
+          "urdu": "لیجیے، لبرٹی ہوٹل۔",
+          "en": "Here you are, Liberty Hotel."
+        },
+        "choices": [
+          {
+            "roman": "Bohat shukriya, bhai. Yeh lijiye.",
+            "urdu": "بہت شکریہ بھائی۔ یہ لیجیے۔",
+            "en": "Thanks a lot, brother. Here you go.",
+            "quality": "best",
+            "feedback": "\"Bhai\" is a friendly, respectful way to address a man.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Shukriya! Khuda hafiz.",
+          "urdu": "شکریہ! خدا حافظ۔",
+          "en": "Thank you! Goodbye."
+        },
+        "end": "You explained a mix-up, clarified the fare and stayed polite — real-world recovery skills."
+      }
+    ]
+  },
+  {
+    "id": "c-story",
+    "level": 6,
+    "title": "Telling a travel story",
+    "emoji": "⛰️",
+    "context": "Your cousin Zara heard you went to Murree and wants the full story.",
+    "goal": "Tell a story in order using linking words and keep your listener engaged.",
+    "partner": {
+      "name": "Zara",
+      "role": "your cousin",
+      "character": "zara"
+    },
+    "start": "n1",
+    "nodes": [
+      {
+        "id": "n1",
+        "line": {
+          "roman": "Suna hai tum Murree gaye thay? Kaisa raha?",
+          "urdu": "سنا ہے تم مری گئے تھے؟ کیسا رہا؟",
+          "en": "I heard you went to Murree? How was it?"
+        },
+        "choices": [
+          {
+            "roman": "Bohat mazaa aaya! Pata hai kya hua?",
+            "urdu": "بہت مزہ آیا! پتا ہے کیا ہوا؟",
+            "en": "It was so much fun! You know what happened?",
+            "quality": "best",
+            "feedback": "A great hook to start a story.",
+            "next": "n2"
+          },
+          {
+            "roman": "Acha tha.",
+            "urdu": "اچھا تھا۔",
+            "en": "It was good.",
+            "quality": "ok",
+            "feedback": "True, but short answers end conversations. Give her a story!",
+            "next": "n1b"
+          }
+        ]
+      },
+      {
+        "id": "n1b",
+        "line": {
+          "roman": "Bas? Kuch to batao!",
+          "urdu": "بس؟ کچھ تو بتاؤ!",
+          "en": "That's it? Tell me something!"
+        },
+        "choices": [
+          {
+            "roman": "Acha, suno. Pata hai kya hua?",
+            "urdu": "اچھا، سنو۔ پتا ہے کیا ہوا؟",
+            "en": "Okay, listen. You know what happened?",
+            "quality": "best",
+            "feedback": "Here we go.",
+            "next": "n2"
+          }
+        ]
+      },
+      {
+        "id": "n2",
+        "line": {
+          "roman": "Nahi, kya hua?",
+          "urdu": "نہیں، کیا ہوا؟",
+          "en": "No, what happened?"
+        },
+        "newWords": [
+          {
+            "roman": "kharab",
+            "urdu": "خراب",
+            "en": "broken / bad"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Pehle hum subah jaldi nikle, lekin raaste mein gaari kharab ho gayi!",
+            "urdu": "پہلے ہم صبح جلدی نکلے، لیکن راستے میں گاڑی خراب ہو گئی!",
+            "en": "First we set off early, but on the way the car broke down!",
+            "quality": "best",
+            "feedback": "\"Pehle ... lekin ...\" — a clear start with a twist.",
+            "next": "n3"
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "line": {
+          "roman": "Oh no! Phir?",
+          "urdu": "اوہ نو! پھر؟",
+          "en": "Oh no! Then what?"
+        },
+        "choices": [
+          {
+            "roman": "Phir achanak barish shuru ho gayi, aur hum do ghante intezaar karte rahe.",
+            "urdu": "پھر اچانک بارش شروع ہو گئی، اور ہم دو گھنٹے انتظار کرتے رہے۔",
+            "en": "Then suddenly it started raining, and we kept waiting for two hours.",
+            "quality": "best",
+            "feedback": "\"Phir achanak\" — great storytelling rhythm.",
+            "next": "n4"
+          },
+          {
+            "roman": "Uske baad hum ghar wapas aa gaye.",
+            "urdu": "اس کے بعد ہم گھر واپس آ گئے۔",
+            "en": "After that we came back home.",
+            "quality": "ok",
+            "feedback": "Grammatically great, but it ends the story early! Add more detail.",
+            "next": "n4"
+          }
+        ]
+      },
+      {
+        "id": "n4",
+        "line": {
+          "roman": "Uff! Itni mushkil!",
+          "urdu": "اُف! اتنی مشکل!",
+          "en": "Ugh! So much trouble!"
+        },
+        "newWords": [
+          {
+            "roman": "muft",
+            "urdu": "مفت",
+            "en": "free (no cost)"
+          }
+        ],
+        "choices": [
+          {
+            "roman": "Haan, lekin mazay ki baat yeh hai ke ek chai wale ne hamein muft chai pilayi!",
+            "urdu": "ہاں، لیکن مزے کی بات یہ ہے کہ ایک چائے والے نے ہمیں مفت چائے پلائی!",
+            "en": "Yes, but the funny thing is a tea seller gave us free tea!",
+            "quality": "best",
+            "feedback": "\"Mazay ki baat yeh hai ke\" — perfect for a twist.",
+            "next": "n5"
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "line": {
+          "roman": "Haha, wah! Aakhir mein pohanch gaye?",
+          "urdu": "ہاہا، واہ! آخر میں پہنچ گئے؟",
+          "en": "Haha, nice! Did you get there in the end?"
+        },
+        "choices": [
+          {
+            "roman": "Haan, aakhir mein raat ko pohanch gaye. Der aayad durust aayad!",
+            "urdu": "ہاں، آخر میں رات کو پہنچ گئے۔ دیر آید درست آید!",
+            "en": "Yes, we finally got there at night. Better late than never!",
+            "quality": "best",
+            "feedback": "An idiom to finish — impressive!",
+            "next": "end"
+          },
+          {
+            "roman": "Haan, aakhir mein pohanch gaye.",
+            "urdu": "ہاں، آخر میں پہنچ گئے۔",
+            "en": "Yes, we got there in the end.",
+            "quality": "best",
+            "feedback": "A clear ending.",
+            "next": "end"
+          }
+        ]
+      },
+      {
+        "id": "end",
+        "line": {
+          "roman": "Haha! Kamaal ki kahani hai.",
+          "urdu": "ہاہا! کمال کی کہانی ہے۔",
+          "en": "Haha! What a story."
+        },
+        "end": "You told a full story with linking words — pehle, lekin, phir, achanak, aakhir mein."
+      }
+    ]
+  }
+]

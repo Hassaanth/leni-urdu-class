@@ -1,0 +1,162 @@
+{
+  "id": "wu5",
+  "level": 2,
+  "host": "zara",
+  "title": "Feelings & questions",
+  "chapter": "Chapter 6 · Zara's questions",
+  "story": "Zara asks a hundred questions a day. Learn the question words she keeps using.",
+  "description": "Happy, worried, sick — and what, who, where, when, how, why, how much, and.",
+  "lessons": [
+    {
+      "id": "w13",
+      "kind": "words",
+      "title": "Feelings",
+      "objective": "Say how you feel.",
+      "phrases": [
+        {
+          "id": "v-khush",
+          "emoji": "😊",
+          "roman": "khush",
+          "urdu": "خوش",
+          "en": "happy",
+          "kind": "word",
+          "note": "kh = the throat sound, like Khuda."
+        },
+        {
+          "id": "v-pareshan",
+          "emoji": "😟",
+          "roman": "pareshan",
+          "urdu": "پریشان",
+          "en": "worried",
+          "kind": "word"
+        },
+        {
+          "id": "v-beemar",
+          "emoji": "🤒",
+          "roman": "beemar",
+          "urdu": "بیمار",
+          "en": "sick",
+          "kind": "word"
+        },
+        {
+          "id": "v-naraz",
+          "emoji": "😠",
+          "roman": "naraz",
+          "urdu": "ناراض",
+          "en": "upset / annoyed",
+          "kind": "word"
+        }
+      ]
+    },
+    {
+      "id": "w14",
+      "kind": "words",
+      "title": "Question words 1",
+      "objective": "What, who, where, when.",
+      "phrases": [
+        {
+          "id": "v-kya",
+          "emoji": "❓",
+          "roman": "kya",
+          "urdu": "کیا",
+          "en": "what",
+          "kind": "word"
+        },
+        {
+          "id": "v-kaun",
+          "emoji": "🕵️",
+          "roman": "kaun",
+          "urdu": "کون",
+          "en": "who",
+          "kind": "word"
+        },
+        {
+          "id": "v-kahan",
+          "emoji": "📍",
+          "roman": "kahan",
+          "urdu": "کہاں",
+          "en": "where",
+          "kind": "word"
+        },
+        {
+          "id": "v-kab",
+          "emoji": "⏰",
+          "roman": "kab",
+          "urdu": "کب",
+          "en": "when",
+          "kind": "word"
+        }
+      ],
+      "tips": [
+        "Almost every Urdu question word starts with k — handy!"
+      ]
+    },
+    {
+      "id": "w15",
+      "kind": "words",
+      "title": "Question words 2",
+      "objective": "How, why, how much — and \"and\".",
+      "phrases": [
+        {
+          "id": "v-kaise",
+          "emoji": "🤔",
+          "roman": "kaise",
+          "urdu": "کیسے",
+          "en": "how",
+          "kind": "word"
+        },
+        {
+          "id": "v-kyun",
+          "emoji": "🤷",
+          "roman": "kyun",
+          "urdu": "کیوں",
+          "en": "why",
+          "kind": "word"
+        },
+        {
+          "id": "v-kitna",
+          "emoji": "💰",
+          "roman": "kitna",
+          "urdu": "کتنا",
+          "en": "how much",
+          "kind": "word"
+        },
+        {
+          "id": "v-aur",
+          "emoji": "➕",
+          "roman": "aur",
+          "urdu": "اور",
+          "en": "and",
+          "kind": "word",
+          "note": "Also means \"more\": aur chai = more tea."
+        }
+      ]
+    }
+  ],
+  "guide": [
+    {
+      "title": "Feelings",
+      "body": "Feeling words don't change for men and women: a man and a woman both say khush (happy).",
+      "examples": [
+        "v-khush",
+        "v-pareshan"
+      ]
+    },
+    {
+      "title": "The k-questions",
+      "body": "kya (what), kaun (who), kahan (where), kab (when), kaise (how), kyun (why), kitna (how much). Learn them well — every conversation uses them.",
+      "examples": [
+        "v-kya",
+        "v-kahan",
+        "v-kaise"
+      ]
+    },
+    {
+      "title": "Aur",
+      "body": "Aur means \"and\", and also \"more\".",
+      "examples": [
+        "v-aur"
+      ]
+    }
+  ]
+}

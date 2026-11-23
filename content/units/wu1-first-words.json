@@ -1,0 +1,171 @@
+{
+  "id": "wu1",
+  "level": 1,
+  "host": "bilal",
+  "title": "First words",
+  "chapter": "Chapter 1 · First words",
+  "story": "Bilal meets you at the airport. Your very first Urdu words — just four at a time.",
+  "description": "Thank you, yes, no, excuse me — and the words for \"I\", \"you\", \"this\" and \"that\".",
+  "lessons": [
+    {
+      "id": "w1",
+      "kind": "words",
+      "title": "Thank you, yes & no",
+      "objective": "Learn 4 words you will use every single day.",
+      "phrases": [
+        {
+          "id": "v-shukriya",
+          "emoji": "🙏",
+          "roman": "shukriya",
+          "urdu": "شکریہ",
+          "en": "thank you",
+          "kind": "word",
+          "note": "Say it: shuk-ri-yaa."
+        },
+        {
+          "id": "v-haan",
+          "emoji": "✅",
+          "roman": "haan",
+          "urdu": "ہاں",
+          "en": "yes",
+          "kind": "word",
+          "note": "Long \"aa\", and the n is soft — air through your nose."
+        },
+        {
+          "id": "v-nahi",
+          "emoji": "❌",
+          "roman": "nahi",
+          "urdu": "نہیں",
+          "en": "no",
+          "kind": "word",
+          "note": "The n at the end is soft, through the nose: na-hee(n)."
+        },
+        {
+          "id": "v-suniye",
+          "emoji": "🙋",
+          "roman": "Suniye",
+          "urdu": "سنیے",
+          "en": "excuse me (to get attention)",
+          "kind": "word",
+          "note": "The polite way to get someone's attention, like \"excuse me\". Say it: su-NI-ye.",
+          "accept": [
+            "suniye",
+            "suniyay",
+            "sunie",
+            "suniye ji"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "kind": "words",
+      "title": "Polite words",
+      "objective": "Sound polite from day one.",
+      "phrases": [
+        {
+          "id": "v-ji",
+          "emoji": "🙂",
+          "roman": "ji",
+          "urdu": "جی",
+          "en": "yes (polite)",
+          "kind": "word",
+          "note": "Ji is a polite \"yes\" — like \"yes, sir / yes, ma'am\". Pakistanis use it all the time."
+        },
+        {
+          "id": "v-theek",
+          "emoji": "👌",
+          "roman": "theek",
+          "urdu": "ٹھیک",
+          "en": "okay / fine",
+          "kind": "word",
+          "note": "The \"th\" is t + a puff of air. It is NOT the \"th\" in \"think\"."
+        },
+        {
+          "id": "v-acha",
+          "emoji": "👍",
+          "roman": "acha",
+          "urdu": "اچھا",
+          "en": "good / okay",
+          "kind": "word",
+          "note": "Also means \"oh, I see!\" when you say it like a question."
+        },
+        {
+          "id": "v-khudahafiz",
+          "emoji": "🫡",
+          "roman": "Khuda hafiz",
+          "urdu": "خدا حافظ",
+          "en": "goodbye",
+          "kind": "word",
+          "note": "The \"kh\" is a soft scrape in the throat, like Scottish \"loch\"."
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "kind": "words",
+      "title": "Me & you",
+      "objective": "Point at people and things.",
+      "phrases": [
+        {
+          "id": "v-main",
+          "emoji": "🙋",
+          "roman": "main",
+          "urdu": "میں",
+          "en": "I",
+          "kind": "word",
+          "note": "Sounds close to \"meh(n)\" — the n is just air through the nose."
+        },
+        {
+          "id": "v-aap",
+          "emoji": "👉",
+          "roman": "aap",
+          "urdu": "آپ",
+          "en": "you",
+          "kind": "word",
+          "note": "The polite \"you\". Use it with everyone you don't know well."
+        },
+        {
+          "id": "v-yeh",
+          "emoji": "👇",
+          "roman": "yeh",
+          "urdu": "یہ",
+          "en": "this",
+          "kind": "word"
+        },
+        {
+          "id": "v-woh",
+          "emoji": "👆",
+          "roman": "woh",
+          "urdu": "وہ",
+          "en": "that",
+          "kind": "word"
+        }
+      ]
+    }
+  ],
+  "guide": [
+    {
+      "title": "Roman Urdu",
+      "body": "In this app Urdu is first written with English letters (\"Roman Urdu\") so you can start right away. The real Urdu script is shown underneath — you can look at it, but you don't need to read it yet.",
+      "examples": [
+        "v-shukriya"
+      ]
+    },
+    {
+      "title": "Ji makes it polite",
+      "body": "Haan means yes, but ji (or ji haan) is the polite yes. Use ji with anyone older than you or anyone you don't know.",
+      "examples": [
+        "v-ji",
+        "v-haan"
+      ]
+    },
+    {
+      "title": "\"Aap\" is \"you\"",
+      "body": "Aap is the respectful word for \"you\". There are less polite ones, but aap is always safe.",
+      "examples": [
+        "v-aap"
+      ]
+    }
+  ]
+}

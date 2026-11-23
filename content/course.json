@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "levels": [
+    {
+      "id": 1,
+      "title": "Your first words",
+      "description": "Basic words, 3–5 at a time: greetings, food, family, numbers.",
+      "speakingGoal": "Recognise and say about 50 everyday words."
+    },
+    {
+      "id": 2,
+      "title": "Putting words together",
+      "description": "Join words into little phrases, then learn question words, small words and action words.",
+      "speakingGoal": "Say short phrases like \"garam chai\" and \"mera ghar\" and know the words sentences are made of."
+    },
+    {
+      "id": 3,
+      "title": "Your first sentences",
+      "description": "Use the words you know with one sentence pattern at a time.",
+      "speakingGoal": "Build your own simple sentences: \"I am fine\", \"I need water\", \"Where is the shop?\"."
+    },
+    {
+      "id": 4,
+      "title": "Everyday conversations",
+      "description": "Greetings, introductions, family, food, shopping, directions and time.",
+      "speakingGoal": "Handle short everyday conversations."
+    },
+    {
+      "id": 5,
+      "title": "Natural conversation",
+      "description": "Past and future, requests, plans, feelings and casual Urdu.",
+      "speakingGoal": "Hold several connected exchanges naturally."
+    },
+    {
+      "id": 6,
+      "title": "Real-world & advanced",
+      "description": "Travel, phone calls, problems, idioms and storytelling.",
+      "speakingGoal": "Keep longer conversations going with less help."
+    }
+  ],
+  "units": [
+    {
+      "id": "wu1",
+      "level": 1,
+      "file": "units/wu1-first-words.json"
+    },
+    {
+      "id": "wu2",
+      "level": 1,
+      "file": "units/wu2-food.json"
+    },
+    {
+      "id": "wu3",
+      "level": 1,
+      "file": "units/wu3-people.json"
+    },
+    {
+      "id": "wu4",
+      "level": 1,
+      "file": "units/wu4-numbers.json"
+    },
+    {
+      "id": "wp1",
+      "level": 2,
+      "file": "units/wp1-word-pairs.json"
+    },
+    {
+      "id": "wu5",
+      "level": 2,
+      "file": "units/wu5-feelings-questions.json"
+    },
+    {
+      "id": "wu6",
+      "level": 2,
+      "file": "units/wu6-glue-actions.json"
+    },
+    {
+      "id": "wu7",
+      "level": 2,
+      "file": "units/wu7-everyday.json"
+    },
+    {
+      "id": "bb1",
+      "level": 3,
+      "file": "units/bb1-first-words.json"
+    },
+    {
+      "id": "bb2",
+      "level": 3,
+      "file": "units/bb2-everyday.json"
+    },
+    {
+      "id": "bb3",
+      "level": 3,
+      "file": "units/bb3-actions.json"
+    },
+    {
+      "id": "u1",
+      "level": 4,
+      "file": "units/u1-greetings.json"
+    },
+    {
+      "id": "u2",
+      "level": 4,
+      "file": "units/u2-basics.json"
+    },
+    {
+      "id": "u3",
+      "level": 4,
+      "file": "units/u3-everyday.json"
+    },
+    {
+      "id": "u4",
+      "level": 4,
+      "file": "units/u4-getting-around.json"
+    },
+    {
+      "id": "u5",
+      "level": 5,
+      "file": "units/u5-sentences.json"
+    },
+    {
+      "id": "u6",
+      "level": 5,
+      "file": "units/u6-social.json"
+    },
+    {
+      "id": "u7",
+      "level": 6,
+      "file": "units/u7-real-world.json"
+    },
+    {
+      "id": "u8",
+      "level": 6,
+      "file": "units/u8-advanced.json"
+    }
+  ],
+  "extras": {
+    "conversations": "conversations.json",
+    "pronunciation": "pronunciation.json",
+    "speaking": "speaking.json",
+    "characters": "characters.json"
+  },
+  "story": {
+    "title": "Summer in Lahore",
+    "text": "You've just landed in Lahore to spend the summer with your Khala's family. Your cousin Bilal, his sister Ayesha, little Zara and Dada ji can't wait to meet you — but at home, everyone speaks Urdu. Leni, your teacher, will help you every step of the way."
+  }
+}
